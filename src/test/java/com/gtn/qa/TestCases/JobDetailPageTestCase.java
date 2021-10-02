@@ -43,12 +43,12 @@ public class JobDetailPageTestCase extends TestBase
 		Assert.assertTrue(flag, "logo missing");
 	}
 	
-//	@Test(priority=0)
-//	public void gtnTMOurlTest()
-//	{
-//		String url=detailPage.detailPageUrlValidation();
-//		Assert.assertEquals(url, "https://gtnrctp-tmo-1.gtncloud.com/static/index.html#/job_details/status/GTN_KTMnWh7ZEeynrwK240Q7Ow", "Incorrect detail page Url");
-//	}
+	@Test(priority=0)
+	public void gtnTMOurlTest()
+	{
+		String url=detailPage.detailPageUrlValidation();
+		Assert.assertEquals(url, "https://gtnrctp-tmo-1.gtncloud.com/static/index.html#/job_details/status/GTN_KTMnWh7ZEeynrwK240Q7Ow", "Incorrect detail page Url");
+	}
 	
 	@Test(priority=3)
 	public void tmoJobUploadDetailpageTest() throws InterruptedException
