@@ -29,12 +29,12 @@ public class JobDetailPageTestCase extends TestBase
 	}
 	
 		
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void titleTest()
 	{
 		String listPageTitle=detailPage.detailPageTitleValidation();
 		Assert.assertEquals(listPageTitle, "GT Nexus - TM Optimizer Job Control","Page title is not correct");
-	}*/
+	}
 	
 	@Test(priority=1)
 	public void gtnLogoTest()
