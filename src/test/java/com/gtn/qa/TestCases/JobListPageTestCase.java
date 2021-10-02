@@ -38,11 +38,11 @@ public class JobListPageTestCase extends TestBase
 		Assert.assertTrue(flag, "logo missing");
 	}
 	
-	@Test(priority=3)
-	public void tmoJobUploadDetailpageTest() throws InterruptedException
-	{
-		listPage.tmoJobFileUploadValidation("C:\\Users\\ramasegowda\\Downloads\\instance-2Stop_LTL_MMRE_2122606594.xml","AutoJob2");
-	}
+//	@Test(priority=3)
+//	public void tmoJobUploadDetailpageTest() throws InterruptedException
+//	{
+//		listPage.tmoJobFileUploadValidation("C:\\Users\\ramasegowda\\Downloads\\instance-2Stop_LTL_MMRE_2122606594.xml","AutoJob2");
+//	}
 	
 	@AfterMethod
 	public static void teaDown()

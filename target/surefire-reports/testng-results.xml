@@ -1,71 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="115463" started-at="2021-10-02T15:45:37 IST" finished-at="2021-10-02T15:47:32 IST">
+  <suite name="Command line suite" duration-ms="63551" started-at="2021-10-03T01:53:59 IST" finished-at="2021-10-03T01:55:03 IST">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="115463" started-at="2021-10-02T15:45:37 IST" finished-at="2021-10-02T15:47:32 IST">
+    <test name="Command line test" duration-ms="63551" started-at="2021-10-03T01:53:59 IST" finished-at="2021-10-03T01:55:03 IST">
       <class name="com.gtn.qa.TestCases.JobDetailPageTestCase">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="setUp" is-config="true" duration-ms="25731" started-at="2021-10-02T15:45:37 IST" finished-at="2021-10-02T15:46:02 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="setUp" is-config="true" duration-ms="20283" started-at="2021-10-03T01:53:59 IST" finished-at="2021-10-03T01:54:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="gtnLogoTest()[pri:1, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="gtnLogoTest" duration-ms="74" started-at="2021-10-02T15:46:02 IST" finished-at="2021-10-02T15:46:03 IST">
+        <test-method status="PASS" signature="titleTest()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="titleTest" duration-ms="5" started-at="2021-10-03T01:54:20 IST" finished-at="2021-10-03T01:54:20 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- gtnLogoTest -->
-        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="teaDown" is-config="true" duration-ms="1141" started-at="2021-10-02T15:46:03 IST" finished-at="2021-10-02T15:46:04 IST">
+        </test-method> <!-- titleTest -->
+        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="teaDown" is-config="true" duration-ms="545" started-at="2021-10-03T01:54:20 IST" finished-at="2021-10-03T01:54:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teaDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="setUp" is-config="true" duration-ms="22324" started-at="2021-10-02T15:46:04 IST" finished-at="2021-10-02T15:46:26 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="setUp" is-config="true" duration-ms="17271" started-at="2021-10-03T01:54:20 IST" finished-at="2021-10-03T01:54:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tmoJobUploadDetailpageTest()[pri:3, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="tmoJobUploadDetailpageTest" duration-ms="11851" started-at="2021-10-02T15:46:26 IST" finished-at="2021-10-02T15:46:38 IST">
+        <test-method status="PASS" signature="gtnLogoTest()[pri:1, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="gtnLogoTest" duration-ms="58" started-at="2021-10-03T01:54:37 IST" finished-at="2021-10-03T01:54:38 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tmoJobUploadDetailpageTest -->
-        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="teaDown" is-config="true" duration-ms="1038" started-at="2021-10-02T15:46:38 IST" finished-at="2021-10-02T15:46:39 IST">
+        </test-method> <!-- gtnLogoTest -->
+        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobDetailPageTestCase@2a17b7b6]" name="teaDown" is-config="true" duration-ms="665" started-at="2021-10-03T01:54:38 IST" finished-at="2021-10-03T01:54:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teaDown -->
       </class> <!-- com.gtn.qa.TestCases.JobDetailPageTestCase -->
       <class name="com.gtn.qa.TestCases.JobListPageTestCase">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="setUp" is-config="true" duration-ms="15548" started-at="2021-10-02T15:46:39 IST" finished-at="2021-10-02T15:46:54 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="setUp" is-config="true" duration-ms="9923" started-at="2021-10-03T01:54:38 IST" finished-at="2021-10-03T01:54:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="titleTest()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="titleTest" duration-ms="8" started-at="2021-10-02T15:46:54 IST" finished-at="2021-10-02T15:46:54 IST">
+        <test-method status="PASS" signature="titleTest()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="titleTest" duration-ms="3" started-at="2021-10-03T01:54:48 IST" finished-at="2021-10-03T01:54:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- titleTest -->
-        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="teaDown" is-config="true" duration-ms="1243" started-at="2021-10-02T15:46:54 IST" finished-at="2021-10-02T15:46:56 IST">
+        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="teaDown" is-config="true" duration-ms="635" started-at="2021-10-03T01:54:48 IST" finished-at="2021-10-03T01:54:49 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teaDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="setUp" is-config="true" duration-ms="11174" started-at="2021-10-02T15:46:56 IST" finished-at="2021-10-02T15:47:07 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="setUp" is-config="true" duration-ms="13439" started-at="2021-10-03T01:54:49 IST" finished-at="2021-10-03T01:55:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="gtnLogoTest()[pri:1, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="gtnLogoTest" duration-ms="85" started-at="2021-10-02T15:47:07 IST" finished-at="2021-10-02T15:47:07 IST">
+        <test-method status="PASS" signature="gtnLogoTest()[pri:1, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="gtnLogoTest" duration-ms="46" started-at="2021-10-03T01:55:02 IST" finished-at="2021-10-03T01:55:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gtnLogoTest -->
-        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="teaDown" is-config="true" duration-ms="1152" started-at="2021-10-02T15:47:07 IST" finished-at="2021-10-02T15:47:08 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teaDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="setUp" is-config="true" duration-ms="10813" started-at="2021-10-02T15:47:08 IST" finished-at="2021-10-02T15:47:19 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tmoJobUploadDetailpageTest()[pri:3, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="tmoJobUploadDetailpageTest" duration-ms="12056" started-at="2021-10-02T15:47:19 IST" finished-at="2021-10-02T15:47:31 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tmoJobUploadDetailpageTest -->
-        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="teaDown" is-config="true" duration-ms="1178" started-at="2021-10-02T15:47:31 IST" finished-at="2021-10-02T15:47:32 IST">
+        <test-method status="PASS" signature="teaDown()[pri:0, instance:com.gtn.qa.TestCases.JobListPageTestCase@1f57539]" name="teaDown" is-config="true" duration-ms="640" started-at="2021-10-03T01:55:02 IST" finished-at="2021-10-03T01:55:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teaDown -->
