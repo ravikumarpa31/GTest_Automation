@@ -1,0 +1,5361 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<instance id="Vesuvius_xml_reduced" xmlns="http://www.clearabacus.com/schema/instance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.2" xsi:schemaLocation="http://www.clearabacus.com/schema/instance instance.xsd">
+<supplyChain id="Network">
+<step id="Louisville_DC_Inbound">
+<customData>
+<Step_Action>Deconsolidation</Step_Action>
+<Type>DC Receipt</Type>
+</customData>
+<narrativeDescription>Inbound in Louisville_DC</narrativeDescription>
+<type>
+<deconsolidateRequirement>
+<nextStep>Louisville_DC</nextStep>
+<nextStep>Louisville_DC_Hold</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+<resourceAvailable>t53</resourceAvailable>
+</deconsolidateRequirement>
+</type>
+</step>
+<step id="Ohio_DC_Inbound">
+<customData>
+<Step_Action>Deconsolidation</Step_Action>
+<Type>DC Receipt</Type>
+</customData>
+<narrativeDescription>Inbound in Ohio_DC</narrativeDescription>
+<type>
+<deconsolidateRequirement>
+<nextStep>Ohio_DC</nextStep>
+<nextStep>Ohio_DC_Hold</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+<resourceAvailable>t53</resourceAvailable>
+</deconsolidateRequirement>
+</type>
+</step>
+<step id="Long_Beach_DC_Inbound">
+<customData>
+<Step_Action>Deconsolidation</Step_Action>
+<Type>DC Receipt</Type>
+</customData>
+<narrativeDescription>Inbound in Long_Beach_DC</narrativeDescription>
+<type>
+<deconsolidateRequirement>
+<nextStep>Long_Beach_DC</nextStep>
+<nextStep>Long_Beach_DC_Hold</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+<resourceAvailable>t53</resourceAvailable>
+</deconsolidateRequirement>
+</type>
+</step>
+<step id="Louisville_DC_Inbound_2">
+<customData>
+<Step_Action>Deconsolidation</Step_Action>
+<Type>DC Receipt</Type>
+</customData>
+<narrativeDescription>Inbound in Louisville_DC</narrativeDescription>
+<type>
+<deconsolidateRequirement>
+<nextStep>Louisville_DC</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+<resourceAvailable>t53</resourceAvailable>
+</deconsolidateRequirement>
+</type>
+</step>
+<step id="Ohio_DC_Inbound_2">
+<customData>
+<Step_Action>Deconsolidation</Step_Action>
+<Type>DC Receipt</Type>
+</customData>
+<narrativeDescription>Inbound in Ohio_DC</narrativeDescription>
+<type>
+<deconsolidateRequirement>
+<nextStep>Ohio_DC</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+<resourceAvailable>t53</resourceAvailable>
+</deconsolidateRequirement>
+</type>
+</step>
+<step id="Long_Beach_DC_Inbound_2">
+<customData>
+<Step_Action>Deconsolidation</Step_Action>
+<Type>DC Receipt</Type>
+</customData>
+<narrativeDescription>Inbound in Long_Beach_DC</narrativeDescription>
+<type>
+<deconsolidateRequirement>
+<nextStep>Long_Beach_DC</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+<resourceAvailable>t53</resourceAvailable>
+</deconsolidateRequirement>
+</type>
+</step>
+<step id="Louisville_DC_Hold">
+<customData>
+<Step_Action>Holding</Step_Action>
+<Type>Temp Storage</Type>
+</customData>
+<narrativeDescription>Temp Storage in Louisville_DC</narrativeDescription>
+<type>
+<holdRequirement>
+<nextStep>Louisville_DC_Outbound</nextStep>
+<maxHours>240</maxHours>
+</holdRequirement>
+</type>
+</step>
+<step id="Ohio_DC_Hold">
+<customData>
+<Step_Action>Holding</Step_Action>
+<Type>Temp Storage</Type>
+</customData>
+<narrativeDescription>Temp Storage in Ohio_DC</narrativeDescription>
+<type>
+<holdRequirement>
+<nextStep>Ohio_DC_Outbound</nextStep>
+<maxHours>240</maxHours>
+</holdRequirement>
+</type>
+</step>
+<step id="Long_Beach_DC_Hold">
+<customData>
+<Step_Action>Holding</Step_Action>
+<Type>Temp Storage</Type>
+</customData>
+<narrativeDescription>Temp Storage in Long_Beach_DC</narrativeDescription>
+<type>
+<holdRequirement>
+<nextStep>Long_Beach_DC_Outbound</nextStep>
+<maxHours>240</maxHours>
+</holdRequirement>
+</type>
+</step>
+<step id="Louisville_DC_Outbound">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>DC Consol</Type>
+</customData>
+<narrativeDescription>Outbound from Louisville_DC</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Louisville_DC_to_Long_Beach_DC</nextStep>
+<nextStep>Louisville_DC_to_Ohio_DC</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>t53</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Ohio_DC_Outbound">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>DC Consol</Type>
+</customData>
+<narrativeDescription>Outbound from Ohio_DC</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Ohio_DC_to_Louisville_DC</nextStep>
+<nextStep>Ohio_DC_to_Long_Beach_DC</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>t53</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Long_Beach_DC_Outbound">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>DC Consol</Type>
+</customData>
+<narrativeDescription>Outbound from Long_Beach_DC</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Long_Beach_DC_to_Ohio_DC</nextStep>
+<nextStep>Long_Beach_DC_to_Louisville_DC</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>t53</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Louisville_DC">
+<customData>
+<Step_Action>Ending Point</Step_Action>
+<Type>Ending Point</Type>
+</customData>
+<narrativeDescription>Final Delivery in Louisville_DC</narrativeDescription>
+<type>
+<endRequirement>EndingPoint</endRequirement>
+</type>
+</step>
+<step id="Ohio_DC">
+<customData>
+<Step_Action>Ending Point</Step_Action>
+<Type>Ending Point</Type>
+</customData>
+<narrativeDescription>Final Delivery in Ohio_DC</narrativeDescription>
+<type>
+<endRequirement>EndingPoint</endRequirement>
+</type>
+</step>
+<step id="Long_Beach_DC">
+<customData>
+<Step_Action>Ending Point</Step_Action>
+<Type>Ending Point</Type>
+</customData>
+<narrativeDescription>Final Delivery in Long_Beach_DC</narrativeDescription>
+<type>
+<endRequirement>EndingPoint</endRequirement>
+</type>
+</step>
+<step id="Mumbai_to_Atlantic_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Nhava Sheva to Atlantic Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Atlantic_Coast_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Atlantic_Transload_Inbound</nextStep>
+<processingTimeInHours>816</processingTimeInHours>
+<rate>Nhava_Sheva_to_Atlantic_Coast_20ft</rate>
+<rate>Nhava_Sheva_to_Atlantic_Coast_40ft</rate>
+<rate>Nhava_Sheva_to_Atlantic_Coast_40HC</rate>
+<rate>Nhava_Sheva_to_Atlantic_Coast_45ft</rate>
+<rate>Nhava_Sheva_20ft_Handling</rate>
+<rate>Nhava_Sheva_40ft_Handling</rate>
+<rate>Nhava_Sheva_40HC_Handling</rate>
+<rate>Nhava_Sheva_45ft_Handling</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Mumbai_to_Pacific_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Nhava Sheva to Pacific Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Pacific_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Pacific_Coast_to_Ohio_DC</nextStep>
+<nextStep>Pacific_Coast_to_Louisville_DC</nextStep>
+<processingTimeInHours>1008</processingTimeInHours>
+<rate>Nhava_Sheva_to_Pacific_Coast_20ft</rate>
+<rate>Nhava_Sheva_to_Pacific_Coast_40ft</rate>
+<rate>Nhava_Sheva_to_Pacific_Coast_40HC</rate>
+<rate>Nhava_Sheva_to_Pacific_Coast_45ft</rate>
+<rate>Nhava_Sheva_20ft_Handling</rate>
+<rate>Nhava_Sheva_40ft_Handling</rate>
+<rate>Nhava_Sheva_40HC_Handling</rate>
+<rate>Nhava_Sheva_45ft_Handling</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Mumbai_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Nhava Sheva to Ohio_DC PA</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>840</processingTimeInHours>
+<rate>Nhava_Sheva_to_Ohio_DC_20ft</rate>
+<rate>Nhava_Sheva_to_Ohio_DC_40ft</rate>
+<rate>Nhava_Sheva_to_Ohio_DC_40HC</rate>
+<rate>Nhava_Sheva_to_Ohio_DC_45ft</rate>
+<rate>Nhava_Sheva_20ft_Handling</rate>
+<rate>Nhava_Sheva_40ft_Handling</rate>
+<rate>Nhava_Sheva_40HC_Handling</rate>
+<rate>Nhava_Sheva_45ft_Handling</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Mumbai_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Nhava Sheva to Long_Beach_DC NV</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>1032</processingTimeInHours>
+<rate>Nhava_Sheva_to_Long_Beach_DC_20ft</rate>
+<rate>Nhava_Sheva_to_Long_Beach_DC_40ft</rate>
+<rate>Nhava_Sheva_to_Long_Beach_DC_40HC</rate>
+<rate>Nhava_Sheva_to_Long_Beach_DC_45ft</rate>
+<rate>Nhava_Sheva_20ft_Handling</rate>
+<rate>Nhava_Sheva_40ft_Handling</rate>
+<rate>Nhava_Sheva_40HC_Handling</rate>
+<rate>Nhava_Sheva_45ft_Handling</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Mumbai_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Nhava Sheva to Louisville_DC SC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>888</processingTimeInHours>
+<rate>Nhava_Sheva_to_Louisville_DC_20ft</rate>
+<rate>Nhava_Sheva_to_Louisville_DC_40ft</rate>
+<rate>Nhava_Sheva_to_Louisville_DC_40HC</rate>
+<rate>Nhava_Sheva_to_Louisville_DC_45ft</rate>
+<rate>Nhava_Sheva_20ft_Handling</rate>
+<rate>Nhava_Sheva_40ft_Handling</rate>
+<rate>Nhava_Sheva_40HC_Handling</rate>
+<rate>Nhava_Sheva_45ft_Handling</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Yantian_to_Atlantic_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Yantian to Atlantic Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Atlantic_Coast_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Long_Beach_DC</nextStep>
+<processingTimeInHours>648</processingTimeInHours>
+<rate>Yantian_to_Atlantic_Coast_20ft</rate>
+<rate>Yantian_to_Atlantic_Coast_40ft</rate>
+<rate>Yantian_to_Atlantic_Coast_40HC</rate>
+<rate>Yantian_to_Atlantic_Coast_45ft</rate>
+<rate>Yantian_20ft_Handling</rate>
+<rate>Yantian_40ft_Handling</rate>
+<rate>Yantian_40HC_Handling</rate>
+<rate>Yantian_45ft_Handling</rate>
+<rate>Yantian_to_Atlantic_Coast_Accessorial</rate>
+<rate>Yantian_to_Atlantic_Coast_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Yantian_to_Pacific_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Yantian to Pacific Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Pacific_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Pacific_Coast_to_Ohio_DC</nextStep>
+<nextStep>Pacific_Coast_to_Louisville_DC</nextStep>
+<nextStep>Pacific_Transload_Inbound</nextStep>
+<processingTimeInHours>576</processingTimeInHours>
+<rate>Yantian_to_Pacific_Coast_20ft</rate>
+<rate>Yantian_to_Pacific_Coast_40ft</rate>
+<rate>Yantian_to_Pacific_Coast_40HC</rate>
+<rate>Yantian_to_Pacific_Coast_45ft</rate>
+<rate>Yantian_20ft_Handling</rate>
+<rate>Yantian_40ft_Handling</rate>
+<rate>Yantian_40HC_Handling</rate>
+<rate>Yantian_45ft_Handling</rate>
+<rate>Yantian_to_Pacific_Coast_Accessorial</rate>
+<rate>Yantian_to_Pacific_Coast_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Yantian_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Yantian to Ohio_DC PA</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>672</processingTimeInHours>
+<rate>Yantian_to_Ohio_DC_20ft</rate>
+<rate>Yantian_to_Ohio_DC_40ft</rate>
+<rate>Yantian_to_Ohio_DC_40HC</rate>
+<rate>Yantian_to_Ohio_DC_45ft</rate>
+<rate>Yantian_20ft_Handling</rate>
+<rate>Yantian_40ft_Handling</rate>
+<rate>Yantian_40HC_Handling</rate>
+<rate>Yantian_45ft_Handling</rate>
+<rate>Yantian_to_Ohio_DC_Accessorial</rate>
+<rate>Yantian_to_Ohio_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Yantian_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Yantian to Long_Beach_DC NV</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>600</processingTimeInHours>
+<rate>Yantian_to_Long_Beach_DC_20ft</rate>
+<rate>Yantian_to_Long_Beach_DC_40ft</rate>
+<rate>Yantian_to_Long_Beach_DC_40HC</rate>
+<rate>Yantian_to_Long_Beach_DC_45ft</rate>
+<rate>Yantian_20ft_Handling</rate>
+<rate>Yantian_40ft_Handling</rate>
+<rate>Yantian_40HC_Handling</rate>
+<rate>Yantian_45ft_Handling</rate>
+<rate>Yantian_to_Long_Beach_DC_Accessorial</rate>
+<rate>Yantian_to_Long_Beach_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Yantian_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Yantian to Louisville_DC SC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>672</processingTimeInHours>
+<rate>Yantian_to_Louisville_DC_20ft</rate>
+<rate>Yantian_to_Louisville_DC_40ft</rate>
+<rate>Yantian_to_Louisville_DC_40HC</rate>
+<rate>Yantian_to_Louisville_DC_45ft</rate>
+<rate>Yantian_20ft_Handling</rate>
+<rate>Yantian_40ft_Handling</rate>
+<rate>Yantian_40HC_Handling</rate>
+<rate>Yantian_45ft_Handling</rate>
+<rate>Yantian_to_Louisville_DC_Accessorial</rate>
+<rate>Yantian_to_Louisville_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Hong_Kong_to_Atlantic_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Hong Kong to Atlantic Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Atlantic_Coast_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Long_Beach_DC</nextStep>
+<processingTimeInHours>576</processingTimeInHours>
+<rate>Hong_Kong_to_Atlantic_Coast_20ft</rate>
+<rate>Hong_Kong_to_Atlantic_Coast_40ft</rate>
+<rate>Hong_Kong_to_Atlantic_Coast_40HC</rate>
+<rate>Hong_Kong_to_Atlantic_Coast_45ft</rate>
+<rate>Hong_Kong_20ft_Handling</rate>
+<rate>Hong_Kong_40ft_Handling</rate>
+<rate>Hong_Kong_40HC_Handling</rate>
+<rate>Hong_Kong_45ft_Handling</rate>
+<rate>Hong_Kong_to_Atlantic_Coast_Accessorial</rate>
+<rate>Hong_Kong_to_Atlantic_Coast_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Hong_Kong_to_Pacific_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Hong Kong to Pacific Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Pacific_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Pacific_Coast_to_Ohio_DC</nextStep>
+<nextStep>Pacific_Coast_to_Louisville_DC</nextStep>
+<nextStep>Pacific_Transload_Inbound</nextStep>
+<processingTimeInHours>504</processingTimeInHours>
+<rate>Hong_Kong_to_Pacific_Coast_20ft</rate>
+<rate>Hong_Kong_to_Pacific_Coast_40ft</rate>
+<rate>Hong_Kong_to_Pacific_Coast_40HC</rate>
+<rate>Hong_Kong_to_Pacific_Coast_45ft</rate>
+<rate>Hong_Kong_20ft_Handling</rate>
+<rate>Hong_Kong_40ft_Handling</rate>
+<rate>Hong_Kong_40HC_Handling</rate>
+<rate>Hong_Kong_45ft_Handling</rate>
+<rate>Hong_Kong_to_Pacific_Coast_Accessorial</rate>
+<rate>Hong_Kong_to_Pacific_Coast_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Hong_Kong_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Hong Kong to Ohio_DC PA</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>600</processingTimeInHours>
+<rate>Hong_Kong_to_Ohio_DC_20ft</rate>
+<rate>Hong_Kong_to_Ohio_DC_40ft</rate>
+<rate>Hong_Kong_to_Ohio_DC_40HC</rate>
+<rate>Hong_Kong_to_Ohio_DC_45ft</rate>
+<rate>Hong_Kong_20ft_Handling</rate>
+<rate>Hong_Kong_40ft_Handling</rate>
+<rate>Hong_Kong_40HC_Handling</rate>
+<rate>Hong_Kong_45ft_Handling</rate>
+<rate>Hong_Kong_to_Ohio_DC_Accessorial</rate>
+<rate>Hong_Kong_to_Ohio_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Hong_Kong_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Hong Kong to Long_Beach_DC NV</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>528</processingTimeInHours>
+<rate>Hong_Kong_to_Long_Beach_DC_20ft</rate>
+<rate>Hong_Kong_to_Long_Beach_DC_40ft</rate>
+<rate>Hong_Kong_to_Long_Beach_DC_40HC</rate>
+<rate>Hong_Kong_to_Long_Beach_DC_45ft</rate>
+<rate>Hong_Kong_20ft_Handling</rate>
+<rate>Hong_Kong_40ft_Handling</rate>
+<rate>Hong_Kong_40HC_Handling</rate>
+<rate>Hong_Kong_45ft_Handling</rate>
+<rate>Hong_Kong_to_Long_Beach_DC_Accessorial</rate>
+<rate>Hong_Kong_to_Long_Beach_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Hong_Kong_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Hong Kong to Louisville_DC SC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>600</processingTimeInHours>
+<rate>Hong_Kong_to_Louisville_DC_20ft</rate>
+<rate>Hong_Kong_to_Louisville_DC_40ft</rate>
+<rate>Hong_Kong_to_Louisville_DC_40HC</rate>
+<rate>Hong_Kong_to_Louisville_DC_45ft</rate>
+<rate>Hong_Kong_20ft_Handling</rate>
+<rate>Hong_Kong_40ft_Handling</rate>
+<rate>Hong_Kong_40HC_Handling</rate>
+<rate>Hong_Kong_45ft_Handling</rate>
+<rate>Hong_Kong_to_Louisville_DC_Accessorial</rate>
+<rate>Hong_Kong_to_Louisville_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Shanghai_to_Atlantic_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Shanghai to Atlantic Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Atlantic_Coast_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Long_Beach_DC</nextStep>
+<processingTimeInHours>600</processingTimeInHours>
+<rate>Shanghai_to_Atlantic_Coast_20ft</rate>
+<rate>Shanghai_to_Atlantic_Coast_40ft</rate>
+<rate>Shanghai_to_Atlantic_Coast_40HC</rate>
+<rate>Shanghai_to_Atlantic_Coast_45ft</rate>
+<rate>Shanghai_20ft_Handling</rate>
+<rate>Shanghai_40ft_Handling</rate>
+<rate>Shanghai_40HC_Handling</rate>
+<rate>Shanghai_45ft_Handling</rate>
+<rate>Shanghai_to_Atlantic_Coast_Accessorial</rate>
+<rate>Shanghai_to_Atlantic_Coast_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Shanghai_to_Pacific_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Shanghai to Pacific Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Pacific_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Pacific_Coast_to_Ohio_DC</nextStep>
+<nextStep>Pacific_Coast_to_Louisville_DC</nextStep>
+<nextStep>Pacific_Transload_Inbound</nextStep>
+<processingTimeInHours>528</processingTimeInHours>
+<rate>Shanghai_to_Pacific_Coast_20ft</rate>
+<rate>Shanghai_to_Pacific_Coast_40ft</rate>
+<rate>Shanghai_to_Pacific_Coast_40HC</rate>
+<rate>Shanghai_to_Pacific_Coast_45ft</rate>
+<rate>Shanghai_20ft_Handling</rate>
+<rate>Shanghai_40ft_Handling</rate>
+<rate>Shanghai_40HC_Handling</rate>
+<rate>Shanghai_45ft_Handling</rate>
+<rate>Shanghai_to_Pacific_Coast_Accessorial</rate>
+<rate>Shanghai_to_Pacific_Coast_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Shanghai_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Shanghai to Ohio_DC PA</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>624</processingTimeInHours>
+<rate>Shanghai_to_Ohio_DC_20ft</rate>
+<rate>Shanghai_to_Ohio_DC_40ft</rate>
+<rate>Shanghai_to_Ohio_DC_40HC</rate>
+<rate>Shanghai_to_Ohio_DC_45ft</rate>
+<rate>Shanghai_20ft_Handling</rate>
+<rate>Shanghai_40ft_Handling</rate>
+<rate>Shanghai_40HC_Handling</rate>
+<rate>Shanghai_45ft_Handling</rate>
+<rate>Shanghai_to_Ohio_DC_Accessorial</rate>
+<rate>Shanghai_to_Ohio_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Shanghai_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Shanghai to Long_Beach_DC NV</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>552</processingTimeInHours>
+<rate>Shanghai_to_Long_Beach_DC_20ft</rate>
+<rate>Shanghai_to_Long_Beach_DC_40ft</rate>
+<rate>Shanghai_to_Long_Beach_DC_40HC</rate>
+<rate>Shanghai_to_Long_Beach_DC_45ft</rate>
+<rate>Shanghai_20ft_Handling</rate>
+<rate>Shanghai_40ft_Handling</rate>
+<rate>Shanghai_40HC_Handling</rate>
+<rate>Shanghai_45ft_Handling</rate>
+<rate>Shanghai_to_Long_Beach_DC_Accessorial</rate>
+<rate>Shanghai_to_Long_Beach_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Shanghai_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Shanghai to Louisville_DC SC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>624</processingTimeInHours>
+<rate>Shanghai_to_Louisville_DC_20ft</rate>
+<rate>Shanghai_to_Louisville_DC_40ft</rate>
+<rate>Shanghai_to_Louisville_DC_40HC</rate>
+<rate>Shanghai_to_Louisville_DC_45ft</rate>
+<rate>Shanghai_20ft_Handling</rate>
+<rate>Shanghai_40ft_Handling</rate>
+<rate>Shanghai_40HC_Handling</rate>
+<rate>Shanghai_45ft_Handling</rate>
+<rate>Shanghai_to_Louisville_DC_Accessorial</rate>
+<rate>Shanghai_to_Louisville_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="HCM_to_Atlantic_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from HCM to Atlantic Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Atlantic_Coast_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Long_Beach_DC</nextStep>
+<processingTimeInHours>624</processingTimeInHours>
+<rate>HCM_to_Atlantic_Coast_20ft</rate>
+<rate>HCM_to_Atlantic_Coast_40ft</rate>
+<rate>HCM_to_Atlantic_Coast_40HC</rate>
+<rate>HCM_to_Atlantic_Coast_45ft</rate>
+<rate>HCM_20ft_Handling</rate>
+<rate>HCM_40ft_Handling</rate>
+<rate>HCM_40HC_Handling</rate>
+<rate>HCM_45ft_Handling</rate>
+<rate>HCM_to_Atlantic_Coast_Accessorial</rate>
+<rate>HCM_to_Atlantic_Coast_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="HCM_to_Pacific_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from HCM to Pacific Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Pacific_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Pacific_Coast_to_Ohio_DC</nextStep>
+<nextStep>Pacific_Coast_to_Louisville_DC</nextStep>
+<nextStep>Pacific_Transload_Inbound</nextStep>
+<processingTimeInHours>528</processingTimeInHours>
+<rate>HCM_to_Pacific_Coast_20ft</rate>
+<rate>HCM_to_Pacific_Coast_40ft</rate>
+<rate>HCM_to_Pacific_Coast_40HC</rate>
+<rate>HCM_to_Pacific_Coast_45ft</rate>
+<rate>HCM_20ft_Handling</rate>
+<rate>HCM_40ft_Handling</rate>
+<rate>HCM_40HC_Handling</rate>
+<rate>HCM_45ft_Handling</rate>
+<rate>HCM_to_Pacific_Coast_Accessorial</rate>
+<rate>HCM_to_Pacific_Coast_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="HCM_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from HCM to Ohio_DC PA</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>648</processingTimeInHours>
+<rate>HCM_to_Ohio_DC_20ft</rate>
+<rate>HCM_to_Ohio_DC_40ft</rate>
+<rate>HCM_to_Ohio_DC_40HC</rate>
+<rate>HCM_to_Ohio_DC_45ft</rate>
+<rate>HCM_20ft_Handling</rate>
+<rate>HCM_40ft_Handling</rate>
+<rate>HCM_40HC_Handling</rate>
+<rate>HCM_45ft_Handling</rate>
+<rate>HCM_to_Ohio_DC_Accessorial</rate>
+<rate>HCM_to_Ohio_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="HCM_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from HCM to Long_Beach_DC NV</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>552</processingTimeInHours>
+<rate>HCM_to_Long_Beach_DC_20ft</rate>
+<rate>HCM_to_Long_Beach_DC_40ft</rate>
+<rate>HCM_to_Long_Beach_DC_40HC</rate>
+<rate>HCM_to_Long_Beach_DC_45ft</rate>
+<rate>HCM_20ft_Handling</rate>
+<rate>HCM_40ft_Handling</rate>
+<rate>HCM_40HC_Handling</rate>
+<rate>HCM_45ft_Handling</rate>
+<rate>HCM_to_Long_Beach_DC_Accessorial</rate>
+<rate>HCM_to_Long_Beach_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="HCM_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from HCM to Louisville_DC SC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>648</processingTimeInHours>
+<rate>HCM_to_Louisville_DC_20ft</rate>
+<rate>HCM_to_Louisville_DC_40ft</rate>
+<rate>HCM_to_Louisville_DC_40HC</rate>
+<rate>HCM_to_Louisville_DC_45ft</rate>
+<rate>HCM_20ft_Handling</rate>
+<rate>HCM_40ft_Handling</rate>
+<rate>HCM_40HC_Handling</rate>
+<rate>HCM_45ft_Handling</rate>
+<rate>HCM_to_Louisville_DC_Accessorial</rate>
+<rate>HCM_to_Louisville_DC_BOL</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Atlantic_Coast_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Drayage</Type>
+</customData>
+<narrativeDescription>Drayage Transport from Atlantic Coast to Louisville_DC SC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Louisville_DC_Drayage</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Atlantic_Coast_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Drayage</Type>
+</customData>
+<narrativeDescription>Drayage Transport from Atlantic Coast to Ohio_DC PA</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Ohio_DC_Drayage</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Pacific_Coast_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Drayage</Type>
+</customData>
+<narrativeDescription>Drayage Transport from Pacific Coast to Long_Beach_DC NV</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Long_Beach_DC_Drayage</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Pacific_Coast_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Drayage</Type>
+</customData>
+<narrativeDescription>Drayage Transport from Pacific Coast to Louisville_DC SC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>72</processingTimeInHours>
+<rate>LA_to_Louisville_DC_Drayage</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Pacific_Coast_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Drayage</Type>
+</customData>
+<narrativeDescription>Drayage Transport from Pacific Coast to Ohio_DC PA</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>72</processingTimeInHours>
+<rate>LA_to_Ohio_DC_Drayage</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Atlantic_Coast_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Drayage</Type>
+</customData>
+<narrativeDescription>Drayage Transport from Atlantic Coast to Long_Beach_DC NV</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>72</processingTimeInHours>
+<rate>NY_to_Long_Beach_DC_Drayage</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="India">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in India</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>India_Consol_NY</nextStep>
+<nextStep>India_Consol_Charleston</nextStep>
+<nextStep>India_Consol_Pacific_Coast</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Yantian">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Yantian</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Yantian_Consol</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Hong_Kong">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Hong_Kong</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Hong_Kong_Consol</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Shanghai">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Shanghai</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Shanghai_Consol</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="HCM">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in HCM</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>HCM_Consol</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="India_Consol_NY">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers at Nhava Sheva</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Mumbai_to_Atlantic_Coast</nextStep>
+<nextStep>Mumbai_to_Ohio_DC</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>India_Consol</rate>
+<operatingHours>Wednesday</operatingHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="India_Consol_Charleston">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers at Nhava Sheva</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Mumbai_to_Atlantic_Coast</nextStep>
+<nextStep>Mumbai_to_Louisville_DC</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>India_Consol</rate>
+<operatingHours>Friday</operatingHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="India_Consol_Pacific_Coast">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers at Nhava Sheva</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Mumbai_to_Long_Beach_DC</nextStep>
+<nextStep>Yantian_to_Pacific_Coast</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>India_Consol</rate>
+<operatingHours>Friday</operatingHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Yantian_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers at Yantian</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Yantian_to_Atlantic_Coast</nextStep>
+<nextStep>Yantian_to_Pacific_Coast</nextStep>
+<nextStep>Yantian_to_Ohio_DC</nextStep>
+<nextStep>Yantian_to_Long_Beach_DC</nextStep>
+<nextStep>Yantian_to_Louisville_DC</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>Yantian_Consol_Charge</rate>
+<operatingHours>Monday</operatingHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Hong_Kong_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers at Hong Kong</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Hong_Kong_to_Atlantic_Coast</nextStep>
+<nextStep>Hong_Kong_to_Pacific_Coast</nextStep>
+<nextStep>Hong_Kong_to_Ohio_DC</nextStep>
+<nextStep>Hong_Kong_to_Long_Beach_DC</nextStep>
+<nextStep>Hong_Kong_to_Louisville_DC</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>Hong_Kong_Consol_Charge</rate>
+<operatingHours>Tuesday</operatingHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Shanghai_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers at Shanghai</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Shanghai_to_Atlantic_Coast</nextStep>
+<nextStep>Shanghai_to_Pacific_Coast</nextStep>
+<nextStep>Shanghai_to_Ohio_DC</nextStep>
+<nextStep>Shanghai_to_Long_Beach_DC</nextStep>
+<nextStep>Shanghai_to_Louisville_DC</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>North_China_Consol</rate>
+<operatingHours>Wednesday</operatingHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="HCM_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers at HCM</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>HCM_to_Atlantic_Coast</nextStep>
+<nextStep>HCM_to_Pacific_Coast</nextStep>
+<nextStep>HCM_to_Ohio_DC</nextStep>
+<nextStep>HCM_to_Long_Beach_DC</nextStep>
+<nextStep>HCM_to_Louisville_DC</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>Vietnam_Consol</rate>
+<operatingHours>Saturday</operatingHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Ohio_DC_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>DC Transfer</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Ohio_DC to Louisville_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound_2</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Ohio_DC_to_Louisville_DC_53ft</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Ohio_DC_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>DC Transfer</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Ohio_DC to Long_Beach_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound_2</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Ohio_DC_to_Long_Beach_DC_53ft</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Louisville_DC_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>DC Transfer</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Louisville_DC to Long_Beach_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound_2</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Louisville_DC_to_Long_Beach_DC_53ft</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Louisville_DC_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>DC Transfer</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Louisville_DC to Ohio_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound_2</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Louisville_DC_to_Ohio_DC_53ft</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Long_Beach_DC_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>DC Transfer</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Long_Beach_DC to Ohio_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound_2</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Long_Beach_DC_to_Ohio_DC_53ft</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Long_Beach_DC_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>DC Transfer</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Long_Beach_DC to Louisville_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound_2</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Long_Beach_DC_to_Louisville_DC_53ft</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Italy">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Italy</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Italy_Consol</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Germany">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Germany</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Germany_Consol</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Portugal">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Portugal</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Portugal_Consol</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Italy_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers in Italy</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Italy_to_Atlantic_Coast</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>Italy_Consol_Fee</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Germany_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers in Germany</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Germany_to_Atlantic_Coast</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>Germany_Consol_Fee</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Portugal_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers in Portugal</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Portugal_to_Atlantic_Coast</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>Portugal_Consol_Fee</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Italy_to_Atlantic_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Italy to Atlantic Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Atlantic_Coast_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Atlantic_Transload_Inbound</nextStep>
+<processingTimeInHours>648</processingTimeInHours>
+<rate>Italy_to_Atlantic_Coast_20ft</rate>
+<rate>Italy_to_Atlantic_Coast_40ft</rate>
+<rate>Italy_to_Atlantic_Coast_40HC</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Germany_to_Atlantic_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Germany to Atlantic Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Atlantic_Coast_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Atlantic_Transload_Inbound</nextStep>
+<processingTimeInHours>696</processingTimeInHours>
+<rate>Germany_to_Atlantic_Coast_20ft</rate>
+<rate>Germany_to_Atlantic_Coast_40ft</rate>
+<rate>Germany_to_Atlantic_Coast_40HC</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Portugal_to_Atlantic_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Portugal to Atlantic Coast</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Atlantic_Coast_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Atlantic_Transload_Inbound</nextStep>
+<processingTimeInHours>744</processingTimeInHours>
+<rate>Portugal_to_Atlantic_Coast_20ft</rate>
+<rate>Portugal_to_Atlantic_Coast_40ft</rate>
+<rate>Portugal_to_Atlantic_Coast_40HC</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Atlantic_Transload_Inbound">
+<customData>
+<Step_Action>Deconsolidation</Step_Action>
+<Type>Transload Receipt</Type>
+</customData>
+<narrativeDescription>Receipt at Atlantic transload facility</narrativeDescription>
+<type>
+<deconsolidateRequirement>
+<nextStep>Atlantic_Transload_Hold</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<rate>Atlantic_Transload_Fee</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+<resourceAvailable>t53</resourceAvailable>
+</deconsolidateRequirement>
+</type>
+</step>
+<step id="Pacific_Transload_Inbound">
+<customData>
+<Step_Action>Deconsolidation</Step_Action>
+<Type>Transload Receipt</Type>
+</customData>
+<narrativeDescription>Receipt at Pacific transload facility</narrativeDescription>
+<type>
+<deconsolidateRequirement>
+<nextStep>Pacific_Transload_Hold</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<rate>Pacific_Transload_Fee</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+<resourceAvailable>c40HIGH</resourceAvailable>
+<resourceAvailable>c45HIGH</resourceAvailable>
+<resourceAvailable>t53</resourceAvailable>
+</deconsolidateRequirement>
+</type>
+</step>
+<step id="Atlantic_Transload_Hold">
+<customData>
+<Step_Action>Holding</Step_Action>
+<Type>Transload Storage</Type>
+</customData>
+<narrativeDescription>Temp Storage at Atlantic Transload Facility</narrativeDescription>
+<type>
+<holdRequirement>
+<nextStep>Atlantic_Transload_Outbound</nextStep>
+<maxHours>48</maxHours>
+</holdRequirement>
+</type>
+</step>
+<step id="Pacific_Transload_Hold">
+<customData>
+<Step_Action>Holding</Step_Action>
+<Type>Transload Storage</Type>
+</customData>
+<narrativeDescription>Temp Storage at Pacific Transload Facility</narrativeDescription>
+<type>
+<holdRequirement>
+<nextStep>Pacific_Transload_Outbound</nextStep>
+<maxHours>48</maxHours>
+</holdRequirement>
+</type>
+</step>
+<step id="Atlantic_Transload_Outbound">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Transload Depart</Type>
+</customData>
+<narrativeDescription>Departure from Atlantic transload facility</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Atlantic_to_Ohio_DC</nextStep>
+<nextStep>Atlantic_to_Louisville_DC</nextStep>
+<nextStep>Atlantic_to_Long_Beach_DC</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>t53</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Pacific_Transload_Outbound">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Transload Depart</Type>
+</customData>
+<narrativeDescription>Departure from Pacific transload facility</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Pacific_to_Ohio_DC</nextStep>
+<nextStep>Pacific_to_Louisville_DC</nextStep>
+<nextStep>Pacific_to_Long_Beach_DC</nextStep>
+<processingTimeInHours>1</processingTimeInHours>
+<resourceAvailable>t53</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Atlantic_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Transload Trucking</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Atlantic Transload Facility to Ohio_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Atlantic_to_Ohio_DC_53t</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Atlantic_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Transload Trucking</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Atlantic Transload Facility to Louisville_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Atlantic_to_Louisville_DC_53t</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Atlantic_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Transload Trucking</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Atlantic Transload Facility to Long_Beach_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>48</processingTimeInHours>
+<rate>Atlantic_to_Long_Beach_DC_53t</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Pacific_to_Ohio_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Transload Trucking</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Pacific Transload Facility to Ohio_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Ohio_DC_Inbound</nextStep>
+<processingTimeInHours>48</processingTimeInHours>
+<rate>Pacific_to_Ohio_DC_53t</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Pacific_to_Louisville_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Transload Trucking</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Pacific Transload Facility to Louisville_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Louisville_DC_Inbound</nextStep>
+<processingTimeInHours>48</processingTimeInHours>
+<rate>Pacific_to_Louisville_DC_53t</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Pacific_to_Long_Beach_DC">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Transload Trucking</Type>
+</customData>
+<narrativeDescription>Truckload Transport from Pacific Transload Facility to Long_Beach_DC</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Long_Beach_DC_Inbound</nextStep>
+<processingTimeInHours>24</processingTimeInHours>
+<rate>Pacific_to_Long_Beach_DC_53t</rate>
+<resourceAvailable>t53</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Thailand">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Thailand</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Thailand_to_Kaoshiung</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Indonesia">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Indonesia</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Indonesia_Consol</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Bangladesh">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Bangladesh</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Bangladesh_to_Kaoshiung</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Malaysia">
+<customData>
+<Step_Action>Starting Point</Step_Action>
+<Type>Starting Point</Type>
+</customData>
+<narrativeDescription>Receive Cargo in Malaysia</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Malaysia_to_Kaoshiung</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Indonesia_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers in Indonesia</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Indonesia_to_Kaoshiung</nextStep>
+<nextStep>Indonesia_to_Oakland</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Indonesia_to_Oakland">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Indonesia to Oakland</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Pacific_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Pacific_Coast_to_Louisville_DC</nextStep>
+<nextStep>Pacific_Coast_to_Ohio_DC</nextStep>
+<nextStep>Pacific_Transload_Inbound</nextStep>
+<processingTimeInHours>696</processingTimeInHours>
+<rate>Indonesia_to_Pacific_Coast_20ft</rate>
+<rate>Indonesia_to_Pacific_Coast_40ft</rate>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Thailand_to_Kaoshiung">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Thailand to Kaoshiung</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Kaoshiung_Hold</nextStep>
+<processingTimeInHours>144</processingTimeInHours>
+</transportRequirement>
+</type>
+</step>
+<step id="Indonesia_to_Kaoshiung">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Indonesia to Kaoshiung</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Kaoshiung_Hold</nextStep>
+<processingTimeInHours>192</processingTimeInHours>
+<resourceAvailable>c20</resourceAvailable>
+<resourceAvailable>c40</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<step id="Bangladesh_to_Kaoshiung">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Bangladesh to Kaoshiung</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Kaoshiung_Hold</nextStep>
+<processingTimeInHours>360</processingTimeInHours>
+</transportRequirement>
+</type>
+</step>
+<step id="Malaysia_to_Kaoshiung">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Malaysia to Kaoshiung</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Kaoshiung_Hold</nextStep>
+<processingTimeInHours>264</processingTimeInHours>
+</transportRequirement>
+</type>
+</step>
+<step id="Kaoshiung_Hold">
+<customData>
+<Step_Action>Holding</Step_Action>
+<Type>Transload Storage</Type>
+</customData>
+<narrativeDescription>Temp storage at Kaoshiung Kaoshiung facility</narrativeDescription>
+<type>
+<holdRequirement>
+<nextStep>Kaoshiung_Consol</nextStep>
+<maxHours>240</maxHours>
+</holdRequirement>
+</type>
+</step>
+<step id="Kaoshiung_Consol">
+<customData>
+<Step_Action>Consolidation</Step_Action>
+<Type>Origin Consol</Type>
+</customData>
+<narrativeDescription>Load Cargo in to containers at Kaoshiung Kaoshiung facility</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Kaoshiung_to_Pacific_Coast</nextStep>
+<processingTimeInHours>8</processingTimeInHours>
+<rate>Kaoshiung_Consol_Fee</rate>
+<resourceAvailable>c20</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Kaoshiung_to_Pacific_Coast">
+<customData>
+<Step_Action>Transport</Step_Action>
+<Type>Ocean Move</Type>
+</customData>
+<narrativeDescription>Ocean Transport from Kaoshiung to Oakland</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Pacific_Coast_to_Long_Beach_DC</nextStep>
+<nextStep>Pacific_Coast_to_Louisville_DC</nextStep>
+<nextStep>Pacific_Coast_to_Ohio_DC</nextStep>
+<nextStep>Pacific_Transload_Inbound</nextStep>
+<processingTimeInHours>432</processingTimeInHours>
+<rate>Kaoshiung_Ocean_Fee_20ft</rate>
+<resourceAvailable>c20</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<rate id="Nhava_Sheva_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1612</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Pacific_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1904</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Ohio_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2060</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Long_Beach_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2464</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Louisville_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1944</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1776</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Pacific_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1088</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Ohio_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2176</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Long_Beach_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2624.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Louisville_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2736</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1776</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Pacific_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1088</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Ohio_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2176</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Long_Beach_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2624.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Louisville_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2736</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1776</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Pacific_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1088</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Ohio_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2176</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Long_Beach_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2624.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Louisville_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2736</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1936</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Pacific_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2240</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Ohio_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2384</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Long_Beach_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2816</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Louisville_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2272</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1904</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Pacific_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1216</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Ohio_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2304</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Long_Beach_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2752.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Louisville_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2864</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1840</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Pacific_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1472</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Ohio_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2288</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Long_Beach_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1856</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Louisville_DC_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>2176</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2012</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Pacific_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2380</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Ohio_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2572</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Long_Beach_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3076</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Louisville_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2428</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2240</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Pacific_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>1360</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Ohio_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2720</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Long_Beach_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3356.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Louisville_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3420</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2240</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Pacific_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>1360</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Ohio_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2720</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Long_Beach_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3356.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Louisville_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3420</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2240</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Pacific_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>1360</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Ohio_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2720</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Long_Beach_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3356.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Louisville_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3420</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2420</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Pacific_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2800</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Ohio_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2980</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Long_Beach_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3520</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Louisville_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2836</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2400</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Pacific_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>1520</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Ohio_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2880</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Long_Beach_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3516.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Louisville_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>3580</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2300</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Pacific_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>1840</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Ohio_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2860</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Long_Beach_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2320</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Louisville_DC_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2716</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2264</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Pacific_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2680</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Ohio_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2896</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Long_Beach_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3464</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Louisville_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2732</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2520</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Pacific_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1532</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Ohio_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3060</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Long_Beach_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3812.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Louisville_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3848</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2520</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Pacific_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1532</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Ohio_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3060</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Long_Beach_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3812.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Louisville_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3848</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2520</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Pacific_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1532</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Ohio_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3060</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Long_Beach_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3812.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Louisville_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3848</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2724</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Pacific_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3152</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Ohio_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3356</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Long_Beach_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3960</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Louisville_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3192</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2700</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Pacific_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1712</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Ohio_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3240</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Long_Beach_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3992.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Louisville_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4028</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2588</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Pacific_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2072</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Ohio_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3220</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Long_Beach_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2612</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Louisville_DC_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3056</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Atlantic_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2548</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Pacific_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3016</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Ohio_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3260</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Long_Beach_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3896</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_to_Louisville_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3076</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Atlantic_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2836</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Pacific_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1724</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Ohio_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3444</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Long_Beach_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4328.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Louisville_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4328</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Atlantic_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2836</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Pacific_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1724</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Ohio_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3444</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Long_Beach_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4328.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Louisville_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4328</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Atlantic_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2836</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Pacific_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1724</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Ohio_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3444</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Long_Beach_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4328.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Louisville_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4328</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Atlantic_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3064</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Pacific_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3548</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Ohio_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3776</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Long_Beach_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4460</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_to_Louisville_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3592</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Atlantic_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3040</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Pacific_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1928</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Ohio_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3648</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Long_Beach_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4532.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Louisville_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>4532</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Atlantic_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2912</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Pacific_Coast_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2332</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Ohio_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3624</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Long_Beach_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2940</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_to_Louisville_DC_45ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>3440</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_20ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>85.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_20ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>120.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_20ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>220</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_20ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>91.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_20ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>103.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_20ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>66.4</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_20ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>68</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_40ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>138.4</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_40ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>232</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_40ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>293.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_40ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>136</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_40ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>147.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_40ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>100</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_40ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>88</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_40HC_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>138.4</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_40HC_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>232</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_40HC_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>293.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_40HC_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>136</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_40HC_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>147.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_40HC_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>100</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_40HC_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>88</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Nhava_Sheva_45ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>164.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_45ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>288.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_45ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>372</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_45ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>182.4</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Mundra_45ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>213.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_45ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>120</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Tuticorin_45ft_Handling">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c45HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>107.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Atlantic_Coast_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>19.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Pacific_Coast_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>9.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Ohio_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>12.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Long_Beach_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>9.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Louisville_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>12.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Atlantic_Coast_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>19.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Pacific_Coast_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>9.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Ohio_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>12.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Long_Beach_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>9.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Louisville_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>12.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Atlantic_Coast_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>19.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Pacific_Coast_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>9.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Ohio_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>12.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Long_Beach_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>9.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Louisville_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>12.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Atlantic_Coast_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>19.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Pacific_Coast_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>9.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Ohio_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>12.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Long_Beach_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>9.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Louisville_DC_Accessorial">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>12.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Atlantic_Coast_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>52</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Pacific_Coast_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>52</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Ohio_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>52</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Long_Beach_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>52</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_to_Louisville_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>52</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Atlantic_Coast_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>41.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Pacific_Coast_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>41.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Ohio_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>41.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Long_Beach_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>41.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_to_Louisville_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>41.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Atlantic_Coast_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>45.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Pacific_Coast_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>45.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Ohio_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>45.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Long_Beach_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>45.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Shanghai_to_Louisville_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>45.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Atlantic_Coast_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>21.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Pacific_Coast_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>21.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Ohio_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>21.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Long_Beach_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>21.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="HCM_to_Louisville_DC_BOL">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>21.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="North_China_Consol">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>2.4</rateCharge>
+<minimumCharge>75</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Yantian_Consol_Charge">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>0.8</rateCharge>
+<minimumCharge>35</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Hong_Kong_Consol_Charge">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>0.8</rateCharge>
+<minimumCharge>35</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="India_Consol">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>1.8</rateCharge>
+<minimumCharge>75</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Vietnam_Consol">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>1.4</rateCharge>
+<minimumCharge>50</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Ohio_DC_Drayage">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>840.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Long_Beach_DC_Drayage">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>909.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Louisville_DC_Drayage">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>535.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="LA_to_Ohio_DC_Drayage">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>4403.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="LA_to_Louisville_DC_Drayage">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>3925.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="NY_to_Long_Beach_DC_Drayage">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</rateUOM>
+<rateCharge>2779.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Ohio_DC_to_Louisville_DC_53ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>735.2</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Ohio_DC_to_Long_Beach_DC_53ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>2932.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Long_Beach_DC_to_Louisville_DC_53ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>3840</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Long_Beach_DC_to_Ohio_DC_53ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>2720</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Louisville_DC_to_Ohio_DC_53ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>1628.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Louisville_DC_to_Long_Beach_DC_53ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>3680</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Italy_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1400</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Italy_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>1640</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Italy_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1640</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Germany_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1240</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Germany_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>1440</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Germany_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>1440</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Portugal_to_Atlantic_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1720</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Portugal_to_Atlantic_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2004</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Portugal_to_Atlantic_Coast_40HC">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40HIGH</unitOrResource>
+</rateUOM>
+<rateCharge>2004</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Atlantic_to_Ohio_DC_53t">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>540</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Atlantic_to_Louisville_DC_53t">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>1089.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Atlantic_to_Long_Beach_DC_53t">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>4210.4</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Pacific_to_Ohio_DC_53t">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>4272.8</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Pacific_to_Louisville_DC_53t">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>4021.6</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Pacific_to_Long_Beach_DC_53t">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>t53</unitOrResource>
+</rateUOM>
+<rateCharge>1114.4</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Atlantic_Transload_Fee">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>Case</unitOrResource>
+</rateUOM>
+<rateCharge>1.16</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Pacific_Transload_Fee">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>Case</unitOrResource>
+</rateUOM>
+<rateCharge>1.04</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Italy_Consol_Fee">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>2.8</rateCharge>
+<minimumCharge>52.5</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Germany_Consol_Fee">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>2.8</rateCharge>
+<minimumCharge>52.5</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Portugal_Consol_Fee">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>2.8</rateCharge>
+<minimumCharge>52.5</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Kaoshiung_Consol_Fee">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</rateUOM>
+<rateCharge>2.8</rateCharge>
+<minimumCharge>12</minimumCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Kaoshiung_Ocean_Fee_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1048</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Indonesia_to_Pacific_Coast_20ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c20</unitOrResource>
+</rateUOM>
+<rateCharge>1268</rateCharge>
+<currency>USD</currency>
+</rate>
+<rate id="Indonesia_to_Pacific_Coast_40ft">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>HBOL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<maxBreakUOMValue>99</maxBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>c40</unitOrResource>
+</rateUOM>
+<rateCharge>2800</rateCharge>
+<currency>USD</currency>
+</rate>
+<operatingTime id="Monday">
+<openTimeRange>
+<weekDayHours>
+<dayOfWeek>1</dayOfWeek>
+<startUTC>06:00:00</startUTC>
+<endUTC>23:00:00</endUTC>
+</weekDayHours>
+</openTimeRange>
+</operatingTime>
+<operatingTime id="Tuesday">
+<openTimeRange>
+<weekDayHours>
+<dayOfWeek>2</dayOfWeek>
+<startUTC>06:00:00</startUTC>
+<endUTC>23:00:00</endUTC>
+</weekDayHours>
+</openTimeRange>
+</operatingTime>
+<operatingTime id="Wednesday">
+<openTimeRange>
+<weekDayHours>
+<dayOfWeek>3</dayOfWeek>
+<startUTC>06:00:00</startUTC>
+<endUTC>23:00:00</endUTC>
+</weekDayHours>
+</openTimeRange>
+</operatingTime>
+<operatingTime id="Thursday">
+<openTimeRange>
+<weekDayHours>
+<dayOfWeek>4</dayOfWeek>
+<startUTC>06:00:00</startUTC>
+<endUTC>23:00:00</endUTC>
+</weekDayHours>
+</openTimeRange>
+</operatingTime>
+<operatingTime id="Friday">
+<openTimeRange>
+<weekDayHours>
+<dayOfWeek>5</dayOfWeek>
+<startUTC>06:00:00</startUTC>
+<endUTC>23:00:00</endUTC>
+</weekDayHours>
+</openTimeRange>
+</operatingTime>
+<operatingTime id="Saturday">
+<openTimeRange>
+<weekDayHours>
+<dayOfWeek>6</dayOfWeek>
+<startUTC>06:00:00</startUTC>
+<endUTC>23:00:00</endUTC>
+</weekDayHours>
+</openTimeRange>
+</operatingTime>
+<unitDimension>
+<base>
+<dimension>volume</dimension>
+<scaledUnit id="CBM">
+<scale>1</scale>
+</scaledUnit>
+</base>
+</unitDimension>
+<unitDimension>
+<base>
+<dimension>currency</dimension>
+<scaledUnit id="USD">
+<scale>1</scale>
+</scaledUnit>
+</base>
+</unitDimension>
+<unitDimension>
+<base>
+<dimension>load</dimension>
+<scaledUnit id="HBOL">
+<scale>1</scale>
+</scaledUnit>
+</base>
+</unitDimension>
+<unitDimension>
+<custom id="Case_Count">
+<scaledUnit id="Case">
+<scale>1</scale>
+</scaledUnit>
+</custom>
+</unitDimension>
+<resource id="c20">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>28.1</maximumValue>
+</capacities>
+</resource>
+<resource id="c40">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>58.1</maximumValue>
+</capacities>
+</resource>
+<resource id="c40HIGH">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>68.1</maximumValue>
+</capacities>
+</resource>
+<resource id="c45HIGH">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>78.1</maximumValue>
+</capacities>
+</resource>
+<resource id="t53">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>CBM</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>95</maximumValue>
+</capacities>
+</resource>
+</supplyChain>
+<requirements><requirement id="PO_1">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.04</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>4</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-07-27T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-07-27T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-03T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-02T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_2">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.05</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>2</quantity>
+<source>India</source>
+<destination>Long_Beach_DC</destination>
+<earliestDepartTime>2013-07-27T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-07-27T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-03T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-02T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_3">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.04</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>3</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-07-27T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-07-27T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-03T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-02T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_4">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0424390243902439</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>41</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-01T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-01T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-08T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-07T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_5">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0675757575757576</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>33</quantity>
+<source>India</source>
+<destination>Ohio_DC</destination>
+<earliestDepartTime>2013-08-05T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-05T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-12T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-11T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_6">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0664285714285714</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>28</quantity>
+<source>India</source>
+<destination>Ohio_DC</destination>
+<earliestDepartTime>2013-08-05T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-05T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-12T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-11T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_7">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.06</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>4</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-02T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-02T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-09T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-08T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_8">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.06</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>2</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-02T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-02T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-09T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-08T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_9">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0374666666666667</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>75</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_10">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0378571428571429</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>42</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_11">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.036875</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>32</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_12">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.013</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>20</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_13">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0516666666666667</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>6</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_14">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.024</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>5</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_15">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.064</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>5</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_16">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0691428571428571</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>105</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_17">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0571111111111111</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>45</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_18">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0349367088607595</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>158</quantity>
+<source>India</source>
+<destination>Ohio_DC</destination>
+<earliestDepartTime>2013-08-19T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-19T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-26T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-25T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_19">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.016</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>5</quantity>
+<source>India</source>
+<destination>Louisville_DC</destination>
+<earliestDepartTime>2013-08-08T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-08T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-15T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-14T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_20">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.042962962962963</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>27</quantity>
+<source>India</source>
+<destination>Long_Beach_DC</destination>
+<earliestDepartTime>2013-08-01T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-01T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-08T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-07T17:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="PO_21">
+<minDivision>
+<unit>CBM</unit>
+<quantityPerDivision>0.0672727272727273</quantityPerDivision>
+</minDivision>
+<minDivision>
+<unit>Case</unit>
+<quantityPerDivision>1</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Cartons</referenceUnitName>
+<quantity>22</quantity>
+<source>India</source>
+<destination>Long_Beach_DC</destination>
+<earliestDepartTime>2013-08-05T08:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-08-05T08:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-08-12T08:00:00</latestDepartTime>
+<latestDeliveryTime>2013-10-11T17:00:00</latestDeliveryTime>
+</requirement>
+</requirements>
+</instance>

@@ -1,0 +1,4198 @@
+<OptimizationInstance struct="OptimizationInstance" ttype="STRUCT">
+	<id ttype="STRING">FAil_Hazmat_121834842</id>
+	<supplyChain struct="SupplyChain" ttype="STRUCT">
+		<id ttype="STRING">Network</id>
+		<name ttype="STRING">supplyChainName12345</name>
+		<steps ttype="MAP">
+			<item>
+				<key ttype="STRING">1001539__1001552__121834677__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__1001552__121834677__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__1001552__121834677__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<ratedCommodity ttype="STRING">test</ratedCommodity>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":10.0,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121834677","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">6236__END_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">6236__END_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">End at 6236 </narrativeDescription>
+					<type ttype="I32">5</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_6236_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">16665__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">16665__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 16665__25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">16665__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_16665_Operating_hour</item>
+					</operatingHours>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">16665__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">16665__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 16665 25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1001539__1001565__121039804__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__95826__121039792__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001552__121834677__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__95826__121834672__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__10020541__121039801__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__96020__121834674__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__96020__121039786__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001552__121039776__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__10020541__121834669__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001565__121834668__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1073741825__1073741823__121807327__SC______MULTI_STOP__1003</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741825__1073741823__121807327__SC______MULTI_STOP__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741825__1073741823__121807327__SC______MULTI_STOP__1003</id>
+					<narrativeDescription ttype="STRING">1073741825__1073741823__121807327__SC______MULTI_STOP__1003__L5GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<ratedCommodity ttype="STRING">Test</ratedCommodity>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+						<item ttype="STRING">1073741825__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1073741823__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_11_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":5.0,"includeInNetFreight":null,"equipmentType":"_11","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[],"rateId":"121807327","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">1073741825__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">1073741823__HOLD_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1433142000</rateValidityStart>
+					<rateValidityEnd ttype="I64">1609401600</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__10020541__121834669__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__10020541__121834669__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__10020541__121834669__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<ratedCommodity ttype="STRING">test</ratedCommodity>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":1.0,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121834669","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">6237__END_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">6237__END_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">End at 6237 </narrativeDescription>
+					<type ttype="I32">5</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_6237_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">6240__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">6240__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 6240 </narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1001539__1001565__121039804__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__95826__121039792__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001552__121834677__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__95826__121834672__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__10020541__121039801__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__96020__121834674__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__96020__121039786__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001552__121039776__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__10020541__121834669__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001565__121834668__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1073741825__1073741823__121807327__SC______MULTI_STOP__1003</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741825__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741825__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1073741825__25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">2</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1073741825_Operating_hour</item>
+					</operatingHours>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741825__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741825__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1073741825__25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1073741825__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1073741825_Operating_hour</item>
+					</operatingHours>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">6245__END_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">6245__END_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">End at 6245 </narrativeDescription>
+					<type ttype="I32">5</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_6245_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__10020541__121039801__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__10020541__121039801__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__10020541__121039801__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":0.016826518593303044,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121039801","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">6244__END_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">6244__END_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">End at 6244 </narrativeDescription>
+					<type ttype="I32">5</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_6244_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__95826__121039792__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__95826__121039792__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__95826__121039792__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":0.16826518593303044,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121039792","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">16665__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">16665__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 16665__25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">2</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_16665_Operating_hour</item>
+					</operatingHours>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741823__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741823__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1073741823 25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1001539__1001565__121039804__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__95826__121039792__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001552__121834677__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__95826__121834672__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1073741823__CONSOLIDATE_REQUIREMENT_XDOC</item>
+						<item ttype="STRING">1001539__10020541__121039801__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__96020__121834674__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__96020__121039786__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001552__121039776__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__10020541__121834669__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001565__121834668__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1073741825__1073741823__121807327__SC______MULTI_STOP__1003</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741823__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741823__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1073741823__25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">2</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1073741823_Operating_hour</item>
+					</operatingHours>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741825__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741825__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 1073741825</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1073741825__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1073741825_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741823__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741823__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 1073741823</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1073741823__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1073741823_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__96020__121834674__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__96020__121834674__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__96020__121834674__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<ratedCommodity ttype="STRING">test</ratedCommodity>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":10.0,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121834674","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__96020__121039786__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__96020__121039786__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__96020__121039786__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":0.16826518593303044,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121039786","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__1001552__121039776__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__1001552__121039776__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__1001552__121039776__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":0.16826518593303044,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121039776","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__1001565__121039804__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__1001565__121039804__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__1001565__121039804__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":0.016826518593303044,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121039804","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">6240__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">6240__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 6240</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_6240_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">6238__END_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">6238__END_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">End at 6238 </narrativeDescription>
+					<type ttype="I32">5</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_6238_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741823__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741823__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1073741823__25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1073741823__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1073741823_Operating_hour</item>
+					</operatingHours>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__95826__121834672__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__95826__121834672__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__95826__121834672__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<ratedCommodity ttype="STRING">test</ratedCommodity>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":10.0,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121834672","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1073741825__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1073741825__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1073741825 25RT,22GP,42GP,L5GP,00A0,45RN,25RN</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1001539__1001565__121039804__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__95826__121039792__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001552__121834677__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__95826__121834672__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__10020541__121039801__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__96020__121834674__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__96020__121039786__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001552__121039776__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__10020541__121834669__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1001539__1001565__121834668__SC______MULTI_STOP__36280</item>
+						<item ttype="STRING">1073741825__1073741823__121807327__SC______MULTI_STOP__1003</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">16665__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">16665__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 16665</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">16665__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_16665_Operating_hour</item>
+					</operatingHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001539__1001565__121834668__SC______MULTI_STOP__36280</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001539__1001565__121834668__SC______MULTI_STOP__36280</id>
+					<narrativeDescription ttype="STRING">1001539__1001565__121834668__SC______MULTI_STOP__36280__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<ratedCommodity ttype="STRING">test</ratedCommodity>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">6244__END_REQUIREMENT</item>
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+						<item ttype="STRING">6236__END_REQUIREMENT</item>
+						<item ttype="STRING">6237__END_REQUIREMENT</item>
+						<item ttype="STRING">6238__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">36280_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":1.0,"includeInNetFreight":null,"equipmentType":"_10","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.016826518593303044,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"121834668","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<origins ttype="SET">
+						<item ttype="STRING">6240__HOLD_REQUIREMENT</item>
+					</origins>
+					<destinations ttype="SET">
+						<item ttype="STRING">6245__END_REQUIREMENT</item>
+					</destinations>
+					<rateValidityStart ttype="I64">1316156400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2546924400</rateValidityEnd>
+				</value>
+			</item>
+		</steps>
+		<operatingTimes ttype="MAP">
+			<item>
+				<key ttype="STRING">RECEIVING_1073741823_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1073741823_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_6238_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_6238_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_16665_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_16665_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_6237_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_6237_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_6245_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_6245_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_6236_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_6236_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">08:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">07:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">08:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">07:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">08:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">07:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">08:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">07:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">08:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">07:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">08:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">07:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">08:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">07:59:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1073741825_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1073741825_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_6240_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_6240_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_6244_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_6244_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_1073741825_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1073741825_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1073741823_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1073741823_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">05:00:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">04:59:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_16665_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_16665_Operating_hour</id>
+					<openTimeRange ttype="LIST">
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">0</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">1</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">2</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">3</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">4</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">5</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">18:30:00</startTime>
+								<endTime ttype="STRING">23:59:59</endTime>
+							</weekDayHours>
+						</item>
+						<item struct="TimeRange" ttype="STRUCT">
+							<weekDayHours struct="WeekDayHours" ttype="STRUCT">
+								<dayOfWeek ttype="LIST">
+									<item ttype="I32">6</item>
+								</dayOfWeek>
+								<startTime ttype="STRING">00:00:00</startTime>
+								<endTime ttype="STRING">18:29:59</endTime>
+							</weekDayHours>
+						</item>
+					</openTimeRange>
+				</value>
+			</item>
+		</operatingTimes>
+		<unitDimensions ttype="MAP">
+			<item>
+				<key ttype="STRING">PALLET</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">PALLET</id>
+					<dimension ttype="I32">7</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">/pallet</id>
+							<name ttype="STRING">169</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">VOLUME</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">VOLUME</id>
+					<dimension ttype="I32">4</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">volInCBM</id>
+							<name ttype="STRING">81</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">CURRENCY</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">CURRENCY</id>
+					<dimension ttype="I32">0</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">Dollar</id>
+							<name ttype="STRING">840</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">WEIGHT</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">WEIGHT</id>
+					<dimension ttype="I32">5</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">wtInKG</id>
+							<name ttype="STRING">33</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">CUSTOM</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">CUSTOM</id>
+					<dimension ttype="I32">6</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">NumberOfTOS</id>
+							<name ttype="STRING">100001</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+		</unitDimensions>
+		<resources ttype="MAP">
+			<item>
+				<key ttype="STRING">37105_9_S</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">37105_9_S</id>
+					<capacities ttype="LIST"/>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"37105_9_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">_9</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">_9</id>
+					<capacities ttype="LIST"/>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"_9"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">36280_10_SC</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">36280_10_SC</id>
+					<capacities ttype="LIST"/>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"36280_10_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">_11</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">_11</id>
+					<capacities ttype="LIST"/>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"_11"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">_10</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">_10</id>
+					<capacities ttype="LIST"/>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"_10"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">32314_9_SC</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">32314_9_SC</id>
+					<capacities ttype="LIST"/>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"32314_9_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1003_11_SC</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">1003_11_SC</id>
+					<capacities ttype="LIST"/>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_11_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+				</value>
+			</item>
+		</resources>
+		<globalScript ttype="STRING">distanceMatrix = {"1073741825":{"1073741823":26.2,"16183":459.2,"16182":459.2,"16181":459.2,"660333":705.2,"660332":987.97},"1073741824":{"16183":459.2,"16182":459.2,"16181":459.2,"660333":699.58,"660332":982.39},"1073741823":{"1073741824":30.5,"16183":459.2,"16182":459.2,"16181":459.2,"660333":722.82,"660332":1004.08},"6240":{"6238":439.24,"6237":282.7,"6239":362.82,"6241":206.24,"6242":304.62,"6243":33.18,"6244":171.92,"6245":447.98,"6236":353.27,"6246":372.53,"6247":241.65},"6241":{"6238":275.45,"6237":95.65,"6239":196.92,"6240":206.24,"6242":113.3,"6243":182.08,"6244":89.69,"6245":258.1,"6236":172.1,"6246":221.2,"6247":65.55},"6242":{"6238":166.42,"6237":22.29,"6239":92.13,"6240":304.62,"6241":113.3,"6243":285.83,"6244":200.37,"6245":145.94,"6236":60.2,"6246":123.57,"6247":63.27},"6243":{"6238":428.08,"6237":264.4,"6239":350.23,"6240":33.18,"6241":182.08,"6242":285.83,"6244":140.06,"6245":430.87,"6236":337.43,"6246":362.83,"6247":223.88},"6244":{"6238":364.72,"6237":184.47,"6239":286.48,"6240":171.92,"6241":89.69,"6242":200.37,"6243":140.06,"6245":341.66,"6236":260.21,"6246":310.78,"6247":154.74},"6245":{"6238":86.42,"6237":166.66,"6239":102.4,"6240":447.98,"6241":258.1,"6242":145.94,"6243":430.87,"6244":341.66,"6236":95.68,"6246":121.46,"6247":207.0},"6236":{"6238":106.58,"6237":76.61,"6239":39.48,"6240":353.27,"6241":172.1,"6242":60.2,"6243":337.43,"6244":260.21,"6245":95.68,"6246":74.76,"6247":114.36},"6246":{"6238":68.58,"6237":130.77,"6239":35.32,"6240":372.53,"6241":221.2,"6242":123.57,"6243":362.83,"6244":310.78,"6245":121.46,"6236":74.76,"6247":156.15},"6247":{"6238":213.08,"6237":41.11,"6239":133.85,"6240":241.65,"6241":65.55,"6242":63.27,"6243":223.88,"6244":154.74,"6245":207.0,"6236":114.36,"6246":156.15},"6238":{"6237":180.29,"6239":79.3,"6240":439.24,"6241":275.45,"6242":166.42,"6243":428.08,"6244":364.72,"6245":86.42,"6236":106.58,"6246":68.58,"6247":213.08},"6237":{"6238":180.29,"6239":102.8,"6240":282.7,"6241":95.65,"6242":22.29,"6243":264.4,"6244":184.47,"6245":166.66,"6236":76.61,"6246":130.77,"6247":41.11},"6239":{"6238":79.3,"6237":102.8,"6240":362.82,"6241":196.92,"6242":92.13,"6243":350.23,"6244":286.48,"6245":102.4,"6236":39.48,"6246":35.32,"6247":133.85},"16183":{"1073741825":461.1,"1073741824":461.1,"1073741823":461.1},"16182":{"1073741825":461.1,"1073741824":461.1,"1073741823":461.1},"16181":{"1073741825":461.1,"1073741824":461.1,"1073741823":461.1},"660333":{"1073741825":705.2,"1073741824":699.58,"1073741823":722.82},"660332":{"1073741825":987.97,"1073741824":982.39,"1073741823":1004.08}}
+transitTimeMatrix = {"1073741825":{"1073741823":1860,"16183":29940,"16182":29940,"16181":29940,"660333":50760,"660332":71100},"1073741824":{"16183":29940,"16182":29940,"16181":29940,"660333":50340,"660332":70680},"1073741823":{"1073741824":2160,"16183":29940,"16182":29940,"16181":29940,"660333":52020,"660332":72240},"6240":{"6238":31620,"6237":20340,"6239":26100,"6241":14820,"6242":21900,"6243":2340,"6244":12360,"6245":32220,"6236":25380,"6246":26820,"6247":17340},"6241":{"6238":19800,"6237":6840,"6239":14160,"6240":14820,"6242":8100,"6243":13080,"6244":6420,"6245":18540,"6236":12360,"6246":15900,"6247":4680},"6242":{"6238":11940,"6237":1560,"6239":6600,"6240":21900,"6241":8100,"6243":20520,"6244":14400,"6245":10500,"6236":4320,"6246":8880,"6247":4500},"6243":{"6238":30780,"6237":19020,"6239":25200,"6240":2340,"6241":13080,"6242":20520,"6244":10080,"6245":31020,"6236":24240,"6246":26100,"6247":16080},"6244":{"6238":26220,"6237":13260,"6239":20580,"6240":12360,"6241":6420,"6242":14400,"6243":10080,"6245":24540,"6236":18720,"6246":22320,"6247":11100},"6245":{"6238":6180,"6237":11940,"6239":7320,"6240":32220,"6241":18540,"6242":10500,"6243":31020,"6244":24540,"6236":6840,"6246":8700,"6247":14880},"6236":{"6238":7620,"6237":5460,"6239":2820,"6240":25380,"6241":12360,"6242":4320,"6243":24240,"6244":18720,"6245":6840,"6246":5340,"6247":8220},"6246":{"6238":4920,"6237":9360,"6239":2520,"6240":26820,"6241":15900,"6242":8880,"6243":26100,"6244":22320,"6245":8700,"6236":5340,"6247":11220},"6247":{"6238":15300,"6237":2940,"6239":9600,"6240":17340,"6241":4680,"6242":4500,"6243":16080,"6244":11100,"6245":14880,"6236":8220,"6246":11220},"6238":{"6237":12960,"6239":5700,"6240":31620,"6241":19800,"6242":11940,"6243":30780,"6244":26220,"6245":6180,"6236":7620,"6246":4920,"6247":15300},"6237":{"6238":12960,"6239":7380,"6240":20340,"6241":6840,"6242":1560,"6243":19020,"6244":13260,"6245":11940,"6236":5460,"6246":9360,"6247":2940},"6239":{"6238":5700,"6237":7380,"6240":26100,"6241":14160,"6242":6600,"6243":25200,"6244":20580,"6245":7320,"6236":2820,"6246":2520,"6247":9600},"16183":{"1073741825":30000,"1073741824":30000,"1073741823":30000},"16182":{"1073741825":30000,"1073741824":30000,"1073741823":30000},"16181":{"1073741825":30000,"1073741824":30000,"1073741823":30000},"660333":{"1073741825":50760,"1073741824":50340,"1073741823":52020},"660332":{"1073741825":71100,"1073741824":70680,"1073741823":72240}}
+var rate = function(rateInputObj) {&#13;
+&#13;
+	this.evaluateByObj = function(dimObj) {&#13;
+		result = this.evaluate(dimObj);&#13;
+		if (!result || result.total &lt;= 0 || !rateInputObj.baseRate.total&#13;
+				|| rateInputObj.baseRate.total &lt;= 0) {&#13;
+			// warn(rateInputObj.rateId+':FinalTotalAmt='+result.total);&#13;
+			// warn(rateInputObj.rateId+':Dimensions: '+JSON.stringify(dimObj));&#13;
+			return 9999999;&#13;
+		}&#13;
+		return parseFloat(result.total);&#13;
+	};&#13;
+&#13;
+	this.evaluate = function(dimObj) {&#13;
+		this.evaluateBaseRate(dimObj);&#13;
+		this.evaluateAccessorials(dimObj);&#13;
+		this.evaluateStopOff(dimObj.stopOffs);&#13;
+		totalAmt = 0;&#13;
+		baseRateBasis = rateInputObj.baseRate.basis;&#13;
+		supportedBasis = rateInputObj.baseRate.supportedBasis;&#13;
+		if (rateInputObj.baseRate.total) {&#13;
+			totalAmt = rateInputObj.baseRate.total;&#13;
+		}&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				if (rateInputObj.accessorials[i]&#13;
+						&amp;&amp; rateInputObj.accessorials[i].total&#13;
+						&amp;&amp; (baseRateBasis || rateInputObj.accessorials[i].supportedBasis)) {&#13;
+					totalAmt = totalAmt + rateInputObj.accessorials[i].total;&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+		if (rateInputObj.stopBands &amp;&amp; rateInputObj.stopOffTotal) {&#13;
+			totalAmt = totalAmt + rateInputObj.stopOffTotal;&#13;
+		}&#13;
+		rateInputObj.total = parseFloat(totalAmt);&#13;
+		return rateInputObj;&#13;
+	};&#13;
+&#13;
+	this.evaluateBaseRate = function(dimObj) {&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		calculateCW = rateInputObj.calculateCW;&#13;
+		supportedBasis = false;&#13;
+		totalAmt = 0;&#13;
+&#13;
+		if (inputObj.basis === '/container') {&#13;
+			supportedBasis = true;&#13;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {&#13;
+				totalAmt = inputObj.amount&#13;
+						* dimObj.dims[inputObj.equipmentType];&#13;
+			} else {&#13;
+				return;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (inputObj.basis === '/package' || inputObj.basis === '/pallet'&#13;
+				|| inputObj.basis === '/unit' || inputObj.basis === '/carton'&#13;
+				|| inputObj.basis === '/LNM' || inputObj.basis === '/SQM'&#13;
+				|| inputObj.basis === '/MBF' || inputObj.basis === '/MSF'&#13;
+				|| inputObj.basis === '/LDM') {&#13;
+			supportedBasis = true;&#13;
+&#13;
+			if (dimObj.dims.genericQty &amp;&amp; dimObj.dims.genericQtyUnit&#13;
+					&amp;&amp; (dimObj.dims.genericQtyUnit === inputObj.basis)) {&#13;
+				genericqty = dimObj.dims.genericQty;&#13;
+				if (inputObj.minimumqty) {&#13;
+					genericqty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty&#13;
+							: dimObj.dims.genericQty;&#13;
+				}&#13;
+				totalAmt = inputObj.amount * genericqty;&#13;
+			} else if (dimObj.dims[inputObj.basis]) {&#13;
+				genericqty = dimObj.dims[inputObj.basis];&#13;
+				if (inputObj.minimumqty) {&#13;
+					genericqty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty&#13;
+							: dimObj.dims.genericQty;&#13;
+				}&#13;
+				totalAmt = inputObj.amount * genericqty;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/FLAT') {&#13;
+			supportedBasis = true;&#13;
+			totalAmt = inputObj.amount;&#13;
+		}&#13;
+		if (dimObj.dims.wtInKG &amp;&amp; inputObj.wtConvRate) {&#13;
+			supportedBasis = true;&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+&#13;
+			// GTN-25018 : Chargeable Weight scenario.&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			dimFactor = rateInputObj.dimFactor;&#13;
+			dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+			volumetricWeight = 0.0;&#13;
+			if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+				if (dimFactorConv === 'cm/kg') {&#13;
+					volumetricWeight = (volume * 1000000) / dimFactor;&#13;
+				} else if (dimFactorConv === 'in/lb') {&#13;
+					volumetricWeight = (volume * 61024) / dimFactor;&#13;
+					volumetricWeight = volumetricWeight * 0.45359237;&#13;
+			    }&#13;
+			}&#13;
+			&#13;
+			weight = (weight * inputObj.wtConvRate) &gt; (volumetricWeight  * inputObj.wtConvRate) ? weight&#13;
+					: volumetricWeight;&#13;
+&#13;
+			if (inputObj.minWeight) {&#13;
+				weight = weight &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+						: weight;&#13;
+				inputObj.wtConvRate = 1;&#13;
+			}&#13;
+			totalAmt = this.evaluateRateBands(weight, inputObj.amount,&#13;
+					inputObj.wtConvRate);&#13;
+		}&#13;
+&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/WM') {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			wmUnit = 0;&#13;
+			supportedBasis = true;&#13;
+			if (weight) {&#13;
+				wmUnit = weight * inputObj.wtConvRate;&#13;
+			}&#13;
+			if (volume) {&#13;
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+			}&#13;
+			if (inputObj.minWeight) {&#13;
+				wmUnit = wmUnit &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+						: wmUnit;&#13;
+				inputObj.wtConvRate = 1;&#13;
+			}&#13;
+			totalAmt = inputObj.amount * wmUnit;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.volInCBM &amp;&amp; inputObj.volConvRate) {&#13;
+			supportedBasis = true;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+&#13;
+			if (inputObj.minimumqty) {&#13;
+				volume = volume &lt; inputObj.minimumqty ? inputObj.minimumqty&#13;
+						: volume;&#13;
+				inputObj.volConvRate = 1;&#13;
+			}&#13;
+			tempAmt = this.evaluateRateBands(volume, inputObj.amount,&#13;
+					inputObj.volConvRate);&#13;
+			totalAmt = totalAmt &gt; tempAmt ? totalAmt : tempAmt;&#13;
+		} else if ((dimObj.dims.dstInMile&#13;
+				|| (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) || rateInputObj.distance)&#13;
+				&amp;&amp; inputObj.dstConvRate) {&#13;
+			supportedBasis = true;&#13;
+			distance = 0.0;&#13;
+			if (dimObj.dims.dstInMile) {&#13;
+				distance = dimObj.dims.dstInMile;&#13;
+			} else if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {&#13;
+				distance = this.getEffectiveDistance(dimObj);&#13;
+			} else {&#13;
+				distance = rateInputObj.distance;&#13;
+			}&#13;
+			totalAmt = this.evaluateRateBands(distance, inputObj.amount,&#13;
+					inputObj.dstConvRate);&#13;
+		}&#13;
+&#13;
+		if (inputObj.basis === 'pricingbands') {&#13;
+			supportedBasis = true;&#13;
+			bandAmt = 0.0;&#13;
+			mUnit = 0.0;&#13;
+			convRate = 0.0;&#13;
+			amount = 0.0;&#13;
+			if (inputObj.isdeficitpricing) {&#13;
+				if (inputObj.wtConvRate) {&#13;
+					mUnit = dimObj.dims.wtInKG;&#13;
+					convRate = inputObj.wtConvRate;&#13;
+					&#13;
+					// GTN-27410 : Chargeable Weight scenario for TL and LTL.&#13;
+					volume = dimObj.dims.volInCBM;&#13;
+					dimFactor = rateInputObj.dimFactor;&#13;
+					dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+					volumetricWeight = 0.0;&#13;
+					if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+						if (dimFactorConv === 'cm/kg') {&#13;
+							volumetricWeight = (volume * 1000000) / dimFactor;&#13;
+						} else if (dimFactorConv === 'in/lb') {&#13;
+							volumetricWeight = (volume * 61024) / dimFactor;&#13;
+							volumetricWeight = volumetricWeight * 0.45359237;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					weight = (weight * inputObj.wtConvRate) &gt; (volumetricWeight * convRate) ? weight&#13;
+							: volumetricWeight;&#13;
+&#13;
+					if (inputObj.minWeight) {&#13;
+						weight = weight &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+								: weight;&#13;
+						inputObj.wtConvRate = 1;&#13;
+						convRate = 1;&#13;
+					}&#13;
+				} else if (inputObj.volConvRate) {&#13;
+					mUnit = dimObj.dims.volInCBM;&#13;
+					convRate = inputObj.volConvRate;&#13;
+				} else if (inputObj.dstConvRate) {&#13;
+					mUnit = dimObj.dims.dstInMile;&#13;
+					convRate = inputObj.dstConvRate;&#13;
+				} else {&#13;
+					if (inputObj.weightbreakbasis&#13;
+							&amp;&amp; (inputObj.weightbreakbasis === '/package'&#13;
+									|| inputObj.weightbreakbasis === '/pallet'&#13;
+									|| inputObj.weightbreakbasis === '/unit'&#13;
+									|| inputObj.weightbreakbasis === '/carton'&#13;
+									|| inputObj.weightbreakbasis === '/LNM'&#13;
+									|| inputObj.weightbreakbasis === '/SQM'&#13;
+									|| inputObj.weightbreakbasis === '/MBF'&#13;
+									|| inputObj.weightbreakbasis === '/MSF' || inputObj.weightbreakbasis === '/LDM')) {&#13;
+						if (dimObj.dims.genericQty&#13;
+								&amp;&amp; dimObj.dims.genericQtyUnit&#13;
+								&amp;&amp; (dimObj.dims.genericQtyUnit === inputObj.weightbreakbasis)) {&#13;
+							mUnit = dimObj.dims.genericQty;&#13;
+							convRate = 1;&#13;
+						} else if (dimObj.dims[inputObj.weightbreakbasis]) {&#13;
+							mUnit = dimObj.dims[inputObj.weightbreakbasis];&#13;
+							convRate = 1;&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+&#13;
+				if (inputObj.isdeficitpricing === 'yes') {&#13;
+					if (rateInputObj.rateBands&#13;
+							&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+							if ((mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+									|| (mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; mUnit &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+								if (rateInputObj.rateBands[i].upperbreak == 999999999) {&#13;
+									bandAmt = rateInputObj.rateBands[i].amount&#13;
+											* mUnit * convRate;&#13;
+									amount = rateInputObj.rateBands[i].amount;&#13;
+								} else {&#13;
+									bandAmt = rateInputObj.rateBands[i + 1].amount&#13;
+											* rateInputObj.rateBands[i + 1].lowerbreak&#13;
+											* convRate;&#13;
+									actualPrice = rateInputObj.rateBands[i].amount&#13;
+											* mUnit * convRate;&#13;
+&#13;
+									if (bandAmt &gt; actualPrice) {&#13;
+										bandAmt = actualPrice;&#13;
+										amount = rateInputObj.rateBands[i].amount;&#13;
+									} else {&#13;
+										amount = rateInputObj.rateBands[i + 1].amount;&#13;
+									}&#13;
+								}&#13;
+								break;&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				} else {&#13;
+					if (rateInputObj.rateBands&#13;
+							&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+							if ((mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+									|| (mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; mUnit &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+								bandAmt = rateInputObj.rateBands[i].amount&#13;
+										* mUnit * convRate;&#13;
+								amount = rateInputObj.rateBands[i].amount;&#13;
+								break;&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+			rateInputObj.amount = parseFloat(amount);&#13;
+			totalAmt = bandAmt;&#13;
+		}&#13;
+&#13;
+		if (!supportedBasis) {&#13;
+			switch (inputObj.basis) {&#13;
+			case '/container':&#13;
+			case '/CBM':&#13;
+			case '/WM':&#13;
+			case '/kg':&#13;
+			case '/lb':&#13;
+			case '/ton':&#13;
+			case '/MI':&#13;
+			case '/KM':&#13;
+				rateInputObj.baseRate.supportedBasis = true;&#13;
+				supportedBasis = true;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (!supportedBasis) {&#13;
+			totalAmt = inputObj.amount;&#13;
+		}&#13;
+&#13;
+		if (inputObj.minAmount) {&#13;
+			totalAmt = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount&#13;
+					: totalAmt;&#13;
+		}&#13;
+		if (inputObj.maxAmount) {&#13;
+			totalAmt = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount&#13;
+					: totalAmt;&#13;
+		}&#13;
+&#13;
+		rateInputObj.baseRate.supportedBasis = supportedBasis;&#13;
+		rateInputObj.baseRate.total = parseFloat(totalAmt);&#13;
+	};&#13;
+&#13;
+	this.getEffectiveDistance = function(dimObj) {&#13;
+		distance = 0.0;&#13;
+		for (i = 0; i &lt; dimObj.stopOffs.length - 1; i++) {&#13;
+			origStop = dimObj.stopOffs[i].stop;&#13;
+			if (origStop.indexOf('__') &gt; 0) {&#13;
+				origStop = origStop.slice(0, origStop.indexOf('__'));&#13;
+			}&#13;
+			destStop = dimObj.stopOffs[i + 1].stop;&#13;
+			if (destStop.indexOf('__') &gt; 0) {&#13;
+				destStop = destStop.slice(0, destStop.indexOf('__'));&#13;
+			}&#13;
+			if (origStop == destStop) {&#13;
+				distance = distance + 0.01;&#13;
+				continue;&#13;
+			}&#13;
+			if (!distanceMatrix[origStop]&#13;
+					|| !distanceMatrix[origStop][destStop]) {&#13;
+				if (rateInputObj.distance) {&#13;
+					return rateInputObj.distance;&#13;
+				} else {&#13;
+					return 9999999;&#13;
+				}&#13;
+			}&#13;
+			distance = distance + distanceMatrix[origStop][destStop];&#13;
+		}&#13;
+		return distance;&#13;
+	};&#13;
+&#13;
+	this.evaluateRateBands = function(totalDim, rateAmount, ConvRate) {&#13;
+		totalBandAmt = 0.0;&#13;
+		if (rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+			for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+				if ((totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+						|| (totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; totalDim &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+					totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateInputObj.rateBands[i].amount&#13;
+							: (rateInputObj.rateBands[i].amount * totalDim * ConvRate);&#13;
+					break;&#13;
+				}&#13;
+			}&#13;
+			if (totalBandAmt == 0 &amp;&amp; rateInputObj.baseRate) {&#13;
+				totalBandAmt = rateInputObj.baseRate.basis === '/kg' ? (rateInputObj.baseRate.amount&#13;
+						* totalDim * ConvRate)&#13;
+						: rateInputObj.baseRate.amount;&#13;
+			}&#13;
+		} else {&#13;
+			totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateAmount&#13;
+					: rateAmount * totalDim * ConvRate;&#13;
+		}&#13;
+		return parseFloat(totalBandAmt);&#13;
+	};&#13;
+&#13;
+	this.evaluateAccessorials = function(dimObj) {&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (var i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				if (rateInputObj.accessorials[i]) {&#13;
+					accObj = rateInputObj.accessorials[i];&#13;
+&#13;
+					totalAmt = 0;&#13;
+					if (accObj.basis === '/container') {&#13;
+						if (rateInputObj.baseRate.equipmentType&#13;
+								&amp;&amp; dimObj.dims[rateInputObj.baseRate.equipmentType]) {&#13;
+							totalAmt = accObj.amount&#13;
+									* dimObj.dims[rateInputObj.baseRate.equipmentType];&#13;
+						} else {&#13;
+							rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+							continue;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '%') {&#13;
+						netfreightcostelems = rateInputObj.netfreightcostelems;&#13;
+						if (netfreightcostelems&#13;
+								&amp;&amp; netfreightcostelems.length &gt; 0) {&#13;
+							totalSurchargeAmount = 0;&#13;
+							for (var j = 0; j &lt; netfreightcostelems.length; j++) {&#13;
+								netFreightSurcharge = netfreightcostelems[j];&#13;
+								surchargeAmount = this.getSurchargeAmount(&#13;
+										dimObj, netFreightSurcharge);&#13;
+								totalSurchargeAmount = totalSurchargeAmount&#13;
+										+ surchargeAmount;&#13;
+							}&#13;
+&#13;
+							baseRate = rateInputObj.baseRate.total;&#13;
+							totalAmt = ((baseRate + totalSurchargeAmount) * accObj.amount) / 100;&#13;
+						} else {&#13;
+							baseRate = rateInputObj.baseRate.total;&#13;
+							totalAmt = (baseRate * accObj.amount) / 100;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '/delivery'&#13;
+							|| accObj.basis === '/entry'&#13;
+							|| accObj.basis === '/shipment') {&#13;
+						totalAmt = accObj.amount;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '/package'&#13;
+							|| accObj.basis === '/pallet'&#13;
+							|| accObj.basis === '/unit'&#13;
+							|| accObj.basis === '/carton'&#13;
+							|| accObj.basis === '/LNM'&#13;
+							|| accObj.basis === '/SQM'&#13;
+							|| accObj.basis === '/MSF'&#13;
+							|| accObj.basis === '/MBF'&#13;
+							|| accObj.basis === '/LDM') {&#13;
+						if (dimObj.dims.genericQty&#13;
+								&amp;&amp; dimObj.dims.genericQtyUnit&#13;
+								&amp;&amp; (dimObj.dims.genericQtyUnit === accObj.basis)) {&#13;
+							totalAmt = accObj.amount * dimObj.dims.genericQty;&#13;
+						} else if (dimObj.dims[accObj.basis]) {&#13;
+							totalAmt = accObj.amount&#13;
+									* dimObj.dims[accObj.basis];&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (dimObj.dims.wtInKG &amp;&amp; accObj.wtConvRate) {&#13;
+						weight = dimObj.dims.wtInKG;&#13;
+&#13;
+						// GTN-25018 : Chargeable Weight scenario.&#13;
+						if (accObj.calculatedWeightBasis&#13;
+								&amp;&amp; accObj.calculatedWeightBasis === 'Chargeable Weight') {&#13;
+							dimFactor = rateInputObj.dimFactor;&#13;
+							dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+							volumetricWeight = 0.0;&#13;
+							if (dimFactor &gt; 0 &amp;&amp; dimFactorConv&#13;
+									&amp;&amp; dimObj.dims.volInCBM) {&#13;
+								if (dimFactorConv === 'cm/kg') {&#13;
+									volumetricWeight = (dimObj.dims.volInCBM * 1000000)&#13;
+											/ dimFactor;&#13;
+								} else if (dimFactorConv === 'in/lb') {&#13;
+									volumetricWeight = (dimObj.dims.volInCBM * 61024)&#13;
+											/ dimFactor;&#13;
+									volumetricWeight = volumetricWeight * 0.45359237;&#13;
+								}&#13;
+							}&#13;
+							weight = (weight * accObj.wtConvRate) &gt; (volumetricWeight * accObj.wtConvRate) ? weight&#13;
+									: volumetricWeight;&#13;
+						}&#13;
+&#13;
+						if (accObj.minWeight) {&#13;
+							weight = weight &lt; accObj.minWeight ? accObj.minWeight&#13;
+									: weight;&#13;
+						}&#13;
+						totalAmt = accObj.amount * weight * accObj.wtConvRate;&#13;
+					}&#13;
+					if (dimObj.dims.volInCBM &amp;&amp; accObj.volConvRate) {&#13;
+						volume = dimObj.dims.volInCBM;&#13;
+						if (accObj.minVolume) {&#13;
+							volume = volume &lt; accObj.minVolume ? accObj.minVolume&#13;
+									: volume;&#13;
+						}&#13;
+						totalAmt = accObj.amount * volume * accObj.volConvRate;&#13;
+					}&#13;
+&#13;
+					if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1))&#13;
+							&amp;&amp; accObj.dstConvRate) {&#13;
+						distance = 0.0;&#13;
+						if (dimObj.dims.dstInMile) {&#13;
+							distance = dimObj.dims.dstInMile;&#13;
+						} else {&#13;
+							distance = this.getEffectiveDistance(dimObj);&#13;
+						}&#13;
+						totalAmt = accObj.amount * distance&#13;
+								* accObj.dstConvRate;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis == '/FLAT') {&#13;
+						totalAmt = accObj.amount;&#13;
+					}&#13;
+					if (accObj.amount &amp;&amp; accObj.basis == '/WM') {&#13;
+						weight = dimObj.dims.wtInKG;&#13;
+						volume = dimObj.dims.volInCBM;&#13;
+						wmUnit = 0;&#13;
+						if (weight) {&#13;
+							wmUnit = weight * accObj.wtConvRate;&#13;
+						}&#13;
+						if (volume) {&#13;
+							wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+						}&#13;
+						totalAmt = accObj.amount * wmUnit;&#13;
+					}&#13;
+&#13;
+					if (rateInputObj.baseRate.basis == accObj.basis&#13;
+							&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+						totalAmt = accObj.amount;&#13;
+						accObj.supportedBasis = true;&#13;
+					} else if (rateInputObj.baseRate.basis != accObj.basis&#13;
+							&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+						totalAmt = 0;&#13;
+					}&#13;
+&#13;
+					if (accObj.minAmount) {&#13;
+						totalAmt = totalAmt &lt; accObj.minAmount ? accObj.minAmount&#13;
+								: totalAmt;&#13;
+					}&#13;
+					if (accObj.maxAmount) {&#13;
+						totalAmt = totalAmt &gt; accObj.maxAmount ? accObj.maxAmount&#13;
+								: totalAmt;&#13;
+					}&#13;
+&#13;
+					if (!dimObj.dims.isHazMat &amp;&amp; accObj.isHazMat) {&#13;
+						totalAmt = 0;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis == '/stop') {&#13;
+						rateInputObj.stopOffTotal = parseFloat(totalAmt);&#13;
+					} else {&#13;
+						rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+	};&#13;
+&#13;
+	this.getSurchargeAmount = function(dimObj, surcharge) {&#13;
+		surchargeAmount = 0;&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		if (surcharge.basis === '/container') {&#13;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {&#13;
+				surchargeAmount = surcharge.amount&#13;
+						* dimObj.dims[inputObj.equipmentType];&#13;
+			} else {&#13;
+				return surchargeAmount;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (surcharge.basis === '/delivery' || surcharge.basis === '/entry'&#13;
+				|| surcharge.basis === '/shipment') {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+		}&#13;
+&#13;
+		if (surcharge.basis === '/package' || surcharge.basis === '/pallet'&#13;
+				|| surcharge.basis === '/unit' || surcharge.basis === '/carton'&#13;
+				|| surcharge.basis === '/LNM' || surcharge.basis === '/SQM'&#13;
+				|| surcharge.basis === '/MSF' || surcharge.basis === '/MBF'&#13;
+				|| accObj.basis === '/LDM') {&#13;
+			if (dimObj.dims.genericQty &amp;&amp; dimObj.dims.genericQtyUnit&#13;
+					&amp;&amp; (dimObj.dims.genericQtyUnit === surcharge.basis)) {&#13;
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;&#13;
+			} else if (dimObj.dims[surcharge.basis]) {&#13;
+				surchargeAmount = surcharge.amount&#13;
+						* dimObj.dims[surcharge.basis];&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/FLAT') {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.wtInKG &amp;&amp; surcharge.wtConvRate) {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			// GTN-25018 : Chargeable Weight scenario.&#13;
+			if (surcharge.calculatedWeightBasis&#13;
+					&amp;&amp; surcharge.calculatedWeightBasis === 'Chargeable Weight') {&#13;
+				dimFactor = rateInputObj.dimFactor;&#13;
+				dimFactorConv = rateInputObj.dimFactorConv;&#13;
+				volumetricWeight = 0.0;&#13;
+				if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+					if (dimFactorConv === 'cm/kg') {&#13;
+						volumetricWeight = (dimObj.dims.volInCBM * 1000000)&#13;
+								/ dimFactor;&#13;
+					} else if (dimFactorConv === 'in/lb') {&#13;
+						volumetricWeight = (dimObj.dims.volInCBM * 61024)&#13;
+								/ dimFactor;&#13;
+						volumetricWeight = volumetricWeight * 0.45359237;&#13;
+					}&#13;
+				}&#13;
+				weight = (weight * surcharge.wtConvRate) &gt; (volumetricWeight * surcharge.wtConvRate) ? weight&#13;
+						: volumetricWeight;&#13;
+			}&#13;
+			if (surcharge.minWeight) {&#13;
+				weight = weight &lt; surcharge.minWeight ? surcharge.minWeight&#13;
+						: weight;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * weight * surcharge.wtConvRate;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.volInCBM &amp;&amp; surcharge.volConvRate) {&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			if (surcharge.minVolume) {&#13;
+				volume = volume &lt; surcharge.minVolume ? surcharge.minVolume&#13;
+						: volume;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * volume * surcharge.volConvRate;&#13;
+		}&#13;
+&#13;
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/WM') {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			wmUnit = 0;&#13;
+			if (weight) {&#13;
+				wmUnit = weight * surcharge.wtConvRate;&#13;
+			}&#13;
+			if (volume) {&#13;
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+			}&#13;
+			if (surcharge.minWeight) {&#13;
+				wmUnit = wmUnit &lt; surcharge.minWeight ? surcharge.minWeight&#13;
+						: wmUnit;&#13;
+				surcharge.wtConvRate = 1;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * wmUnit;&#13;
+		}&#13;
+&#13;
+		if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1))&#13;
+				&amp;&amp; surcharge.dstConvRate) {&#13;
+			if (surcharge.basis == '/stop') {&#13;
+				surchargeAmount = surcharge.amount * dimObj.stopOffs.length&#13;
+						* surcharge.dstConvRate;&#13;
+			} else {&#13;
+				distance = 0.0;&#13;
+				if (dimObj.dims.dstInMile) {&#13;
+					distance = dimObj.dims.dstInMile;&#13;
+				} else {&#13;
+					distance = this.getEffectiveDistance(dimObj);&#13;
+				}&#13;
+				surchargeAmount = surcharge.amount * distance&#13;
+						* surcharge.dstConvRate;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (rateInputObj.baseRate.basis == inputObj.basis&#13;
+				&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+			surcharge.supportedBasis = true;&#13;
+		} else if (rateInputObj.baseRate.basis != surcharge.basis&#13;
+				&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+			surchargeAmount = 0;&#13;
+		}&#13;
+&#13;
+		if (surcharge.minAmount) {&#13;
+			surchargeAmount = surchargeAmount &lt; surcharge.minAmount ? surcharge.minAmount&#13;
+					: surchargeAmount;&#13;
+		}&#13;
+		if (surcharge.maxAmount) {&#13;
+			surchargeAmount = surchargeAmount &gt; surcharge.maxAmount ? surcharge.maxAmount&#13;
+					: surchargeAmount;&#13;
+		}&#13;
+		return surchargeAmount;&#13;
+	}&#13;
+&#13;
+	this.evaluateStopOff = function(stopOffs) {&#13;
+		stopOffAmt = 0.0;&#13;
+		if (rateInputObj.stopBands &amp;&amp; stopOffs &amp;&amp; stopOffs.length &gt; 2) {&#13;
+			numOfStopOffs = stopOffs.length - 2;&#13;
+			remainingStopOffs = numOfStopOffs;&#13;
+			previousEnd = 0;&#13;
+&#13;
+			for (i = 0; i &lt; rateInputObj.stopBands.length; i++) {&#13;
+				start = rateInputObj.stopBands[i].start;&#13;
+				end = rateInputObj.stopBands[i].stop;&#13;
+				if (numOfStopOffs &gt; end) {&#13;
+					stopOffAmt = stopOffAmt&#13;
+							+ (rateInputObj.stopBands[i].costPerStop * (end - previousEnd));&#13;
+					remainingStopOffs -= (end - previousEnd);&#13;
+					previousEnd = end;&#13;
+&#13;
+				} else if (numOfStopOffs &gt;= start &amp;&amp; numOfStopOffs &lt;= end) {&#13;
+					stopOffAmt = stopOffAmt&#13;
+							+ (rateInputObj.stopBands[i].costPerStop * remainingStopOffs);&#13;
+					break;&#13;
+				}&#13;
+			}&#13;
+			rateInputObj.stopOffTotal = parseFloat(stopOffAmt);&#13;
+		}&#13;
+&#13;
+	};&#13;
+};var constraints = {/*##*/resources:{"10":{"max_qty":2,"max_cube":56,"max_weight":28800},"18":{"max_qty":2,"max_cube":65,"max_weight":30200},"33":{"max_qty":1},"9":{"max_qty":1,"max_cube":28,"max_weight":28250},"73":{"max_qty":1},"74":{"max_qty":2,"max_cube":63,"max_weight":29700},"256":{"max_qty":0},"11":{"max_qty":2}},/*##*/locations:{6238:{},6237:{},1073741825:{fixed_time:0,max_variable_time:0,LOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}},UNLOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}}},1073741823:{fixed_time:0,max_variable_time:0,LOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}},UNLOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}}},16665:{fixed_time:0,max_variable_time:0,LOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}},UNLOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}}},6240:{},6244:{},6245:{},6236:{}}}; evaluateConstraints = function evaluateConstraints(dimObj) {
+	var resourceData = this.id.split("_");
+	var resource = resourceData[1];
+	if ((resource in constraints.resources)) {
+		if ("max_weight" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.wtInKG &gt; constraints.resources[resource].max_weight)
+			return false;
+		if ("max_cube" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.volInCBM &gt; constraints.resources[resource].max_cube)
+			return false;
+	}
+	if (!(this.id in constraints.resources))
+		return true;
+
+	if ("maxstops" in constraints.resources[this.id]
+			&amp;&amp; dimObj.stopOffs.length &gt; constraints.resources[this.id].maxstops)
+		return false;
+	if ("max_distance" in constraints.resources[this.id]
+			&amp;&amp; isMaxDistanceCrossed(dimObj, this.id)) {
+		return false;
+	}
+	if ("maximum_single_hours" in constraints.resources[this.id]
+			&amp;&amp; isMaxDriveTimeCrossed(dimObj, this.id)) {
+		return false;
+	}
+	if ("maximum_out_of_route_miles" in constraints.resources[this.id]
+			&amp;&amp; isMaxOutOfRouteMile(dimObj, this.id)) {
+		return false;
+	}
+
+	return true;
+};
+
+isMaxOutOfRouteMile = function isMaxOutOfRouteMile(dimObj, resourceid) {
+	var totalDistance = 0;
+	var maxOutOfRouteMile = 0;
+	try {
+		totalDistance = distanceMatrix[sliceStopOffData(dimObj.stopOffs[0].stop)][sliceStopOffData(dimObj.stopOffs[dimObj.stopOffs.length - 1].stop)];
+	} catch (err) {
+		warn('error distanceMatrix  does not exist in  isMaxOutOfRouteMile');
+	}
+	;
+
+	try {
+		maxOutOfRouteMile = constraints.resources[resourceid].maximum_out_of_route_miles;
+
+	} catch (err) {
+		warn('maxOutOfRouteMile  does not exist in  for resourece' + resourceid);
+		maxOutOfRouteMile = 0;
+	}
+	;
+
+	if (constraints.resources[resourceid].maxoutofroutemilesunit == "%") {
+		maxOutOfRouteMile = ((maxOutOfRouteMile / 100) * totalDistance)
+				+ totalDistance;
+	} else {
+		maxOutOfRouteMile = maxOutOfRouteMile + totalDistance;
+
+		var totalDriveDistance = getTotalDriveDistance(dimObj);
+		if (!isNaN(maxOutOfRouteMile)) {
+			// warn('maxOutOfRouteMile==' + maxOutOfRouteMile);
+			// warn('totalDriveDistance=' + totalDriveDistance+' for
+			// resourceid'+ resourceid);
+
+		}
+	}
+	if (totalDriveDistance &gt; maxOutOfRouteMile) {
+		// warn('totalDriveDistance =='+totalDriveDistance
+		// +'-'+maxOutOfRouteMile);
+		return true;
+	}
+	// warn('in else totalDriveDistance =='+totalDriveDistance
+	// +'-'+maxOutOfRouteMile);
+	return false;
+};
+
+isMaxDistanceCrossed = function isMaxDistanceCrossed(dimObj, resourceid) {
+	var totalDriveDistance = getTotalDriveDistance(dimObj);
+	if (totalDriveDistance &gt; constraints.resources[resourceid].max_distance) {
+		return true;
+	}
+	return false;
+};
+
+isMaxDriveTimeCrossed = function isMaxDriveTimeCrossed(dimObj, resourceid) {
+	var totalDriveTime = getTotalDriveTime(dimObj);
+	if (totalDriveTime &gt; constraints.resources[resourceid].maximum_single_hours) {
+		return true;
+	}
+	return false;
+};
+
+getTotalDriveDistance = function getTotalDriveDistance(dimObj) {
+	var totalDriveDistance = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			var distance = distanceMatrix[stop1][stop2]
+			if (!isNaN(distance)) {
+				totalDriveDistance = totalDriveDistance + (distance);
+			} else {
+				warn('can give wrong data,since');
+				warn(' no dtm between ' + stop1 + '-' + stop2);
+			}
+		}
+	} catch (err) {
+		warn('distanceMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveDistance;
+};
+
+getTotalDriveTime = function getTotalDriveTime(dimObj) {
+	var totalDriveTime = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			totalDriveTime = totalDriveTime + (transitTimeMatrix[stop1][stop2]);
+		}
+	} catch (err) {
+		warn('transitTimeMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveTime;
+};
+
+sliceStopOffData = function sliceStopOffData(stopOffData) {
+	var stop = stopOffData;
+	try {
+
+		if (stopOffData.indexOf('__') &gt; 0) {
+			stop = stopOffData.slice(0, stopOffData.indexOf('__'));
+		}
+	} catch (err) {
+		warn('stopOffData incorrect for ' + stopOffData);
+	}
+	return JSON.parse(stop);
+};
+
+getProcessingTime = function getProcessingTime(dimObj) {
+
+	if (typeof dimObj.stopOffs[1] == 'undefined') {
+		return 1000000;
+	}
+	trasitTime = 0;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop
+					.indexOf('TRANSPORT') &gt; -1))) {
+		return 99999;
+	}
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	try {
+		trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]
+				+ finalunloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('errcause no transittime for ' + stop1 + '-- ' + stop2);
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+	return this.transitTime;
+	};
+
+getFinalThroughput = function getFinalThroughput(dimObj) {
+	var finalTroughputResult = '';
+
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length); stopIndex++) {
+		var stop = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+		if (dimObj.dims.wtInKG != 0) {
+			if ((stop in constraints.locations)
+					&amp;&amp; ("Throughput" in constraints.locations[stop])) {
+				finalTroughputResult = finalTroughputResult + stop + '--'
+						+ ((constraints.locations[stop].Throughput)) + '--';
+			}
+		}
+	}
+	return finalTroughputResult;
+};
+
+getDistanceBetweenStops = function getDistanceBetweenStops(dimObj) {
+	var distancebetweenstops = "";
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+		try {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+
+			distancebetweenstops = distancebetweenstops + "#" + stop1 + "_"
+					+ stop2;
+			distancebetweenstops = distancebetweenstops + "#"
+					+ distanceMatrix[stop1][stop2];
+		} catch (err) {
+			warn('err cause no distancebetweenstops ' + stop1 + ' -- ' + stop2);
+		}
+	}
+	return distancebetweenstops;
+};
+
+getFinalLoadThroughput = function getFinalLoadThroughput(dimObj) {
+	var varloadthroughput = 0;
+	stop1 = sliceStopOffData(dimObj.stopOffs[0].stop);
+	try {
+		if (stop1 in constraints.locations
+				&amp;&amp; ("LOADING" in constraints.locations[stop1])) {
+
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop1].LOADING["weight_time"].division_factor)
+						* constraints.locations[stop1].LOADING["weight_time"].time_factor;
+				varloadthroughput = varweightthrouput;
+			}
+
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop1].LOADING["volume_time"].division_factor)
+						* constraints.locations[stop1].LOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varloadthroughput) {
+					varloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop1].max_variable_time != 0) {
+			if (constraints.locations[stop1].max_variable_time &lt; varloadthroughput) {
+				varloadthroughput = constraints.locations[stop1].max_variable_time;
+			}
+		}
+		return constraints.locations[stop1].fixed_time + varloadthroughput;
+	} catch (err) {
+		warn('err calculating load throughput for stop ' + stop1 + '-- '
+				+ err.message);
+		return 0;
+	}
+};
+
+getFinalUnLoadThroughput = function getFinalUnLoadThroughput(dimObj) {
+	var varunloadthroughput = 0;
+	stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+	try {
+		if (stop2 in constraints.locations
+				&amp;&amp; "UNLOADING" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].UNLOADING["weight_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].UNLOADING["volume_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2].max_variable_time != 0) {
+			if (constraints.locations[stop2].max_variable_time &lt; varunloadthroughput) {
+				varunloadthroughput = constraints.locations[stop2].max_variable_time;
+			}
+		}
+		// warn('Unloading varunloadthroughput ' + varunloadthroughput + ' stop2
+		// ' + stop2+' fixed_time ' + constraints.locations[stop2].fixed_time);
+		return constraints.locations[stop2].fixed_time + varunloadthroughput;
+	} catch (err) {
+		warn('err calculating Unload throughput for stop ' + stop2 + '-- '
+				+ err.message);
+		return 0;
+	}
+};
+
+getOceanAirLoadingProcessingTime = function getOceanAirLoadingProcessingTime(dimObj) {
+
+	trasitTime = 0;
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	try {
+		trasitTime = finalloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('failed');
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+return this.transitTime;
+};
+
+getOceanAirUnloadingProcessingTime = function getOceanAirUnloadingProcessingTime(dimObj) {
+
+trasitTime = 0;
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput1(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	/*
+	 * warn('finalloadthroughput ' + finalloadthroughput + '
+	 * finalunloadthroughput ' + finalunloadthroughput + ' matrix ' +
+	 * transitTimeMatrix[stop1][stop2]);
+	 */
+	try {
+		trasitTime = finalunloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('unloading failed');
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getFinalUnLoadThroughput1 = function getFinalUnLoadThroughput1(dimObj) {
+	var varunloadthroughput = 0;
+	var stop2;
+	//warn(" calculating Unload throughput for stop ' + s");
+	try {
+	//warn(dimObj.stopOffs);
+	stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+	if(typeof stop2 == 'undefined')
+	  return 0;
+
+		if (stop2 in constraints.locations
+				&amp;&amp; "UNLOADING" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].UNLOADING["weight_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].UNLOADING["volume_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2].max_variable_time != 0) {
+			if (constraints.locations[stop2].max_variable_time &lt; varunloadthroughput) {
+				varunloadthroughput = constraints.locations[stop2].max_variable_time;
+			}
+		}
+		// warn('Unloading varunloadthroughput ' + varunloadthroughput + ' stop2
+		// ' + stop2+' fixed_time ' + constraints.locations[stop2].fixed_time);
+		return constraints.locations[stop2].fixed_time + varunloadthroughput;
+	} catch (err) {
+		//warn('err calculating Unload throughput for stop ' + stop2 + '-- '
+				//+ err.message);
+			//	warn("catch");
+		return 0;
+	}
+};</globalScript>
+		<productMatchMatrix struct="ProductMatchMatrix" ttype="STRUCT">
+			<compatibleIncompatibleFlag ttype="STRING">Incompatible</compatibleIncompatibleFlag>
+			<row ttype="MAP">
+				<item>
+					<key ttype="STRING">222</key>
+					<value ttype="LIST">
+						<item ttype="STRING">Class B</item>
+						<item ttype="STRING">Class E</item>
+						<item ttype="STRING">Class F</item>
+						<item ttype="STRING">Class G</item>
+						<item ttype="STRING">Class H</item>
+					</value>
+				</item>
+				<item>
+					<key ttype="STRING">Class H</key>
+					<value ttype="LIST">
+						<item ttype="STRING">222</item>
+						<item ttype="STRING">Class B</item>
+						<item ttype="STRING">Class C</item>
+						<item ttype="STRING">Class D</item>
+						<item ttype="STRING">Class E</item>
+						<item ttype="STRING">Class F</item>
+						<item ttype="STRING">Class G</item>
+					</value>
+				</item>
+				<item>
+					<key ttype="STRING">Class G</key>
+					<value ttype="LIST">
+						<item ttype="STRING">222</item>
+						<item ttype="STRING">Class B</item>
+						<item ttype="STRING">Class E</item>
+						<item ttype="STRING">Class F</item>
+						<item ttype="STRING">Class H</item>
+					</value>
+				</item>
+				<item>
+					<key ttype="STRING">Class F</key>
+					<value ttype="LIST">
+						<item ttype="STRING">222</item>
+						<item ttype="STRING">Class B</item>
+						<item ttype="STRING">Class E</item>
+						<item ttype="STRING">Class G</item>
+						<item ttype="STRING">Class H</item>
+					</value>
+				</item>
+				<item>
+					<key ttype="STRING">Class E</key>
+					<value ttype="LIST">
+						<item ttype="STRING">222</item>
+						<item ttype="STRING">Class B</item>
+						<item ttype="STRING">Class F</item>
+						<item ttype="STRING">Class G</item>
+						<item ttype="STRING">Class H</item>
+					</value>
+				</item>
+				<item>
+					<key ttype="STRING">Class D</key>
+					<value ttype="LIST">
+						<item ttype="STRING">Class H</item>
+					</value>
+				</item>
+				<item>
+					<key ttype="STRING">Class C</key>
+					<value ttype="LIST">
+						<item ttype="STRING">Class H</item>
+					</value>
+				</item>
+				<item>
+					<key ttype="STRING">Class B</key>
+					<value ttype="LIST">
+						<item ttype="STRING">222</item>
+						<item ttype="STRING">Class E</item>
+						<item ttype="STRING">Class F</item>
+						<item ttype="STRING">Class G</item>
+						<item ttype="STRING">Class H</item>
+					</value>
+				</item>
+			</row>
+		</productMatchMatrix>
+		<applyConsolidationRules ttype="STRING">Yes</applyConsolidationRules>
+		<requirementConsolidationLevel ttype="I32">0</requirementConsolidationLevel>
+	</supplyChain>
+	<requirements ttype="MAP">
+		<item>
+			<key ttype="STRING">121040065</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">121040065</id>
+				<name ttype="STRING">121040065</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">11.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">0.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">6240__START_REQUIREMENT</source>
+				<destination ttype="STRING">6237__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1783450800</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1783450860</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1820473200</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1820473200</latestDeliveryTime>
+				<ratedCommodity ttype="STRING">test</ratedCommodity>
+				<compatibilityClass ttype="STRING">222</compatibilityClass>
+				<isHazardous ttype="STRING">Yes</isHazardous>
+				<consolidationCode ttype="STRING">111</consolidationCode>
+			</value>
+		</item>
+		<item>
+			<key ttype="STRING">121044954</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">121044954</id>
+				<name ttype="STRING">121044954</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">11.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">0.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">6240__START_REQUIREMENT</source>
+				<destination ttype="STRING">6236__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1783450800</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1783450860</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1820473200</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1820473200</latestDeliveryTime>
+				<ratedCommodity ttype="STRING">test</ratedCommodity>
+				<compatibilityClass ttype="STRING">222</compatibilityClass>
+				<isHazardous ttype="STRING">Yes</isHazardous>
+				<consolidationCode ttype="STRING">111</consolidationCode>
+			</value>
+		</item>
+		<item>
+			<key ttype="STRING">121044988</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">121044988</id>
+				<name ttype="STRING">121044988</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">11.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">0.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">6240__START_REQUIREMENT</source>
+				<destination ttype="STRING">6238__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1783450800</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1783450860</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1820473200</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1820473200</latestDeliveryTime>
+				<ratedCommodity ttype="STRING">test</ratedCommodity>
+				<compatibilityClass ttype="STRING">222</compatibilityClass>
+				<isHazardous ttype="STRING">Yes</isHazardous>
+				<consolidationCode ttype="STRING">111</consolidationCode>
+			</value>
+		</item>
+		<item>
+			<key ttype="STRING">121044993</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">121044993</id>
+				<name ttype="STRING">121044993</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">11.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">0.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">6240__START_REQUIREMENT</source>
+				<destination ttype="STRING">6245__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1783450800</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1783450860</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1820473200</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1820473200</latestDeliveryTime>
+				<ratedCommodity ttype="STRING">test</ratedCommodity>
+				<compatibilityClass ttype="STRING">222</compatibilityClass>
+				<isHazardous ttype="STRING">Yes</isHazardous>
+				<consolidationCode ttype="STRING">111</consolidationCode>
+			</value>
+		</item>
+		<item>
+			<key ttype="STRING">121040034</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">121040034</id>
+				<name ttype="STRING">121040034</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">11.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">0.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">6240__START_REQUIREMENT</source>
+				<destination ttype="STRING">6244__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1783450800</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1783450860</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1820473200</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1820473200</latestDeliveryTime>
+				<ratedCommodity ttype="STRING">test</ratedCommodity>
+				<compatibilityClass ttype="STRING">222</compatibilityClass>
+				<isHazardous ttype="STRING">Yes</isHazardous>
+				<consolidationCode ttype="STRING">111</consolidationCode>
+			</value>
+		</item>
+	</requirements>
+	<modelingLanguageVersion ttype="STRING">3.2</modelingLanguageVersion>
+</OptimizationInstance>

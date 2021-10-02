@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GTN TestNG Sanity Suite" parallel="true" thread-count="1">
+	<test name="GTN TMO Sanity Automation">
+		<classes>
+			<class name="com.gtn.qa.TestCases.JobListPageTestCase"></class>
+		</classes>
+	</test>		
+</suite> 

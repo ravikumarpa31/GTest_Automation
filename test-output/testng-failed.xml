@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [GTN TestNG Suite]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListenerTestNG.ExtentReporterNG"/>
+  </listeners>
+  <test name="GTN TMO Automation2(failed)">
+    <classes>
+      <class name="com.gtn.qa.TestCases.JobDetailPageTestCase">
+        <methods>
+          <include name="teaDown"/>
+          <include name="setUp"/>
+          <include name="gtnTMOurlTest"/>
+        </methods>
+      </class> <!-- com.gtn.qa.TestCases.JobDetailPageTestCase -->
+      <class name="com.gtn.qa.TestCases.JobListPageTestCase">
+        <methods>
+          <include name="setUp"/>
+          <include name="teaDown"/>
+        </methods>
+      </class> <!-- com.gtn.qa.TestCases.JobListPageTestCase -->
+    </classes>
+  </test> <!-- GTN TMO Automation2(failed) -->
+</suite> <!-- Failed suite [GTN TestNG Suite] -->

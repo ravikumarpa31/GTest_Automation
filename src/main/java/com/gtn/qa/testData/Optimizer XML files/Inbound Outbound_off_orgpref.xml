@@ -1,0 +1,1205 @@
+<OptimizationInstance struct="OptimizationInstance" ttype="STRUCT"><id ttype="STRING">Inbound+Outbound_28035955463</id><supplyChain struct="SupplyChain" ttype="STRUCT"><id ttype="STRING">Network</id><name ttype="STRING">supplyChainName12345</name><steps ttype="MAP"><item><key ttype="STRING">1000726__1000144__28034194932__S__P__P__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1000726__1000144__28034194932__S__P__P__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 1000726__1000144__28034194932__S__P__P__TRANSPORT_REQUIREMENT__22GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">126494__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1009_9_S</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":100.0,"includeInNetFreight":null,"equipmentType":"1009_9_S","basis":"\/container","isHazMat":null},"accessorials":[{"amount":3.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":18.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":24.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":19.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":28.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":6.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":2.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":1.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":29.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":5.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":25.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":17.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":30.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":10.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":13.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":8.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":14.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":23.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":22.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":21.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":4.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":31.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":26.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":15.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":11.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":28.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":16.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":20.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null}],"rateId":"28034194932","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":259200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">54784__HOLD_REQUIREMENT__BEFORECONSOLIDATE</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54784__HOLD_REQUIREMENT__BEFORECONSOLIDATE</id><narrativeDescription ttype="STRING">Hold at 54784 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">54784__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><processingTime ttype="DOUBLE">0.0</processingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1000726__1000710__28035960279__SC______MULTI_STOP</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1000726__1000710__28035960279__SC______MULTI_STOP</id><narrativeDescription ttype="STRING">1000726__1000710__28035960279__SC______MULTI_STOP__L5GP</narrativeDescription><type ttype="I32">6</type><nextSteps ttype="SET"><item ttype="STRING">54788__END_REQUIREMENT</item><item ttype="STRING">54788__HOLD_REQUIREMENT__AFTERSTART</item><item ttype="STRING">54784__HOLD_REQUIREMENT__BEFORECONSOLIDATE</item><item ttype="STRING">126492__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">32314_19_SC</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":10.0,"includeInNetFreight":null,"equipmentType":"32314_19_SC","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[],"rateId":"28035960279","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+				+ finalunloadthroughput;&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime><origins ttype="SET"><item ttype="STRING">54788__HOLD_REQUIREMENT__AFTERSTART</item><item ttype="STRING">126492__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item></origins><destinations ttype="SET"><item ttype="STRING">54784__HOLD_REQUIREMENT__BEFORECONSOLIDATE</item></destinations></value></item><item><key ttype="STRING">130287__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">130287__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 130287__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">2</type><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1000144__1000112__28034334027__S__P__D__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1000144__1000112__28034334027__S__P__D__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 1000144__1000112__28034334027__S__P__D__TRANSPORT_REQUIREMENT__22GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">139307__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1009_9_S</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":600.0,"includeInNetFreight":null,"equipmentType":"1009_9_S","basis":"\/container","isHazMat":null},"accessorials":[{"amount":3.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":18.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":24.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":19.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":28.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":6.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":2.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":1.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":29.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":5.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":25.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":17.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":30.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":10.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":13.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":8.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":14.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":23.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":22.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":21.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":4.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":31.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":26.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":15.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":11.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":28.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":16.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null},{"amount":20.0,"includeInNetFreight":null,"basis":"\/WM","wtConvRate":0.001,"isHazMat":null}],"rateId":"28034334027","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":259200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">52910__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">52910__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 52910__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">2</type><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1001539__10020541__28029080128__SC______MULTI_STOP</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1001539__10020541__28029080128__SC______MULTI_STOP</id><narrativeDescription ttype="STRING">1001539__10020541__28029080128__SC______MULTI_STOP__L5GP</narrativeDescription><type ttype="I32">6</type><nextSteps ttype="SET"><item ttype="STRING">36312__HOLD_REQUIREMENT__AFTERSTART</item><item ttype="STRING">36312__END_REQUIREMENT</item><item ttype="STRING">54786__HOLD_REQUIREMENT__BEFORECONSOLIDATE</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">32314_19_SC</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":0.14885382554331644,"includeInNetFreight":null,"equipmentType":"32314_19_SC","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":0.014885382554331646,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"28029080128","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+				+ finalunloadthroughput;&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime><origins ttype="SET"><item ttype="STRING">36312__HOLD_REQUIREMENT__AFTERSTART</item></origins><destinations ttype="SET"><item ttype="STRING">54786__HOLD_REQUIREMENT__BEFORECONSOLIDATE</item></destinations></value></item><item><key ttype="STRING">1003076__1000121__28034174826__S__P__P__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1003076__1000121__28034174826__S__P__P__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 1003076__1000121__28034174826__S__P__P__TRANSPORT_REQUIREMENT__22GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">52910__DECONSOLIDATE_REQUIREMENT</item><item ttype="STRING">126494__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1003_9_S</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":200.0,"includeInNetFreight":null,"equipmentType":"1003_9_S","basis":"\/container","isHazMat":null},"accessorials":[{"amount":100.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null}],"rateId":"28034174826","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":259200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">1000714__2000283__28029055995__S__P__P__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1000714__2000283__28029055995__S__P__P__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 1000714__2000283__28029055995__S__P__P__TRANSPORT_REQUIREMENT__22GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">37415__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1003_9_S</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":500.0,"includeInNetFreight":null,"equipmentType":"1003_9_S","basis":"\/container","isHazMat":null},"accessorials":[],"rateId":"28029055995","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":604800});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">37415__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">37415__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 37415__45GP,22GP,42GP,L5GP,LCOS</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">37415__HOLD_REQUIREMENT__AFTERSTART</item></nextSteps><processingTime ttype="DOUBLE">1.0</processingTime><resourcesAvailable ttype="SET"><item ttype="STRING">1003_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">52910__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">52910__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 52910 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">52910__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">126492__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">126492__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 126492__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">1000726__1000144__28034194932__S__P__P__TRANSPORT_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1009_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">54784__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54784__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 54784 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">4</type><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">138280__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">138280__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 138280__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">138280__HOLD_REQUIREMENT__AFTERSTART</item></nextSteps><processingTime ttype="DOUBLE">1.0</processingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">36312__START_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">36312__START_REQUIREMENT</id><narrativeDescription ttype="STRING">start at 36312</narrativeDescription><type ttype="I32">0</type><nextSteps ttype="SET"><item ttype="STRING">36312__HOLD_REQUIREMENT__AFTERSTART</item></nextSteps></value></item><item><key ttype="STRING">126492__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">126492__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 126492__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">126492__HOLD_REQUIREMENT__AFTERSTART</item><item ttype="STRING">126492__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item></nextSteps><processingTime ttype="DOUBLE">1.0</processingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">10020541__1001539__28035960281__SC______MULTI_STOP</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">10020541__1001539__28035960281__SC______MULTI_STOP</id><narrativeDescription ttype="STRING">10020541__1001539__28035960281__SC______MULTI_STOP__L5GP</narrativeDescription><type ttype="I32">6</type><nextSteps ttype="SET"><item ttype="STRING">36312__HOLD_REQUIREMENT__AFTERSTART</item><item ttype="STRING">54786__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item><item ttype="STRING">36312__END_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">32314_19_SC</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":0.14885382554331644,"includeInNetFreight":null,"equipmentType":"32314_19_SC","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[],"rateId":"28035960281","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+				+ finalunloadthroughput;&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime><origins ttype="SET"><item ttype="STRING">54786__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item></origins><destinations ttype="SET"><item ttype="STRING">36312__END_REQUIREMENT</item></destinations></value></item><item><key ttype="STRING">126492__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">126492__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</id><narrativeDescription ttype="STRING">Hold at 126492 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">1000726__1000710__28035960279__SC______MULTI_STOP</item></nextSteps><processingTime ttype="DOUBLE">0.0</processingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">126492__HOLD_REQUIREMENT__BEFORECONSOLIDATE</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">126492__HOLD_REQUIREMENT__BEFORECONSOLIDATE</id><narrativeDescription ttype="STRING">Hold at 126492 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">126492__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><processingTime ttype="DOUBLE">0.0</processingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1002444__1000121__28032773631__S__P__P__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1002444__1000121__28032773631__S__P__P__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 1002444__1000121__28032773631__S__P__P__TRANSPORT_REQUIREMENT__NONE</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">52910__DECONSOLIDATE_REQUIREMENT</item><item ttype="STRING">126494__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1003_0_S</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":500.0,"includeInNetFreight":null,"equipmentType":"1003_0_S","basis":"\/WM","wtConvRate":0.001,"isHazMat":null},"accessorials":[{"amount":100.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null}],"rateId":"28032773631","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":259200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">54788__START_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54788__START_REQUIREMENT</id><narrativeDescription ttype="STRING">start at 54788</narrativeDescription><type ttype="I32">0</type><nextSteps ttype="SET"><item ttype="STRING">54788__HOLD_REQUIREMENT__AFTERSTART</item></nextSteps></value></item><item><key ttype="STRING">37415__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">37415__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 37415 45GP,22GP,42GP,L5GP,LCOS</narrativeDescription><type ttype="I32">4</type><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">54786__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54786__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 54786__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">10020541__1000710__28032761240__A__D__D__TRANSPORT_REQUIREMENT</item><item ttype="STRING">10020541__1000710__28032760416__S__P__P__TRANSPORT_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">52551_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">54788__END_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54788__END_REQUIREMENT</id><narrativeDescription ttype="STRING">End at 54788 </narrativeDescription><type ttype="I32">5</type></value></item><item><key ttype="STRING">54786__HOLD_REQUIREMENT__BEFORECONSOLIDATE</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54786__HOLD_REQUIREMENT__BEFORECONSOLIDATE</id><narrativeDescription ttype="STRING">Hold at 54786 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">54786__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><processingTime ttype="DOUBLE">0.0</processingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">10020541__1000710__28032760416__S__P__P__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">10020541__1000710__28032760416__S__P__P__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 10020541__1000710__28032760416__S__P__P__TRANSPORT_REQUIREMENT__22GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">54784__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">52551_9_S</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":100.0,"includeInNetFreight":null,"equipmentType":"52551_9_S","basis":"\/container","isHazMat":null},"accessorials":[{"amount":6.0,"includeInNetFreight":null,"basis":"\/lb","wtConvRate":2.20462,"isHazMat":null},{"amount":5.0,"includeInNetFreight":null,"basis":"\/lb","wtConvRate":2.20462,"isHazMat":null}],"rateId":"28032760416","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":604800});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">36312__END_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">36312__END_REQUIREMENT</id><narrativeDescription ttype="STRING">End at 36312 </narrativeDescription><type ttype="I32">5</type></value></item><item><key ttype="STRING">10020541__1000710__28032761240__A__D__D__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">10020541__1000710__28032761240__A__D__D__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 10020541__1000710__28032761240__A__D__D__TRANSPORT_REQUIREMENT__00A0</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">54784__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">20456_256_A</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"dimFactorConv":"cm\/kg","rateBands":[{"amount":4.59,"unit":"KG","lowerbreak":0.0,"upperbreak":150.0},{"amount":3.53,"unit":"KG","lowerbreak":151.0,"upperbreak":300.0},{"amount":2.67,"unit":"KG","lowerbreak":301.0,"upperbreak":500.0},{"amount":2.07,"unit":"KG","lowerbreak":501.0,"upperbreak":750.0},{"amount":1.49,"unit":"KG","lowerbreak":751.0,"upperbreak":1500.0},{"amount":1.11,"unit":"KG","lowerbreak":1501.0,"upperbreak":3000.0},{"amount":0.81,"unit":"KG","lowerbreak":3001.0,"upperbreak":4500.0},{"amount":0.65,"unit":"KG","lowerbreak":4501.0,"upperbreak":6000.0},{"amount":0.45,"unit":"KG","lowerbreak":6001,"upperbreak":999999999}],"baseRate":{"includeInNetFreight":null,"minAmount":12.0,"basis":"\/kg","wtConvRate":1.0,"isHazMat":null},"accessorials":[],"rateId":"28032761240","netfreightcostelems":[],"dimFactor":10.0});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":3600});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">54786__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54786__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 54786 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">54786__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">138280__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">138280__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 138280 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">138280__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">52910__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">52910__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 52910__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">52910__HOLD_REQUIREMENT__AFTERSTART</item></nextSteps><processingTime ttype="DOUBLE">1.0</processingTime><resourcesAvailable ttype="SET"><item ttype="STRING">1003_9_S</item><item ttype="STRING">1003_0_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">139307__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">139307__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 139307 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">4</type><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">37413__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">37413__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 37413__45GP,22GP,42GP,L5GP,LCOS</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">1000714__2000283__28029055995__S__P__P__TRANSPORT_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1003_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">48.0</maxHours></value></item><item><key ttype="STRING">54786__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54786__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</id><narrativeDescription ttype="STRING">Hold at 54786 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">10020541__1001539__28035960281__SC______MULTI_STOP</item></nextSteps><processingTime ttype="DOUBLE">0.0</processingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">54784__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54784__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 54784__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">1000710__10020541__28035955457__S__P__P__TRANSPORT_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">52551_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">130287__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">130287__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 130287 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">130287__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">139307__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">139307__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 139307__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">139307__HOLD_REQUIREMENT__AFTERSTART</item></nextSteps><processingTime ttype="DOUBLE">1.0</processingTime><resourcesAvailable ttype="SET"><item ttype="STRING">1009_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">138280__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">138280__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 138280__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">1003076__1000121__28034174826__S__P__P__TRANSPORT_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1003_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1002444__1000121__28032773965__S__P__P__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1002444__1000121__28032773965__S__P__P__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 1002444__1000121__28032773965__S__P__P__TRANSPORT_REQUIREMENT__NONE</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">52910__DECONSOLIDATE_REQUIREMENT</item><item ttype="STRING">126494__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1003_0_S</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":499.0,"includeInNetFreight":null,"equipmentType":"1003_0_S","basis":"\/WM","wtConvRate":0.001,"isHazMat":null},"accessorials":[{"amount":100.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null}],"rateId":"28032773965","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":259200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">126494__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">126494__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 126494__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">1000144__1000112__28034334027__S__P__D__TRANSPORT_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1009_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">120.0</maxHours></value></item><item><key ttype="STRING">126492__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">126492__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 126492 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">126492__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">37413__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">37413__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 37413 45GP,22GP,42GP,L5GP,LCOS</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">37413__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">54786__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54786__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 54786__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">54786__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item><item ttype="STRING">54786__HOLD_REQUIREMENT__AFTERSTART</item></nextSteps><processingTime ttype="DOUBLE">1.0</processingTime><resourcesAvailable ttype="SET"><item ttype="STRING">52551_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">54784__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54784__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 54784__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">54784__HOLD_REQUIREMENT__AFTERSTART</item><item ttype="STRING">54784__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item></nextSteps><processingTime ttype="DOUBLE">1.0</processingTime><resourcesAvailable ttype="SET"><item ttype="STRING">52551_9_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">52909__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">52909__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 52909 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">52909__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">126494__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">126494__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 126494__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">126494__HOLD_REQUIREMENT__AFTERSTART</item></nextSteps><processingTime ttype="DOUBLE">1.0</processingTime><resourcesAvailable ttype="SET"><item ttype="STRING">1009_9_S</item><item ttype="STRING">1003_9_S</item><item ttype="STRING">1003_0_S</item></resourcesAvailable><maxHours ttype="DOUBLE">120.0</maxHours></value></item><item><key ttype="STRING">52909__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">52909__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 52909__45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">1002444__1000121__28032773631__S__P__P__TRANSPORT_REQUIREMENT</item><item ttype="STRING">1002444__1000121__28032773965__S__P__P__TRANSPORT_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1003_0_S</item></resourcesAvailable><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">54784__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54784__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</id><narrativeDescription ttype="STRING">Hold at 54784 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">1000710__1000726__28032970063__SC______MULTI_STOP</item></nextSteps><processingTime ttype="DOUBLE">0.0</processingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1000710__10020541__28035955457__S__P__P__TRANSPORT_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1000710__10020541__28035955457__S__P__P__TRANSPORT_REQUIREMENT</id><narrativeDescription ttype="STRING">Transport from 1000710__10020541__28035955457__S__P__P__TRANSPORT_REQUIREMENT__22GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">54786__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">52551_9_S</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":100.0,"includeInNetFreight":null,"equipmentType":"52551_9_S","basis":"\/container","isHazMat":null},"accessorials":[{"amount":100.0,"includeInNetFreight":null,"basis":"\/lb","wtConvRate":2.20462,"isHazMat":null},{"amount":501.0,"includeInNetFreight":null,"basis":"\/lb","wtConvRate":2.20462,"isHazMat":null}],"rateId":"28035955457","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":604800});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime></value></item><item><key ttype="STRING">126494__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">126494__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 126494 45GP,LTL,22GP,42GP,L5GP,NONE,LCOS,00A0,FTL</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">126494__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">36312__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">36312__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 36312 </narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">1001539__10020541__28029080128__SC______MULTI_STOP</item><item ttype="STRING">10020541__1001539__28035960281__SC______MULTI_STOP</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1000710__1000726__28032970063__SC______MULTI_STOP</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1000710__1000726__28032970063__SC______MULTI_STOP</id><narrativeDescription ttype="STRING">1000710__1000726__28032970063__SC______MULTI_STOP__22GP</narrativeDescription><type ttype="I32">6</type><nextSteps ttype="SET"><item ttype="STRING">54784__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item><item ttype="STRING">54788__HOLD_REQUIREMENT__AFTERSTART</item><item ttype="STRING">126492__HOLD_REQUIREMENT__BEFORECONSOLIDATE</item><item ttype="STRING">54788__END_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1003_9_SC</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":1.0,"includeInNetFreight":null,"equipmentType":"1003_9_SC","basis":"\/MI","dstConvRate":1.0,"isHazMat":null},"accessorials":[{"amount":1.0,"includeInNetFreight":null,"basis":"\/MI","dstConvRate":1.0,"isHazMat":null}],"rateId":"28032970063","netfreightcostelems":[]});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+				+ finalunloadthroughput;&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime><origins ttype="SET"><item ttype="STRING">54784__HOLD_REQUIREMENT__AFTERDECONSOLIDATE</item></origins><destinations ttype="SET"><item ttype="STRING">126492__HOLD_REQUIREMENT__BEFORECONSOLIDATE</item><item ttype="STRING">54788__END_REQUIREMENT</item></destinations></value></item><item><key ttype="STRING">54788__HOLD_REQUIREMENT__AFTERSTART</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">54788__HOLD_REQUIREMENT__AFTERSTART</id><narrativeDescription ttype="STRING">Hold at 54788 </narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">1000726__1000710__28035960279__SC______MULTI_STOP</item><item ttype="STRING">1000710__1000726__28032970063__SC______MULTI_STOP</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item></steps><unitDimensions ttype="MAP"><item><key ttype="STRING">VOLUME</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">VOLUME</id><dimension ttype="I32">4</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">volInCBM</id><name ttype="STRING">81</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">CURRENCY</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">CURRENCY</id><dimension ttype="I32">0</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">Dollar</id><name ttype="STRING">840</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">WEIGHT</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">WEIGHT</id><dimension ttype="I32">5</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">wtInKG</id><name ttype="STRING">33</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">CUSTOM</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">CUSTOM</id><dimension ttype="I32">6</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">NumberOfTOS</id><name ttype="STRING">100001</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item></unitDimensions><resources ttype="MAP"><item><key ttype="STRING">1003_0_S</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1003_0_S</id><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_0_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">32314_19_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">32314_19_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"32314_19_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1009_9_S</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1009_9_S</id><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1009_9_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">20456_256_A</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">20456_256_A</id><scriptedConstraint ttype="STRING">(resourceObj= {"id":"20456_256_A"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">32314_9_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">32314_9_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"32314_9_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1003_9_S</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1003_9_S</id><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_9_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">52551_9_S</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">52551_9_S</id><scriptedConstraint ttype="STRING">(resourceObj= {"id":"52551_9_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1003_9_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1003_9_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_9_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item></resources><globalScript ttype="STRING">distanceMatrix = {"52910":{"52910":0.01,"126494":4532.22,"52912":100.0,"139307":4402.6},"130289":{"130289":0.01,"129626":540.77,"130287":251.17,"130291":499.49},"40717":{"40717":0.01,"40716":6287.22,"40719":6037.14,"40718":6105.35,"40700":6519.97,"40702":7216.36,"40701":7482.39,"40704":7006.92,"40703":7224.91,"40723":5320.69,"40724":5272.94,"40725":5193.59,"40720":5820.67,"37415":7468.05,"40721":5536.86,"37418":7462.09,"40722":5541.14,"37417":7465.9,"40699":6808.14,"40709":6596.58,"40708":5565.53,"40707":5545.72,"40706":6527.42,"40705":6746.42,"40714":6643.87,"40715":6325.32,"40712":6358.16,"40713":6429.52,"40710":6459.84,"40711":6309.84},"138278":{"138280":0.01,"138278":0.01},"40716":{"40717":6287.22,"40716":0.01,"40719":324.94,"40718":226.63,"40700":1934.56,"40702":2028.97,"40701":1809.52,"40704":1171.27,"40703":1233.47,"40723":967.18,"40724":1014.39,"40725":1093.79,"40720":526.49,"37415":1859.64,"40721":755.16,"37418":1865.34,"40722":759.66,"37417":1882.85,"40699":2073.14,"40709":1535.25,"40708":734.95,"40707":745.57,"40706":1834.29,"40705":1542.28,"40714":422.03,"40715":278.58,"40712":621.88,"40713":271.46,"40710":1784.48,"40711":377.88},"52912":{"52910":54.12,"126494":4539.61,"52912":0.01,"139307":4404.2},"40719":{"40717":6037.14,"40716":324.94,"40719":0.01,"40718":99.35,"40700":2182.95,"40702":2333.54,"40701":2131.88,"40704":1490.7,"40703":1558.41,"40723":736.33,"40724":787.65,"40725":872.57,"40720":219.56,"37415":2180.6,"40721":514.78,"37418":2185.98,"40722":606.4,"37417":2203.27,"40699":2346.45,"40709":1801.21,"40708":584.3,"40707":507.95,"40706":2085.3,"40705":1824.54,"40714":745.42,"40715":296.21,"40712":885.56,"40713":588.55,"40710":2028.68,"40711":645.12},"130287":{"130289":251.17,"129626":641.02,"130287":0.01,"130291":640.54},"40718":{"40717":6105.35,"40716":226.63,"40719":99.35,"40718":0.01,"40700":2098.01,"40702":2236.51,"40701":2032.53,"40704":1391.44,"40703":1459.78,"40723":790.82,"40724":840.94,"40725":924.35,"40720":304.78,"37415":2081.28,"40721":570.65,"37418":2086.68,"40722":628.65,"37417":2103.98,"40699":2255.88,"40709":1711.82,"40708":605.06,"40707":562.5,"40706":1999.64,"40705":1731.66,"40714":648.23,"40715":261.16,"40712":794.45,"40713":489.25,"40710":1944.56,"40711":551.75},"40460":{"36315":41.11,"36316":213.08,"36317":207.0,"36312":241.65,"36313":154.74,"36314":65.55,"40455":223.88,"40456":63.27,"40458":114.36,"142204":1061.57,"54786":213.08,"40460":0.01,"57932":213.08,"142205":919.9,"40452":133.85,"40453":156.15,"40454":159.46},"37412":{"126492":1046.44,"54788":1046.44,"37412":0.01,"54784":611.24,"57930":611.24,"37413":47.42,"54790":1200.28},"40723":{"40717":5320.69,"40716":967.18,"40719":736.33,"40718":790.82,"40700":2285.34,"40702":2643.6,"40701":2575.63,"40704":1939.94,"40703":2080.57,"40723":0.01,"40724":52.04,"40725":137.66,"37415":2607.12,"40720":540.62,"37418":2609.15,"40721":221.58,"37417":2623.5,"40722":281.97,"40699":2522.42,"40709":1993.86,"40708":299.18,"40707":228.84,"40706":2203.83,"40705":2071.8,"40714":1348.52,"40715":1032.54,"40712":1223.68,"40713":1140.1,"40710":2130.73,"40711":1070.67},"52907":{"52907":0.01,"52909":100.0},"40724":{"40717":5272.94,"40716":1014.39,"40719":787.65,"40718":840.94,"40700":2291.71,"40702":2663.07,"40701":2604.46,"40704":1971.22,"40703":2116.01,"40723":52.04,"40724":0.01,"40725":85.63,"37415":2634.69,"40720":592.65,"37418":2636.49,"40721":272.9,"37417":2650.61,"40722":309.67,"40699":2532.99,"40709":2007.96,"40708":329.22,"40707":279.81,"40706":2211.7,"40705":2089.2,"40714":1391.59,"40715":1083.85,"40712":1253.45,"40713":1182.02,"40710":2137.8,"40711":1107.24},"37411":{"126492":1074.18,"54788":1074.18,"37411":0.01,"54784":672.45,"57930":672.45,"37413":108.8,"54790":1205.96},"130291":{"130289":499.49,"129626":108.78,"130287":640.54,"130291":0.01},"40725":{"40717":5193.59,"40716":1093.79,"40719":872.57,"40718":924.35,"40700":2306.51,"40702":2698.64,"40701":2654.95,"40704":2026.04,"40703":2177.14,"40723":137.66,"40724":85.63,"40725":0.01,"37415":2683.17,"40720":678.28,"37418":2684.6,"40721":358.01,"37417":2698.33,"40722":368.34,"40699":2554.35,"40709":2035.61,"40708":390.25,"40707":364.62,"40706":2229.06,"40705":2122.04,"40714":1464.79,"40715":1168.73,"40712":1307.02,"40713":1253.75,"40710":2153.96,"40711":1171.3},"37413":{"126492":1002.15,"54788":1002.15,"37412":47.42,"37411":108.8,"54784":575.58,"57930":575.58,"37413":0.01,"54790":1153.4},"40720":{"40717":5820.67,"40716":526.49,"40719":219.56,"40718":304.78,"40700":2274.45,"40702":2481.87,"40701":2311.03,"40704":1665.68,"40703":1751.24,"40723":540.62,"40724":592.65,"40725":678.28,"40720":0.01,"37415":2356.1,"40721":324.54,"37418":2360.73,"40722":475.22,"37417":2377.45,"40699":2459.88,"40709":1912.56,"40708":458.09,"40707":320.47,"40706":2180.08,"40705":1951.17,"40714":947.74,"40715":505.65,"40712":1015.21,"40713":772.26,"40710":2118.1,"40711":790.33},"37415":{"40717":7468.05,"40716":1859.64,"40719":2180.6,"40718":2081.28,"40700":1049.44,"40702":429.04,"40701":76.27,"40704":690.65,"40703":671.19,"40723":2607.12,"40724":2634.69,"40725":2683.17,"40720":2356.1,"37415":0.01,"40721":2462.94,"37418":13.04,"40722":2325.83,"37417":30.64,"40699":850.6,"40709":872.51,"40708":2307.94,"40707":2451.55,"40706":1003.67,"40705":721.77,"40714":1461.12,"40715":2053.82,"40712":1385.24,"40713":1592.06,"40710":1054.27,"40711":1574.01},"40721":{"40717":5536.86,"40716":755.16,"40719":514.78,"40718":570.65,"40700":2229.26,"40702":2531.62,"40701":2426.63,"40704":1783.77,"40703":1907.67,"40723":221.58,"40724":272.9,"40725":358.01,"40720":324.54,"37415":2462.94,"40721":0.01,"37418":2465.89,"40722":225.73,"37417":2481.13,"40699":2447.48,"40709":1907.48,"40708":223.64,"40707":11.39,"40706":2141.94,"40705":1971.16,"40714":1149.7,"40715":810.99,"40712":1079.48,"40713":946.78,"40710":2072.7,"40711":899.84},"37418":{"40717":7462.09,"40716":1865.34,"40719":2185.98,"40718":2086.68,"40700":1039.0,"40702":416.13,"40701":88.87,"40704":695.64,"40703":680.14,"40723":2609.15,"40724":2636.49,"40725":2684.6,"37415":13.04,"40720":2360.73,"40721":2465.89,"37418":0.01,"40722":2327.76,"40699":838.58,"40709":866.05,"40708":2309.97,"40707":2454.5,"40706":993.98,"40705":715.68,"40714":1467.82,"40715":2060.72,"40712":1387.77,"40713":1597.43,"40710":1045.13,"40711":1577.91},"37417":{"40717":7465.9,"40716":1882.85,"40719":2203.27,"40718":2103.98,"40700":1034.39,"40702":403.15,"40701":106.74,"40704":712.72,"40703":699.33,"40723":2623.5,"40724":2650.61,"40725":2698.33,"37415":30.64,"40720":2377.45,"40721":2481.13,"40722":2342.01,"37417":0.01,"40699":829.56,"40709":869.39,"40708":2324.33,"40707":2469.74,"40706":991.11,"40705":719.69,"40714":1485.99,"40715":2079.0,"40712":1402.67,"40713":1614.73,"40710":1043.43,"40711":1594.03},"52909":{"52907":164.11,"52909":0.01},"40722":{"40717":5541.14,"40716":759.66,"40719":606.4,"40718":628.65,"40700":2024.98,"40702":2363.47,"40701":2295.07,"40704":1661.64,"40703":1809.07,"40723":281.97,"40724":309.67,"40725":368.34,"40720":475.22,"37415":2325.83,"37418":2327.76,"40721":225.73,"40722":0.01,"37417":2342.01,"40699":2253.38,"40709":1719.84,"40708":24.72,"40707":218.63,"40706":1940.39,"40705":1793.67,"40714":1105.79,"40715":888.58,"40712":943.8,"40713":892.67,"40710":1869.14,"40711":803.13},"40699":{"40717":6808.14,"40716":2073.14,"40719":2346.45,"40718":2255.88,"40700":302.41,"40702":448.74,"40701":911.26,"40704":1086.09,"40703":1250.66,"40723":2522.42,"40724":2532.99,"40725":2554.35,"40720":2459.88,"37415":850.6,"40721":2447.48,"37418":838.58,"40722":2253.38,"37417":829.56,"40699":0.01,"40709":547.33,"40708":2243.43,"40707":2436.84,"40706":340.7,"40705":536.02,"40714":1781.58,"40715":2331.23,"40712":1461.44,"40713":1813.89,"40710":420.85,"40711":1705.15},"40709":{"40717":6596.58,"40716":1535.25,"40719":1801.21,"40718":1711.82,"40700":421.83,"40702":694.44,"40701":893.84,"40704":701.67,"40703":929.0,"40723":1993.86,"40724":2007.96,"40725":2035.61,"40720":1912.56,"37415":872.51,"40721":1907.48,"37418":866.05,"40722":1719.84,"37417":869.39,"40699":547.33,"40709":0.01,"40708":1708.48,"40707":1896.67,"40706":320.67,"40705":152.61,"40714":1274.63,"40715":1799.41,"40712":918.0,"40713":1282.52,"40710":302.84,"40711":1162.96},"40708":{"40717":5565.53,"40716":734.95,"40719":584.3,"40718":605.06,"40700":2017.3,"40702":2349.21,"40701":2276.64,"40704":1642.14,"40703":1787.9,"40723":299.18,"40724":329.22,"40725":390.25,"40720":458.09,"37415":2307.94,"40721":223.64,"37418":2309.97,"40722":24.72,"37417":2324.33,"40699":2243.43,"40709":1708.48,"40708":0.01,"40707":215.59,"40706":1932.02,"40705":1780.61,"40714":1081.78,"40715":865.24,"40712":924.91,"40713":868.81,"40710":1861.24,"40711":781.06},"40707":{"40717":5545.72,"40716":745.57,"40719":507.95,"40718":562.5,"40700":2219.05,"40702":2520.4,"40701":2415.24,"40704":1772.4,"40703":1896.49,"40723":228.84,"40724":279.81,"40725":364.62,"40720":320.47,"37415":2451.55,"40721":11.39,"37418":2454.5,"40722":218.63,"37417":2469.74,"40699":2436.84,"40709":1896.67,"40708":215.59,"40707":0.01,"40706":2131.61,"40705":1960.11,"40714":1139.23,"40715":804.12,"40712":1068.1,"40713":936.03,"40710":2062.46,"40711":888.56},"40706":{"40717":6527.42,"40716":1834.29,"40719":2085.3,"40718":1999.64,"40700":102.02,"40702":688.94,"40701":1046.09,"40704":1002.91,"40703":1214.82,"40723":2203.83,"40724":2211.7,"40725":2229.06,"40720":2180.08,"37415":1003.67,"40721":2141.94,"37418":993.98,"40722":1940.39,"37417":991.11,"40699":340.7,"40709":320.67,"40708":1932.02,"40707":2131.61,"40706":0.01,"40705":405.69,"40714":1591.98,"40715":2103.46,"40712":1212.68,"40713":1589.06,"40710":80.19,"40711":1457.89},"40705":{"40717":6746.42,"40716":1542.28,"40719":1824.54,"40718":1731.66,"40700":497.53,"40702":580.56,"40701":741.55,"40704":598.54,"40703":810.03,"40723":2071.8,"40724":2089.2,"40725":2122.04,"40720":1951.17,"37415":721.77,"40721":1971.16,"37418":715.68,"40722":1793.67,"37417":719.69,"40699":536.02,"40709":152.61,"40708":1780.61,"40707":1960.11,"40706":405.69,"40705":0.01,"40714":1246.3,"40715":1796.91,"40712":939.9,"40713":1280.12,"40710":413.97,"40711":1179.93},"54790":{"126492":277.83,"54788":277.83,"37412":1200.28,"37411":1205.96,"54784":746.45,"57930":746.45,"37413":1153.4,"54790":0.01},"40455":{"36315":264.4,"36316":428.08,"36317":430.87,"36312":33.18,"36313":140.06,"36314":182.08,"40455":0.01,"40456":285.83,"40458":337.43,"142204":977.81,"54786":428.08,"40460":223.88,"57932":428.08,"142205":804.23,"40452":350.23,"40453":362.83,"40454":109.75},"129626":{"130289":540.77,"129626":0.01,"130287":641.02,"130291":108.78},"40456":{"36315":22.29,"36316":166.42,"36317":145.94,"36312":304.62,"36313":200.37,"36314":113.3,"40455":285.83,"40456":0.01,"40458":60.2,"142204":1103.93,"54786":166.42,"40460":63.27,"57932":166.42,"142205":969.5,"40452":92.13,"40453":123.57,"40454":211.62},"40458":{"36315":76.61,"36316":106.58,"36317":95.68,"36312":353.27,"36313":260.21,"36314":172.1,"40455":337.43,"40456":60.2,"40458":0.01,"142204":1104.39,"54786":106.58,"40460":114.36,"57932":106.58,"142205":980.12,"40452":39.48,"40453":74.76,"40454":270.21},"40714":{"40717":6643.87,"40716":422.03,"40719":745.42,"40718":648.23,"40700":1693.97,"40702":1672.22,"40701":1406.37,"40704":785.14,"40703":817.15,"40723":1348.52,"40724":1391.59,"40725":1464.79,"40720":947.74,"37415":1461.12,"40721":1149.7,"37418":1467.82,"40722":1105.79,"37417":1485.99,"40699":1781.58,"40709":1274.63,"40708":1081.78,"40707":1139.23,"40706":1591.98,"40705":1246.3,"40714":0.01,"40715":593.62,"40712":484.09,"40713":214.41,"40710":1556.67,"40711":366.46},"57932":{"36315":180.29,"36316":0.01,"36317":86.42,"36312":439.24,"36313":364.72,"36314":275.45,"40455":428.08,"40456":166.42,"40458":106.58,"142204":1098.29,"40460":213.08,"54786":0.01,"57932":0.01,"142205":993.02,"40452":79.3,"40453":68.58,"40454":372.31},"40715":{"40717":6325.32,"40716":278.58,"40719":296.21,"40718":261.16,"40700":2204.35,"40702":2258.59,"40701":1997.72,"40704":1377.96,"40703":1400.68,"40723":1032.54,"40724":1083.85,"40725":1168.73,"40720":505.65,"37415":2053.82,"40721":810.99,"37418":2060.72,"40722":888.58,"37417":2079.0,"40699":2331.23,"40709":1799.41,"40708":865.24,"40707":804.12,"40706":2103.46,"40705":1796.91,"40714":593.62,"40715":0.01,"40712":894.23,"40713":517.53,"40710":2055.94,"40711":653.28},"40712":{"40717":6358.16,"40716":621.88,"40719":885.56,"40718":794.45,"40700":1312.77,"40702":1468.72,"40701":1352.11,"40704":719.15,"40703":887.41,"40723":1223.68,"40724":1253.45,"40725":1307.02,"40720":1015.21,"37415":1385.24,"40721":1079.48,"37418":1387.77,"40722":943.8,"37417":1402.67,"40699":1461.44,"40709":918.0,"40708":924.91,"40707":1068.1,"40706":1212.68,"40705":939.9,"40714":484.09,"40715":894.23,"40712":0.01,"40713":392.87,"40710":1162.66,"40711":245.47},"57930":{"126492":510.05,"54788":510.05,"37412":611.24,"37411":672.45,"54784":0.01,"57930":0.01,"37413":575.58,"54790":746.45},"40713":{"40717":6429.52,"40716":271.46,"40719":588.55,"40718":489.25,"40700":1690.39,"40702":1757.97,"40701":1543.72,"40704":902.26,"40703":979.5,"40723":1140.1,"40724":1182.02,"40725":1253.75,"40720":772.26,"37415":1592.06,"40721":946.78,"37418":1597.43,"40722":892.67,"37417":1614.73,"40699":1813.89,"40709":1282.52,"40708":868.81,"40707":936.03,"40706":1589.06,"40705":1280.12,"40714":214.41,"40715":517.53,"40712":392.87,"40713":0.01,"40710":1544.04,"40711":188.66},"40710":{"40717":6459.84,"40716":1784.48,"40719":2028.68,"40718":1944.56,"40700":156.94,"40702":757.96,"40701":1092.72,"40704":1001.5,"40703":1222.2,"40723":2130.73,"40724":2137.8,"40725":2153.96,"40720":2118.1,"37415":1054.27,"40721":2072.7,"37418":1045.13,"40722":1869.14,"37417":1043.43,"40699":420.85,"40709":302.84,"40708":1861.24,"40707":2062.46,"40706":80.19,"40705":413.97,"40714":1556.67,"40715":2055.94,"40712":1162.66,"40713":1544.04,"40710":0.01,"40711":1407.04},"40452":{"36315":102.8,"36316":79.3,"36317":102.4,"36312":362.82,"36313":286.48,"36314":196.92,"40455":350.23,"40456":92.13,"40458":39.48,"142204":1077.32,"54786":79.3,"40460":133.85,"57932":79.3,"142205":958.53,"40452":0.01,"40453":35.32,"40454":293.22},"40711":{"40717":6309.84,"40716":377.88,"40719":645.12,"40718":551.75,"40700":1557.79,"40702":1693.57,"40701":1533.33,"40704":887.58,"40703":1010.38,"40723":1070.67,"40724":1107.24,"40725":1171.3,"40720":790.33,"37415":1574.01,"40721":899.84,"37418":1577.91,"40722":803.13,"37417":1594.03,"40699":1705.15,"40709":1162.96,"40708":781.06,"40707":888.56,"40706":1457.89,"40705":1179.93,"40714":366.46,"40715":653.28,"40712":245.47,"40713":188.66,"40710":1407.04,"40711":0.01},"40453":{"36315":130.77,"36316":68.58,"36317":121.46,"36312":372.53,"36313":310.78,"36314":221.2,"40455":362.83,"40456":123.57,"40458":74.76,"142204":1052.08,"54786":68.58,"40460":156.15,"57932":68.58,"142205":938.24,"40452":35.32,"40453":0.01,"40454":314.85},"40454":{"36315":193.62,"36316":372.31,"36317":355.93,"36312":141.46,"36313":30.48,"36314":98.32,"40455":109.75,"40456":211.62,"40458":270.21,"142204":1072.2,"54786":372.31,"40460":159.46,"57932":372.31,"142205":905.72,"40452":293.22,"40453":314.85,"40454":0.01},"36315":{"36315":0.01,"36316":180.29,"36317":166.66,"36312":282.7,"36313":184.47,"36314":95.65,"40455":264.4,"40456":22.29,"40458":76.61,"142204":1087.38,"54786":180.29,"40460":41.11,"57932":180.29,"142205":950.7,"40452":102.8,"40453":130.77,"40454":193.62},"36316":{"36315":180.29,"36316":0.01,"36317":86.42,"36312":439.24,"36313":364.72,"36314":275.45,"40455":428.08,"40456":166.42,"40458":106.58,"142204":1098.29,"54786":0.01,"40460":213.08,"57932":0.01,"142205":993.02,"40452":79.3,"40453":68.58,"40454":372.31},"36317":{"36315":166.66,"36316":86.42,"36317":0.01,"36312":447.98,"36313":341.66,"36314":258.1,"40455":430.87,"40456":145.94,"40458":95.68,"142204":1173.12,"54786":86.42,"40460":207.0,"57932":86.42,"142205":1059.15,"40452":102.4,"40453":121.46,"40454":355.93},"36312":{"36315":282.7,"36316":439.24,"36317":447.98,"36312":0.01,"36313":171.92,"36314":206.24,"40455":33.18,"40456":304.62,"40458":353.27,"142204":945.48,"54786":439.24,"40460":241.65,"57932":439.24,"142205":771.14,"40452":362.82,"40453":372.53,"40454":141.46},"36313":{"36315":184.47,"36316":364.72,"36317":341.66,"36312":171.92,"36313":0.01,"36314":89.69,"40455":140.06,"40456":200.37,"40458":260.21,"142204":1100.45,"54786":364.72,"40460":154.74,"57932":364.72,"142205":935.31,"40452":286.48,"40453":310.78,"40454":30.48},"36314":{"36315":95.65,"36316":275.45,"36317":258.1,"36312":206.24,"36313":89.69,"36314":0.01,"40455":182.08,"40456":113.3,"40458":172.1,"142204":1081.44,"54786":275.45,"40460":65.55,"57932":275.45,"142205":929.44,"40452":196.92,"40453":221.2,"40454":98.32},"40700":{"40717":6519.97,"40716":1934.56,"40719":2182.95,"40718":2098.01,"40700":0.01,"40702":703.04,"40701":1097.19,"40704":1096.07,"40703":1302.5,"40723":2285.34,"40724":2291.71,"40725":2306.51,"40720":2274.45,"37415":1049.44,"40721":2229.26,"37418":1039.0,"40722":2024.98,"37417":1034.39,"40699":302.41,"40709":421.83,"40708":2017.3,"40707":2219.05,"40706":102.02,"40705":497.53,"40714":1693.97,"40715":2204.35,"40712":1312.77,"40713":1690.39,"40710":156.94,"40711":1557.79},"40702":{"40717":7216.36,"40716":2028.97,"40719":2333.54,"40718":2236.51,"40700":703.04,"40702":0.01,"40701":499.61,"40704":896.04,"40703":981.65,"40723":2643.6,"40724":2663.07,"40725":2698.64,"40720":2481.87,"37415":429.04,"40721":2531.62,"37418":416.13,"40722":2363.47,"37417":403.15,"40699":448.74,"40709":694.44,"40708":2349.21,"40707":2520.4,"40706":688.94,"40705":580.56,"40714":1672.22,"40715":2258.59,"40712":1468.72,"40713":1757.97,"40710":757.96,"40711":1693.57},"40701":{"40717":7482.39,"40716":1809.52,"40719":2131.88,"40718":2032.53,"40700":1097.19,"40702":499.61,"40701":0.01,"40704":646.28,"40703":606.97,"40723":2575.63,"40724":2604.46,"40725":2654.95,"40720":2311.03,"37415":76.27,"40721":2426.63,"37418":88.87,"40722":2295.07,"37417":106.74,"40699":911.26,"40709":893.84,"40708":2276.64,"40707":2415.24,"40706":1046.09,"40705":741.55,"40714":1406.37,"40715":1997.72,"40712":1352.11,"40713":1543.72,"40710":1092.72,"40711":1533.33},"40704":{"40717":7006.92,"40716":1171.27,"40719":1490.7,"40718":1391.44,"40700":1096.07,"40702":896.04,"40701":646.28,"40704":0.01,"40703":247.37,"40723":1939.94,"40724":1971.22,"40725":2026.04,"40720":1665.68,"37415":690.65,"40721":1783.77,"37418":695.64,"40722":1661.64,"37417":712.72,"40699":1086.09,"40709":701.67,"40708":1642.14,"40707":1772.4,"40706":1002.91,"40705":598.54,"40714":785.14,"40715":1377.96,"40712":719.15,"40713":902.26,"40710":1001.5,"40711":887.58},"54788":{"126492":0.01,"54788":0.01,"37412":1046.44,"37411":1074.18,"54784":510.05,"57930":510.05,"37413":1002.15,"54790":277.83},"40703":{"40717":7224.91,"40716":1233.47,"40719":1558.41,"40718":1459.78,"40700":1302.5,"40702":981.65,"40701":606.97,"40704":247.37,"40703":0.01,"40723":2080.57,"40724":2116.01,"40725":2177.14,"40720":1751.24,"37415":671.19,"40721":1907.67,"37418":680.14,"40722":1809.07,"37417":699.33,"40699":1250.66,"40709":929.0,"40708":1787.9,"40707":1896.49,"40706":1214.82,"40705":810.03,"40714":817.15,"40715":1400.68,"40712":887.41,"40713":979.5,"40710":1222.2,"40711":1010.38},"139307":{"52910":4402.6,"126494":406.05,"52912":4404.2,"139307":0.01},"54786":{"36315":180.29,"36316":0.01,"36317":86.42,"36312":439.24,"36313":364.72,"36314":275.45,"40455":428.08,"40456":166.42,"40458":106.58,"142204":1098.29,"54786":0.01,"40460":213.08,"57932":0.01,"142205":993.02,"40452":79.3,"40453":68.58,"40454":372.31},"54784":{"126492":510.05,"54788":510.05,"37412":611.24,"37411":672.45,"54784":0.01,"57930":0.01,"37413":575.58,"54790":746.45},"138280":{"138280":0.01,"138278":0.01},"126492":{"126492":0.01,"54788":0.01,"37412":1046.44,"37411":1074.18,"54784":510.05,"57930":510.05,"37413":1002.15,"54790":277.83},"142204":{"36315":1087.38,"36316":1098.29,"36317":1173.12,"36312":945.48,"36313":1100.45,"36314":1081.44,"40455":977.81,"40456":1103.93,"40458":1104.39,"142204":0.01,"54786":1098.29,"40460":1061.57,"57932":1098.29,"142205":216.79,"40452":1077.32,"40453":1052.08,"40454":1072.2},"126494":{"52910":4532.22,"126494":0.01,"52912":4539.61,"139307":406.05},"142205":{"36315":950.7,"36316":993.02,"36317":1059.15,"36312":771.14,"36313":935.31,"36314":929.44,"40455":804.23,"40456":969.5,"40458":980.12,"142204":216.79,"54786":993.02,"40460":919.9,"57932":993.02,"142205":0.01,"40452":958.53,"40453":938.24,"40454":905.72}}
+transitTimeMatrix = {"52910":{"52910":60,"126494":326280,"52912":86400,"139307":316980},"130289":{"130289":60,"129626":38880,"130287":18060,"130291":35940},"40717":{"40717":60,"40716":452640,"40719":434640,"40718":439560,"40700":469380,"40702":519540,"40701":538680,"40704":504480,"40703":520140,"40723":383040,"40724":379620,"40725":373920,"40720":419040,"37415":537660,"40721":398640,"37418":537240,"40722":398940,"37417":537540,"40699":490140,"40709":474900,"40708":400680,"40707":399240,"40706":469920,"40705":485700,"40714":478320,"40715":455400,"40712":457740,"40713":462900,"40710":465060,"40711":454260},"138278":{"138280":60,"138278":60},"40716":{"40717":452640,"40716":60,"40719":23340,"40718":16260,"40700":139260,"40702":146040,"40701":130260,"40704":84300,"40703":88800,"40723":69600,"40724":73020,"40725":78720,"40720":37860,"37415":133860,"40721":54360,"37418":134280,"40722":54660,"37417":135540,"40699":149220,"40709":110520,"40708":52860,"40707":53640,"40706":132060,"40705":111000,"40714":30360,"40715":20040,"40712":44760,"40713":19500,"40710":128460,"40711":27180},"52912":{"52910":3840,"126494":326820,"52912":60,"139307":317100},"40719":{"40717":434640,"40716":23340,"40719":60,"40718":7140,"40700":157140,"40702":168000,"40701":153480,"40704":107280,"40703":112200,"40723":52980,"40724":56700,"40725":62820,"40720":15780,"37415":156960,"40721":37020,"37418":157380,"40722":43620,"37417":158580,"40699":168900,"40709":129660,"40708":42060,"40707":36540,"40706":150120,"40705":131340,"40714":53640,"40715":21300,"40712":63720,"40713":42360,"40710":146040,"40711":46440},"130287":{"130289":18060,"129626":46140,"130287":60,"130291":46080},"40718":{"40717":439560,"40716":16260,"40719":7140,"40718":60,"40700":151020,"40702":160980,"40701":146340,"40704":100140,"40703":105060,"40723":56880,"40724":60540,"40725":66540,"40720":21900,"37415":149820,"40721":41040,"37418":150240,"40722":45240,"37417":151440,"40699":162420,"40709":123240,"40708":43560,"40707":40500,"40706":143940,"40705":124620,"40714":46620,"40715":18780,"40712":57180,"40713":35220,"40710":139980,"40711":39720},"40460":{"36315":2940,"36316":15300,"36317":14880,"36312":17340,"36313":11100,"36314":4680,"40455":16080,"40456":4500,"40458":8220,"142204":76380,"54786":15300,"40460":60,"57932":15300,"142205":66180,"40452":9600,"40453":11220,"40454":11460},"37412":{"126492":75300,"54788":75300,"37412":60,"54784":43980,"57930":43980,"37413":3360,"54790":86400},"40723":{"40717":383040,"40716":69600,"40719":52980,"40718":56880,"40700":164520,"40702":190320,"40701":185400,"40704":139620,"40703":149760,"40723":60,"40724":3720,"40725":9900,"37415":187680,"40720":38880,"37418":187800,"40721":15900,"37417":188880,"40722":20280,"40699":181560,"40709":143520,"40708":21540,"40707":16440,"40706":158640,"40705":149160,"40714":97080,"40715":74340,"40712":88080,"40713":82080,"40710":153360,"40711":77040},"52907":{"52907":60,"52909":86400},"40724":{"40717":379620,"40716":73020,"40719":56700,"40718":60540,"40700":165000,"40702":191700,"40701":187500,"40704":141900,"40703":152340,"40723":3720,"40724":60,"40725":6120,"37415":189660,"40720":42660,"37418":189780,"40721":19620,"37417":190800,"40722":22260,"40699":182340,"40709":144540,"40708":23700,"40707":20100,"40706":159240,"40705":150420,"40714":100140,"40715":78000,"40712":90240,"40713":85080,"40710":153900,"40711":79680},"37411":{"126492":77340,"54788":77340,"37411":60,"54784":48360,"57930":48360,"37413":7800,"54790":86820},"130291":{"130289":35940,"129626":7800,"130287":46080,"130291":60},"40725":{"40717":373920,"40716":78720,"40719":62820,"40718":66540,"40700":166020,"40702":194280,"40701":191100,"40704":145860,"40703":156720,"40723":9900,"40724":6120,"40725":60,"37415":193140,"40720":48780,"37418":193260,"40721":25740,"37417":194220,"40722":26520,"40699":183900,"40709":146520,"40708":28080,"40707":26220,"40706":160440,"40705":152760,"40714":105420,"40715":84120,"40712":94080,"40713":90240,"40710":155040,"40711":84300},"37413":{"126492":72120,"54788":72120,"37412":3360,"37411":7800,"54784":41400,"57930":41400,"37413":60,"54790":83040},"40720":{"40717":419040,"40716":37860,"40719":15780,"40718":21900,"40700":163740,"40702":178680,"40701":166380,"40704":119880,"40703":126060,"40723":38880,"40724":42660,"40725":48780,"40720":60,"37415":169620,"40721":23340,"37418":169920,"40722":34200,"37417":171120,"40699":177060,"40709":137700,"40708":32940,"40707":23040,"40706":156960,"40705":140460,"40714":68220,"40715":36360,"40712":73080,"40713":55560,"40710":152460,"40711":56880},"37415":{"40717":537660,"40716":133860,"40719":156960,"40718":149820,"40700":75540,"40702":30840,"40701":5460,"40704":49680,"40703":48300,"40723":187680,"40724":189660,"40725":193140,"40720":169620,"37415":60,"40721":177300,"37418":900,"40722":167400,"37417":2160,"40699":61200,"40709":62820,"40708":166140,"40707":176460,"40706":72240,"40705":51960,"40714":105180,"40715":147840,"40712":99720,"40713":114600,"40710":75900,"40711":113280},"40721":{"40717":398640,"40716":54360,"40719":37020,"40718":41040,"40700":160500,"40702":182220,"40701":174660,"40704":128400,"40703":137340,"40723":15900,"40724":19620,"40725":25740,"40720":23340,"37415":177300,"40721":60,"37418":177540,"40722":16200,"37417":178620,"40699":176160,"40709":137280,"40708":16080,"40707":780,"40706":154200,"40705":141900,"40714":82740,"40715":58380,"40712":77700,"40713":68160,"40710":149220,"40711":64740},"37418":{"40717":537240,"40716":134280,"40719":157380,"40718":150240,"40700":74760,"40702":29940,"40701":6360,"40704":50040,"40703":48960,"40723":187800,"40724":189780,"40725":193260,"37415":900,"40720":169920,"40721":177540,"37418":60,"40722":167580,"40699":60360,"40709":62340,"40708":166260,"40707":176700,"40706":71520,"40705":51480,"40714":105660,"40715":148320,"40712":99900,"40713":114960,"40710":75240,"40711":113580},"37417":{"40717":537540,"40716":135540,"40719":158580,"40718":151440,"40700":74460,"40702":28980,"40701":7680,"40704":51300,"40703":50340,"40723":188880,"40724":190800,"40725":194220,"37415":2160,"40720":171120,"40721":178620,"40722":168600,"37417":60,"40699":59700,"40709":62580,"40708":167340,"40707":177780,"40706":71340,"40705":51780,"40714":106980,"40715":149640,"40712":100980,"40713":116220,"40710":75120,"40711":114720},"52909":{"52907":11760,"52909":60},"40722":{"40717":398940,"40716":54660,"40719":43620,"40718":45240,"40700":145740,"40702":170160,"40701":165240,"40704":119580,"40703":130200,"40723":20280,"40724":22260,"40725":26520,"40720":34200,"37415":167400,"37418":167580,"40721":16200,"40722":60,"37417":168600,"40699":162240,"40709":123780,"40708":1740,"40707":15720,"40706":139680,"40705":129120,"40714":79560,"40715":63960,"40712":67920,"40713":64260,"40710":134520,"40711":57780},"40699":{"40717":490140,"40716":149220,"40719":168900,"40718":162420,"40700":21720,"40702":32280,"40701":65580,"40704":78180,"40703":90000,"40723":181560,"40724":182340,"40725":183900,"40720":177060,"37415":61200,"40721":176160,"37418":60360,"40722":162240,"37417":59700,"40699":60,"40709":39360,"40708":161520,"40707":175440,"40706":24480,"40705":38580,"40714":128220,"40715":167820,"40712":105180,"40713":130560,"40710":30300,"40711":122760},"40709":{"40717":474900,"40716":110520,"40719":129660,"40718":123240,"40700":30360,"40702":49980,"40701":64320,"40704":50520,"40703":66840,"40723":143520,"40724":144540,"40725":146520,"40720":137700,"37415":62820,"40721":137280,"37418":62340,"40722":123780,"37417":62580,"40699":39360,"40709":60,"40708":123000,"40707":136560,"40706":23040,"40705":10980,"40714":91740,"40715":129540,"40712":66060,"40713":92340,"40710":21780,"40711":83700},"40708":{"40717":400680,"40716":52860,"40719":42060,"40718":43560,"40700":145200,"40702":169140,"40701":163860,"40704":118200,"40703":128700,"40723":21540,"40724":23700,"40725":28080,"40720":32940,"37415":166140,"40721":16080,"37418":166260,"40722":1740,"37417":167340,"40699":161520,"40709":123000,"40708":60,"40707":15480,"40706":139080,"40705":128160,"40714":77880,"40715":62280,"40712":66540,"40713":62520,"40710":133980,"40711":56220},"40707":{"40717":399240,"40716":53640,"40719":36540,"40718":40500,"40700":159720,"40702":181440,"40701":173880,"40704":127560,"40703":136500,"40723":16440,"40724":20100,"40725":26220,"40720":23040,"37415":176460,"40721":780,"37418":176700,"40722":15720,"37417":177780,"40699":175440,"40709":136560,"40708":15480,"40707":60,"40706":153420,"40705":141120,"40714":82020,"40715":57840,"40712":76860,"40713":67380,"40710":148440,"40711":63960},"40706":{"40717":469920,"40716":132060,"40719":150120,"40718":143940,"40700":7320,"40702":49560,"40701":75300,"40704":72180,"40703":87420,"40723":158640,"40724":159240,"40725":160440,"40720":156960,"37415":72240,"40721":154200,"37418":71520,"40722":139680,"37417":71340,"40699":24480,"40709":23040,"40708":139080,"40707":153420,"40706":60,"40705":29160,"40714":114600,"40715":151440,"40712":87300,"40713":114360,"40710":5760,"40711":104940},"40705":{"40717":485700,"40716":111000,"40719":131340,"40718":124620,"40700":35820,"40702":41760,"40701":53340,"40704":43080,"40703":58320,"40723":149160,"40724":150420,"40725":152760,"40720":140460,"37415":51960,"40721":141900,"37418":51480,"40722":129120,"37417":51780,"40699":38580,"40709":10980,"40708":128160,"40707":141120,"40706":29160,"40705":60,"40714":89700,"40715":129360,"40712":67620,"40713":92160,"40710":29760,"40711":84900},"54790":{"126492":19980,"54788":19980,"37412":86400,"37411":86820,"54784":53700,"57930":53700,"37413":83040,"54790":60},"40455":{"36315":19020,"36316":30780,"36317":31020,"36312":2340,"36313":10080,"36314":13080,"40455":60,"40456":20520,"40458":24240,"142204":70380,"54786":30780,"40460":16080,"57932":30780,"142205":57900,"40452":25200,"40453":26100,"40454":7860},"129626":{"130289":38880,"129626":60,"130287":46140,"130291":7800},"40456":{"36315":1560,"36316":11940,"36317":10500,"36312":21900,"36313":14400,"36314":8100,"40455":20520,"40456":60,"40458":4320,"142204":79440,"54786":11940,"40460":4500,"57932":11940,"142205":69780,"40452":6600,"40453":8880,"40454":15180},"40458":{"36315":5460,"36316":7620,"36317":6840,"36312":25380,"36313":18720,"36314":12360,"40455":24240,"40456":4320,"40458":60,"142204":79500,"54786":7620,"40460":8220,"57932":7620,"142205":70560,"40452":2820,"40453":5340,"40454":19440},"40714":{"40717":478320,"40716":30360,"40719":53640,"40718":46620,"40700":121920,"40702":120360,"40701":101220,"40704":56520,"40703":58800,"40723":97080,"40724":100140,"40725":105420,"40720":68220,"37415":105180,"40721":82740,"37418":105660,"40722":79560,"37417":106980,"40699":128220,"40709":91740,"40708":77880,"40707":82020,"40706":114600,"40705":89700,"40714":60,"40715":42720,"40712":34800,"40713":15420,"40710":112080,"40711":26340},"57932":{"36315":12960,"36316":60,"36317":6180,"36312":31620,"36313":26220,"36314":19800,"40455":30780,"40456":11940,"40458":7620,"142204":79020,"40460":15300,"54786":60,"57932":60,"142205":71460,"40452":5700,"40453":4920,"40454":26760},"40715":{"40717":455400,"40716":20040,"40719":21300,"40718":18780,"40700":158700,"40702":162600,"40701":143820,"40704":99180,"40703":100800,"40723":74340,"40724":78000,"40725":84120,"40720":36360,"37415":147840,"40721":58380,"37418":148320,"40722":63960,"37417":149640,"40699":167820,"40709":129540,"40708":62280,"40707":57840,"40706":151440,"40705":129360,"40714":42720,"40715":60,"40712":64380,"40713":37260,"40710":148020,"40711":46980},"40712":{"40717":457740,"40716":44760,"40719":63720,"40718":57180,"40700":94500,"40702":105720,"40701":97320,"40704":51720,"40703":63840,"40723":88080,"40724":90240,"40725":94080,"40720":73080,"37415":99720,"40721":77700,"37418":99900,"40722":67920,"37417":100980,"40699":105180,"40709":66060,"40708":66540,"40707":76860,"40706":87300,"40705":67620,"40714":34800,"40715":64380,"40712":60,"40713":28260,"40710":83700,"40711":17640},"57930":{"126492":36720,"54788":36720,"37412":43980,"37411":48360,"54784":60,"57930":60,"37413":41400,"54790":53700},"40713":{"40717":462900,"40716":19500,"40719":42360,"40718":35220,"40700":121680,"40702":126540,"40701":111120,"40704":64920,"40703":70500,"40723":82080,"40724":85080,"40725":90240,"40720":55560,"37415":114600,"40721":68160,"37418":114960,"40722":64260,"37417":116220,"40699":130560,"40709":92340,"40708":62520,"40707":67380,"40706":114360,"40705":92160,"40714":15420,"40715":37260,"40712":28260,"40713":60,"40710":111120,"40711":13560},"40710":{"40717":465060,"40716":128460,"40719":146040,"40718":139980,"40700":11280,"40702":54540,"40701":78660,"40704":72060,"40703":87960,"40723":153360,"40724":153900,"40725":155040,"40720":152460,"37415":75900,"40721":149220,"37418":75240,"40722":134520,"37417":75120,"40699":30300,"40709":21780,"40708":133980,"40707":148440,"40706":5760,"40705":29760,"40714":112080,"40715":148020,"40712":83700,"40713":111120,"40710":60,"40711":101280},"40452":{"36315":7380,"36316":5700,"36317":7320,"36312":26100,"36313":20580,"36314":14160,"40455":25200,"40456":6600,"40458":2820,"142204":77520,"54786":5700,"40460":9600,"57932":5700,"142205":69000,"40452":60,"40453":2520,"40454":21060},"40711":{"40717":454260,"40716":27180,"40719":46440,"40718":39720,"40700":112140,"40702":121920,"40701":110340,"40704":63900,"40703":72720,"40723":77040,"40724":79680,"40725":84300,"40720":56880,"37415":113280,"40721":64740,"37418":113580,"40722":57780,"37417":114720,"40699":122760,"40709":83700,"40708":56220,"40707":63960,"40706":104940,"40705":84900,"40714":26340,"40715":46980,"40712":17640,"40713":13560,"40710":101280,"40711":60},"40453":{"36315":9360,"36316":4920,"36317":8700,"36312":26820,"36313":22320,"36314":15900,"40455":26100,"40456":8880,"40458":5340,"142204":75720,"54786":4920,"40460":11220,"57932":4920,"142205":67500,"40452":2520,"40453":60,"40454":22620},"40454":{"36315":13920,"36316":26760,"36317":25620,"36312":10140,"36313":2160,"36314":7020,"40455":7860,"40456":15180,"40458":19440,"142204":77160,"54786":26760,"40460":11460,"57932":26760,"142205":65160,"40452":21060,"40453":22620,"40454":60},"36315":{"36315":60,"36316":12960,"36317":11940,"36312":20340,"36313":13260,"36314":6840,"40455":19020,"40456":1560,"40458":5460,"142204":78240,"54786":12960,"40460":2940,"57932":12960,"142205":68400,"40452":7380,"40453":9360,"40454":13920},"36316":{"36315":12960,"36316":60,"36317":6180,"36312":31620,"36313":26220,"36314":19800,"40455":30780,"40456":11940,"40458":7620,"142204":79020,"54786":60,"40460":15300,"57932":60,"142205":71460,"40452":5700,"40453":4920,"40454":26760},"36317":{"36315":11940,"36316":6180,"36317":60,"36312":32220,"36313":24540,"36314":18540,"40455":31020,"40456":10500,"40458":6840,"142204":84420,"54786":6180,"40460":14880,"57932":6180,"142205":76200,"40452":7320,"40453":8700,"40454":25620},"36312":{"36315":20340,"36316":31620,"36317":32220,"36312":60,"36313":12360,"36314":14820,"40455":2340,"40456":21900,"40458":25380,"142204":68040,"54786":31620,"40460":17340,"57932":31620,"142205":55500,"40452":26100,"40453":26820,"40454":10140},"36313":{"36315":13260,"36316":26220,"36317":24540,"36312":12360,"36313":60,"36314":6420,"40455":10080,"40456":14400,"40458":18720,"142204":79200,"54786":26220,"40460":11100,"57932":26220,"142205":67320,"40452":20580,"40453":22320,"40454":2160},"36314":{"36315":6840,"36316":19800,"36317":18540,"36312":14820,"36313":6420,"36314":60,"40455":13080,"40456":8100,"40458":12360,"142204":77820,"54786":19800,"40460":4680,"57932":19800,"142205":66900,"40452":14160,"40453":15900,"40454":7020},"40700":{"40717":469380,"40716":139260,"40719":157140,"40718":151020,"40700":60,"40702":50580,"40701":78960,"40704":78900,"40703":93780,"40723":164520,"40724":165000,"40725":166020,"40720":163740,"37415":75540,"40721":160500,"37418":74760,"40722":145740,"37417":74460,"40699":21720,"40709":30360,"40708":145200,"40707":159720,"40706":7320,"40705":35820,"40714":121920,"40715":158700,"40712":94500,"40713":121680,"40710":11280,"40711":112140},"40702":{"40717":519540,"40716":146040,"40719":168000,"40718":160980,"40700":50580,"40702":60,"40701":35940,"40704":64500,"40703":70620,"40723":190320,"40724":191700,"40725":194280,"40720":178680,"37415":30840,"40721":182220,"37418":29940,"40722":170160,"37417":28980,"40699":32280,"40709":49980,"40708":169140,"40707":181440,"40706":49560,"40705":41760,"40714":120360,"40715":162600,"40712":105720,"40713":126540,"40710":54540,"40711":121920},"40701":{"40717":538680,"40716":130260,"40719":153480,"40718":146340,"40700":78960,"40702":35940,"40701":60,"40704":46500,"40703":43680,"40723":185400,"40724":187500,"40725":191100,"40720":166380,"37415":5460,"40721":174660,"37418":6360,"40722":165240,"37417":7680,"40699":65580,"40709":64320,"40708":163860,"40707":173880,"40706":75300,"40705":53340,"40714":101220,"40715":143820,"40712":97320,"40713":111120,"40710":78660,"40711":110340},"40704":{"40717":504480,"40716":84300,"40719":107280,"40718":100140,"40700":78900,"40702":64500,"40701":46500,"40704":60,"40703":17760,"40723":139620,"40724":141900,"40725":145860,"40720":119880,"37415":49680,"40721":128400,"37418":50040,"40722":119580,"37417":51300,"40699":78180,"40709":50520,"40708":118200,"40707":127560,"40706":72180,"40705":43080,"40714":56520,"40715":99180,"40712":51720,"40713":64920,"40710":72060,"40711":63900},"54788":{"126492":60,"54788":60,"37412":75300,"37411":77340,"54784":36720,"57930":36720,"37413":72120,"54790":19980},"40703":{"40717":520140,"40716":88800,"40719":112200,"40718":105060,"40700":93780,"40702":70620,"40701":43680,"40704":17760,"40703":60,"40723":149760,"40724":152340,"40725":156720,"40720":126060,"37415":48300,"40721":137340,"37418":48960,"40722":130200,"37417":50340,"40699":90000,"40709":66840,"40708":128700,"40707":136500,"40706":87420,"40705":58320,"40714":58800,"40715":100800,"40712":63840,"40713":70500,"40710":87960,"40711":72720},"139307":{"52910":316980,"126494":29220,"52912":317100,"139307":60},"54786":{"36315":12960,"36316":60,"36317":6180,"36312":31620,"36313":26220,"36314":19800,"40455":30780,"40456":11940,"40458":7620,"142204":79020,"54786":60,"40460":15300,"57932":60,"142205":71460,"40452":5700,"40453":4920,"40454":26760},"54784":{"126492":36720,"54788":36720,"37412":43980,"37411":48360,"54784":60,"57930":60,"37413":41400,"54790":53700},"138280":{"138280":60,"138278":60},"126492":{"126492":60,"54788":60,"37412":75300,"37411":77340,"54784":36720,"57930":36720,"37413":72120,"54790":19980},"142204":{"36315":78240,"36316":79020,"36317":84420,"36312":68040,"36313":79200,"36314":77820,"40455":70380,"40456":79440,"40458":79500,"142204":60,"54786":79020,"40460":76380,"57932":79020,"142205":15600,"40452":77520,"40453":75720,"40454":77160},"126494":{"52910":326280,"126494":60,"52912":326820,"139307":29220},"142205":{"36315":68400,"36316":71460,"36317":76200,"36312":55500,"36313":67320,"36314":66900,"40455":57900,"40456":69780,"40458":70560,"142204":15600,"54786":71460,"40460":66180,"57932":71460,"142205":60,"40452":69000,"40453":67500,"40454":65160}}
+var rate = function(rateInputObj) {
+
+	this.evaluateByObj = function(dimObj) {
+		result = this.evaluate(dimObj);
+		if(!result || result.total&lt;=0 || !rateInputObj.baseRate.total || rateInputObj.baseRate.total &lt;= 0) {
+//			warn(rateInputObj.rateId+':FinalTotalAmt='+result.total);
+//		    warn(rateInputObj.rateId+':Dimensions: '+JSON.stringify(dimObj));
+			return 9999999;
+		}
+		return parseFloat(result.total);
+	};
+
+	this.evaluate = function(dimObj) {		
+		this.evaluateBaseRate(dimObj);		
+		this.evaluateAccessorials(dimObj);	
+		this.evaluateStopOff(dimObj.stopOffs);		
+		totalAmt = -1;		
+		baseRateBasis = rateInputObj.baseRate.basis;
+		supportedBasis = rateInputObj.baseRate.supportedBasis;	 
+		if(rateInputObj.baseRate.total) {
+			totalAmt = rateInputObj.baseRate.total;
+		}
+		if (rateInputObj.accessorials) {
+			for (i=0; i &lt; rateInputObj.accessorials.length; i++) {
+				if(rateInputObj.accessorials[i] &amp;&amp; rateInputObj.accessorials[i].total &amp;&amp; (baseRateBasis || rateInputObj.accessorials[i].supportedBasis)) {
+					totalAmt = totalAmt + rateInputObj.accessorials[i].total;
+				}
+			}
+		}
+		if(rateInputObj.stopBands &amp;&amp; rateInputObj.stopOffTotal){
+			totalAmt = totalAmt + rateInputObj.stopOffTotal;
+		}
+		rateInputObj.total = parseFloat(totalAmt);
+		return rateInputObj;
+	};
+
+	this.evaluateBaseRate = function(dimObj) {
+		inputObj = rateInputObj.baseRate;
+		calculateCW = rateInputObj.calculateCW;
+		supportedBasis = false;
+		totalAmt = 0;
+		
+		if (inputObj.basis === '/container') {
+			supportedBasis = true;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {
+				totalAmt = inputObj.amount
+						* dimObj.dims[inputObj.equipmentType];
+				if (dimObj.dims.eqQty) {
+					totalAmt = totalAmt * dimObj.dims.eqQty;
+				}
+			} else {
+				return;
+			}
+		}
+		
+		if(inputObj.basis === '/package') {
+		supportedBasis = true;
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/package') {
+				totalAmt = inputObj.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(inputObj.basis === '/pallet') {
+		supportedBasis = true;
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/pallet') {
+				totalAmt = inputObj.amount * dimObj.dims.genericQty;
+			}
+		}
+				
+		if(inputObj.basis === '/unit') {
+		supportedBasis = true;
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/unit') {
+				totalAmt = inputObj.amount * dimObj.dims.genericQty;
+			}
+		}
+				
+		if(inputObj.basis === '/carton') {
+		supportedBasis = true;
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/carton') {
+				totalAmt = inputObj.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(inputObj.basis === '/LNM') {
+		supportedBasis = true;
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/LNM') {
+				totalAmt = inputObj.amount * dimObj.dims.genericQty;
+			}
+		}
+				
+		if(inputObj.basis === '/SQM') {
+		supportedBasis = true;
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/SQM') {
+				totalAmt = inputObj.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(inputObj.basis === '/MBF') {
+		supportedBasis = true;
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/MBF') {
+				totalAmt = inputObj.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(inputObj.basis === '/MSF') {
+		supportedBasis = true;
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/MSF') {
+				totalAmt = inputObj.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/FLAT') {
+			supportedBasis = true;
+			totalAmt = inputObj.amount;
+		}
+		if (dimObj.dims.wtInKG &amp;&amp; inputObj.wtConvRate) {
+			supportedBasis = true;
+			weight = dimObj.dims.wtInKG;
+
+			// GTN-25018 : Chargeable Weight scenario.
+			volume = dimObj.dims.volInCBM;
+			dimFactor = rateInputObj.dimFactor;
+			dimFactorConv = rateInputObj.dimFactorConv;
+
+			volumetricWeight = 0.0;
+			if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {
+				if (dimFactorConv === 'cm/kg') {
+					volumetricWeight = (volume * 1000000) / dimFactor;
+				} else if (dimFactorConv === 'in/lb') {
+					volumetricWeight = (volume * 61024) / dimFactor;
+				}
+			}
+
+			weight = (weight * inputObj.wtConvRate) &gt; volumetricWeight ? weight
+					: volumetricWeight;
+
+			if (inputObj.minWeight) {
+				weight = weight &lt; inputObj.minWeight ? inputObj.minWeight
+						: weight;
+				inputObj.wtConvRate = 1;
+			}
+			totalAmt = this.evaluateRateBands(weight, inputObj.amount,
+					inputObj.wtConvRate);
+		}
+		
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/WM') {
+			weight = dimObj.dims.wtInKG;
+			volume = dimObj.dims.volInCBM;
+			wmUnit = 0;
+			supportedBasis = true;
+			if (weight) {
+				wmUnit = weight * inputObj.wtConvRate;
+			}
+			if (volume) {
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;
+			}
+			if (inputObj.minWeight) {
+				wmUnit = wmUnit &lt; inputObj.minWeight ? inputObj.minWeight
+						: wmUnit;
+				inputObj.wtConvRate = 1;
+			}
+			totalAmt = inputObj.amount * wmUnit;
+		}
+
+		if (dimObj.dims.volInCBM &amp;&amp; inputObj.volConvRate) {
+			supportedBasis = true;
+			volume = dimObj.dims.volInCBM;
+			if (inputObj.minVolume) {
+				volume = volume &lt; inputObj.minVolume ? inputObj.minVolume
+						: volume;
+			}
+			if (inputObj.minVolume) {
+				volume = volume &lt; inputObj.minVolume ? inputObj.minVolume
+						: volume;
+				inputObj.wtConvRate = 1;
+			}
+			tempAmt = this.evaluateRateBands(volume, inputObj.amount,
+					inputObj.volConvRate);
+			totalAmt = totalAmt &gt; tempAmt ? totalAmt : tempAmt;
+		} else if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) || rateInputObj.distance)
+				&amp;&amp; inputObj.dstConvRate) {
+			supportedBasis = true;
+			distance = 0.0;
+			if (dimObj.dims.dstInMile) {
+				distance = dimObj.dims.dstInMile;
+			} else if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {
+				distance = this.getEffectiveDistance(dimObj);
+			} else {
+				distance = rateInputObj.distance;
+			}
+			totalAmt = this.evaluateRateBands(distance, inputObj.amount, inputObj.dstConvRate);
+		}
+		
+		if (inputObj.basis === 'pricingbands') {
+			supportedBasis = true;
+			totalBandAmt = 0.0;
+			mUnit = 0;
+			convRate = 0.0;
+			amount = 0.0;
+			if(inputObj.isdeficitpricing) {
+				if(inputObj.wtConvRate) {
+					mUnit = dimObj.dims.wtInKG;		
+					convRate = inputObj.wtConvRate;			
+			    } else if(inputObj.volConvRate) {
+			    	mUnit = dimObj.volInCBM;
+			    	convRate = inputObj.volConvRate;
+			    } else if(inputObj.dstConvRate) {
+			    	mUnit = dimObj.dstInMile;
+			    	convRate = inputObj.dstConvRate;
+			    }
+			    
+				if(inputObj.isdeficitpricing === 'yes') {					
+					if(rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {		
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {
+							if ((mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak) || 
+							(mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; mUnit &lt;= rateInputObj.rateBands[i].upperbreak)){
+								if(rateInputObj.rateBands[i].upperbreak == 999999999) {
+									totalBandAmt = rateInputObj.rateBands[i].amount * mUnit * convRate;		
+									amount = rateInputObj.rateBands[i].amount; 						
+								} else {
+									totalBandAmt = rateInputObj.rateBands[i+1].amount * rateInputObj.rateBands[i+1].lowerbreak * convRate;
+									actualPrice = rateInputObj.rateBands[i].amount * mUnit * convRate;
+									
+									if(totalBandAmt &gt; actualPrice) {
+										totalBandAmt = actualPrice;
+										amount = rateInputObj.rateBands[i].amount;
+									}
+									else {
+									amount = rateInputObj.rateBands[i+1].amount;
+									}
+								}
+								break;
+							}
+						}
+					}
+				} else {
+					if(rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {		
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {
+							if ((mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak) || 
+							(mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; mUnit &lt;= rateInputObj.rateBands[i].upperbreak)){
+								totalBandAmt = rateInputObj.rateBands[i].amount * mUnit * convRate;
+								amount = rateInputObj.rateBands[i].amount;
+								break;
+							}
+						}
+					}						
+				}
+			}		
+			rateInputObj.amount = parseFloat(amount);
+			totalAmt = totalBandAmt;
+		}
+		
+		if(!supportedBasis) {
+			switch (inputObj.basis) {
+			  case '/container':
+			  case '/CBM' :
+			  case '/WM' :
+			  case '/kg' :
+			  case '/lb' :
+			  case '/ton' :		
+			  case '/MI' :
+			  case '/KM' :		
+			    rateInputObj.baseRate.supportedBasis = true;
+			    supportedBasis = true;
+			}	
+		}
+		
+		if(!supportedBasis) {
+			totalAmt = inputObj.amount;
+		}
+
+		if (inputObj.minAmount) {
+			totalAmt = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount : totalAmt;
+		}
+		if (inputObj.maxAmount) {
+			totalAmt = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount : totalAmt;
+		}
+		
+		rateInputObj.baseRate.supportedBasis = supportedBasis;
+		rateInputObj.baseRate.total = parseFloat(totalAmt);	
+	};
+
+	this.getEffectiveDistance = function(dimObj) {
+		distance = 0.0;
+		for (i = 0; i &lt; dimObj.stopOffs.length-1; i++) {
+			origStop = dimObj.stopOffs[i].stop;
+			if (origStop.indexOf('__') &gt; 0) {
+				origStop = origStop.slice(0, origStop.indexOf('__'));
+			}
+			destStop = dimObj.stopOffs[i + 1].stop;
+			if (destStop.indexOf('__') &gt; 0) {
+				destStop = destStop.slice(0, destStop.indexOf('__'));
+			}
+			if(origStop == destStop) {
+				distance = distance + 0.01;
+				continue;
+			}
+			if(!distanceMatrix[origStop] || !distanceMatrix[origStop][destStop]) {
+				if(rateInputObj.distance) {
+					return rateInputObj.distance;
+				} else {				
+					return 9999999;
+				}
+			}
+			distance = distance + distanceMatrix[origStop][destStop];
+		}
+		return distance;
+	};
+
+	this.evaluateRateBands = function(totalDim, rateAmount, ConvRate){
+		totalBandAmt = 0.0;
+		if(rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {		
+			for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {
+				if ((totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak) || 
+				(totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; totalDim &lt;= rateInputObj.rateBands[i].upperbreak)){
+					totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateInputObj.rateBands[i].amount  : (rateInputObj.rateBands[i].amount * totalDim * ConvRate);
+					break;
+				}
+			} 
+			if(totalBandAmt == 0 &amp;&amp; rateInputObj.baseRate){			
+				totalBandAmt = rateInputObj.baseRate.basis === '/kg' ?  (rateInputObj.baseRate.amount * totalDim * ConvRate) : rateInputObj.baseRate.amount;
+			}
+		} else {
+			totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateAmount : rateAmount * totalDim * ConvRate;
+		}
+		return parseFloat(totalBandAmt);
+	};
+
+	this.evaluateAccessorials = function(dimObj) {
+		if (rateInputObj.accessorials) {
+			for (var i = 0; i &lt; rateInputObj.accessorials.length; i++) {
+				if (rateInputObj.accessorials[i]) {
+					accObj = rateInputObj.accessorials[i];
+					
+					totalAmt = 0;
+					if(accObj.basis === '/container') {
+						if(rateInputObj.baseRate.equipmentType &amp;&amp; dimObj.dims[rateInputObj.baseRate.equipmentType]) {
+							totalAmt = accObj.amount * dimObj.dims[rateInputObj.baseRate.equipmentType];
+							if(dimObj.dims.eqQty) {
+								totalAmt = totalAmt * dimObj.dims.eqQty;
+							}
+						} else {
+							rateInputObj.accessorials[i].total = parseFloat(totalAmt);
+							continue;
+						}
+					} 
+					
+					if(accObj.basis === '%') {
+						netfreightcostelems = rateInputObj.netfreightcostelems;
+						if(netfreightcostelems &amp;&amp; netfreightcostelems.length &gt; 0) {
+							totalSurchargeAmount = 0;
+							for(var j = 0; j &lt; netfreightcostelems.length; j++) {
+								netFreightSurcharge = netfreightcostelems[j];
+								surchargeAmount = this.getSurchargeAmount(dimObj, netFreightSurcharge);
+								totalSurchargeAmount = totalSurchargeAmount + surchargeAmount;
+							}
+							
+							baseRate = rateInputObj.baseRate.total;
+							totalAmt = ((baseRate + totalSurchargeAmount) * accObj.amount) / 100;
+						} else {
+							baseRate = rateInputObj.baseRate.total;
+							totalAmt = (baseRate * accObj.amount) / 100;
+						}
+					}
+					
+					if(accObj.basis === '/delivery' || accObj.basis === '/entry' || accObj.basis === '/shipment') {
+						totalAmt = accObj.amount;
+					}
+					
+					if(accObj.basis === '/package') {
+						if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/package') {
+							totalAmt = accObj.amount * dimObj.dims.genericQty;
+						}
+					}		
+					
+					if(accObj.basis === '/pallet') {
+						if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/pallet') {
+							totalAmt = accObj.amount * dimObj.dims.genericQty;
+						}
+					}
+					
+					if(accObj.basis === '/unit') {
+						if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/unit') {
+							totalAmt = accObj.amount * dimObj.dims.genericQty;
+						}
+					}
+					
+					if(accObj.basis === '/carton') {
+						if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/carton') {
+							totalAmt = accObj.amount * dimObj.dims.genericQty;
+						}
+					}
+					
+					if(accObj.basis === '/LNM') {
+						if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/LNM') {
+							totalAmt = accObj.amount * dimObj.dims.genericQty;
+						}
+					}
+					
+					if(accObj.basis === '/SQM') {
+						if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/SQM') {
+							totalAmt = accObj.amount * dimObj.dims.genericQty;
+						}
+					}
+					
+					if(accObj.basis === '/MSF') {
+						if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/MSF') {
+							totalAmt = accObj.amount * dimObj.dims.genericQty;
+						}
+					}
+					
+					if(accObj.basis === '/MBF') {
+						if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/MBF') {
+							totalAmt = accObj.amount * dimObj.dims.genericQty;
+						}
+					}
+					
+					if (dimObj.dims.wtInKG &amp;&amp; accObj.wtConvRate) {
+						weight = dimObj.dims.wtInKG;
+						
+						// GTN-25018 : Chargeable Weight scenario.
+						if(accObj.calculatedWeightBasis &amp;&amp; accObj.calculatedWeightBasis === 'Chargeable Weight') {
+							dimFactor = rateInputObj.dimFactor;
+							dimFactorConv = rateInputObj.dimFactorConv;
+
+							volumetricWeight = 0.0;
+							if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {
+								if (dimFactorConv === 'cm/kg') {
+									volumetricWeight = (dimObj.dims.volInCBM * 1000000) / dimFactor;
+								} else if (dimFactorConv === 'in/lb') {
+									volumetricWeight = (dimObj.dims.volInCBM * 61024) / dimFactor;
+								}
+							}
+							weight = (weight * accObj.wtConvRate) &gt; volumetricWeight ? weight
+									: volumetricWeight;
+						}
+						
+						if (accObj.minWeight) {
+							weight = weight &lt; accObj.minWeight ? accObj.minWeight : weight;
+						}
+						totalAmt = accObj.amount * weight * accObj.wtConvRate;
+					}
+					if (dimObj.dims.volInCBM &amp;&amp; accObj.volConvRate) {
+						volume = dimObj.dims.volInCBM;
+						if (accObj.minVolume) {
+							volume = volume &lt; accObj.minVolume ? accObj.minVolume : volume;
+						}
+						totalAmt = accObj.amount * volume * accObj.volConvRate;
+					}
+					
+					if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1)) &amp;&amp; accObj.dstConvRate) {
+						distance = 0.0;
+						if (dimObj.dims.dstInMile) {
+							distance = dimObj.dims.dstInMile;
+						} else {
+							distance = this.getEffectiveDistance(dimObj);
+						}
+						totalAmt = accObj.amount * distance * accObj.dstConvRate;
+					}
+					
+					if (accObj.basis == '/FLAT') {
+						totalAmt = accObj.amount;
+					}
+					if (accObj.amount &amp;&amp; accObj.basis == '/WM') {
+						weight = dimObj.dims.wtInKG;
+						volume = dimObj.dims.volInCBM;
+						wmUnit = 0;
+						if(weight) {
+							wmUnit = weight * accObj.wtConvRate;
+						}
+						if (volume) {
+							wmUnit = wmUnit &gt; volume ? wmUnit : volume;
+						}
+						totalAmt = accObj.amount * wmUnit;
+					}	
+					
+					if(rateInputObj.baseRate.basis == accObj.basis &amp;&amp; !rateInputObj.baseRate.supportedBasis) {
+						totalAmt = accObj.amount;	
+						accObj.supportedBasis = true;					
+					} else if(rateInputObj.baseRate.basis != accObj.basis &amp;&amp; !rateInputObj.baseRate.supportedBasis) {
+						totalAmt = 0;
+					}
+
+					if (accObj.minAmount) {
+						totalAmt = totalAmt &lt; accObj.minAmount ? accObj.minAmount : totalAmt;
+					}
+					if (accObj.maxAmount) {
+						totalAmt = totalAmt &gt; accObj.maxAmount ? accObj.maxAmount : totalAmt;
+					}
+					
+					if(!dimObj.dims.isHazMat &amp;&amp; accObj.isHazMat) {
+						totalAmt = 0;
+					}
+					
+					if(accObj.basis == '/stop'){
+						rateInputObj.stopOffTotal = parseFloat(totalAmt);	
+					} else{
+						rateInputObj.accessorials[i].total = parseFloat(totalAmt);
+					}
+				}
+			}
+		}
+	};
+	
+	this.getSurchargeAmount = function(dimObj, surcharge) {
+		surchargeAmount = 0;
+		inputObj = rateInputObj.baseRate;
+		if(surcharge.basis === '/container') {
+			if(inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {
+				surchargeAmount = surcharge.amount * dimObj.dims[inputObj.equipmentType];
+				if(dimObj.dims.eqQty) {
+					surchargeAmount = surchargeAmount * dimObj.dims.eqQty;
+				}
+			} else {
+				return surchargeAmount;
+			}
+		} 
+		
+		if(surcharge.basis === '/delivery' || surcharge.basis === '/entry' || surcharge.basis === '/shipment') {
+			surchargeAmount = surcharge.amount;
+		}
+		
+		if(surcharge.basis === '/package') {
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/package') {
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(surcharge.basis === '/pallet') {
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/pallet') {
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(surcharge.basis === '/unit') {
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/unit') {
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(surcharge.basis === '/carton') {
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/carton') {
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(surcharge.basis === '/LNM') {
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/LNM') {
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(surcharge.basis === '/SQM') {
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/SQM') {
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(surcharge.basis === '/MBF') {
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/MBF') {
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;
+			}
+		}
+		
+		if(surcharge.basis === '/MSF') {
+			if(dimObj.dims.genericQty &amp;&amp; dimsObj.dims.genericQtyUnit &amp;&amp; dimsObj.dims.genericQtyUnit === '/MSF') {
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;
+			}
+		}
+
+		
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/FLAT') {
+			surchargeAmount = surcharge.amount;
+		}
+		
+		if (dimObj.dims.wtInKG &amp;&amp; surcharge.wtConvRate) {
+			weight = dimObj.dims.wtInKG;
+			// GTN-25018 : Chargeable Weight scenario.
+			if(surcharge.calculatedWeightBasis &amp;&amp; surcharge.calculatedWeightBasis === 'Chargeable Weight') {
+				dimFactor = rateInputObj.dimFactor;
+				dimFactorConv = rateInputObj.dimFactorConv;
+		        volumetricWeight = 0.0;
+				if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {
+					if (dimFactorConv === 'cm/kg') {
+						volumetricWeight = (dimObj.dims.volInCBM * 1000000) / dimFactor;
+					} else if (dimFactorConv === 'in/lb') {
+						volumetricWeight = (dimObj.dims.volInCBM * 61024) / dimFactor;
+					}
+				}
+				weight = (weight * surcharge.wtConvRate) &gt; volumetricWeight ? weight
+									: volumetricWeight;
+			}
+			if (surcharge.minWeight) {
+				weight = weight &lt; surcharge.minWeight ? surcharge.minWeight : weight;
+			}
+			surchargeAmount = surcharge.amount * weight * surcharge.wtConvRate;
+		}
+		
+		if (dimObj.dims.volInCBM &amp;&amp; surcharge.volConvRate) {
+			volume = dimObj.dims.volInCBM;
+			if (surcharge.minVolume) {
+				volume = volume &lt; surcharge.minVolume ? surcharge.minVolume : volume;
+			}
+			surchargeAmount = surcharge.amount * volume * surcharge.volConvRate;
+		}
+		
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/WM') {
+			weight = dimObj.dims.wtInKG;
+			volume = dimObj.dims.volInCBM;
+			wmUnit = 0;
+			if(weight) {
+				wmUnit = weight * surcharge.wtConvRate;
+			}
+			if (volume) {
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;
+			}
+			if (surcharge.minWeight) {
+				wmUnit = wmUnit &lt; surcharge.minWeight ? surcharge.minWeight : wmUnit;
+				surcharge.wtConvRate = 1;
+			}
+			surchargeAmount = surcharge.amount * wmUnit;
+		}		
+		
+		if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1)) &amp;&amp; surcharge.dstConvRate) {
+			if(surcharge.basis == '/stop'){
+				surchargeAmount = surcharge.amount * dimObj.stopOffs.length * surcharge.dstConvRate;
+			} else {						
+				distance = 0.0;
+				if (dimObj.dims.dstInMile) {
+					distance = dimObj.dims.dstInMile;
+				} else {
+					distance = this.getEffectiveDistance(dimObj);
+				}
+				surchargeAmount = surcharge.amount * distance * surcharge.dstConvRate;
+			}
+		}
+		
+		if(rateInputObj.baseRate.basis == inputObj.basis &amp;&amp; !rateInputObj.baseRate.supportedBasis) {
+			surchargeAmount = surcharge.amount;	
+			surcharge.supportedBasis = true;					
+		} else if(rateInputObj.baseRate.basis != surcharge.basis &amp;&amp; !rateInputObj.baseRate.supportedBasis) {
+			surchargeAmount = 0;
+		}
+
+		if (surcharge.minAmount) {
+			surchargeAmount = surchargeAmount &lt; surcharge.minAmount ? surcharge.minAmount : surchargeAmount;
+		}
+		if (surcharge.maxAmount) {
+			surchargeAmount = surchargeAmount &gt; surcharge.maxAmount ? surcharge.maxAmount : surchargeAmount;
+		}
+		return surchargeAmount;
+	}
+
+	this.evaluateStopOff = function(stopOffs) {
+		stopOffAmt = 0.0;
+		if (rateInputObj.stopBands &amp;&amp; stopOffs &amp;&amp; stopOffs.length &gt; 2) {
+			numOfStopOffs = stopOffs.length-2;
+			remainingStopOffs = numOfStopOffs;
+			previousEnd = 0;
+
+			for (i = 0; i &lt; rateInputObj.stopBands.length; i++) {
+				start = rateInputObj.stopBands[i].start;
+				end = rateInputObj.stopBands[i].stop;
+				if (numOfStopOffs &gt; end) {
+					stopOffAmt = stopOffAmt + (rateInputObj.stopBands[i].costPerStop * (end - previousEnd));
+					remainingStopOffs -= (end - previousEnd);
+					previousEnd = end;
+
+				} else if (numOfStopOffs &gt;= start &amp;&amp; numOfStopOffs &lt;= end) {
+					stopOffAmt = stopOffAmt + (rateInputObj.stopBands[i].costPerStop * remainingStopOffs);
+					break;
+				}
+			}
+			rateInputObj.stopOffTotal = parseFloat(stopOffAmt);
+		}
+
+	};
+};var constraints = {/*##*/resources: {"10":{"max_qty":2,"max_cube":56,"max_weight":28800},"0":{"max_qty":0},"3000":{"max_qty":0,"max_cube":12000,"max_weight":12000},"19":{"max_qty":2,"max_cube":120,"max_weight":60000},"799":{"max_qty":0},"798":{"max_qty":0},"18":{"max_qty":2,"max_cube":65,"max_weight":30200},"607":{"max_qty":0},"9":{"max_qty":1,"max_cube":28,"max_weight":28250},"603":{"max_qty":0},"256":{"max_qty":0}}, 
+ /*##*/locations: {"54784":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"138280":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"54786":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"54788":{},"52910":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"52909":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"36312":{},"37415":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"139307":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"37413":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"126494":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}},"126492":{"Unloading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}},"fixed_time":0,"max_variable_time":0,"Loading":{"volume_time":{"division_factor":1.0,"time_factor":0},"weight_time":{"division_factor":1.0,"time_factor":0}}}}}; 
+ evaluateConstraints = function evaluateConstraints(dimObj) {
+	var resourceData = this.id.split("_");
+	var resource = resourceData[1];
+	if ((resource in constraints.resources)) {
+		if ("max_weight" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.wtInKG &gt; constraints.resources[resource].max_weight)
+			return false;
+		if ("max_cube" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.volInCBM &gt; constraints.resources[resource].max_cube)
+			return false;
+	}
+	if (!(this.id in constraints.resources))
+		return true;
+
+	if ("maxstops" in constraints.resources[this.id]
+			&amp;&amp; dimObj.stopOffs.length &gt; constraints.resources[this.id].maxstops)
+		return false;
+	if ("max_distance" in constraints.resources[this.id]
+			&amp;&amp; isMaxDistanceCrossed(dimObj, this.id)) {
+		return false;
+	}
+	if ("maximum_single_hours" in constraints.resources[this.id]
+			&amp;&amp; isMaxDriveTimeCrossed(dimObj, this.id)) {
+		return false;
+	}
+	if ("maximum_out_of_route_miles" in constraints.resources[this.id]
+			&amp;&amp; isMaxOutOfRouteMile(dimObj, this.id)) {
+		return false;
+	}
+
+	return true;
+};
+
+isMaxOutOfRouteMile = function isMaxOutOfRouteMile(dimObj, resourceid) {
+	var totalDistance = 0;
+	var maxOutOfRouteMile = 0;
+	try {
+		totalDistance = distanceMatrix[sliceStopOffData(dimObj.stopOffs[0].stop)][sliceStopOffData(dimObj.stopOffs[dimObj.stopOffs.length - 1].stop)];
+	} catch (err) {
+		warn('error distanceMatrix  does not exist in  isMaxOutOfRouteMile');
+	}
+	;
+
+	try {
+		maxOutOfRouteMile = constraints.resources[resourceid].maximum_out_of_route_miles;
+
+	} catch (err) {
+		warn('maxOutOfRouteMile  does not exist in  for resourece' + resourceid);
+		maxOutOfRouteMile = 0;
+	}
+	;
+
+	if (constraints.resources[resourceid].maxoutofroutemilesunit == "%") {
+		maxOutOfRouteMile = ((maxOutOfRouteMile / 100) * totalDistance)
+				+ totalDistance;
+	} else {
+		maxOutOfRouteMile = maxOutOfRouteMile + totalDistance;
+
+		var totalDriveDistance = getTotalDriveDistance(dimObj);
+		if (!isNaN(maxOutOfRouteMile)) {
+			// warn('maxOutOfRouteMile==' + maxOutOfRouteMile);
+			// warn('totalDriveDistance=' + totalDriveDistance+' for
+			// resourceid'+ resourceid);
+
+		}
+	}
+	if (totalDriveDistance &gt; maxOutOfRouteMile) {
+		// warn('totalDriveDistance =='+totalDriveDistance
+		// +'-'+maxOutOfRouteMile);
+		return true;
+	}
+	// warn('in else totalDriveDistance =='+totalDriveDistance
+	// +'-'+maxOutOfRouteMile);
+	return false;
+};
+
+isMaxDistanceCrossed = function isMaxDistanceCrossed(dimObj, resourceid) {
+	var totalDriveDistance = getTotalDriveDistance(dimObj);
+	if (totalDriveDistance &gt; constraints.resources[resourceid].max_distance) {
+		return true;
+	}
+	return false;
+};
+
+isMaxDriveTimeCrossed = function isMaxDriveTimeCrossed(dimObj, resourceid) {
+	var totalDriveTime = getTotalDriveTime(dimObj);
+	if (totalDriveTime &gt; constraints.resources[resourceid].maximum_single_hours) {
+		return true;
+	}
+	return false;
+};
+
+getTotalDriveDistance = function getTotalDriveDistance(dimObj) {
+	var totalDriveDistance = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			var distance = distanceMatrix[stop1][stop2]
+			if (!isNaN(distance)) {
+				totalDriveDistance = totalDriveDistance + (distance);
+			} else {
+				warn('can give wrong data,since');
+				warn(' no dtm between ' + stop1 + '-' + stop2);
+			}
+		}
+	} catch (err) {
+		warn('distanceMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveDistance;
+};
+
+getTotalDriveTime = function getTotalDriveTime(dimObj) {
+	var totalDriveTime = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			totalDriveTime = totalDriveTime + (transitTimeMatrix[stop1][stop2]);
+		}
+	} catch (err) {
+		warn('transitTimeMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveTime;
+};
+
+sliceStopOffData = function sliceStopOffData(stopOffData) {
+	var stop = stopOffData;
+	try {
+
+		if (stopOffData.indexOf('__') &gt; 0) {
+			stop = stopOffData.slice(0, stopOffData.indexOf('__'));
+		}
+	} catch (err) {
+		warn('stopOffData incorrect for ' + stopOffData);
+	}
+	return JSON.parse(stop);
+};
+
+getProcessingTime = function getProcessingTime(dimObj) {
+
+	if (typeof dimObj.stopOffs[1] == 'undefined') {
+		return 1000000;
+	}
+	trasitTime = 0;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop
+					.indexOf('TRANSPORT') &gt; -1))) {
+		return 99999;
+	}
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	/*
+	 * warn('finalloadthroughput ' + finalloadthroughput + '
+	 * finalunloadthroughput ' + finalunloadthroughput + ' matrix ' +
+	 * transitTimeMatrix[stop1][stop2]);
+	 */
+	try {
+		trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]
+				+ finalunloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('errcause no transittime for ' + stop1 + '-- ' + stop2);
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+
+	if (typeof dimObj.stopOffs[1] == 'undefined') {
+		return 0;
+	}
+	trasitTime = 0;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop
+					.indexOf('TRANSPORT') &gt; -1))) {
+		return 0;
+	}
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	/*
+	 * warn('finalloadthroughput ' + finalloadthroughput + '
+	 * finalunloadthroughput ' + finalunloadthroughput + ' matrix ' +
+	 * transitTimeMatrix[stop1][stop2]);
+	 */
+	try {
+		trasitTime = finalloadthroughput + this.transitTime
+				+ finalunloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('errcause no transittime for ' + stop1 + '-- ' + stop2);
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getFinalThroughput = function getFinalThroughput(dimObj) {
+	var finalTroughputResult = '';
+
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length); stopIndex++) {
+		var stop = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+		if (dimObj.dims.wtInKG != 0) {
+			if ((stop in constraints.locations)
+					&amp;&amp; ("Throughput" in constraints.locations[stop])) {
+				finalTroughputResult = finalTroughputResult + stop + '--'
+						+ ((constraints.locations[stop].Throughput)) + '--';
+			}
+		}
+	}
+	return finalTroughputResult;
+};
+
+getDistanceBetweenStops = function getDistanceBetweenStops(dimObj) {
+	var distancebetweenstops = "";
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+		try {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+
+			distancebetweenstops = distancebetweenstops + "#" + stop1 + "_"
+					+ stop2;
+			distancebetweenstops = distancebetweenstops + "#"
+					+ distanceMatrix[stop1][stop2];
+		} catch (err) {
+			warn('err cause no distancebetweenstops ' + stop1 + ' -- ' + stop2);
+		}
+	}
+	return distancebetweenstops;
+};
+
+getFinalLoadThroughput = function getFinalLoadThroughput(dimObj) {
+	var varloadthroughput = 0;
+	stop1 = sliceStopOffData(dimObj.stopOffs[0].stop);
+	try {
+		if (stop1 in constraints.locations
+				&amp;&amp; ("Loading" in constraints.locations[stop1])) {
+
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop1].Loading["weight_time"].division_factor)
+						* constraints.locations[stop1].Loading["weight_time"].time_factor;
+				varloadthroughput = varweightthrouput;
+			}
+
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop1].Loading["volume_time"].division_factor)
+						* constraints.locations[stop1].Loading["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varloadthroughput) {
+					varloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop1].max_variable_time != 0
+				&amp;&amp; (varloadthroughput == 0 || constraints.locations[stop1].max_variable_time &lt; varloadthroughput)) {
+			varloadthroughput = constraints.locations[stop1].max_variable_time;
+		}
+		// warn('Loading varloadthroughput ' + varloadthroughput + 'fixed_time '
+		// + constraints.locations[stop1].fixed_time);
+		return constraints.locations[stop1].fixed_time + varloadthroughput;
+		;
+	} catch (err) {
+		warn('err calculating load throughput for stop ' + stop1 + '-- '
+				+ err.message);
+		return 0;
+	}
+};
+
+getFinalUnLoadThroughput = function getFinalUnLoadThroughput(dimObj) {
+	var varunloadthroughput = 0;
+	stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+	try {
+		if (stop2 in constraints.locations
+				&amp;&amp; "Unloading" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].Unloading["weight_time"].division_factor)
+						* constraints.locations[stop2].Unloading["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].Unloading["volume_time"].division_factor)
+						* constraints.locations[stop2].Unloading["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2].max_variable_time != 0
+				&amp;&amp; (varunloadthroughput == 0 || constraints.locations[stop2].max_variable_time &lt; varunloadthroughput)) {
+			varunloadthroughput = constraints.locations[stop2].max_variable_time;
+		}
+		// warn('Unloading varunloadthroughput ' + varunloadthroughput +
+		// 'fixed_time ' + constraints.locations[stop2].fixed_time);
+		return varunloadthroughput = constraints.locations[stop2].fixed_time
+				+ varunloadthroughput;
+		;
+	} catch (err) {
+		warn('err calculating Unload throughput for stop ' + stop2 + '-- '
+				+ err.message);
+		return 0;
+	}
+};
+</globalScript></supplyChain><requirements ttype="MAP"><item><key ttype="STRING">28035960288</key><value struct="LoadRequirement" ttype="STRUCT"><id ttype="STRING">28035960288</id><name ttype="STRING">28035960288</name><minDivision ttype="LIST"><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">wtInKG</unit><quantityPerDivision ttype="DOUBLE">2000.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">volInCBM</unit><quantityPerDivision ttype="DOUBLE">2.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">NumberOfTOS</unit><quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision></item></minDivision><referenceUnitName ttype="STRING">order</referenceUnitName><quantity ttype="I32">1</quantity><source ttype="STRING">36312__START_REQUIREMENT</source><destination ttype="STRING">54788__END_REQUIREMENT</destination><earliestDepartTime ttype="I64">1898712000</earliestDepartTime><earliestDeliveryTime ttype="I64">1898712060</earliestDeliveryTime><latestDepartTime ttype="I64">1900522800</latestDepartTime><latestDeliveryTime ttype="I64">1930118400</latestDeliveryTime></value></item><item><key ttype="STRING">28035960284</key><value struct="LoadRequirement" ttype="STRUCT"><id ttype="STRING">28035960284</id><name ttype="STRING">28035960284</name><minDivision ttype="LIST"><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">wtInKG</unit><quantityPerDivision ttype="DOUBLE">2000.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">volInCBM</unit><quantityPerDivision ttype="DOUBLE">2.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">NumberOfTOS</unit><quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision></item></minDivision><referenceUnitName ttype="STRING">order</referenceUnitName><quantity ttype="I32">1</quantity><source ttype="STRING">54788__START_REQUIREMENT</source><destination ttype="STRING">36312__END_REQUIREMENT</destination><earliestDepartTime ttype="I64">1898712000</earliestDepartTime><earliestDeliveryTime ttype="I64">1898712060</earliestDeliveryTime><latestDepartTime ttype="I64">1900522800</latestDepartTime><latestDeliveryTime ttype="I64">1930118400</latestDeliveryTime></value></item></requirements><modelingLanguageVersion ttype="STRING">3.2</modelingLanguageVersion></OptimizationInstance>

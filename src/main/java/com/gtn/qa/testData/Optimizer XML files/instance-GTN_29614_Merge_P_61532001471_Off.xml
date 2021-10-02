@@ -1,0 +1,3387 @@
+<OptimizationInstance struct="OptimizationInstance" ttype="STRUCT">
+	<id ttype="STRING">GTN_29614_Merge_P_61532001471</id>
+	<supplyChain struct="SupplyChain" ttype="STRUCT">
+		<id ttype="STRING">Network</id>
+		<name ttype="STRING">supplyChainName12345</name>
+		<steps ttype="MAP">
+			<item>
+				<key ttype="STRING">1074071340__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071340__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1074071340 00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071340__CONSOLIDATE_REQUIREMENT_XDOC</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071338__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071338__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1074071338 00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071338__CONSOLIDATE_REQUIREMENT_XDOC</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001575__96688__61532319986__S__D__P__TRANSPORT_REQUIREMENT__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001575__96688__61532319986__S__D__P__TRANSPORT_REQUIREMENT__1003</id>
+					<narrativeDescription ttype="STRING">Transport from 1001575__96688__61532319986__S__D__P__TRANSPORT_REQUIREMENT__1003__22GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071338__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":111.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_9"},"netfreightcostelems":[],"accessorials":[],"rateId":"61532319986"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":259200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420099200</rateValidityStart>
+					<rateValidityEnd ttype="I64">2398320000</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">4131717__4131720__61531717093__SC______MULTI_STOP__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">4131717__4131720__61531717093__SC______MULTI_STOP__1003</id>
+					<narrativeDescription ttype="STRING">4131717__4131720__61531717093__SC______MULTI_STOP__1003__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"dimFactor":0.0,"baseRate":{"minAmount":0.014074656833702485,"amount":0.14074656833702484,"includeInNetFreight":null,"dstConvRate":1.0,"basis":"\/MI","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[],"dimFactorConv":"cm\/kg","rateId":"61531717093"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+    var dtmLookUPFlag = dimObj.dtmFromTMO;&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 999999999;&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var sendingTimeFactor = 0 ;&#13;
+	var receivingTimeFactor = 0 ;&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	try {&#13;
+		&#13;
+		 sendingTimeFactor = getAdditionalSendingActivityTime(dimObj) ;&#13;
+		receivingTimeFactor = getAdditionalReceivingActivityTime(dimObj);&#13;
+	    if(dtmLookUPFlag &gt; 0){&#13;
+			if(parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2])) {&#13;
+						trasitTime = finalloadthroughput + (parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2]))&#13;
+									+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor;&#13;
+		 		}&#13;
+		} else {&#13;
+			&#13;
+				if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+					trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+							+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor ;&#13;
+				}	&#13;
+		}&#13;
+		&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('Error Calculating Transit Time for' + stop1 + '-- ' + stop2);&#13;
+			return 999999999;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('Error calculating processing time -- ' + err.message);&#13;
+		return 999999999;&#13;
+		&#13;
+	}&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420099200</rateValidityStart>
+					<rateValidityEnd ttype="I64">1704009600</rateValidityEnd>
+					<scriptedCarrierConstraints ttype="STRING">resourceObj = new carrier({"id":"1003_10"}); resourceObj.evaluateCarrierConstraint.bind(resourceObj)</scriptedCarrierConstraints>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">4131717__1074068695__61531874573__SC______MULTI_STOP__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">4131717__1074068695__61531874573__SC______MULTI_STOP__1003</id>
+					<narrativeDescription ttype="STRING">4131717__1074068695__61531874573__SC______MULTI_STOP__1003__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"dimFactor":0.0,"baseRate":{"minAmount":0.14074656833702484,"amount":0.14074656833702484,"includeInNetFreight":null,"dstConvRate":1.0,"basis":"\/MI","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[],"dimFactorConv":"cm\/kg","rateId":"61531874573"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+    var dtmLookUPFlag = dimObj.dtmFromTMO;&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 999999999;&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var sendingTimeFactor = 0 ;&#13;
+	var receivingTimeFactor = 0 ;&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	try {&#13;
+		&#13;
+		 sendingTimeFactor = getAdditionalSendingActivityTime(dimObj) ;&#13;
+		receivingTimeFactor = getAdditionalReceivingActivityTime(dimObj);&#13;
+	    if(dtmLookUPFlag &gt; 0){&#13;
+			if(parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2])) {&#13;
+						trasitTime = finalloadthroughput + (parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2]))&#13;
+									+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor;&#13;
+		 		}&#13;
+		} else {&#13;
+			&#13;
+				if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+					trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+							+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor ;&#13;
+				}	&#13;
+		}&#13;
+		&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('Error Calculating Transit Time for' + stop1 + '-- ' + stop2);&#13;
+			return 999999999;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('Error calculating processing time -- ' + err.message);&#13;
+		return 999999999;&#13;
+		&#13;
+	}&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420099200</rateValidityStart>
+					<rateValidityEnd ttype="I64">1704009600</rateValidityEnd>
+					<scriptedCarrierConstraints ttype="STRING">resourceObj = new carrier({"id":"1003_10"}); resourceObj.evaluateCarrierConstraint.bind(resourceObj)</scriptedCarrierConstraints>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071337__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071337__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074071337__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">2</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1001575__96688__61532319986__S__D__P__TRANSPORT_REQUIREMENT__1003</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074071337_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071341__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071341__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074071341__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071341__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074071341_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071340__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071340__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 1074071340</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071340__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074071340_Operating_hour</item>
+					</operatingHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071341__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071341__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1074071341 00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">4</type>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">2000348__1000714__61532001481__S__CFSCY__P__TRANSPORT_REQUIREMENT__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">2000348__1000714__61532001481__S__CFSCY__P__TRANSPORT_REQUIREMENT__1003</id>
+					<narrativeDescription ttype="STRING">Transport from 2000348__1000714__61532001481__S__CFSCY__P__TRANSPORT_REQUIREMENT__1003__42GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_10_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":50.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[{"expiryDate":1640822400,"amount":2.0,"includeInNetFreight":null,"basis":"%","isHazMat":null,"distArr":"","effectiveDate":1630454400}],"rateId":"61532001481"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":1555200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1630479600</rateValidityStart>
+					<rateValidityEnd ttype="I64">1640851200</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">2000348__1000714__61532001479__S__P__CY__TRANSPORT_REQUIREMENT__1010</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">2000348__1000714__61532001479__S__P__CY__TRANSPORT_REQUIREMENT__1010</id>
+					<narrativeDescription ttype="STRING">Transport from 2000348__1000714__61532001479__S__P__CY__TRANSPORT_REQUIREMENT__1010__42GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__DECONSOLIDATE_REQUIREMENT</item>
+						<item ttype="STRING">1074069941__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1010_10_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":30.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[{"expiryDate":1640822400,"amount":2.0,"includeInNetFreight":null,"basis":"%","isHazMat":null,"distArr":"","effectiveDate":1630454400}],"rateId":"61532001479"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":1382400});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1630479600</rateValidityStart>
+					<rateValidityEnd ttype="I64">1640851200</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">31298__1074068695__61531963243__SC______MULTI_STOP__10864</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">31298__1074068695__61531963243__SC______MULTI_STOP__10864</id>
+					<narrativeDescription ttype="STRING">31298__1074068695__61531963243__SC______MULTI_STOP__10864__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">10864_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"dimFactor":0.0,"baseRate":{"minAmount":1.4074656833702486,"amount":1.4074656833702486,"wtConvRate":1.0,"includeInNetFreight":null,"basis":"\/kg","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[],"dimFactorConv":"cm\/kg","rateId":"61531963243"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+    var dtmLookUPFlag = dimObj.dtmFromTMO;&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 999999999;&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var sendingTimeFactor = 0 ;&#13;
+	var receivingTimeFactor = 0 ;&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	try {&#13;
+		&#13;
+		 sendingTimeFactor = getAdditionalSendingActivityTime(dimObj) ;&#13;
+		receivingTimeFactor = getAdditionalReceivingActivityTime(dimObj);&#13;
+	    if(dtmLookUPFlag &gt; 0){&#13;
+			if(parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2])) {&#13;
+						trasitTime = finalloadthroughput + (parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2]))&#13;
+									+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor;&#13;
+		 		}&#13;
+		} else {&#13;
+			&#13;
+				if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+					trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+							+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor ;&#13;
+				}	&#13;
+		}&#13;
+		&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('Error Calculating Transit Time for' + stop1 + '-- ' + stop2);&#13;
+			return 999999999;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('Error calculating processing time -- ' + err.message);&#13;
+		return 999999999;&#13;
+		&#13;
+	}&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420099200</rateValidityStart>
+					<rateValidityEnd ttype="I64">1704009600</rateValidityEnd>
+					<scriptedCarrierConstraints ttype="STRING">resourceObj = new carrier({"id":"10864_10"}); resourceObj.evaluateCarrierConstraint.bind(resourceObj)</scriptedCarrierConstraints>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069938__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069938__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074069938__42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,TV20,L5GH,29PF,22RN,P5GP,01TN,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription>
+					<type ttype="I32">2</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">2000348__1000714__61532001484__S__CY__P__TRANSPORT_REQUIREMENT__1010</item>
+						<item ttype="STRING">2000348__1000714__61532001483__S__D__P__TRANSPORT_REQUIREMENT__1004</item>
+						<item ttype="STRING">2000348__1000714__61532001478__S__P__CFSD__TRANSPORT_REQUIREMENT__1004</item>
+						<item ttype="STRING">2000348__1000714__61532001477__S__P__P__TRANSPORT_REQUIREMENT__1003</item>
+						<item ttype="STRING">2000348__1000714__61532001480__S__P__D__TRANSPORT_REQUIREMENT__1008</item>
+						<item ttype="STRING">2000348__1000714__61532001481__S__CFSCY__P__TRANSPORT_REQUIREMENT__1003</item>
+						<item ttype="STRING">2000348__1000714__61532001479__S__P__CY__TRANSPORT_REQUIREMENT__1010</item>
+						<item ttype="STRING">2000348__1000714__61532001482__S__CY__P__TRANSPORT_REQUIREMENT__1003</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074069938_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+						<item ttype="STRING">1003_10_S</item>
+						<item ttype="STRING">1010_10_S</item>
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071338__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071338__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074071338__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071338__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074071338_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069939__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069939__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074069939</narrativeDescription>
+					<type ttype="I32">2</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">2000348__1000714__61532001484__S__CY__P__TRANSPORT_REQUIREMENT__1010</item>
+						<item ttype="STRING">2000348__1000714__61532001483__S__D__P__TRANSPORT_REQUIREMENT__1004</item>
+						<item ttype="STRING">2000348__1000714__61532001478__S__P__CFSD__TRANSPORT_REQUIREMENT__1004</item>
+						<item ttype="STRING">2000348__1000714__61532001477__S__P__P__TRANSPORT_REQUIREMENT__1003</item>
+						<item ttype="STRING">2000348__1000714__61532001480__S__P__D__TRANSPORT_REQUIREMENT__1008</item>
+						<item ttype="STRING">2000348__1000714__61532001481__S__CFSCY__P__TRANSPORT_REQUIREMENT__1003</item>
+						<item ttype="STRING">2000348__1000714__61532001479__S__P__CY__TRANSPORT_REQUIREMENT__1010</item>
+						<item ttype="STRING">2000348__1000714__61532001482__S__CY__P__TRANSPORT_REQUIREMENT__1003</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+						<item ttype="STRING">1003_10_S</item>
+						<item ttype="STRING">1010_10_S</item>
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069939__INTERCHANGE_REQUIREMENT_XCHG</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069939__INTERCHANGE_REQUIREMENT_XCHG</id>
+					<narrativeDescription ttype="STRING">XCHG  at 1074069939__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">7</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">2000348__1000714__61532001484__S__CY__P__TRANSPORT_REQUIREMENT__1010</item>
+						<item ttype="STRING">2000348__1000714__61532001483__S__D__P__TRANSPORT_REQUIREMENT__1004</item>
+						<item ttype="STRING">2000348__1000714__61532001478__S__P__CFSD__TRANSPORT_REQUIREMENT__1004</item>
+						<item ttype="STRING">2000348__1000714__61532001477__S__P__P__TRANSPORT_REQUIREMENT__1003</item>
+						<item ttype="STRING">2000348__1000714__61532001480__S__P__D__TRANSPORT_REQUIREMENT__1008</item>
+						<item ttype="STRING">2000348__1000714__61532001481__S__CFSCY__P__TRANSPORT_REQUIREMENT__1003</item>
+						<item ttype="STRING">2000348__1000714__61532001479__S__P__CY__TRANSPORT_REQUIREMENT__1010</item>
+						<item ttype="STRING">2000348__1000714__61532001482__S__CY__P__TRANSPORT_REQUIREMENT__1003</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074069939_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+						<item ttype="STRING">1003_10_S</item>
+						<item ttype="STRING">1010_10_S</item>
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">2000348__1000714__61532001483__S__D__P__TRANSPORT_REQUIREMENT__1004</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">2000348__1000714__61532001483__S__D__P__TRANSPORT_REQUIREMENT__1004</id>
+					<narrativeDescription ttype="STRING">Transport from 2000348__1000714__61532001483__S__D__P__TRANSPORT_REQUIREMENT__1004__42GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":70.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[{"expiryDate":1640822400,"amount":2.0,"includeInNetFreight":null,"basis":"%","isHazMat":null,"distArr":"","effectiveDate":1630454400}],"rateId":"61532001483"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":1641600});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1630479600</rateValidityStart>
+					<rateValidityEnd ttype="I64">1640851200</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071338__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071338__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074071338__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">2</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">96688__1001573__61532319987__S__P__P__TRANSPORT_REQUIREMENT__1003</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074071338_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">2000348__1000714__61532001478__S__P__CFSD__TRANSPORT_REQUIREMENT__1004</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">2000348__1000714__61532001478__S__P__CFSD__TRANSPORT_REQUIREMENT__1004</id>
+					<narrativeDescription ttype="STRING">Transport from 2000348__1000714__61532001478__S__P__CFSD__TRANSPORT_REQUIREMENT__1004__42GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__DECONSOLIDATE_REQUIREMENT</item>
+						<item ttype="STRING">1074069941__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":20.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[{"expiryDate":1640822400,"amount":2.0,"includeInNetFreight":null,"basis":"%","isHazMat":null,"distArr":"","effectiveDate":1630454400}],"rateId":"61532001478"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":950400});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1630479600</rateValidityStart>
+					<rateValidityEnd ttype="I64">1640851200</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071340__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071340__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074071340__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">2</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">10023743__1001545__61532319989__S__P__D__TRANSPORT_REQUIREMENT__1003</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074071340_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071337__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071337__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 1074071337</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071337__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074071337_Operating_hour</item>
+					</operatingHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069941__END_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069941__END_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">End at 1074069941 00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">5</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074069941_Operating_hour</item>
+					</operatingHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069938__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069938__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 1074069938</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069938__CONSOLIDATE_REQUIREMENT_XDOC</item>
+						<item ttype="STRING">1074069938__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074069938_Operating_hour</item>
+					</operatingHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071339__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071339__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1074071339 00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071339__CONSOLIDATE_REQUIREMENT_XDOC</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071339__CONSOLIDATE_REQUIREMENT_XDOC</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071339__CONSOLIDATE_REQUIREMENT_XDOC</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074071339__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">2</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1001573__10023743__61532319988__S__P__P__TRANSPORT_REQUIREMENT__1003</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074071339_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071339__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071339__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074071339__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071339__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074071339_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069938__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069938__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1074069938 42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,TV20,L5GH,29PF,22RN,P5GP,01TN,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069938__CONSOLIDATE_REQUIREMENT_XDOC</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071338__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071338__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 1074071338</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071338__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074071338_Operating_hour</item>
+					</operatingHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069941__INTERCHANGE_REQUIREMENT_XCHG</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069941__INTERCHANGE_REQUIREMENT_XCHG</id>
+					<narrativeDescription ttype="STRING">XCHG  at 1074069941__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">7</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074069941_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+						<item ttype="STRING">1003_10_S</item>
+						<item ttype="STRING">1010_10_S</item>
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071340__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071340__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074071340__00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071340__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074071340_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">96688__1001573__61532319987__S__P__P__TRANSPORT_REQUIREMENT__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">96688__1001573__61532319987__S__P__P__TRANSPORT_REQUIREMENT__1003</id>
+					<narrativeDescription ttype="STRING">Transport from 96688__1001573__61532319987__S__P__P__TRANSPORT_REQUIREMENT__1003__22GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071339__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":222.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_9"},"netfreightcostelems":[],"accessorials":[],"rateId":"61532319987"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":604800});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420185600</rateValidityStart>
+					<rateValidityEnd ttype="I64">2398320000</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069941__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069941__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074069941</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__END_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+						<item ttype="STRING">1010_10_S</item>
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069939__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069939__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 1074069939</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069939__CONSOLIDATE_REQUIREMENT_XDOC</item>
+						<item ttype="STRING">1074069939__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074069939_Operating_hour</item>
+					</operatingHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1001573__10023743__61532319988__S__P__P__TRANSPORT_REQUIREMENT__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1001573__10023743__61532319988__S__P__P__TRANSPORT_REQUIREMENT__1003</id>
+					<narrativeDescription ttype="STRING">Transport from 1001573__10023743__61532319988__S__P__P__TRANSPORT_REQUIREMENT__1003__22GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071340__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":333.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_9"},"netfreightcostelems":[],"accessorials":[],"rateId":"61532319988"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":950400});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420272000</rateValidityStart>
+					<rateValidityEnd ttype="I64">2398320000</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">10023743__1001545__61532319989__S__P__D__TRANSPORT_REQUIREMENT__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">10023743__1001545__61532319989__S__P__D__TRANSPORT_REQUIREMENT__1003</id>
+					<narrativeDescription ttype="STRING">Transport from 10023743__1001545__61532319989__S__P__D__TRANSPORT_REQUIREMENT__1003__22GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071341__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_9_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":444.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_9"},"netfreightcostelems":[],"accessorials":[],"rateId":"61532319989"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":950400});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420358400</rateValidityStart>
+					<rateValidityEnd ttype="I64">2398320000</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074068694__1074068695__61531721804__SC______MULTI_STOP__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074068694__1074068695__61531721804__SC______MULTI_STOP__1003</id>
+					<narrativeDescription ttype="STRING">1074068694__1074068695__61531721804__SC______MULTI_STOP__1003__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"dimFactor":0.0,"baseRate":{"minAmount":0.14074656833702484,"amount":0.14074656833702484,"includeInNetFreight":null,"dstConvRate":1.0,"basis":"\/MI","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[],"dimFactorConv":"cm\/kg","rateId":"61531721804"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+    var dtmLookUPFlag = dimObj.dtmFromTMO;&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 999999999;&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var sendingTimeFactor = 0 ;&#13;
+	var receivingTimeFactor = 0 ;&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	try {&#13;
+		&#13;
+		 sendingTimeFactor = getAdditionalSendingActivityTime(dimObj) ;&#13;
+		receivingTimeFactor = getAdditionalReceivingActivityTime(dimObj);&#13;
+	    if(dtmLookUPFlag &gt; 0){&#13;
+			if(parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2])) {&#13;
+						trasitTime = finalloadthroughput + (parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2]))&#13;
+									+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor;&#13;
+		 		}&#13;
+		} else {&#13;
+			&#13;
+				if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+					trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+							+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor ;&#13;
+				}	&#13;
+		}&#13;
+		&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('Error Calculating Transit Time for' + stop1 + '-- ' + stop2);&#13;
+			return 999999999;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('Error calculating processing time -- ' + err.message);&#13;
+		return 999999999;&#13;
+		&#13;
+	}&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420099200</rateValidityStart>
+					<rateValidityEnd ttype="I64">1704009600</rateValidityEnd>
+					<scriptedCarrierConstraints ttype="STRING">resourceObj = new carrier({"id":"1003_10"}); resourceObj.evaluateCarrierConstraint.bind(resourceObj)</scriptedCarrierConstraints>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071339__START_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071339__START_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">start at 1074071339</narrativeDescription>
+					<type ttype="I32">0</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071339__HOLD_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074071339_Operating_hour</item>
+					</operatingHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074071337__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074071337__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1074071337 00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074071337__CONSOLIDATE_REQUIREMENT_XDOC</item>
+					</nextSteps>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">2000348__1000714__61532001484__S__CY__P__TRANSPORT_REQUIREMENT__1010</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">2000348__1000714__61532001484__S__CY__P__TRANSPORT_REQUIREMENT__1010</id>
+					<narrativeDescription ttype="STRING">Transport from 2000348__1000714__61532001484__S__CY__P__TRANSPORT_REQUIREMENT__1010__42GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1010_10_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":80.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[{"expiryDate":1640822400,"amount":2.0,"includeInNetFreight":null,"basis":"%","isHazMat":null,"distArr":"","effectiveDate":1630454400}],"rateId":"61532001484"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":1728000});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1630479600</rateValidityStart>
+					<rateValidityEnd ttype="I64">1640851200</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069941__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069941__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1074069941 00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__INTERCHANGE_REQUIREMENT_XCHG</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+						<item ttype="STRING">1003_10_S</item>
+						<item ttype="STRING">1010_10_S</item>
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">2000348__1000714__61532001477__S__P__P__TRANSPORT_REQUIREMENT__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">2000348__1000714__61532001477__S__P__P__TRANSPORT_REQUIREMENT__1003</id>
+					<narrativeDescription ttype="STRING">Transport from 2000348__1000714__61532001477__S__P__P__TRANSPORT_REQUIREMENT__1003__42GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_10_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":10.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[{"expiryDate":1640822400,"amount":2.0,"includeInNetFreight":null,"basis":"%","isHazMat":null,"distArr":"","effectiveDate":1630454400}],"rateId":"61532001477"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":1296000});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1630479600</rateValidityStart>
+					<rateValidityEnd ttype="I64">1640851200</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">31298__31299__61535979997__SC______MULTI_STOP__73016</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">31298__31299__61535979997__SC______MULTI_STOP__73016</id>
+					<narrativeDescription ttype="STRING">31298__31299__61535979997__SC______MULTI_STOP__73016__42GP</narrativeDescription>
+					<type ttype="I32">6</type>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">73016_10_SC</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"dimFactor":0.0,"baseRate":{"minAmount":0.12667191150332235,"amount":0.12667191150332235,"includeInNetFreight":null,"dstConvRate":1.0,"basis":"\/MI","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[],"dimFactorConv":"cm\/kg","rateId":"61535979997"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+    var dtmLookUPFlag = dimObj.dtmFromTMO;&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 999999999;&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var sendingTimeFactor = 0 ;&#13;
+	var receivingTimeFactor = 0 ;&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	try {&#13;
+		&#13;
+		 sendingTimeFactor = getAdditionalSendingActivityTime(dimObj) ;&#13;
+		receivingTimeFactor = getAdditionalReceivingActivityTime(dimObj);&#13;
+	    if(dtmLookUPFlag &gt; 0){&#13;
+			if(parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2])) {&#13;
+						trasitTime = finalloadthroughput + (parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2]))&#13;
+									+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor;&#13;
+		 		}&#13;
+		} else {&#13;
+			&#13;
+				if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+					trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+							+ finalunloadthroughput + sendingTimeFactor + receivingTimeFactor ;&#13;
+				}	&#13;
+		}&#13;
+		&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('Error Calculating Transit Time for' + stop1 + '-- ' + stop2);&#13;
+			return 999999999;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('Error calculating processing time -- ' + err.message);&#13;
+		return 999999999;&#13;
+		&#13;
+	}&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1420099200</rateValidityStart>
+					<rateValidityEnd ttype="I64">1704009600</rateValidityEnd>
+					<scriptedCarrierConstraints ttype="STRING">resourceObj = new carrier({"id":"73016_10"}); resourceObj.evaluateCarrierConstraint.bind(resourceObj)</scriptedCarrierConstraints>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">2000348__1000714__61532001482__S__CY__P__TRANSPORT_REQUIREMENT__1003</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">2000348__1000714__61532001482__S__CY__P__TRANSPORT_REQUIREMENT__1003</id>
+					<narrativeDescription ttype="STRING">Transport from 2000348__1000714__61532001482__S__CY__P__TRANSPORT_REQUIREMENT__1003__42GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1003_10_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":60.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[{"expiryDate":1640822400,"amount":2.0,"includeInNetFreight":null,"basis":"%","isHazMat":null,"distArr":"","effectiveDate":1630454400}],"rateId":"61532001482"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":1555200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1630479600</rateValidityStart>
+					<rateValidityEnd ttype="I64">1640851200</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069940__END_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069940__END_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">End at 1074069940 42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,TV20,L5GH,29PF,22RN,P5GP,01TN,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription>
+					<type ttype="I32">5</type>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">RECEIVING_1074069940_Operating_hour</item>
+					</operatingHours>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069939__HOLD_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069939__HOLD_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">Hold at 1074069939 00B0,29PF,22GP,25GP,22RN,22UT,22RT,22GH,22TD,49PF,42RT,45GP,45GH,45RN,45RT,42RN,42UT,42GP,42GH,42TD,L5GP,L5GH,TR45,M5GP,TR48,P5GP,P2GP,TR53,00A0,BBOS,TRSM,LCOS,NONE,ROOS,01TN,TV20</narrativeDescription>
+					<type ttype="I32">4</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069939__INTERCHANGE_REQUIREMENT_XCHG</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+						<item ttype="STRING">1003_10_S</item>
+						<item ttype="STRING">1010_10_S</item>
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">2000348__1000714__61532001480__S__P__D__TRANSPORT_REQUIREMENT__1008</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">2000348__1000714__61532001480__S__P__D__TRANSPORT_REQUIREMENT__1008</id>
+					<narrativeDescription ttype="STRING">Transport from 2000348__1000714__61532001480__S__P__D__TRANSPORT_REQUIREMENT__1008__42GP</narrativeDescription>
+					<type ttype="I32">1</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069941__DECONSOLIDATE_REQUIREMENT</item>
+						<item ttype="STRING">1074069941__HOLD_REQUIREMENT</item>
+						<item ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</item>
+					</nextSteps>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<scriptedRate ttype="STRING">rateObj = new rate({"dtmlookupflag":false,"baseRate":{"amount":40.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[{"expiryDate":1640822400,"amount":2.0,"includeInNetFreight":null,"basis":"%","isHazMat":null,"distArr":"","effectiveDate":1630454400}],"rateId":"61532001480"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":1123200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<rateValidityStart ttype="I64">1630479600</rateValidityStart>
+					<rateValidityEnd ttype="I64">1640851200</rateValidityEnd>
+					<minHours ttype="DOUBLE">0</minHours>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</key>
+				<value struct="Step" ttype="STRUCT">
+					<id ttype="STRING">1074069940__DECONSOLIDATE_REQUIREMENT</id>
+					<narrativeDescription ttype="STRING">XDOC  at 1074069940__42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,TV20,L5GH,29PF,22RN,P5GP,01TN,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription>
+					<type ttype="I32">3</type>
+					<nextSteps ttype="SET">
+						<item ttype="STRING">1074069940__END_REQUIREMENT</item>
+					</nextSteps>
+					<operatingHours ttype="LIST">
+						<item ttype="STRING">SHIPPING_1074069940_Operating_hour</item>
+					</operatingHours>
+					<resourcesAvailable ttype="SET">
+						<item ttype="STRING">1004_10_S</item>
+						<item ttype="STRING">1003_10_S</item>
+						<item ttype="STRING">1010_10_S</item>
+						<item ttype="STRING">1008_10_S</item>
+					</resourcesAvailable>
+					<scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime>
+					<maxHours ttype="DOUBLE">0.0</maxHours>
+					<minHours ttype="DOUBLE">0.0</minHours>
+				</value>
+			</item>
+		</steps>
+		<operatingTimes ttype="MAP">
+			<item>
+				<key ttype="STRING">RECEIVING_1074071337_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1074071337_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_1074071338_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1074071338_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_1074069938_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1074069938_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1074071341_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1074071341_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_1074071339_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1074071339_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_1074069940_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1074069940_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1074071338_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1074071338_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_1074071340_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1074071340_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1074069938_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1074069938_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1074071340_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1074071340_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_1074069941_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1074069941_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1074071337_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1074071337_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1074069939_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1074069939_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1074071339_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1074071339_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">RECEIVING_1074069939_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">RECEIVING_1074069939_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SHIPPING_1074069940_Operating_hour</key>
+				<value struct="OperatingHours" ttype="STRUCT">
+					<id ttype="STRING">SHIPPING_1074069940_Operating_hour</id>
+					<openTimeRange ttype="LIST"/>
+				</value>
+			</item>
+		</operatingTimes>
+		<unitDimensions ttype="MAP">
+			<item>
+				<key ttype="STRING">LINEARMETER</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">LINEARMETER</id>
+					<dimension ttype="I32">10</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">/LNM</id>
+							<name ttype="STRING">544</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">WEIGHT</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">WEIGHT</id>
+					<dimension ttype="I32">5</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">wtInKG</id>
+							<name ttype="STRING">33</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">PACKAGE</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">PACKAGE</id>
+					<dimension ttype="I32">12</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">/package</id>
+							<name ttype="STRING">155</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">CUSTOM</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">CUSTOM</id>
+					<dimension ttype="I32">6</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">NumberOfTOS</id>
+							<name ttype="STRING">100001</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">VOLUME</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">VOLUME</id>
+					<dimension ttype="I32">4</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">volInCBM</id>
+							<name ttype="STRING">81</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">CURRENCY</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">CURRENCY</id>
+					<dimension ttype="I32">0</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">Dollar</id>
+							<name ttype="STRING">840</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">PALLET</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">PALLET</id>
+					<dimension ttype="I32">7</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">/pallet</id>
+							<name ttype="STRING">169</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">CARTON</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">CARTON</id>
+					<dimension ttype="I32">8</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">/carton</id>
+							<name ttype="STRING">159</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">SQUAREMETER</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">SQUAREMETER</id>
+					<dimension ttype="I32">11</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">/SQM</id>
+							<name ttype="STRING">181</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">UNIT</key>
+				<value struct="UnitDimension" ttype="STRUCT">
+					<id ttype="STRING">UNIT</id>
+					<dimension ttype="I32">9</dimension>
+					<scaledUnits ttype="LIST">
+						<item struct="UnitDefinition" ttype="STRUCT">
+							<id ttype="STRING">/unit</id>
+							<name ttype="STRING">152</name>
+							<scale ttype="DOUBLE">1.0</scale>
+						</item>
+					</scaledUnits>
+				</value>
+			</item>
+		</unitDimensions>
+		<resources ttype="MAP">
+			<item>
+				<key ttype="STRING">1010_10_S</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">1010_10_S</id>
+					<capacities ttype="LIST">
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">wtInKG</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">28800.0</maximumValue>
+						</item>
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">volInCBM</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">56.0</maximumValue>
+						</item>
+					</capacities>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"1010_10_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+					<priority ttype="I32">1</priority>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1008_10_S</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">1008_10_S</id>
+					<capacities ttype="LIST">
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">wtInKG</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">28800.0</maximumValue>
+						</item>
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">volInCBM</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">56.0</maximumValue>
+						</item>
+					</capacities>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"1008_10_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+					<priority ttype="I32">1</priority>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1003_10_S</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">1003_10_S</id>
+					<capacities ttype="LIST">
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">wtInKG</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">28800.0</maximumValue>
+						</item>
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">volInCBM</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">56.0</maximumValue>
+						</item>
+					</capacities>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_10_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+					<priority ttype="I32">1</priority>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1003_10_SC</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">1003_10_SC</id>
+					<capacities ttype="LIST">
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">wtInKG</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">28800.0</maximumValue>
+						</item>
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">volInCBM</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">56.0</maximumValue>
+						</item>
+					</capacities>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_10_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+					<priority ttype="I32">1</priority>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1003_9_S</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">1003_9_S</id>
+					<capacities ttype="LIST">
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">wtInKG</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">1600.0</maximumValue>
+						</item>
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">volInCBM</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">28.0</maximumValue>
+						</item>
+					</capacities>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_9_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+					<priority ttype="I32">1</priority>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">73016_10_SC</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">73016_10_SC</id>
+					<capacities ttype="LIST">
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">wtInKG</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">28800.0</maximumValue>
+						</item>
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">volInCBM</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">56.0</maximumValue>
+						</item>
+					</capacities>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"73016_10_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+					<priority ttype="I32">1</priority>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">1004_10_S</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">1004_10_S</id>
+					<capacities ttype="LIST">
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">wtInKG</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">28800.0</maximumValue>
+						</item>
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">volInCBM</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">56.0</maximumValue>
+						</item>
+					</capacities>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"1004_10_S"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+					<priority ttype="I32">1</priority>
+				</value>
+			</item>
+			<item>
+				<key ttype="STRING">10864_10_SC</key>
+				<value struct="Resource" ttype="STRUCT">
+					<id ttype="STRING">10864_10_SC</id>
+					<capacities ttype="LIST">
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">wtInKG</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">28800.0</maximumValue>
+						</item>
+						<item struct="ResourceCapacities" ttype="STRUCT">
+							<UOM struct="UnitOfMeasure" ttype="STRUCT">
+								<unit ttype="STRING">volInCBM</unit>
+							</UOM>
+							<minimumValue ttype="DOUBLE">0.0</minimumValue>
+							<maximumValue ttype="DOUBLE">56.0</maximumValue>
+						</item>
+					</capacities>
+					<scriptedConstraint ttype="STRING">(resourceObj= {"id":"10864_10_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint>
+					<priority ttype="I32">1</priority>
+				</value>
+			</item>
+		</resources>
+		<carrierLaneWiseAllocations ttype="MAP"/>
+		<globalScript ttype="STRING">distanceMatrix = {"1074071552":{"1074071553":1064.03,"1074069939":1683.8,"1073741824":1229.52,"1073741823":1205.56,"3658132":1198.15,"1074069938":1689.43,"1074071550":1556.49,"1074071549":927.89,"31397":7335.5,"1074071208":1575.8,"1074071551":1296.37},"1074071553":{"1074071550":547.56,"1074069939":1142.5,"1073741823":410.66,"1073741824":421.96,"1074071549":164.48,"1074071551":415.97,"3658132":396.74,"1074069938":1150.35,"31397":6464.47,"1074071208":884.7,"1074071552":1064.03},"1074071550":{"31397":5917.59,"1074071553":547.56,"1073741824":788.84,"1074071549":712.04,"1074069938":1441.06,"3658132":784.0,"1073741823":794.11,"1074071208":1141.6,"1074071552":1556.49,"1074071551":301.4,"1074069939":1433.5},"1074071551":{"1074071208":1220.08,"1074069938":1508.06,"1074071553":415.97,"1073741824":790.74,"1074071549":561.04,"1074071550":301.4,"1074071552":1296.37,"31397":6104.84,"1073741823":786.8,"1074069939":1500.21,"3658132":773.81},"31398":{"1074069938":6469.14,"1074069939":6470.4},"31397":{"1074069938":6924.08,"1074069939":6920.44,"1074071208":6705.56,"1073741823":6630.98,"1074071550":5917.59,"1074071552":7335.5,"1074071551":6104.84,"1074071553":6464.47,"1074071549":6628.75},"1074071208":{"1074069939":292.52,"3658132":494.7,"1073741824":465.64,"1074069938":299.95,"31397":6705.56,"1073741823":481.03,"1074071550":1141.6,"1074071552":1575.8,"1074071551":1220.08,"1074071553":884.7,"1074071549":861.03},"1074071209":{"1074042699":1067.19,"1074042697":660.64,"1074069940":81.03,"1074042698":660.64,"31453":1068.02,"1074069941":102.85,"31447":833.23,"1074071543":1067.19,"1074071541":660.64},"1074069887":{"31347":0.01,"31349":5281.59,"31298":5383.25,"1074068694":5338.69,"1074042695":5563.53,"1073741826":5311.67,"1073741827":5280.8,"1074042694":5383.25,"1074042696":5563.53,"31299":5563.53,"1073741828":5193.94,"1074069987":0.01,"4131717":5338.69,"1074071542":5563.53,"1074071540":5161.07},"1074071888":{"1074071888":0.621371,"1074071890":68.4750842,"1074071887":222.6993664,"1074071889":349.0240907,"1073778011":9290.18},"1074071889":{"1074071888":38.2764536,"1074071890":349.0240907,"1074071887":105.3223845,"1074071889":0.621371},"1074071887":{"1074071888":349.0240907,"1074071890":105.3223845,"1074071887":0.621371,"1074071889":68.4750842},"31347":{"1074042695":5563.53,"1074042694":5383.25,"1074042696":5563.53,"1074069887":0.01,"1074069987":0.01,"1074071542":5563.53,"1074071540":5161.07,"31349":5281.59},"31349":{"1074042695":347.92,"1074042694":227.18,"1074042696":347.92,"1074069887":5281.59,"1074069987":5281.59,"1074071542":347.92,"1074071540":394.88,"31298":227.18,"31347":5281.59,"1073741826":163.53,"4131717":264.45,"1074068694":264.45,"31299":347.92,"1073741827":210.76,"1073741828":226.66},"1074042699":{"1074042699":0.01,"1074042697":510.05,"1074042698":510.05,"31447":234.55,"31453":1.0,"1074069941":986.07,"1074069940":1009.68,"1074071209":1067.19,"1074071543":0.01,"1074071541":510.05},"3658132":{"1073741824":33.17,"1074069938":753.6,"1074069939":745.76,"1074071208":494.7,"1073741823":13.94,"1074071550":784.0,"1074071552":1198.15,"1074071551":773.81,"1074071553":396.74,"1074071549":369.79},"1074069938":{"3658132":753.6,"1073741824":729.36,"31398":6469.14,"31397":6924.08,"1074069939":7.87,"1073741823":739.69,"1074071208":299.95,"1074071550":1441.06,"1074071552":1689.43,"1074071551":1508.06,"1074071553":1150.35,"1074071549":1100.45},"1074042696":{"1074042694":180.29,"1074042695":0.01,"1074042696":0.01,"31299":0.01,"1073741826":255.35,"31349":347.92,"31347":5563.53,"1073741827":282.86,"31298":180.29,"1073741828":369.67,"1074069887":5563.53,"1074069987":5563.53,"1074071542":0.01,"1074071540":439.24},"1074042695":{"1074042694":180.29,"1074042695":0.01,"1074042696":0.01,"1073741826":255.35,"1073741827":282.86,"31298":180.29,"31349":347.92,"31299":0.01,"31347":5563.53,"1073741828":369.67,"1074069887":5563.53,"1074069987":5563.53,"1074071542":0.01,"1074071540":439.24},"1074042698":{"1074042699":510.05,"1074042697":0.01,"1074042698":0.01,"31447":333.53,"31453":510.5,"1074069941":561.89,"1074069940":586.27,"1074071209":660.64,"1074071543":510.05,"1074071541":0.01},"1074042697":{"1074042699":510.05,"1074042697":0.01,"1074042698":0.01,"31447":333.53,"31453":510.5,"1074069940":586.27,"1074069941":561.89,"1074071209":660.64,"1074071543":510.05,"1074071541":0.01},"1074069939":{"1073741823":731.85,"1074069938":7.87,"1073741824":721.5,"3658132":745.76,"31397":6920.44,"31398":6470.4,"1074071208":292.52,"1074071550":1433.5,"1074071552":1683.8,"1074071551":1500.21,"1074071553":1142.5,"1074071549":1092.78},"1074071890":{"1074071888":105.3223845,"1074071890":0.621371,"1074071887":68.4750842,"1074071889":222.6993664},"31299":{"31298":180.29,"1074042694":180.29,"1074042696":0.01,"1074042695":0.01,"1074069887":5563.53,"1074069987":5563.53,"1074071542":0.01,"1074071540":439.24,"31349":347.92},"31453":{"31447":235.4,"1074042699":1.0,"1074042697":510.5,"1074042698":510.5,"1074069940":1010.47,"1074069941":986.86,"1074071209":1068.02,"1074071543":1.0,"1074071541":510.5},"31298":{"31299":180.29,"1073741826":83.05,"1073741827":102.77,"1073741828":189.44,"1074042694":0.01,"1074042696":180.29,"1074042695":180.29,"1074069887":5383.25,"1074069987":5383.25,"1074071542":180.29,"1074071540":282.7,"31349":227.18},"1074068694":{"1074069887":5338.69,"1074069987":5338.69,"1074071542":231.71,"1074071540":214.06,"31349":264.45},"1074069940":{"1074042699":1009.68,"31453":1010.47,"1074042697":586.27,"1074069941":24.52,"31447":777.25,"1074042698":586.27,"1074071209":81.03,"1074071543":1009.68,"1074071541":586.27},"1074069941":{"31453":986.86,"1074069940":24.52,"1074042699":986.07,"31447":753.9,"1074042697":561.89,"1074042698":561.89,"1074071209":102.85,"1074071543":986.07,"1074071541":561.89},"1074071549":{"1074071550":712.04,"1074071552":927.89,"3658132":369.79,"1074071551":561.04,"1074069939":1092.78,"1073741824":401.54,"1074071208":861.03,"31397":6628.75,"1073741823":382.8,"1074071553":164.48,"1074069938":1100.45},"1074071547":{"1074071548":927.89},"1074069987":{"1074042695":5563.53,"1074042694":5383.25,"1074068694":5338.69,"1073741828":5193.94,"31299":5563.53,"1073741827":5280.8,"31298":5383.25,"31349":5281.59,"1073741826":5311.67,"4131717":5338.69,"1074069887":0.01,"31347":0.01,"1074042696":5563.53,"1074071542":5563.53,"1074071540":5161.07},"4131717":{"1074069987":5338.69,"1074069887":5338.69,"1074071542":231.71,"1074071540":214.06,"31349":264.45},"1074071548":{"1074071544":164.48,"1074071547":927.89},"1074071545":{"1074071546":301.4,"1074071544":136.19},"1074071546":{"1074071545":301.4,"1074071544":415.97},"1074071543":{"1074069941":986.07,"1074042697":510.05,"1074042698":510.05,"1074071541":510.05,"31447":234.55,"1074071209":1067.19,"31453":1.0,"1074042699":0.01,"1074069940":1009.68},"1074071544":{"1074071546":415.97,"1074071548":164.48,"1074071545":136.19},"1074071541":{"1074069941":561.89,"1074042699":510.05,"1074069940":586.27,"1074042697":0.01,"1074071209":660.64,"1074071543":510.05,"31453":510.5,"31447":333.53,"1074042698":0.01},"1074071542":{"1073741828":369.67,"1074042696":0.01,"31347":5563.53,"1074042695":0.01,"1074071540":439.24,"1073741826":255.35,"4131717":231.71,"1074068694":231.71,"1074069887":5563.53,"1074069987":5563.53,"31299":0.01,"31298":180.29,"31349":347.92,"1074042694":180.29,"1073741827":282.86},"1074071540":{"1074042696":439.24,"31298":282.7,"31349":394.88,"1074069887":5161.07,"1074071542":439.24,"1073741827":204.74,"1073741828":169.97,"1074042694":282.7,"31347":5161.07,"1074042695":439.24,"4131717":214.06,"31299":439.24,"1073741826":263.54,"1074069987":5161.07,"1074068694":214.06},"1073778011":{"1074071888":9290.18},"1073741823":{"1073741824":30.94,"1074069938":739.69,"1074069939":731.85,"1074071208":481.03,"31397":6630.98,"3658132":13.94,"1074071550":794.11,"1074071552":1205.56,"1074071551":786.8,"1074071553":410.66,"1074071549":382.8},"1073741824":{"1073741823":23.99,"3658132":33.17,"1074069938":729.36,"1074069939":721.5,"1074071208":465.64,"1074071550":788.84,"1074071552":1229.52,"1074071551":790.74,"1074071553":421.96,"1074071549":401.54},"1073741826":{"31298":83.05,"1073741827":58.95,"1073741828":127.49,"1074042695":255.35,"1074042696":255.35,"1074042694":83.05,"1074069887":5311.67,"1074069987":5311.67,"1074071542":255.35,"1074071540":263.54,"31349":163.53},"1073741827":{"31298":102.77,"1073741826":58.95,"1073741828":86.87,"1074042696":282.86,"1074042694":102.77,"1074042695":282.86,"1074069887":5280.8,"1074069987":5280.8,"1074071542":282.86,"1074071540":204.74,"31349":210.76},"1073741828":{"31298":189.44,"1073741826":127.49,"1073741827":86.87,"1074042695":369.67,"1074042694":189.44,"1074042696":369.67,"1074069887":5193.94,"1074069987":5193.94,"1074071542":369.67,"1074071540":169.97,"31349":226.66},"1074042694":{"1074042694":0.01,"1074042695":180.29,"1074042696":180.29,"31298":0.01,"1073741827":102.77,"31299":180.29,"1073741826":83.05,"1073741828":189.44,"31349":227.18,"31347":5383.25,"1074069887":5383.25,"1074069987":5383.25,"1074071542":180.29,"1074071540":282.7},"31447":{"31453":235.4,"1074042697":333.53,"1074042699":234.55,"1074042698":333.53,"1074069940":777.25,"1074069941":753.9,"1074071209":833.23,"1074071543":234.55,"1074071541":333.53}}
+transitTimeMatrix = {"1074071552":{"1074071553":76560,"1074069939":121200,"1073741824":88500,"1073741823":86760,"3658132":86220,"1074069938":121620,"1074071550":112020,"1074071549":66780,"31397":528120,"1074071208":113400,"1074071551":93300},"1074071553":{"1074071550":39420,"1074069939":82260,"1073741823":29520,"1073741824":30360,"1074071549":11820,"1074071551":29940,"3658132":28560,"1074069938":82800,"31397":465420,"1074071208":63660,"1074071552":76560},"1074071550":{"31397":426060,"1074071553":39420,"1073741824":56760,"1074071549":51240,"1074069938":103740,"3658132":56400,"1073741823":57120,"1074071208":82140,"1074071552":112020,"1074071551":21660,"1074069939":103200},"1074071551":{"1074071208":87840,"1074069938":108540,"1074071553":29940,"1073741824":56880,"1074071549":40380,"1074071550":21660,"1074071552":93300,"31397":439500,"1073741823":56640,"1074069939":108000,"3658132":55680},"31398":{"1074069938":465720,"1074069939":465840},"31397":{"1074069938":498480,"1074069939":498240,"1074071208":482760,"1073741823":477420,"1074071550":426060,"1074071552":528120,"1074071551":439500,"1074071553":465420,"1074071549":477240},"1074071208":{"1074069939":21060,"3658132":35580,"1073741824":33480,"1074069938":21540,"31397":482760,"1073741823":34620,"1074071550":82140,"1074071552":113400,"1074071551":87840,"1074071553":63660,"1074071549":61980},"1074071209":{"1074042699":76800,"1074042697":47520,"1074069940":5820,"1074042698":47520,"31453":76860,"1074069941":7380,"31447":59940,"1074071543":76800,"1074071541":47520},"1074069887":{"31347":60,"31349":380220,"31298":387540,"1074068694":384360,"1074042695":400560,"1073741826":382440,"1073741827":380160,"1074042694":387540,"1074042696":400560,"31299":400560,"1073741828":373920,"1074069987":60,"4131717":384360,"1074071542":400560,"1074071540":371580},"1074071888":{"1074071888":60,"1074071890":7200,"1074071887":28800,"1074071889":14400,"1073778011":668880},"1074071889":{"1074071888":7200,"1074071890":14400,"1074071887":18000,"1074071889":60},"1074071887":{"1074071888":14400,"1074071890":18000,"1074071887":60,"1074071889":7200},"31347":{"1074042695":400560,"1074042694":387540,"1074042696":400560,"1074069887":60,"1074069987":60,"1074071542":400560,"1074071540":371580,"31349":380220},"31349":{"1074042695":25020,"1074042694":16320,"1074042696":25020,"1074069887":380220,"1074069987":380220,"1074071542":25020,"1074071540":28380,"31298":16320,"31347":380220,"1073741826":11760,"4131717":19020,"1074068694":19020,"31299":25020,"1073741827":15120,"1073741828":16260},"1074042699":{"1074042699":60,"1074042697":36720,"1074042698":36720,"31447":16860,"31453":60,"1074069941":70980,"1074069940":72660,"1074071209":76800,"1074071543":60,"1074071541":36720},"3658132":{"1073741824":2340,"1074069938":54240,"1074069939":53640,"1074071208":35580,"1073741823":960,"1074071550":56400,"1074071552":86220,"1074071551":55680,"1074071553":28560,"1074071549":26580},"1074069938":{"3658132":54240,"1073741824":52500,"31398":465720,"31397":498480,"1074069939":540,"1073741823":53220,"1074071208":21540,"1074071550":103740,"1074071552":121620,"1074071551":108540,"1074071553":82800,"1074071549":79200},"1074042696":{"1074042694":12960,"1074042695":60,"1074042696":60,"31299":60,"1073741826":18360,"31349":25020,"31347":400560,"1073741827":20340,"31298":12960,"1073741828":26580,"1074069887":400560,"1074069987":400560,"1074071542":60,"1074071540":31620},"1074042695":{"1074042694":12960,"1074042695":60,"1074042696":60,"1073741826":18360,"1073741827":20340,"31298":12960,"31349":25020,"31299":60,"31347":400560,"1073741828":26580,"1074069887":400560,"1074069987":400560,"1074071542":60,"1074071540":31620},"1074042698":{"1074042699":36720,"1074042697":60,"1074042698":60,"31447":24000,"31453":36720,"1074069941":40440,"1074069940":42180,"1074071209":47520,"1074071543":36720,"1074071541":60},"1074042697":{"1074042699":36720,"1074042697":60,"1074042698":60,"31447":24000,"31453":36720,"1074069940":42180,"1074069941":40440,"1074071209":47520,"1074071543":36720,"1074071541":60},"1074069939":{"1073741823":52680,"1074069938":540,"1073741824":51900,"3658132":53640,"31397":498240,"31398":465840,"1074071208":21060,"1074071550":103200,"1074071552":121200,"1074071551":108000,"1074071553":82260,"1074071549":78660},"1074071890":{"1074071888":18000,"1074071890":60,"1074071887":7200,"1074071889":28800},"31299":{"31298":12960,"1074042694":12960,"1074042696":60,"1074042695":60,"1074069887":400560,"1074069987":400560,"1074071542":60,"1074071540":31620,"31349":25020},"31453":{"31447":16920,"1074042699":60,"1074042697":36720,"1074042698":36720,"1074069940":72720,"1074069941":71040,"1074071209":76860,"1074071543":60,"1074071541":36720},"31298":{"31299":12960,"1073741826":5940,"1073741827":7380,"1073741828":13620,"1074042694":60,"1074042696":12960,"1074042695":12960,"1074069887":387540,"1074069987":387540,"1074071542":12960,"1074071540":20340,"31349":16320},"1074068694":{"1074069887":384360,"1074069987":384360,"1074071542":16680,"1074071540":15360,"31349":19020},"1074069940":{"1074042699":72660,"31453":72720,"1074042697":42180,"1074069941":1740,"31447":55920,"1074042698":42180,"1074071209":5820,"1074071543":72660,"1074071541":42180},"1074069941":{"31453":71040,"1074069940":1740,"1074042699":70980,"31447":54240,"1074042697":40440,"1074042698":40440,"1074071209":7380,"1074071543":70980,"1074071541":40440},"1074071549":{"1074071550":51240,"1074071552":66780,"3658132":26580,"1074071551":40380,"1074069939":78660,"1073741824":28860,"1074071208":61980,"31397":477240,"1073741823":27540,"1074071553":11820,"1074069938":79200},"1074071547":{"1074071548":66780},"1074069987":{"1074042695":400560,"1074042694":387540,"1074068694":384360,"1073741828":373920,"31299":400560,"1073741827":380160,"31298":387540,"31349":380220,"1073741826":382440,"4131717":384360,"1074069887":60,"31347":60,"1074042696":400560,"1074071542":400560,"1074071540":371580},"4131717":{"1074069987":384360,"1074069887":384360,"1074071542":16680,"1074071540":15360,"31349":19020},"1074071548":{"1074071544":11820,"1074071547":66780},"1074071545":{"1074071546":21660,"1074071544":9780},"1074071546":{"1074071545":21660,"1074071544":29940},"1074071543":{"1074069941":70980,"1074042697":36720,"1074042698":36720,"1074071541":36720,"31447":16860,"1074071209":76800,"31453":60,"1074042699":60,"1074069940":72660},"1074071544":{"1074071546":29940,"1074071548":11820,"1074071545":9780},"1074071541":{"1074069941":40440,"1074042699":36720,"1074069940":42180,"1074042697":60,"1074071209":47520,"1074071543":36720,"31453":36720,"31447":24000,"1074042698":60},"1074071542":{"1073741828":26580,"1074042696":60,"31347":400560,"1074042695":60,"1074071540":31620,"1073741826":18360,"4131717":16680,"1074068694":16680,"1074069887":400560,"1074069987":400560,"31299":60,"31298":12960,"31349":25020,"1074042694":12960,"1073741827":20340},"1074071540":{"1074042696":31620,"31298":20340,"31349":28380,"1074069887":371580,"1074071542":31620,"1073741827":14700,"1073741828":12180,"1074042694":20340,"31347":371580,"1074042695":31620,"4131717":15360,"31299":31620,"1073741826":18960,"1074069987":371580,"1074068694":15360},"1073778011":{"1074071888":668880},"1073741823":{"1073741824":2220,"1074069938":53220,"1074069939":52680,"1074071208":34620,"31397":477420,"3658132":960,"1074071550":57120,"1074071552":86760,"1074071551":56640,"1074071553":29520,"1074071549":27540},"1073741824":{"1073741823":1680,"3658132":2340,"1074069938":52500,"1074069939":51900,"1074071208":33480,"1074071550":56760,"1074071552":88500,"1074071551":56880,"1074071553":30360,"1074071549":28860},"1073741826":{"31298":5940,"1073741827":4200,"1073741828":9120,"1074042695":18360,"1074042696":18360,"1074042694":5940,"1074069887":382440,"1074069987":382440,"1074071542":18360,"1074071540":18960,"31349":11760},"1073741827":{"31298":7380,"1073741826":4200,"1073741828":6240,"1074042696":20340,"1074042694":7380,"1074042695":20340,"1074069887":380160,"1074069987":380160,"1074071542":20340,"1074071540":14700,"31349":15120},"1073741828":{"31298":13620,"1073741826":9120,"1073741827":6240,"1074042695":26580,"1074042694":13620,"1074042696":26580,"1074069887":373920,"1074069987":373920,"1074071542":26580,"1074071540":12180,"31349":16260},"1074042694":{"1074042694":60,"1074042695":12960,"1074042696":12960,"31298":60,"1073741827":7380,"31299":12960,"1073741826":5940,"1073741828":13620,"31349":16320,"31347":387540,"1074069887":387540,"1074069987":387540,"1074071542":12960,"1074071540":20340},"31447":{"31453":16920,"1074042697":24000,"1074042699":16860,"1074042698":24000,"1074069940":55920,"1074069941":54240,"1074071209":59940,"1074071543":16860,"1074071541":24000}}
+var rate = function(rateInputObj) {&#13;
+&#13;
+	this.evaluateByObj = function(dimObj) {&#13;
+		result = this.evaluate(dimObj);&#13;
+		if (!result || result.total &lt;= 0 || !rateInputObj.baseRate.total&#13;
+				|| rateInputObj.baseRate.total &lt;= 0) {&#13;
+			return 9999999;&#13;
+		}&#13;
+		return parseFloat(result.total);&#13;
+	};&#13;
+&#13;
+	this.evaluate = function(dimObj) {&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				rateInputObj.accessorials[i].total = 0;&#13;
+			}&#13;
+		}&#13;
+		this.evaluateBaseRate(dimObj);&#13;
+		this.evaluateAccessorials(dimObj);&#13;
+		this.evaluateStopOff(dimObj.stopOffs);&#13;
+		this.getDistanceSplit(dimObj);&#13;
+		this.evaluateTransitTime(dimObj);&#13;
+		totalAmt = 0;&#13;
+		baseRateBasis = rateInputObj.baseRate.basis;&#13;
+		supportedBasis = rateInputObj.baseRate.supportedBasis;&#13;
+		if (rateInputObj.baseRate.total) {&#13;
+			totalAmt = rateInputObj.baseRate.total;&#13;
+		}&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				if (rateInputObj.accessorials[i]&#13;
+						&amp;&amp; rateInputObj.accessorials[i].total&#13;
+						&amp;&amp; (baseRateBasis || rateInputObj.accessorials[i].supportedBasis)) {&#13;
+					totalAmt = totalAmt + rateInputObj.accessorials[i].total;&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+		if (rateInputObj.stopBands &amp;&amp; rateInputObj.stopOffTotal) {&#13;
+			totalAmt = totalAmt + rateInputObj.stopOffTotal;&#13;
+		}&#13;
+		if (constraints &amp;&amp; constraints.locationactivities) {&#13;
+			this.evaluateActivityCost(constraints.locationactivities, dimObj);&#13;
+		}&#13;
+		if (rateInputObj.activityCost) {&#13;
+			totalAmt = totalAmt + rateInputObj.activityCost;&#13;
+		}&#13;
+		rateInputObj.total = parseFloat(totalAmt);&#13;
+		return rateInputObj;&#13;
+	};&#13;
+	&#13;
+	&#13;
+	this.evaluateActivityCost = function(locationactivities, dimObj) {&#13;
+		var cost = 0.0;&#13;
+		if(locationactivities){&#13;
+			var keys = Object.keys(locationactivities);&#13;
+			keys.forEach(function(key){&#13;
+				 if ( dimObj.stopOffs.length &gt; 1 ) {&#13;
+                    // handle multi pick and multidrop cases &#13;
+                    for (j = 0; j &lt; dimObj.stopOffs.length ; j++) {&#13;
+                    	 var stop = dimObj.stopOffs[j].stop;&#13;
+                    	 if ( stop.split('__')[1].split('_')[0] == 'HOLD') { //HOLD REQUIREMENT&#13;
+                    		 if ( key == stop.slice(0, stop.indexOf('__'))){&#13;
+                          	   for(var i = 0; i&lt; constraints.locationactivities[stop.slice(0, stop.indexOf('__'))].SENDINGACTIVITIES.length; i++) {&#13;
+                              	   cost = cost + calculateActivityCost(constraints.locationactivities[stop.slice(0, stop.indexOf('__'))].SENDINGACTIVITIES[i], dimObj);&#13;
+                                 }&#13;
+                             }&#13;
+                    	 }else { // END REQUIREMENT&#13;
+                    		 if ( key == stop.slice(0, stop.indexOf('__'))){&#13;
+                          	   for(var i = 0; i&lt; constraints.locationactivities[stop.slice(0, stop.indexOf('__'))].RECEIVINGACTIVITIES.length; i++) {&#13;
+                              	   cost = cost + calculateActivityCost(constraints.locationactivities[stop.slice(0, stop.indexOf('__'))].RECEIVINGACTIVITIES[i], dimObj);&#13;
+                          	   }&#13;
+                             }&#13;
+                    	 }&#13;
+                    }&#13;
+              }&#13;
+		    });&#13;
+			rateInputObj.activityCost = parseFloat(cost);&#13;
+		}&#13;
+		return rateInputObj.activityCost;&#13;
+	};&#13;
+	&#13;
+	calculateActivityCost = function(activity, dimObj) {&#13;
+		var totalActivityCost = 0.0;&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		if((activity.NAME &amp;&amp; activity.ISDEFAULT &amp;&amp; activity.COST &amp;&amp; activity.COSTBASIS &amp;&amp; activity.COSTCURRENCY) &amp;&amp; &#13;
+		   ((activity.SHIPPING &amp;&amp; activity.SHIPPING == true) ||(activity.RECEIEVING &amp;&amp; activity.RECEIEVING == true))) {&#13;
+			&#13;
+			var costBasis = activity.COSTBASIS.replace(/"/g, "");&#13;
+			var activityCost = parseFloat(activity.COST)&#13;
+			if (costBasis == '/CBM') {&#13;
+				if (dimObj.dims.volInCBM &amp;&amp; activity.VOLCONVRATE) {&#13;
+					var volume = dimObj.dims.volInCBM;&#13;
+					totalActivityCost = (volume * activity.VOLCONVRATE) * activityCost;&#13;
+				}&#13;
+			} else if (costBasis == '/KG' || costBasis == '/LB'	|| costBasis == '/METRICTON') {&#13;
+				if (dimObj.dims.wtInKG &amp;&amp; activity.WTCONVRATE) {&#13;
+					var weight = dimObj.dims.wtInKG;&#13;
+					totalActivityCost = weight * (activity.WTCONVRATE * activityCost);&#13;
+				}&#13;
+			} else if (costBasis == '/FLAT') {&#13;
+				totalActivityCost = activityCost;&#13;
+			}&#13;
+		}&#13;
+		return totalActivityCost;&#13;
+   };&#13;
+	&#13;
+	this.evaluateSMCRate = function(dimObj) {&#13;
+		lbConvRate = rateInputObj.baseRate.lbConvRate;&#13;
+		smcWeight = dimObj.dims.wtInKG * lbConvRate;&#13;
+		smcRate = 0.0;&#13;
+		smcDiscount = 0.0;&#13;
+		smcFinalPrice = 0.0;&#13;
+		&#13;
+		if (inputObj.isdeficitpricing &amp;&amp; inputObj.isdeficitpricing === 'yes') {&#13;
+			if (rateInputObj.rateBands&#13;
+					&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+				for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+					found = false;&#13;
+					if ((smcWeight &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+							|| (smcWeight &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; smcWeight &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+						found = true;					&#13;
+					} else {&#13;
+						if (i != 0 &amp;&amp; smcWeight &gt; rateInputObj.rateBands[i-1].upperbreak &amp;&amp; smcWeight &lt; rateInputObj.rateBands[i].lowerbreak) {&#13;
+							found = true;				&#13;
+						}&#13;
+					}&#13;
+					if (found) {&#13;
+						if (rateInputObj.rateBands[i].upperbreak == 999999999) {&#13;
+							smcRate = rateInputObj.rateBands[i].amount;&#13;
+							smcDiscount = rateInputObj.rateBands[i].discountpercentage;&#13;
+						} else {&#13;
+							smcNextBandAmt = rateInputObj.rateBands[i + 1].amount;&#13;
+							smcNextBandRate = smcNextBandAmt * dimObj.dims.wtInKG * 0.01;&#13;
+							smcBandRate = rateInputObj.rateBands[i].amount * dimObj.dims.wtInKG * 0.01;&#13;
+									&#13;
+							if (smcNextBandRate &gt; smcBandRate) {&#13;
+								smcRate = rateInputObj.rateBands[i+1].amount;&#13;
+								smcDiscount = rateInputObj.rateBands[i+1].discountpercentage;&#13;
+							} else {&#13;
+								smcRate = rateInputObj.rateBands[i].amount;&#13;
+								smcDiscount = rateInputObj.rateBands[i].discountpercentage;&#13;
+							}&#13;
+						}&#13;
+						break;&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+		} else {&#13;
+			if (rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+				for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+					found = false;&#13;
+					if ((smcWeight &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+						|| (smcWeight &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; smcWeight &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+						found = true;					&#13;
+					} else {&#13;
+						if (i != 0 &amp;&amp; smcWeight &gt; rateInputObj.rateBands[i-1].upperbreak &amp;&amp; smcWeight &lt; rateInputObj.rateBands[i].lowerbreak) {&#13;
+							found = true;				&#13;
+						}&#13;
+					}&#13;
+					if (found) {&#13;
+							smcRate = rateInputObj.rateBands[i].amount;&#13;
+							smcDiscount = rateInputObj.rateBands[i].discountpercentage;&#13;
+							break;&#13;
+					}&#13;
+				}&#13;
+			}		&#13;
+		}		&#13;
+		&#13;
+		if (smcRate &gt; 0.0) {&#13;
+			noOfCwts = dimObj.dims.wtInKG * 0.01;&#13;
+			grossCharge = noOfCwts * smcRate;&#13;
+			discountedCharge = 0.0;&#13;
+			&#13;
+			if (smcDiscount &gt; 0.0) {&#13;
+				discountCharge = (grossCharge * smcDiscount) / 100;&#13;
+				discountedCharge = grossCharge - discountCharge;				&#13;
+			} else {&#13;
+				discountedCharge = grossCharge;&#13;
+			}&#13;
+			&#13;
+			minimumcharge = rateInputObj.baseRate.minimumcharge;&#13;
+			minimumchargediscount = rateInputObj.baseRate.minimumchargediscount;&#13;
+			discountedMinimumCharge = 0.0;&#13;
+			&#13;
+			if (minimumchargediscount &gt; 0.0) {&#13;
+				minimumdiscountCharge = (minimumcharge * minimumchargediscount) / 100;&#13;
+				discountedMinimumCharge = minimumcharge - minimumdiscountCharge;				&#13;
+			} else {&#13;
+				discountedMinimumCharge = minimumcharge;&#13;
+			}&#13;
+			&#13;
+			smcTotalPrice = (discountedCharge &gt; discountedMinimumCharge) ? discountedCharge : discountedMinimumCharge;&#13;
+			&#13;
+			ltlsurchargepercentage = rateInputObj.baseRate.ltlsurchargepercentage;&#13;
+			ltlsurchargeamount = (smcTotalPrice * ltlsurchargepercentage) / 100;&#13;
+			&#13;
+			smcCalculatedPrice = smcTotalPrice + ltlsurchargeamount;&#13;
+			&#13;
+			minimumfloorcharge = rateInputObj.baseRate.minimumfloorcharge;&#13;
+			&#13;
+			smcFinalPrice = (minimumfloorcharge &gt; smcCalculatedPrice) ? minimumfloorcharge : smcCalculatedPrice;			&#13;
+		} &#13;
+		&#13;
+		rateInputObj.baseRate.supportedBasis = true;&#13;
+		rateInputObj.baseRate.total = parseFloat(smcFinalPrice);&#13;
+	};&#13;
+&#13;
+	this.evaluateBaseRate = function(dimObj) {&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		calculateCW = rateInputObj.calculateCW;&#13;
+		supportedBasis = false;&#13;
+		totalAmt = 0;&#13;
+		quantity = 0;&#13;
+		&#13;
+		if (inputObj.isSMC) {&#13;
+			this.evaluateSMCRate(dimObj);&#13;
+			return;				&#13;
+		}&#13;
+		&#13;
+		if (inputObj.basis === '/container') {&#13;
+			supportedBasis = true;&#13;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {&#13;
+				totalAmt = inputObj.amount&#13;
+						* dimObj.dims[inputObj.equipmentType];&#13;
+				quantity = dimObj.dims[inputObj.equipmentType];&#13;
+			} else {&#13;
+				return;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (inputObj.basis === '/package' || inputObj.basis === '/pallet'&#13;
+				|| inputObj.basis === '/unit' || inputObj.basis === '/carton'&#13;
+				|| inputObj.basis === '/LNM' || inputObj.basis === '/SQM'&#13;
+				|| inputObj.basis === '/MBF' || inputObj.basis === '/MSF'&#13;
+				|| inputObj.basis === '/LDM') {&#13;
+			supportedBasis = true;&#13;
+&#13;
+			if (dimObj.dims.genericQty &amp;&amp; dimObj.dims.genericQtyUnit&#13;
+					&amp;&amp; (dimObj.dims.genericQtyUnit === inputObj.basis)) {&#13;
+				genericqty = dimObj.dims.genericQty;&#13;
+				if (inputObj.minimumqty) {&#13;
+					rateInputObj.baseRate.appliedMinQty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty : 0;&#13;
+					genericqty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty&#13;
+							: dimObj.dims.genericQty;							&#13;
+				}&#13;
+				totalAmt = inputObj.amount * genericqty;&#13;
+				quantity = genericqty;&#13;
+			} else if (dimObj.dims[inputObj.basis]) {&#13;
+				genericqty = dimObj.dims[inputObj.basis];&#13;
+				if (inputObj.minimumqty) {&#13;
+					rateInputObj.baseRate.appliedMinQty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty : 0;&#13;
+					genericqty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty&#13;
+							: dimObj.dims.genericQty;&#13;
+				}&#13;
+				totalAmt = inputObj.amount * genericqty;&#13;
+				quantity = genericqty;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/FLAT') {&#13;
+			supportedBasis = true;&#13;
+			totalAmt = inputObj.amount;&#13;
+			quantity = 1;&#13;
+		}&#13;
+		&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == 'lps') {&#13;
+			supportedBasis = true;&#13;
+			totalAmt = inputObj.amount;&#13;
+			quantity = 1;&#13;
+	    }&#13;
+	    &#13;
+		if (dimObj.dims.wtInKG &amp;&amp; inputObj.wtConvRate) {&#13;
+			supportedBasis = true;&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+&#13;
+			// GTN-25018 : Chargeable Weight scenario.&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			dimFactor = rateInputObj.dimFactor;&#13;
+			dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+			volumetricWeight = 0.0;&#13;
+			if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+				if (dimFactorConv === 'cm/kg') {&#13;
+					volumetricWeight = (volume * 1000000) / dimFactor;&#13;
+				} else if (dimFactorConv === 'in/lb') {&#13;
+					volumetricWeight = (volume * 61024) / dimFactor;&#13;
+					volumetricWeight = volumetricWeight * 0.45359237;&#13;
+			    }&#13;
+			}&#13;
+			&#13;
+			weight = (weight * inputObj.wtConvRate) &gt; (volumetricWeight  * inputObj.wtConvRate) ? weight&#13;
+					: volumetricWeight;&#13;
+&#13;
+			if (inputObj.minWeight) {&#13;
+				inputObj.appliedMinWeight = weight &lt; inputObj.minWeight ? inputObj.minWeight : 0;&#13;
+				weight = weight &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+						: weight;&#13;
+				inputObj.wtConvRate = 1;&#13;
+			}&#13;
+			quantity = weight * inputObj.wtConvRate;&#13;
+			totalAmt = this.evaluateRateBands(weight, inputObj.amount,&#13;
+					inputObj.wtConvRate);&#13;
+		}&#13;
+&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/WM') {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			wmUnit = 0;&#13;
+			supportedBasis = true;&#13;
+			if (weight) {&#13;
+				wmUnit = weight * inputObj.wtConvRate;&#13;
+			}&#13;
+			if (volume) {&#13;
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+			}&#13;
+			if (inputObj.minWeight) {&#13;
+				rateInputObj.baseRate.appliedMinWeight = wmUnit &lt; inputObj.minWeight ? inputObj.minWeight : 0;&#13;
+				wmUnit = wmUnit &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+						: wmUnit;&#13;
+				inputObj.wtConvRate = 1;&#13;
+			}&#13;
+			totalAmt = inputObj.amount * wmUnit;&#13;
+			quantity = wmUnit;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.volInCBM &amp;&amp; inputObj.volConvRate) {&#13;
+			supportedBasis = true;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+&#13;
+			if (inputObj.minimumqty) {&#13;
+				rateInputObj.baseRate.appliedMinQty = volume &lt; inputObj.minimumqty ? inputObj.minimumqty : 0;				&#13;
+				volume = volume &lt; inputObj.minimumqty ? inputObj.minimumqty&#13;
+						: volume;&#13;
+				inputObj.volConvRate = 1;&#13;
+			}&#13;
+			tempAmt = this.evaluateRateBands(volume, inputObj.amount,&#13;
+					inputObj.volConvRate);&#13;
+			totalAmt = totalAmt &gt; tempAmt ? totalAmt : tempAmt;						&#13;
+			quantity = volume * inputObj.volConvRate;&#13;
+			&#13;
+		} else if ((dimObj.dims.dstInMile&#13;
+				|| (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) || rateInputObj.distance)&#13;
+				&amp;&amp; inputObj.dstConvRate) {&#13;
+			supportedBasis = true;&#13;
+			distance = 0.0;&#13;
+			if (dimObj.dims.dstInMile) {&#13;
+				distance = dimObj.dims.dstInMile;&#13;
+			} else if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {&#13;
+				distance = this.getEffectiveDistance(dimObj);&#13;
+			} else {&#13;
+				distance = rateInputObj.distance;&#13;
+			}&#13;
+			quantity = distance * inputObj.dstConvRate;&#13;
+			totalAmt = this.evaluateRateBands(distance, inputObj.amount,&#13;
+					inputObj.dstConvRate);&#13;
+		}&#13;
+&#13;
+		if (inputObj.basis === 'pricingbands') {&#13;
+			supportedBasis = true;&#13;
+			bandAmt = 0.0;&#13;
+			mUnit = 0.0;&#13;
+			convRate = 0.0;&#13;
+			amount = 0.0;&#13;
+			&#13;
+			if (inputObj.isdeficitpricing) {&#13;
+				if (inputObj.wtConvRate) {&#13;
+					mUnit = dimObj.dims.wtInKG;&#13;
+					convRate = inputObj.wtConvRate;&#13;
+					&#13;
+					// GTN-27410 : Chargeable Weight scenario for TL and LTL.&#13;
+					volume = dimObj.dims.volInCBM;&#13;
+					dimFactor = rateInputObj.dimFactor;&#13;
+					dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+					volumetricWeight = 0.0;&#13;
+					if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+						if (dimFactorConv === 'cm/kg') {&#13;
+							volumetricWeight = (volume * 1000000) / dimFactor;&#13;
+						} else if (dimFactorConv === 'in/lb') {&#13;
+							volumetricWeight = (volume * 61024) / dimFactor;&#13;
+							volumetricWeight = volumetricWeight * 0.45359237;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					mUnit = (mUnit * inputObj.wtConvRate) &gt; (volumetricWeight * convRate) ? mUnit&#13;
+							: volumetricWeight;&#13;
+&#13;
+					if (inputObj.minWeight) {&#13;
+						mUnit = mUnit &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+								: mUnit;&#13;
+						inputObj.wtConvRate = 1;&#13;
+						convRate = 1;&#13;
+					}&#13;
+				} else if (inputObj.volConvRate) {&#13;
+					mUnit = dimObj.dims.volInCBM;&#13;
+					convRate = inputObj.volConvRate;&#13;
+				} else if (inputObj.dstConvRate) {&#13;
+					mUnit = dimObj.dims.dstInMile;&#13;
+					convRate = inputObj.dstConvRate;&#13;
+				} else {&#13;
+					if (inputObj.weightbreakbasis&#13;
+							&amp;&amp; (inputObj.weightbreakbasis === '/package'&#13;
+									|| inputObj.weightbreakbasis === '/pallet'&#13;
+									|| inputObj.weightbreakbasis === '/unit'&#13;
+									|| inputObj.weightbreakbasis === '/carton'&#13;
+									|| inputObj.weightbreakbasis === '/LNM'&#13;
+									|| inputObj.weightbreakbasis === '/SQM'&#13;
+									|| inputObj.weightbreakbasis === '/MBF'&#13;
+									|| inputObj.weightbreakbasis === '/MSF' &#13;
+									|| inputObj.weightbreakbasis === '/LDM')) {&#13;
+						if (dimObj.dims.genericQty&#13;
+								&amp;&amp; dimObj.dims.genericQtyUnit&#13;
+								&amp;&amp; (dimObj.dims.genericQtyUnit === inputObj.weightbreakbasis)) {&#13;
+							mUnit = dimObj.dims.genericQty;&#13;
+							convRate = 1;&#13;
+						} else if (dimObj.dims[inputObj.weightbreakbasis]) {&#13;
+							mUnit = dimObj.dims[inputObj.weightbreakbasis];&#13;
+							convRate = 1;&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+&#13;
+				if (inputObj.isdeficitpricing === 'yes') {&#13;
+					if (rateInputObj.rateBands&#13;
+							&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+							found = false;&#13;
+							if (((mUnit * convRate) &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+									|| ((mUnit * convRate) &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; (mUnit * convRate) &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+								found = true;					&#13;
+							} else {&#13;
+								if (i != 0 &amp;&amp; (mUnit * convRate) &gt; rateInputObj.rateBands[i-1].upperbreak &amp;&amp; (mUnit * convRate) &lt; rateInputObj.rateBands[i].lowerbreak) {&#13;
+									found = true;				&#13;
+								}&#13;
+							}&#13;
+							if (found) {&#13;
+								if (rateInputObj.rateBands[i].upperbreak == 999999999) {&#13;
+								    if (inputObj.weightbreakbasis == 'lps') {&#13;
+										bandAmt = rateInputObj.rateBands[i].amount;&#13;
+									} else {&#13;
+										bandAmt = rateInputObj.rateBands[i].amount&#13;
+											* mUnit * convRate;																&#13;
+									}&#13;
+									quantity = mUnit * convRate;										&#13;
+									amount = rateInputObj.rateBands[i].actualCost;&#13;
+								} else {&#13;
+									if (inputObj.weightbreakbasis == 'lps') {&#13;
+										bandAmt = rateInputObj.rateBands[i + 1].amount;&#13;
+									} else {&#13;
+										bandAmt = rateInputObj.rateBands[i + 1].amount&#13;
+												* rateInputObj.rateBands[i + 1].lowerbreak&#13;
+												* convRate;							&#13;
+									}&#13;
+									actualPrice = 0.0;&#13;
+									if (inputObj.weightbreakbasis == 'lps') {&#13;
+										actualPrice = rateInputObj.rateBands[i].amount;&#13;
+									} else {&#13;
+										actualPrice = rateInputObj.rateBands[i].amount&#13;
+												* mUnit * convRate;						&#13;
+									}&#13;
+									&#13;
+									if (bandAmt &gt; actualPrice) {&#13;
+										bandAmt = actualPrice;&#13;
+										amount = rateInputObj.rateBands[i].actualCost;&#13;
+									} else {&#13;
+										amount = rateInputObj.rateBands[i + 1].actualCost;&#13;
+									}&#13;
+									quantity = mUnit * convRate;		&#13;
+								}&#13;
+								break;&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				} else {&#13;
+					if (rateInputObj.rateBands&#13;
+							&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+							found = false;&#13;
+							if (((mUnit * convRate) &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+									|| ((mUnit * convRate) &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; (mUnit * convRate) &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+								found = true;					&#13;
+							} else {&#13;
+								if (i != 0 &amp;&amp; (mUnit * convRate) &gt; rateInputObj.rateBands[i-1].upperbreak &amp;&amp; (mUnit * convRate) &lt; rateInputObj.rateBands[i].lowerbreak) {&#13;
+									found = true;				&#13;
+								}&#13;
+							}&#13;
+							if (found) {&#13;
+								if (inputObj.weightbreakbasis == 'lps') {&#13;
+									bandAmt = rateInputObj.rateBands[i].amount;&#13;
+								} else {&#13;
+									bandAmt = rateInputObj.rateBands[i].amount&#13;
+										* mUnit * convRate;								&#13;
+								}&#13;
+								quantity = mUnit * convRate;&#13;
+								amount = rateInputObj.rateBands[i].actualCost;&#13;
+								break;&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+			}		&#13;
+			&#13;
+			rateInputObj.baseRate.actualCost = parseFloat(amount);&#13;
+			totalAmt = bandAmt;&#13;
+		}&#13;
+&#13;
+		if (!supportedBasis) {&#13;
+			switch (inputObj.basis) {&#13;
+			case '/container':&#13;
+			case '/CBM':&#13;
+			case '/WM':&#13;
+			case '/kg':&#13;
+			case '/lb':&#13;
+			case '/ton':&#13;
+			case '/MI':&#13;
+			case '/KM':&#13;
+				rateInputObj.baseRate.supportedBasis = true;&#13;
+				supportedBasis = true;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (!supportedBasis) {&#13;
+			totalAmt = inputObj.amount;&#13;
+			rateInputObj.baseRate.quantity = 1;&#13;
+		}&#13;
+		&#13;
+		if (quantity) {&#13;
+			rateInputObj.baseRate.quantity = quantity;&#13;
+		}		&#13;
+&#13;
+		if (inputObj.minAmount) {&#13;
+			rateInputObj.baseRate.appliedMin = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount : 0;&#13;
+			totalAmt = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount&#13;
+					: totalAmt;&#13;
+		}&#13;
+		&#13;
+		if (inputObj.maxAmount) {&#13;
+			rateInputObj.baseRate.appliedMax = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount : 0;&#13;
+			totalAmt = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount&#13;
+					: totalAmt;&#13;
+		}&#13;
+	&#13;
+		rateInputObj.baseRate.supportedBasis = supportedBasis;&#13;
+		rateInputObj.baseRate.total = parseFloat(totalAmt);&#13;
+	};&#13;
+&#13;
+	this.getEffectiveDistance = function(dimObj) {&#13;
+		distance = 0.0;&#13;
+		var jsonBaseRate = rateInputObj.baseRate;&#13;
+		var dtmLookUPFlag = rateInputObj.dtmlookupflag;&#13;
+		for (i = 0; i &lt; dimObj.stopOffs.length - 1; i++) {&#13;
+			origStop = dimObj.stopOffs[i].stop;&#13;
+			if (origStop.indexOf('__') &gt; 0) {&#13;
+				origStop = origStop.slice(0, origStop.indexOf('__'));&#13;
+			}&#13;
+			destStop = dimObj.stopOffs[i + 1].stop;&#13;
+			if (destStop.indexOf('__') &gt; 0) {&#13;
+				destStop = destStop.slice(0, destStop.indexOf('__'));&#13;
+			}&#13;
+			if (origStop == destStop) {&#13;
+				distance = distance + 0.01;&#13;
+				continue;&#13;
+			}&#13;
+			if(!dtmLookUPFlag){&#13;
+				if (!distanceMatrix[origStop]&#13;
+						|| !distanceMatrix[origStop][destStop]) {&#13;
+					if (rateInputObj.distance) {&#13;
+						return rateInputObj.distance;&#13;
+					} else {&#13;
+						return 9999999;&#13;
+					}&#13;
+				}&#13;
+				distval = distanceMatrix[origStop][destStop];&#13;
+				distance = distance + distanceMatrix[origStop][destStop];&#13;
+			} else {&#13;
+				if(!parseFloat(dimObj.distanceMatrix[origStop+'-'+destStop])){&#13;
+					if (rateInputObj.distance) {&#13;
+						return rateInputObj.distance;&#13;
+					} else {&#13;
+						return 9999999;&#13;
+					}&#13;
+				}&#13;
+				distval = parseFloat(dimObj.distanceMatrix[origStop+'-'+destStop]);&#13;
+				distance = distance + parseFloat(dimObj.distanceMatrix[origStop+'-'+destStop]);&#13;
+			}&#13;
+		}&#13;
+		return distance;&#13;
+	};&#13;
+&#13;
+	this.evaluateRateBands = function(totalDim, rateAmount, ConvRate) {&#13;
+		totalBandAmt = 0.0;&#13;
+		if (rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+			actualCost = 0.0;&#13;
+			for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+				found = false;&#13;
+				if ((totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+						|| (totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; totalDim &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+					found = true;					&#13;
+				} else {&#13;
+					if (i != 0 &amp;&amp; totalDim &gt; rateInputObj.rateBands[i-1].upperbreak &amp;&amp; totalDim &lt; rateInputObj.rateBands[i].lowerbreak) {&#13;
+						found = true;				&#13;
+					}&#13;
+				}&#13;
+				if (found) {&#13;
+					totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateInputObj.rateBands[i].amount&#13;
+							: (rateInputObj.rateBands[i].amount * totalDim * ConvRate);&#13;
+					actualCost = rateInputObj.rateBands[i].actualCost;&#13;
+					break;&#13;
+				}&#13;
+			}&#13;
+			if (totalBandAmt == 0 &amp;&amp; rateInputObj.baseRate) {&#13;
+				totalBandAmt = rateInputObj.baseRate.basis === '/kg' ? (rateInputObj.baseRate.amount&#13;
+						* totalDim * ConvRate)&#13;
+						: rateInputObj.baseRate.amount;&#13;
+				actualCost = rateInputObj.baseRate.amount;&#13;
+			}&#13;
+			rateInputObj.baseRate.actualCost = actualCost;&#13;
+		} else {&#13;
+			totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateAmount&#13;
+					: rateAmount * totalDim * ConvRate;&#13;
+		}&#13;
+		return parseFloat(totalBandAmt);&#13;
+	};&#13;
+&#13;
+	this.evaluateAccessorials = function(dimObj) {&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (var i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				if (rateInputObj.accessorials[i]) {&#13;
+					accObj = rateInputObj.accessorials[i];&#13;
+					&#13;
+					if(dimObj.assignmentStart){&#13;
+						if(accObj.expiryDate &lt; dimObj.assignmentStart || accObj.effectiveDate &gt; dimObj.assignmentStart){&#13;
+							continue;&#13;
+						}&#13;
+					}&#13;
+					quantity = 0;&#13;
+					totalAmt = 0;&#13;
+					if (accObj.basis === '/container') {&#13;
+						if (rateInputObj.baseRate.equipmentType&#13;
+								&amp;&amp; dimObj.dims[rateInputObj.baseRate.equipmentType]) {&#13;
+							totalAmt = accObj.amount&#13;
+									* dimObj.dims[rateInputObj.baseRate.equipmentType];&#13;
+							quantity =  dimObj.dims[rateInputObj.baseRate.equipmentType];&#13;
+						} else {&#13;
+							rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+							continue;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '%') {&#13;
+						netfreightcostelems = rateInputObj.netfreightcostelems;&#13;
+						if (netfreightcostelems&#13;
+								&amp;&amp; netfreightcostelems.length &gt; 0) {&#13;
+							totalSurchargeAmount = 0;&#13;
+							for (var j = 0; j &lt; netfreightcostelems.length; j++) {&#13;
+								netFreightSurcharge = netfreightcostelems[j];&#13;
+								surchargeAmount = this.getSurchargeAmount(&#13;
+										dimObj, netFreightSurcharge);&#13;
+								totalSurchargeAmount = totalSurchargeAmount&#13;
+										+ surchargeAmount;&#13;
+							}&#13;
+&#13;
+							baseRate = rateInputObj.baseRate.total;&#13;
+							totalAmt = ((baseRate + totalSurchargeAmount) * accObj.amount) / 100;&#13;
+						} else {&#13;
+							baseRate = rateInputObj.baseRate.total;&#13;
+							totalAmt = (baseRate * accObj.amount) / 100;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '/delivery'&#13;
+							|| accObj.basis === '/entry'&#13;
+							|| accObj.basis === '/shipment') {&#13;
+						totalAmt = accObj.amount;&#13;
+						quantity = 1;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '/package'&#13;
+							|| accObj.basis === '/pallet'&#13;
+							|| accObj.basis === '/unit'&#13;
+							|| accObj.basis === '/carton'&#13;
+							|| accObj.basis === '/LNM'&#13;
+							|| accObj.basis === '/SQM'&#13;
+							|| accObj.basis === '/MSF'&#13;
+							|| accObj.basis === '/MBF'&#13;
+							|| accObj.basis === '/LDM') {&#13;
+						if (dimObj.dims.genericQty&#13;
+								&amp;&amp; dimObj.dims.genericQtyUnit&#13;
+								&amp;&amp; (dimObj.dims.genericQtyUnit === accObj.basis)) {&#13;
+							totalAmt = accObj.amount * dimObj.dims.genericQty;&#13;
+							quantity = dimObj.dims.genericQty;&#13;
+						} else if (dimObj.dims[accObj.basis]) {&#13;
+							totalAmt = accObj.amount&#13;
+									* dimObj.dims[accObj.basis];&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (dimObj.dims.wtInKG &amp;&amp; accObj.wtConvRate) {&#13;
+						weight = dimObj.dims.wtInKG;&#13;
+&#13;
+						// GTN-25018 : Chargeable Weight scenario.&#13;
+						if (accObj.calculatedWeightBasis&#13;
+								&amp;&amp; accObj.calculatedWeightBasis === 'Chargeable Weight') {&#13;
+							dimFactor = rateInputObj.dimFactor;&#13;
+							dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+							volumetricWeight = 0.0;&#13;
+							if (dimFactor &gt; 0 &amp;&amp; dimFactorConv&#13;
+									&amp;&amp; dimObj.dims.volInCBM) {&#13;
+								if (dimFactorConv === 'cm/kg') {&#13;
+									volumetricWeight = (dimObj.dims.volInCBM * 1000000)&#13;
+											/ dimFactor;&#13;
+								} else if (dimFactorConv === 'in/lb') {&#13;
+									volumetricWeight = (dimObj.dims.volInCBM * 61024)&#13;
+											/ dimFactor;&#13;
+									volumetricWeight = volumetricWeight * 0.45359237;&#13;
+								}&#13;
+							}&#13;
+							weight = (weight * accObj.wtConvRate) &gt; (volumetricWeight * accObj.wtConvRate) ? weight&#13;
+									: volumetricWeight;&#13;
+						}&#13;
+&#13;
+						if (accObj.minWeight) {&#13;
+							weight = weight &lt; accObj.minWeight ? accObj.minWeight&#13;
+									: weight;&#13;
+						}&#13;
+						totalAmt = accObj.amount * weight * accObj.wtConvRate;&#13;
+						quantity = weight * accObj.wtConvRate;&#13;
+					}&#13;
+					if (dimObj.dims.volInCBM &amp;&amp; accObj.volConvRate) {&#13;
+						volume = dimObj.dims.volInCBM;&#13;
+						if (accObj.minVolume) {&#13;
+							volume = volume &lt; accObj.minVolume ? accObj.minVolume&#13;
+									: volume;&#13;
+						}&#13;
+						totalAmt = accObj.amount * volume * accObj.volConvRate;&#13;
+						quantity = volume * accObj.volConvRate;&#13;
+					}&#13;
+&#13;
+					if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1))&#13;
+							&amp;&amp; accObj.dstConvRate) {&#13;
+						distance = 0.0;&#13;
+						if (dimObj.dims.dstInMile) {&#13;
+							distance = dimObj.dims.dstInMile;&#13;
+						} else {&#13;
+							distance = this.getEffectiveDistance(dimObj);&#13;
+						}&#13;
+						totalAmt = accObj.amount * distance&#13;
+								* accObj.dstConvRate;&#13;
+						quantity = distance * accObj.dstConvRate;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis == '/FLAT') {&#13;
+						totalAmt = accObj.amount;&#13;
+						quantity = 1;&#13;
+					}&#13;
+					&#13;
+					if (accObj.basis == 'lps') {&#13;
+						totalAmt = accObj.amount;&#13;
+						quantity = 1;&#13;
+					}&#13;
+					&#13;
+					if (accObj.amount &amp;&amp; accObj.basis == '/WM') {&#13;
+						weight = dimObj.dims.wtInKG;&#13;
+						volume = dimObj.dims.volInCBM;&#13;
+						wmUnit = 0;&#13;
+						if (weight) {&#13;
+							wmUnit = weight * accObj.wtConvRate;&#13;
+						}&#13;
+						if (volume) {&#13;
+							wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+						}&#13;
+						totalAmt = accObj.amount * wmUnit;&#13;
+						quantity = wmUnit;&#13;
+					}&#13;
+&#13;
+					if (rateInputObj.baseRate.basis == accObj.basis&#13;
+							&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+						totalAmt = accObj.amount;&#13;
+						accObj.supportedBasis = true;&#13;
+					} else if (rateInputObj.baseRate.basis != accObj.basis&#13;
+							&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+						totalAmt = 0;&#13;
+					}&#13;
+&#13;
+					if (accObj.minAmount) {&#13;
+						rateInputObj.accessorials[i].appliedMin = totalAmt &lt; accObj.minAmount ? accObj.minAmount : 0;&#13;
+						totalAmt = totalAmt &lt; accObj.minAmount ? accObj.minAmount&#13;
+								: totalAmt;&#13;
+					}&#13;
+					if (accObj.maxAmount) {&#13;
+						rateInputObj.accessorials[i].appliedMax = totalAmt &gt; accObj.maxAmount ? accObj.maxAmount : 0;&#13;
+						totalAmt = totalAmt &gt; accObj.maxAmount ? accObj.maxAmount&#13;
+								: totalAmt;&#13;
+					}&#13;
+&#13;
+					if (!dimObj.dims.isHazMat &amp;&amp; accObj.isHazMat) {&#13;
+						totalAmt = 0;&#13;
+					}&#13;
+&#13;
+					rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+					if (accObj.basis == '/stop') {&#13;
+						rateInputObj.stopOffTotal = parseFloat(totalAmt);&#13;
+						if(totalAmt &amp;&amp; totalAmt &gt;0) {&#13;
+							rateInputObj.accessorials[i].quantity = 1;&#13;
+						}&#13;
+					} else{&#13;
+						rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+						if(totalAmt &amp;&amp; quantity) {&#13;
+							rateInputObj.accessorials[i].quantity = quantity;&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+	};&#13;
+&#13;
+	this.getSurchargeAmount = function(dimObj, surcharge) {&#13;
+		surchargeAmount = 0;&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		quantity = 0;&#13;
+		if (surcharge.basis === '/container') {&#13;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {&#13;
+				surchargeAmount = surcharge.amount&#13;
+						* dimObj.dims[inputObj.equipmentType];&#13;
+				quantity = dimObj.dims[inputObj.equipmentType];&#13;
+			} else {&#13;
+				quantity = 1;&#13;
+				return surchargeAmount;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (surcharge.basis === '/delivery' || surcharge.basis === '/entry'&#13;
+				|| surcharge.basis === '/shipment') {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+			quantity = 1;&#13;
+		}&#13;
+&#13;
+		if (surcharge.basis === '/package' || surcharge.basis === '/pallet'&#13;
+				|| surcharge.basis === '/unit' || surcharge.basis === '/carton'&#13;
+				|| surcharge.basis === '/LNM' || surcharge.basis === '/SQM'&#13;
+				|| surcharge.basis === '/MSF' || surcharge.basis === '/MBF'&#13;
+				|| accObj.basis === '/LDM') {&#13;
+			if (dimObj.dims.genericQty &amp;&amp; dimObj.dims.genericQtyUnit&#13;
+					&amp;&amp; (dimObj.dims.genericQtyUnit === surcharge.basis)) {&#13;
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;&#13;
+				quantity = dimObj.dims.genericQty;&#13;
+			} else if (dimObj.dims[surcharge.basis]) {&#13;
+				surchargeAmount = surcharge.amount&#13;
+						* dimObj.dims[surcharge.basis];&#13;
+				quantity = dimObj.dims[surcharge.basis];&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/FLAT') {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+			quantity = 1;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.wtInKG &amp;&amp; surcharge.wtConvRate) {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			// GTN-25018 : Chargeable Weight scenario.&#13;
+			if (surcharge.calculatedWeightBasis&#13;
+					&amp;&amp; surcharge.calculatedWeightBasis === 'Chargeable Weight') {&#13;
+				dimFactor = rateInputObj.dimFactor;&#13;
+				dimFactorConv = rateInputObj.dimFactorConv;&#13;
+				volumetricWeight = 0.0;&#13;
+				if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+					if (dimFactorConv === 'cm/kg') {&#13;
+						volumetricWeight = (dimObj.dims.volInCBM * 1000000)&#13;
+								/ dimFactor;&#13;
+					} else if (dimFactorConv === 'in/lb') {&#13;
+						volumetricWeight = (dimObj.dims.volInCBM * 61024)&#13;
+								/ dimFactor;&#13;
+						volumetricWeight = volumetricWeight * 0.45359237;&#13;
+					}&#13;
+				}&#13;
+				weight = (weight * surcharge.wtConvRate) &gt; (volumetricWeight * surcharge.wtConvRate) ? weight&#13;
+						: volumetricWeight;&#13;
+			}&#13;
+			if (surcharge.minWeight) {&#13;
+				surcharge.appliedWeight = weight &lt; surcharge.minWeight ? surcharge.minWeight : weight;&#13;
+				weight = weight &lt; surcharge.minWeight ? surcharge.minWeight&#13;
+						: weight;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * weight * surcharge.wtConvRate;&#13;
+			quantity = weight * surcharge.wtConvRate;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.volInCBM &amp;&amp; surcharge.volConvRate) {&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			if (surcharge.minVolume) {&#13;
+				surcharge.appliedVolume = volume &lt; surcharge.minVolume ? surcharge.minVolume : volume;&#13;
+				volume = volume &lt; surcharge.minVolume ? surcharge.minVolume&#13;
+						: volume;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * volume * surcharge.volConvRate;&#13;
+			quantity = volume * surcharge.volConvRate;&#13;
+		}&#13;
+&#13;
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/WM') {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			wmUnit = 0;&#13;
+			if (weight) {&#13;
+				wmUnit = weight * surcharge.wtConvRate;&#13;
+			}&#13;
+			if (volume) {&#13;
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+			}&#13;
+			if (surcharge.minWeight) {&#13;
+				surcharge.appliedWeight = wmUnit &lt; surcharge.minWeight ? surcharge.minWeight : wmUnit;&#13;
+				wmUnit = wmUnit &lt; surcharge.minWeight ? surcharge.minWeight&#13;
+						: wmUnit;&#13;
+				surcharge.wtConvRate = 1;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * wmUnit;&#13;
+			quantity = wmUnit;&#13;
+		}&#13;
+&#13;
+		if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1))&#13;
+				&amp;&amp; surcharge.dstConvRate) {&#13;
+			if (surcharge.basis == '/stop') {&#13;
+				surchargeAmount = surcharge.amount * dimObj.stopOffs.length&#13;
+					* surcharge.dstConvRate;&#13;
+				quantity = dimObj.stopOffs.length * surcharge.dstConvRate;&#13;
+			} else {&#13;
+				distance = 0.0;&#13;
+				if (dimObj.dims.dstInMile) {&#13;
+					distance = dimObj.dims.dstInMile;&#13;
+				} else {&#13;
+					distance = this.getEffectiveDistance(dimObj);&#13;
+				}&#13;
+				surchargeAmount = surcharge.amount * distance&#13;
+						* surcharge.dstConvRate;&#13;
+				quantity = distance * surcharge.dstConvRate;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (rateInputObj.baseRate.basis == inputObj.basis&#13;
+				&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+			surcharge.supportedBasis = true;&#13;
+			rateInputObj.accessorials[i].quantity = quantity;&#13;
+		} else if (rateInputObj.baseRate.basis != surcharge.basis&#13;
+				&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+			surchargeAmount = 0;&#13;
+		}&#13;
+&#13;
+		if (surcharge.minAmount) {&#13;
+			surcharge.appliedMin = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount : 0;			&#13;
+			surchargeAmount = surchargeAmount &lt; surcharge.minAmount ? surcharge.minAmount&#13;
+					: surchargeAmount;&#13;
+		}&#13;
+		if (surcharge.maxAmount) {&#13;
+			surcharge.appliedMax = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount : 0;&#13;
+			surchargeAmount = surchargeAmount &gt; surcharge.maxAmount ? surcharge.maxAmount&#13;
+					: surchargeAmount;&#13;
+		}&#13;
+		return surchargeAmount;&#13;
+	}&#13;
+&#13;
+	this.evaluateStopOff = function(stopOffs) {&#13;
+		stopOffAmt = 0.0;&#13;
+		if (rateInputObj.stopBands &amp;&amp; stopOffs &amp;&amp; stopOffs.length &gt; 2) {&#13;
+			numOfStopOffs = stopOffs.length - 2;&#13;
+			remainingStopOffs = numOfStopOffs;&#13;
+			previousEnd = 0;&#13;
+&#13;
+			for (i = 0; i &lt; rateInputObj.stopBands.length; i++) {&#13;
+				start = rateInputObj.stopBands[i].start;&#13;
+				end = rateInputObj.stopBands[i].stop;&#13;
+				if (numOfStopOffs &gt; end) {&#13;
+					stopOffAmt = stopOffAmt&#13;
+							+ (rateInputObj.stopBands[i].costPerStop * (end - previousEnd));&#13;
+					remainingStopOffs -= (end - previousEnd);&#13;
+					previousEnd = end;&#13;
+&#13;
+				} else if (numOfStopOffs &gt;= start &amp;&amp; numOfStopOffs &lt;= end) {&#13;
+					stopOffAmt = stopOffAmt&#13;
+							+ (rateInputObj.stopBands[i].costPerStop * remainingStopOffs);&#13;
+					break;&#13;
+				}&#13;
+			}&#13;
+			rateInputObj.stopOffTotal = parseFloat(stopOffAmt);&#13;
+		}&#13;
+&#13;
+	};&#13;
+	&#13;
+	this.getDistanceSplit = function(dimObj) {&#13;
+		distance = 0.0;&#13;
+		var distObj = [];&#13;
+		var distArr = [];&#13;
+		var jsonBaseRate = rateInputObj.baseRate;&#13;
+		var dtmLookUPFlag = rateInputObj.dtmlookupflag;&#13;
+		if(dimObj.stopOffs) {&#13;
+			for (i = 0; i &lt; dimObj.stopOffs.length - 1; i++) {&#13;
+				origStop = dimObj.stopOffs[i].stop;&#13;
+				if (origStop.indexOf('__') &gt; 0) {&#13;
+					origStop = origStop.slice(0, origStop.indexOf('__'));&#13;
+				}&#13;
+				destStop = dimObj.stopOffs[i + 1].stop;&#13;
+				if (destStop.indexOf('__') &gt; 0) {&#13;
+					destStop = destStop.slice(0, destStop.indexOf('__'));&#13;
+				}&#13;
+				if (origStop == destStop) {&#13;
+					distance = distance + 0.01;&#13;
+					distObj = {Distance:distance, OrigStop:origStop, DestStop:destStop};&#13;
+					distArr.push(distObj);&#13;
+					continue;&#13;
+				}&#13;
+				if(!dtmLookUPFlag){&#13;
+					if (!distanceMatrix[origStop]&#13;
+							|| !distanceMatrix[origStop][destStop]) {&#13;
+						if (rateInputObj.distance) {&#13;
+							return rateInputObj.distance;&#13;
+						} else {&#13;
+							return 9999999;&#13;
+						}&#13;
+					}&#13;
+					distval = distanceMatrix[origStop][destStop];&#13;
+					distance = distance + distanceMatrix[origStop][destStop];&#13;
+				} else{&#13;
+					if(!parseFloat(dimObj.distanceMatrix[origStop+'-'+destStop])){&#13;
+						if (rateInputObj.distance) {&#13;
+							return rateInputObj.distance;&#13;
+						} else {&#13;
+							return 9999999;&#13;
+						}&#13;
+					}&#13;
+					distval = parseFloat(dimObj.distanceMatrix[origStop+'-'+destStop]);&#13;
+					distance = distance + parseFloat(dimObj.distanceMatrix[origStop+'-'+destStop]);&#13;
+				}&#13;
+				distObj = {Distance:distval, OrigStop:origStop, DestStop:destStop};&#13;
+				distArr.push(distObj);&#13;
+			}&#13;
+		}&#13;
+		jsonBaseRate["distArr"] = distArr;&#13;
+		return jsonBaseRate;&#13;
+	};&#13;
+	&#13;
+	this.evaluateTransitTime = function(dimObj) {&#13;
+		transittime = 0.0;&#13;
+		var dtmLookUPFlag = rateInputObj.dtmlookupflag;&#13;
+		if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {		&#13;
+			if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {&#13;
+				for (i = 0; i &lt; dimObj.stopOffs.length - 1; i++) {&#13;
+					origStop = dimObj.stopOffs[i].stop;&#13;
+					if (origStop.indexOf('__') &gt; 0) {&#13;
+						origStop = origStop.slice(0, origStop.indexOf('__'));&#13;
+					}&#13;
+					destStop = dimObj.stopOffs[i + 1].stop;&#13;
+					if (destStop.indexOf('__') &gt; 0) {&#13;
+						destStop = destStop.slice(0, destStop.indexOf('__'));&#13;
+					}&#13;
+					if (origStop == destStop) {&#13;
+						transittime = transittime + 0.01;&#13;
+						continue;&#13;
+					}&#13;
+					if(!dtmLookUPFlag){&#13;
+					if (!transitTimeMatrix[origStop]&#13;
+							|| !transitTimeMatrix[origStop][destStop]) {&#13;
+							transittime = parseFloat(9999999);&#13;
+							break;&#13;
+					}&#13;
+						transittime = transittime + transitTimeMatrix[origStop][destStop];&#13;
+					} else {&#13;
+						if(!parseFloat(dimObj.transitTimeMatrix[origStop+'-'+destStop]) ){&#13;
+							transittime = parseFloat(9999999);&#13;
+							break;&#13;
+						}&#13;
+						transittime = transittime + parseFloat(dimObj.transitTimeMatrix[origStop+'-'+destStop]);&#13;
+					}&#13;
+				}&#13;
+			} &#13;
+		}	&#13;
+		rateInputObj.baseRate.transittime = parseFloat(transittime);		&#13;
+	};&#13;
+};var constraints = {/*##*/locationtimeactivities:{"1074069938":{},"1074069940":{},"1074069939":{},"1074069941":{},"1074071340":{},"1074071339":{},"1074071338":{},"1074071341":{},"1074071337":{}},/*##*/locationactivities:{"1074069938":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]},"1074069940":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]},"1074069939":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]},"1074069941":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]},"1074071340":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]},"1074071339":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]},"1074071338":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]},"1074071341":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]},"1074071337":{"SENDINGACTIVITIES":[],"RECEIVINGACTIVITIES":[]}},/*##*/resources:{"9":{"max_weight":1600.0,"max_cube":28.0,"max_qty":1.0},"10":{"max_weight":28800.0,"max_cube":56.0,"max_qty":2.0},"11":{"max_cube":75.0,"max_qty":2.532,"max_weight":27700.0},"12":{"max_cube":90.0,"max_weight":30200.0,"max_qty":2.886},"13":{"max_qty":2.0},"17":{"max_qty":1.0},"18":{"max_weight":30200.0,"max_qty":2.25,"max_cube":65.0},"19":{"max_cube":75.0,"max_qty":2.532,"max_weight":27700.0},"20":{"max_weight":30200.0,"max_cube":90.0,"max_qty":2.886},"21":{"max_qty":2.0},"25":{"max_cube":28.0,"max_weight":27490.0,"max_qty":1.0},"26":{"max_cube":59.0,"max_qty":2.0,"max_weight":28600.0},"27":{"max_weight":27700.0,"max_cube":75.0,"max_qty":2.532},"34":{"max_cube":63.0,"max_weight":29700.0,"max_qty":2.25},"41":{"max_qty":1.0},"42":{"max_qty":2.0},"49":{"max_qty":1.0},"50":{"max_qty":2.0},"57":{"max_qty":1.0},"58":{"max_qty":2.0},"65":{"max_weight":27490.0,"max_cube":28.0,"max_qty":1.0},"66":{"max_qty":2.0,"max_weight":28600.0,"max_cube":59.0},"74":{"max_weight":29700.0,"max_cube":63.0,"max_qty":2.25},"83":{"max_qty":2.532},"84":{"max_weight":18100.0,"max_qty":2.886,"max_cube":85.0},"85":{"max_qty":2.65,"max_weight":20000.0,"max_cube":95.0},"137":{"max_qty":1.0},"138":{"max_qty":2.0},"146":{"max_qty":2.25},"147":{"max_qty":2.532},"153":{"max_cube":33.0},"154":{"max_cube":33.0},"209":{"max_qty":1.0},"798":{"max_weight":24000.0,"max_qty":2.0},"799":{"max_qty":2.0,"max_weight":24000.0},"801":{"max_weight":1000.0},"2057":{"max_cube":28.0,"max_weight":28250.0,"max_qty":1.0},"2065":{"max_qty":1.0},"2066":{"max_cube":65.0,"max_qty":2.25,"max_weight":30200.0},"2073":{"max_qty":1.0,"max_weight":28250.0,"max_cube":28.0},"2074":{"max_cube":59.0,"max_weight":28600.0,"max_qty":2.0},"2082":{"max_cube":65.0,"max_qty":2.25,"max_weight":30200.0}},/*##*/locations:{1074069938:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1074069940:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1074069939:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1074069941:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1074071340:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1074071339:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1074071338:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1074071341:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1074071337:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}}}}; evaluateConstraints = function evaluateConstraints(dimObj) {
+	var resourceData = this.id.split("_");
+	var resource = resourceData[1];
+	if ((resource in constraints.resources)) {
+		if ("max_weight" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.wtInKG &gt; constraints.resources[resource].max_weight)
+			return false;
+		if ("max_cube" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.volInCBM &gt; constraints.resources[resource].max_cube)
+			return false;
+	}
+	return true;
+};
+
+
+var carrier = function(resourceInputObj){
+	this.evaluateCarrierConstraint = function (dimObj){
+	resource = resourceInputObj.id;
+    if (!(resource in constraints.resources))
+		return true;
+
+	if ("maxstops" in constraints.resources[resource]
+			&amp;&amp; dimObj.stopOffs.length  &gt; constraints.resources[resource].maxstops ){
+		return false;
+		}
+	if ("max_distance" in constraints.resources[resource]
+			&amp;&amp; isMaxDistanceCrossed(dimObj, resource)) {
+		return false;
+	}
+	if ("maximum_single_hours" in constraints.resources[resource]
+			&amp;&amp; isMaxDriveTimeCrossed(dimObj, resource)) {
+		return false;
+	}
+	if ("maximum_out_of_route_miles" in constraints.resources[resource]
+			&amp;&amp; isMaxOutOfRouteMile(dimObj, resource)) {
+		return false;
+	}
+		return true;
+	}
+};
+
+
+
+isMaxOutOfRouteMile = function isMaxOutOfRouteMile(dimObj, resourceid) {
+	var totalDistance = 0;
+	var maxOutOfRouteMile = 0;
+	var dtmLookUPFlag = dimObj.dtmFromTMO;
+	try {
+		if(dtmLookUPFlag &gt; 0){
+	    totalDistance =parseFloat(dimObj.distanceMatrix[sliceStopOffData(dimObj.stopOffs[0].stop)+'-'+sliceStopOffData(dimObj.stopOffs[dimObj.stopOffs.length - 1].stop)]);
+		} else {
+		totalDistance = distanceMatrix[sliceStopOffData(dimObj.stopOffs[0].stop)][sliceStopOffData(dimObj.stopOffs[dimObj.stopOffs.length - 1].stop)];
+		}
+	} catch (err) {
+		// warn('error distanceMatrix  does not exist in  isMaxOutOfRouteMile');
+	}
+	;
+
+	try {
+		maxOutOfRouteMile = constraints.resources[resourceid].maximum_out_of_route_miles;
+
+	} catch (err) {
+		// warn('maxOutOfRouteMile  does not exist in  for resource' + resourceid);
+		maxOutOfRouteMile = 0;
+	}
+	;
+
+	var totalDriveDistance = getTotalDriveDistance(dimObj);
+
+	if (constraints.resources[resourceid].maxoutofroutemilesunit == "%") {
+		maxOutOfRouteMile = ((maxOutOfRouteMile / 100) * totalDistance)
+				+ totalDistance;
+	} else {
+		maxOutOfRouteMile = maxOutOfRouteMile + totalDistance;
+
+		if (!isNaN(maxOutOfRouteMile)) {
+		}
+	}
+	if (totalDriveDistance &gt; maxOutOfRouteMile) {
+		return true;
+	}
+	return false;
+};
+
+isMaxDistanceCrossed = function isMaxDistanceCrossed(dimObj, resourceid) {
+	var totalDriveDistance = getTotalDriveDistance(dimObj);
+	if (totalDriveDistance &gt; constraints.resources[resourceid].max_distance) {
+		return true;
+	}
+	return false;
+};
+
+isMaxDriveTimeCrossed = function isMaxDriveTimeCrossed(dimObj, resourceid) {
+	var totalDriveTime = getTotalDriveTime(dimObj);
+	if (totalDriveTime &gt; constraints.resources[resourceid].maximum_single_hours) {
+		return true;
+	}
+	return false;
+};
+
+getTotalDriveDistance = function getTotalDriveDistance(dimObj) {
+	var totalDriveDistance = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			var distance=0;
+			if(dtmLookUPFlag &gt; 0){
+			      distance = (parseFloat(dimObj.distanceMatrix[stop1+'-'+stop2]));
+			} else {
+			      distance = distanceMatrix[stop1][stop2];
+			}
+
+			if (!isNaN(distance)) {
+				totalDriveDistance = totalDriveDistance + (distance);
+			} else {
+				warn('can give wrong data,since');
+				warn(' no dtm between ' + stop1 + '-' + stop2);
+			}
+		}
+	} catch (err) {
+		// warn('distanceMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveDistance;
+};
+
+getTotalDriveTime = function getTotalDriveTime(dimObj) {
+	var totalDriveTime = 0;
+	var dtmLookUPFlag = dimObj.dtmFromTMO;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			if(dtmLookUPFlag &gt; 0){
+				totalDriveTime = totalDriveTime + (parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2]));
+			} else {
+				totalDriveTime = totalDriveTime + (transitTimeMatrix[stop1][stop2]);
+			}
+		}
+	} catch (err) {
+		// warn('transitTimeMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveTime;
+};
+
+sliceStopOffData = function sliceStopOffData(stopOffData) {
+	var stop = stopOffData;
+	try {
+
+		if (stopOffData.indexOf('__') &gt; 0) {
+			stop = stopOffData.slice(0, stopOffData.indexOf('__'));
+		}
+	} catch (err) {
+		warn('stopOffData incorrect for ' + stopOffData);
+	}
+	return JSON.parse(stop);
+};
+
+getProcessingTime = function getProcessingTime(dimObj) {
+    var dtmLookUPFlag = dimObj.dtmFromTMO;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {
+		return 1000000;
+	}
+	trasitTime = 0;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop
+					.indexOf('TRANSPORT') &gt; -1))) {
+		return 99999;
+	}
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	try {
+	    if(dtmLookUPFlag &gt; 0){
+	        trasitTime = finalloadthroughput + (parseFloat(dimObj.transitTimeMatrix[stop1+'-'+stop2]))+ finalunloadthroughput;
+	    } else {
+	    	trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]+ finalunloadthroughput;
+	    }
+
+		if (isNaN(trasitTime)) {
+			 // warn('errcause no transittime for ' + stop1 + '-- ' + stop2);
+			return 0;
+		}
+	} catch (err) {
+		// warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+	return this.transitTime;
+	};
+
+getFinalThroughput = function getFinalThroughput(dimObj) {
+	var finalTroughputResult = '';
+
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length); stopIndex++) {
+		var stop = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+		if (dimObj.dims.wtInKG != 0) {
+			if ((stop in constraints.locations)
+					&amp;&amp; ("Throughput" in constraints.locations[stop])) {
+				finalTroughputResult = finalTroughputResult + stop + '--'
+						+ ((constraints.locations[stop].Throughput)) + '--';
+			}
+		}
+	}
+	return finalTroughputResult;
+};
+
+getDistanceBetweenStops = function getDistanceBetweenStops(dimObj) {
+	var distancebetweenstops = "";
+	var dtmLookUPFlag = dimObj.dtmFromTMO;
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+		try {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+
+			distancebetweenstops = distancebetweenstops + "#" + stop1 + "_"
+					+ stop2;
+			if(dtmLookUPFlag &gt; 0){
+				distancebetweenstops = distancebetweenstops + "#"
+					+ (parseFloat(dimObj.distanceMatrix[stop1+'-'+stop2]));
+			} else {
+				distancebetweenstops = distancebetweenstops + "#"
+					+ distanceMatrix[stop1][stop2];
+			}
+		} catch (err) {
+			// warn('Error cause no distancebetweenstops ' + stop1 + ' -- ' + stop2);
+		}
+	}
+	return distancebetweenstops;
+};
+
+getFinalLoadThroughput = function getFinalLoadThroughput(dimObj) {
+	var varloadthroughput = 0;
+	stop1 = sliceStopOffData(dimObj.stopOffs[0].stop);
+	try {
+		if (stop1 in constraints.locations
+				&amp;&amp; ("LOADING" in constraints.locations[stop1])) {
+
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop1].LOADING["weight_time"].division_factor)
+						* constraints.locations[stop1].LOADING["weight_time"].time_factor;
+				varloadthroughput = varweightthrouput;
+			}
+
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop1].LOADING["volume_time"].division_factor)
+						* constraints.locations[stop1].LOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varloadthroughput) {
+					varloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop1].max_variable_time != 0) {
+			if (constraints.locations[stop1].max_variable_time &lt; varloadthroughput) {
+				varloadthroughput = constraints.locations[stop1].max_variable_time;
+			}
+		}
+		return constraints.locations[stop1].fixed_time + varloadthroughput;
+	} catch (err) {
+		// warn('Error calculating load throughput for stop ' + stop1 + '-- '+ err.message);
+		return 0;
+	}
+};
+
+getFinalUnLoadThroughput = function getFinalUnLoadThroughput(dimObj) {
+	var varunloadthroughput = 0;
+	var fixedTime = 0 ;
+	if ( dimObj.stopOffs.length == 2  &amp;&amp; dimObj.stopOffs[1] ) {
+		stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+	}
+
+	if(typeof stop2 == 'undefined')
+		  return 0;
+
+	try {
+		if (stop2 in constraints.locations
+				&amp;&amp; "UNLOADING" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].UNLOADING["weight_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].UNLOADING["volume_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2] &amp;&amp; constraints.locations[stop2].max_variable_time != 0) {
+			if (constraints.locations[stop2].max_variable_time &lt; varunloadthroughput) {
+				varunloadthroughput = constraints.locations[stop2].max_variable_time;
+			}
+		}
+
+		if ( constraints.locations[stop2] ) {
+			fixedTime = constraints.locations[stop2].fixed_time ;
+		}
+
+		return fixedTime + varunloadthroughput;
+	} catch (err) {
+		 warn('Error calculating Unload throughput for stop ' + stop2 + '-- '+ err.message);
+		return 0;
+	}
+};
+
+// additional activity time starts
+getAdditionalSendingActivityTime = function getAdditionalSendingActivityTime(dimObj) {
+	try {
+		var sendingTimeFactor = 0 ;
+		stop1 = JSON.parse(sliceStopOffData(dimObj.stopOffs[0].stop));
+		if (constraints.locationtimeactivities[stop1]) {
+			 sendingTimeFactor = constraints.locationtimeactivities[stop1].SENDING_ADDITIONAL_TIMEFACTOR;
+		}
+		if ( typeof sendingTimeFactor == 'undefined') {
+
+			return 0 ;
+		}
+		return sendingTimeFactor;
+	} catch (err) {
+		// warn('Error calculating sending activity for stop ' + stop1 + '--' + err.message);
+		return 0;
+	}
+};
+
+
+getAdditionalReceivingActivityTime = function getAdditionalReceivingActivityTime(dimObj) {
+	var receivingTimeFactor = 0 ;
+	var destStop ;
+	try {
+			if ( dimObj.stopOffs.length == 2  &amp;&amp; dimObj.stopOffs[1] ) {
+				destStop = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+			if ( constraints.locationtimeactivities[destStop] ) {
+				receivingTimeFactor = constraints.locationtimeactivities[destStop].RECEIVING_ADDITIONAL_TIMEFACTOR;
+
+				if (typeof receivingTimeFactor == 'undefined') {
+					return 0 ;
+				}
+			}
+
+		}
+		return receivingTimeFactor;
+	} catch (err) {
+		// warn('Error calculating receiving activity for stop ' + destStop + '-- '+ err.message);
+		return 0;
+	}
+};
+
+
+// additional activity time ends
+
+
+getOceanAirLoadingProcessingTime = function getOceanAirLoadingProcessingTime(dimObj) {
+	var sendingTimeFactor = getAdditionalSendingActivityTime(dimObj) ;
+	trasitTime = 0;
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	try {
+		trasitTime = finalloadthroughput +sendingTimeFactor;
+		if (isNaN(trasitTime)) {
+		 //	warn('failed');
+			return 0;
+		}
+	} catch (err) {
+	//	warn('err cause-- ' + err.message);
+		return 0;
+	}
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+	return this.transitTime ;
+};
+
+getOceanAirUnloadingProcessingTime = function getOceanAirUnloadingProcessingTime(dimObj) {
+	var receivingTimeFactor = getAdditionalReceivingActivityTime(dimObj);
+	trasitTime = 0;
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput1(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	try {
+		trasitTime = finalunloadthroughput + receivingTimeFactor;
+
+		if (isNaN(trasitTime)) {
+			return 0;
+		}
+	} catch (err) {
+		// warn('err cause-- ' + err.message);
+		return 0;
+	}
+	return (trasitTime);
+};
+
+getFinalUnLoadThroughput1 = function getFinalUnLoadThroughput1(dimObj) {
+	var varunloadthroughput = 0;
+	var stop2;
+	var fixedTime ;
+	try {
+		if ( dimObj.stopOffs.length == 2  &amp;&amp; dimObj.stopOffs[1] ) {
+			stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+		}
+
+	if(typeof stop2 == 'undefined')
+	  return 0;
+
+		if (stop2 in constraints.locations
+				&amp;&amp; "UNLOADING" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].UNLOADING["weight_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].UNLOADING["volume_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2] &amp;&amp; constraints.locations[stop2].max_variable_time != 0) {
+			if (constraints.locations[stop2].max_variable_time &lt; varunloadthroughput) {
+				varunloadthroughput = constraints.locations[stop2].max_variable_time;
+			}
+		}
+		if ( constraints.locations[stop2] ) {
+			fixedTime = constraints.locations[stop2].fixed_time;
+		}
+		return fixedTime + varunloadthroughput;
+	} catch (err) {
+	   warn('err calculating Unload throughput for stop ' + stop2 + '-- '+ err.message);
+		return 0;
+	}
+};</globalScript>
+		<applyConsolidationRules ttype="STRING">Yes</applyConsolidationRules>
+		<requirementConsolidationLevel ttype="I32">0</requirementConsolidationLevel>
+		<resourceToAllocationMaps ttype="MAP"/>
+	</supplyChain>
+	<requirements ttype="MAP">
+		<item>
+			<key ttype="STRING">59953060147</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">59953060147</id>
+				<name ttype="STRING">59953060147</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">100.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">2.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/carton</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/package</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/SQM</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/LNM</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/unit</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">1074069939__START_REQUIREMENT</source>
+				<destination ttype="STRING">1074069941__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1631214000</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1631214060</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1631646000</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1638388800</latestDeliveryTime>
+				<freightClass ttype="STRING">Class 50</freightClass>
+			</value>
+		</item>
+		<item>
+			<key ttype="STRING">59953059147</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">59953059147</id>
+				<name ttype="STRING">59953059147</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">100.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">2.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/carton</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/package</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/SQM</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/LNM</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/unit</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">1074069938__START_REQUIREMENT</source>
+				<destination ttype="STRING">1074069940__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1631214000</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1631214060</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1631646000</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1638388800</latestDeliveryTime>
+				<freightClass ttype="STRING">Class 50</freightClass>
+			</value>
+		</item>
+		<item>
+			<key ttype="STRING">59953060149</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">59953060149</id>
+				<name ttype="STRING">59953060149</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">100.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">2.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/carton</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/package</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/SQM</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/LNM</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/unit</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">1074069938__START_REQUIREMENT</source>
+				<destination ttype="STRING">1074069941__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1631214000</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1631214060</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1631646000</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1638388800</latestDeliveryTime>
+				<freightClass ttype="STRING">Class 50</freightClass>
+			</value>
+		</item>
+		<item>
+			<key ttype="STRING">59953060148</key>
+			<value struct="LoadRequirement" ttype="STRUCT">
+				<id ttype="STRING">59953060148</id>
+				<name ttype="STRING">59953060148</name>
+				<minDivision ttype="LIST">
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">wtInKG</unit>
+						<quantityPerDivision ttype="DOUBLE">100.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">volInCBM</unit>
+						<quantityPerDivision ttype="DOUBLE">2.1</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/pallet</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/carton</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/package</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/SQM</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/LNM</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">/unit</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+					<item struct="MinDivision" ttype="STRUCT">
+						<unit ttype="STRING">NumberOfTOS</unit>
+						<quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision>
+					</item>
+				</minDivision>
+				<referenceUnitName ttype="STRING">order</referenceUnitName>
+				<quantity ttype="I32">1</quantity>
+				<source ttype="STRING">1074069939__START_REQUIREMENT</source>
+				<destination ttype="STRING">1074069940__END_REQUIREMENT</destination>
+				<earliestDepartTime ttype="I64">1631214000</earliestDepartTime>
+				<earliestDeliveryTime ttype="I64">1631214060</earliestDeliveryTime>
+				<latestDepartTime ttype="I64">1631646000</latestDepartTime>
+				<latestDeliveryTime ttype="I64">1638388800</latestDeliveryTime>
+				<freightClass ttype="STRING">Class 50</freightClass>
+			</value>
+		</item>
+	</requirements>
+	<modelingLanguageVersion ttype="STRING">3.2</modelingLanguageVersion>
+	<resourceAllocationCheck ttype="I32">0</resourceAllocationCheck>
+	<orgid ttype="I32">64033</orgid>
+	<orgUserId ttype="I32">236462</orgUserId>
+	<dtmFromTMO ttype="I32">0</dtmFromTMO>
+	<dtmPriority ttype="STRING">M-P-C-R</dtmPriority>
+	<stepsCleaned ttype="I32">0</stepsCleaned>
+	<stepsRaw ttype="I64">0</stepsRaw>
+	<timeToClean ttype="DOUBLE">0</timeToClean>
+	<binPackingEnabled ttype="I32">0</binPackingEnabled>
+</OptimizationInstance>

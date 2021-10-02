@@ -1,0 +1,6 @@
+com\gtn\qa\PageObjectRepository\JobDetailPage.class
+com\gtn\qa\PageObjectRepository\JobListPage.class
+com\gtn\qa\TestBase\TestBase.class
+com\gtn\qa\Utilities\WebEventListener.class
+com\gtn\qa\Utilities\Util.class
+com\qa\ExtentReportListenerTestNG\ExtentReporterNG.class

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GTN TestNG Suite" thread-count="1">
+	
+	<listeners>
+		<listener class-name="com.qa.ExtentReportListenerTestNG.ExtentReporterNG" />
+	</listeners>
+	
+	<test name="GTN TMO Automation2">
+		<classes>
+			<class name="com.gtn.qa.TestCases.JobDetailPageTestCase"></class>
+			<class name="com.gtn.qa.TestCases.JobListPageTestCase"></class>
+		</classes>
+	</test>		
+</suite> 

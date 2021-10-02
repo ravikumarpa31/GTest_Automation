@@ -1,0 +1,1108 @@
+<OptimizationInstance struct="OptimizationInstance" ttype="STRUCT"><id ttype="STRING">truck_ton_test_121737255</id><supplyChain struct="SupplyChain" ttype="STRUCT"><id ttype="STRING">Network</id><name ttype="STRING">supplyChainName12345</name><steps ttype="MAP"><item><key ttype="STRING">6253__HOLD_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">6253__HOLD_REQUIREMENT</id><narrativeDescription ttype="STRING">Hold at 6253 TR53,29PF,22GP,42GP,42UT,M5GP,22GH,00A0,45RN,22TD,22RN,ROOS,P2GP,42RT,49PF,TR48,L5GH,45GP,22RT,42RN,45GH,TR45,00B0,BBOS,42GH,25GP,42TD,L5GP,P5GP,LCOS,22UT,45RT</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">96945__97207__121736630__SC______MULTI_STOP__1006</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">6253__END_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">6253__END_REQUIREMENT</id><narrativeDescription ttype="STRING">End at 6253 TR53,29PF,22GP,42GP,42UT,M5GP,22GH,00A0,45RN,22TD,22RN,ROOS,P2GP,42RT,49PF,TR48,L5GH,45GP,22RT,42RN,45GH,TR45,00B0,BBOS,42GH,25GP,42TD,L5GP,P5GP,LCOS,22UT,45RT</narrativeDescription><type ttype="I32">5</type><operatingHours ttype="LIST"><item ttype="STRING">RECEIVING_6253_Operating_hour</item></operatingHours><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/></value></item><item><key ttype="STRING">1073741828__START_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073741828__START_REQUIREMENT</id><narrativeDescription ttype="STRING">start at 1073741828</narrativeDescription><type ttype="I32">0</type><nextSteps ttype="SET"><item ttype="STRING">1073741828__HOLD_REQUIREMENT</item></nextSteps><operatingHours ttype="LIST"><item ttype="STRING">SHIPPING_1073741828_Operating_hour</item></operatingHours></value></item><item><key ttype="STRING">6251__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">6251__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 6251__TR53,29PF,22GP,42GP,42UT,M5GP,22GH,00A0,45RN,22TD,22RN,ROOS,P2GP,42RT,49PF,TR48,L5GH,45GP,22RT,42RN,45GH,TR45,00B0,BBOS,42GH,25GP,42TD,L5GP,P5GP,LCOS,22UT,45RT</narrativeDescription><type ttype="I32">2</type><operatingHours ttype="LIST"><item ttype="STRING">RECEIVING_6251_Operating_hour</item></operatingHours><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">6251__INTERCHANGE_REQUIREMENT_XCHG</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">6251__INTERCHANGE_REQUIREMENT_XCHG</id><narrativeDescription ttype="STRING">XCHG  at 6251__TR53,29PF,22GP,42GP,42UT,M5GP,22GH,00A0,45RN,22TD,22RN,ROOS,P2GP,42RT,49PF,TR48,L5GH,45GP,22RT,42RN,45GH,TR45,00B0,BBOS,42GH,25GP,42TD,L5GP,P5GP,LCOS,22UT,45RT</narrativeDescription><type ttype="I32">7</type><operatingHours ttype="LIST"><item ttype="STRING">RECEIVING_6251_Operating_hour</item></operatingHours><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">6253__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">6253__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 6253__TR53,29PF,22GP,42GP,42UT,M5GP,22GH,00A0,45RN,22TD,22RN,ROOS,P2GP,42RT,49PF,TR48,L5GH,45GP,22RT,42RN,45GH,TR45,00B0,BBOS,42GH,25GP,42TD,L5GP,P5GP,LCOS,22UT,45RT</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">6253__HOLD_REQUIREMENT</item></nextSteps><operatingHours ttype="LIST"><item ttype="STRING">SHIPPING_6253_Operating_hour</item></operatingHours><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1073741839__END_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073741839__END_REQUIREMENT</id><narrativeDescription ttype="STRING">End at 1073741839 </narrativeDescription><type ttype="I32">5</type><operatingHours ttype="LIST"><item ttype="STRING">RECEIVING_1073741839_Operating_hour</item></operatingHours><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/></value></item><item><key ttype="STRING">6251__HOLD_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">6251__HOLD_REQUIREMENT</id><narrativeDescription ttype="STRING">Hold at 6251 TR53,29PF,22GP,42GP,42UT,M5GP,22GH,00A0,45RN,22TD,22RN,ROOS,P2GP,42RT,49PF,TR48,L5GH,45GP,22RT,42RN,45GH,TR45,00B0,BBOS,42GH,25GP,42TD,L5GP,P5GP,LCOS,22UT,45RT</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">96945__97207__121736630__SC______MULTI_STOP__1006</item><item ttype="STRING">6251__INTERCHANGE_REQUIREMENT_XCHG</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1073741828__HOLD_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073741828__HOLD_REQUIREMENT</id><narrativeDescription ttype="STRING">Hold at 1073741828 </narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">96945__97207__121736630__SC______MULTI_STOP__1006</item></nextSteps><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">96945__97207__121736630__SC______MULTI_STOP__1006</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">96945__97207__121736630__SC______MULTI_STOP__1006</id><narrativeDescription ttype="STRING">96945__97207__121736630__SC______MULTI_STOP__1006__TR45</narrativeDescription><type ttype="I32">6</type><ratedCommodity ttype="STRING">Apples</ratedCommodity><nextSteps ttype="SET"><item ttype="STRING">1073741839__END_REQUIREMENT</item><item ttype="STRING">6253__END_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1006_83_SC</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"dimFactorConv":"cm\/kg","baseRate":{"amount":60.0,"includeInNetFreight":null,"equipmentType":"1006_83_SC","basis":"\/ton","wtConvRate":0.001,"isHazMat":null},"accessorials":[{"amount":6.0,"calculatedWeightBasis":"Actual Weight","includeInNetFreight":null,"basis":"\/ton","wtConvRate":0.001,"isHazMat":null}],"rateId":"121736630","netfreightcostelems":[],"dimFactor":0.0});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime><origins ttype="SET"><item ttype="STRING">1073741828__HOLD_REQUIREMENT</item></origins><destinations ttype="SET"><item ttype="STRING">1073741839__END_REQUIREMENT</item></destinations><rateValidityStart ttype="I64">1483257600</rateValidityStart><rateValidityEnd ttype="I64">1738310400</rateValidityEnd></value></item></steps><operatingTimes ttype="MAP"><item><key ttype="STRING">SHIPPING_6253_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">SHIPPING_6253_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">RECEIVING_6253_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">RECEIVING_6253_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">12:30:00</startTime><endTime ttype="STRING">13:30:00</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">10:30:00</startTime><endTime ttype="STRING">11:30:00</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:30:00</startTime><endTime ttype="STRING">01:30:00</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">RECEIVING_1073741839_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">RECEIVING_1073741839_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">RECEIVING_6251_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">RECEIVING_6251_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">SHIPPING_1073741828_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">SHIPPING_1073741828_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">18:30:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">18:29:59</endTime></weekDayHours></item></openTimeRange></value></item></operatingTimes><unitDimensions ttype="MAP"><item><key ttype="STRING">PALLET</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">PALLET</id><dimension ttype="I32">7</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">/pallet</id><name ttype="STRING">169</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">CURRENCY</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">CURRENCY</id><dimension ttype="I32">0</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">Dollar</id><name ttype="STRING">840</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">VOLUME</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">VOLUME</id><dimension ttype="I32">4</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">volInCBM</id><name ttype="STRING">81</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">WEIGHT</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">WEIGHT</id><dimension ttype="I32">5</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">wtInKG</id><name ttype="STRING">33</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">CUSTOM</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">CUSTOM</id><dimension ttype="I32">6</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">NumberOfTOS</id><name ttype="STRING">100001</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item></unitDimensions><resources ttype="MAP"><item><key ttype="STRING">1003_9_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1003_9_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_9_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1006_19_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1006_19_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1006_19_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1010_12_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1010_12_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1010_12_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1003_20_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1003_20_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1003_20_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1008_84_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1008_84_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1008_84_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_20</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_20</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_20"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1008_10_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1008_10_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1008_10_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1004_11_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1004_11_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1004_11_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1006_83_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1006_83_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1006_83_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_10</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_10</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_10"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_84</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_84</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_84"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_85</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_85</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_85"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_83</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_83</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_83"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1004_13_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1004_13_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1004_13_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_9</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_9</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_9"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1006_85_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1006_85_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1006_85_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_13</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_13</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_13"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_12</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_12</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_12"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_11</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_11</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_11"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">1010_18_SC</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1010_18_SC</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1010_18_SC"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_19</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_19</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_19"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item><item><key ttype="STRING">_18</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">_18</id><capacities ttype="LIST"/><restrictionAttributes struct="RestrictionAttributes" ttype="STRUCT"><attributeSets ttype="LIST"><item struct="RestrictionAttributeSet" ttype="STRUCT"><name ttype="STRING">Forklift</name><values ttype="LIST"><item ttype="STRING">Yes</item></values></item></attributeSets></restrictionAttributes><scriptedConstraint ttype="STRING">(resourceObj= {"id":"_18"});evaluateConstraints.bind(resourceObj);</scriptedConstraint></value></item></resources><globalScript ttype="STRING">distanceMatrix = {"1073741839":{"1073741839":0.01,"1073741838":1039.76,"1073741835":241.9,"1073741834":180.94,"1073741837":446.93,"1073741836":33.24,"1073741841":186.85,"1073741842":973.11,"1073741843":622.71,"1073741844":913.85,"660331":264.41,"16169":5159.79,"1073741840":75.09,"1073741829":62.67,"1073741828":75.62,"1073741827":857.14,"1073741826":576.23,"660286":428.09,"1073741825":229.11,"1073741824":139.06,"1073741823":263.34,"16986":5159.79,"16987":5159.79,"34825":33.22,"6253":977.85,"6251":366.86,"15303":5159.79,"1073741832":299.68,"1073741833":256.46,"1073741830":363.7,"16171":5159.79,"1073741831":428.88},"1073741838":{"1073741839":1039.76,"1073741838":0.01,"1073741835":1010.32,"1073741834":1006.04,"1073741837":980.84,"1073741836":1024.22,"1073741841":871.55,"1073741842":816.54,"1073741843":1141.37,"1073741844":1011.96,"660331":931.42,"16169":6095.14,"1073741840":984.24,"1073741829":1047.51,"1073741828":964.15,"1073741827":188.33,"1073741826":988.78,"660286":803.72,"1073741825":810.66,"1073741824":1075.28,"1073741823":931.45,"16986":6095.14,"16987":6095.14,"34825":1024.23,"6253":825.27,"6251":1145.15,"15303":6095.14,"1073741832":1009.68,"1073741833":952.68,"1073741830":1144.84,"16171":6095.14,"1073741831":803.19},"1073741835":{"1073741839":241.9,"1073741838":1010.32,"1073741835":0.01,"1073741834":61.42,"1073741837":662.48,"1073741836":267.47,"1073741841":197.37,"1073741842":1128.02,"1073741843":853.48,"1073741844":1107.62,"660331":79.58,"16169":5316.57,"1073741840":284.4,"1073741829":183.76,"1073741828":235.14,"1073741827":822.02,"1073741826":787.53,"660286":250.75,"1073741825":293.24,"1073741824":129.39,"1073741823":79.41,"16986":5316.57,"16987":5316.57,"34825":267.45,"6253":1134.03,"6251":165.32,"15303":5316.57,"1073741832":526.32,"1073741833":468.25,"1073741830":163.26,"16171":5316.57,"1073741831":251.56},"1073741834":{"1073741839":180.94,"1073741838":1006.04,"1073741835":61.42,"1073741834":0.01,"1073741837":603.6,"1073741836":206.07,"1073741841":158.12,"1073741842":1081.19,"1073741843":792.84,"1073741844":1053.19,"660331":101.79,"16169":5281.72,"1073741840":223.65,"1073741829":124.48,"1073741828":175.56,"1073741827":817.98,"1073741826":729.54,"660286":281.92,"1073741825":252.28,"1073741824":84.57,"1073741823":100.99,"16986":5281.72,"16987":5281.72,"34825":206.05,"6253":1086.97,"6251":212.4,"15303":5281.72,"1073741832":465.79,"1073741833":409.11,"1073741830":209.82,"16171":5281.72,"1073741831":282.75},"1073741837":{"1073741839":446.93,"1073741838":980.84,"1073741835":662.48,"1073741834":603.6,"1073741837":0.01,"1073741836":414.12,"1073741841":495.33,"1073741842":582.9,"1073741843":211.39,"1073741844":474.65,"660331":647.48,"16169":5114.3,"1073741840":383.18,"1073741829":507.88,"1073741828":428.07,"1073741827":841.36,"1073741826":129.71,"660286":743.33,"1073741825":425.42,"1073741824":584.8,"1073741823":646.42,"16986":5114.3,"16987":5114.3,"34825":414.14,"6253":585.29,"6251":809.09,"15303":5114.3,"1073741832":152.0,"1073741833":194.55,"1073741830":806.09,"16171":5114.3,"1073741831":743.85},"1073741836":{"1073741839":33.24,"1073741838":1024.22,"1073741835":267.47,"1073741834":206.07,"1073741837":414.12,"1073741836":0.01,"1073741841":186.82,"1073741842":940.77,"1073741843":591.95,"1073741844":880.61,"660331":282.71,"16169":5161.07,"1073741840":45.44,"1073741829":94.14,"1073741828":66.78,"1073741827":843.17,"1073741826":543.3,"660286":439.25,"1073741825":214.88,"1073741824":171.06,"1073741823":281.62,"16986":5161.07,"16987":5161.07,"34825":0.02,"6253":945.45,"6251":398.02,"15303":5161.07,"1073741832":267.67,"1073741833":223.25,"1073741830":394.9,"16171":5161.07,"1073741831":440.01},"34852":{"34852":0.01,"34854":54.12},"34854":{"34852":54.12,"34854":0.01},"34850":{"34850":0.01,"34832":154.27},"34832":{"34832":0.01,"34850":154.27},"35304":{"35304":0.01,"660318":7250.96,"35305":1304.85,"660257":1747.55,"660295":4924.37,"15280":6109.4,"660320":6413.17,"660314":6899.98,"15207":6109.4},"35306":{"35306":0.01,"35308":70.07},"660318":{"35304":7250.96,"35305":7420.58,"15280":6228.9,"15207":6228.9},"35305":{"35304":1304.85,"660318":7420.58,"35305":0.01,"660257":445.91,"660295":5751.05,"15280":7394.38,"660320":6923.96,"660314":6569.56,"15207":7394.38},"1073741841":{"1073741839":186.85,"1073741838":871.55,"1073741835":197.37,"1073741834":158.12,"1073741837":495.33,"1073741836":186.82,"1073741841":0.01,"1073741842":931.14,"1073741843":699.04,"1073741844":919.65,"660331":156.4,"16169":5346.39,"1073741840":168.67,"1073741829":177.68,"1073741828":120.82,"1073741827":685.48,"1073741826":613.41,"660286":265.61,"1073741825":95.89,"1073741824":207.75,"1073741823":155.43,"16986":5346.39,"16987":5346.39,"34825":186.82,"6253":937.25,"6251":362.54,"15303":5346.39,"1073741832":378.68,"1073741833":309.24,"1073741830":360.38,"16171":5346.39,"1073741831":266.3},"660257":{"35304":1747.55,"35305":445.91},"1073741842":{"1073741839":973.11,"1073741838":816.54,"1073741835":1128.02,"1073741834":1081.19,"1073741837":582.9,"1073741836":940.77,"1073741841":931.14,"1073741842":0.01,"1073741843":580.92,"1073741844":240.51,"660331":1080.99,"16169":5443.8,"1073741840":898.66,"1073741829":1024.22,"1073741828":925.02,"1073741827":789.26,"1073741826":479.7,"660286":1090.93,"1073741825":835.83,"1073741824":1095.03,"1073741823":1080.19,"16986":5443.8,"16987":5443.8,"34825":940.79,"6253":8.95,"6251":1292.25,"15303":5443.8,"1073741832":721.85,"1073741833":728.83,"1073741830":1289.89,"16171":5443.8,"1073741831":1091.06},"1073741843":{"1073741839":622.71,"1073741838":1141.37,"1073741835":853.48,"1073741834":792.84,"1073741837":211.39,"1073741836":591.95,"1073741841":699.04,"1073741842":580.92,"1073741843":0.01,"1073741844":395.02,"660331":847.01,"16169":4964.22,"1073741840":569.19,"1073741829":685.36,"1073741828":618.89,"1073741827":1019.31,"1073741826":152.6,"660286":952.49,"1073741825":634.56,"1073741824":761.46,"1073741823":845.93,"16986":4964.22,"16987":4964.22,"34825":591.97,"6253":580.06,"6251":989.56,"15303":4964.22,"1073741832":327.18,"1073741833":390.47,"1073741830":986.4,"16171":4964.22,"1073741831":953.03},"1073741844":{"1073741839":913.85,"1073741838":1011.96,"1073741835":1107.62,"1073741834":1053.19,"1073741837":474.65,"1073741836":880.61,"1073741841":919.65,"1073741842":240.51,"1073741843":395.02,"1073741844":0.01,"660331":1075.88,"16169":5203.56,"1073741840":844.46,"1073741829":972.21,"1073741828":882.21,"1073741827":951.44,"1073741826":347.44,"660286":1125.37,"1073741825":830.86,"1073741824":1048.04,"1073741823":1074.93,"16986":5203.56,"16987":5203.56,"34825":880.63,"6253":235.22,"6251":1264.63,"15303":5203.56,"1073741832":626.48,"1073741833":657.43,"1073741830":1261.86,"16171":5203.56,"1073741831":1125.66},"15280":{"35304":6109.4,"35305":7394.38,"660318":6228.9,"660295":4389.27,"660320":5259.29,"660314":7815.83},"35308":{"35306":70.07,"35308":0.01},"660331":{"1073741839":264.41,"1073741838":931.42,"1073741835":79.58,"1073741834":101.79,"1073741837":647.48,"1073741836":282.71,"1073741841":156.4,"1073741842":1080.99,"1073741843":847.01,"1073741844":1075.88,"16169":5383.25,"1073741840":287.18,"1073741829":217.11,"1073741828":233.93,"1073741827":743.16,"1073741826":768.02,"1073741825":247.12,"660286":180.299512997,"1073741824":186.21,"1073741823":1.11,"16986":5383.25,"16987":5383.25,"6253":620.0,"34825":620.0,"6251":228.5,"15303":5383.25,"1073741832":521.69,"1073741833":456.82,"1073741830":227.18,"16171":5383.25,"1073741831":181.12},"16169":{"1073741839":5159.79,"1073741838":6095.14,"1073741835":5316.57,"1073741834":5281.72,"1073741837":5114.3,"1073741836":5161.07,"1073741841":5346.39,"1073741842":5443.8,"1073741843":4964.22,"1073741844":5203.56,"660331":5383.25,"16169":0.01,"1073741840":5188.73,"1073741829":5182.47,"1073741828":5227.85,"1073741827":5947.56,"1073741826":5115.51,"660286":5563.53,"1073741825":5364.21,"1073741824":5197.15,"1073741823":5382.5,"16986":0.01,"16987":0.01,"34825":5161.07,"6253":5438.09,"6251":5283.78,"15303":0.01,"1073741832":5097.2,"1073741833":5161.98,"1073741830":5281.59,"16171":0.01,"1073741831":5564.36},"660314":{"35304":6899.98,"35305":6569.56,"15280":7815.83,"15207":7815.83},"1073741840":{"1073741839":75.09,"1073741838":984.24,"1073741835":284.4,"1073741834":223.65,"1073741837":383.18,"1073741836":45.44,"1073741841":168.67,"1073741842":898.66,"1073741843":569.19,"1073741844":844.46,"660331":287.18,"16169":5188.73,"1073741840":0.01,"1073741829":127.98,"1073741828":53.47,"1073741827":804.56,"1073741826":511.2,"660286":430.9,"1073741825":178.71,"1073741824":203.63,"1073741823":286.08,"16986":5188.73,"16987":5188.73,"34825":45.45,"6253":903.49,"6251":425.91,"15303":5188.73,"1073741832":242.19,"1073741833":189.31,"1073741830":422.91,"16171":5188.73,"1073741831":431.63},"1073741829":{"1073741839":62.67,"1073741838":1047.51,"1073741835":183.76,"1073741834":124.48,"1073741837":507.88,"1073741836":94.14,"1073741841":177.68,"1073741842":1024.22,"1073741843":685.36,"1073741844":972.21,"660331":217.11,"16169":5182.47,"1073741840":127.98,"1073741829":0.01,"1073741828":102.18,"1073741827":862.24,"1073741826":636.83,"660286":390.06,"1073741825":243.69,"1073741824":76.96,"1073741823":216.11,"16986":5182.47,"16987":5182.47,"34825":94.11,"6253":1029.24,"6251":304.23,"15303":5182.47,"1073741832":361.78,"1073741833":315.74,"1073741830":301.08,"16171":5182.47,"1073741831":390.87},"1073741828":{"1073741839":75.62,"1073741838":964.15,"1073741835":235.14,"1073741834":175.56,"1073741837":428.07,"1073741836":66.78,"1073741841":120.82,"1073741842":925.02,"1073741843":618.89,"1073741844":882.21,"660331":233.93,"16169":5227.85,"1073741840":53.47,"1073741829":102.18,"1073741828":0.01,"1073741827":781.58,"1073741826":554.46,"660286":379.01,"1073741825":153.51,"1073741824":170.05,"1073741823":232.82,"16986":5227.85,"16987":5227.85,"34825":66.78,"6253":930.23,"6251":383.23,"15303":5227.85,"1073741832":291.75,"1073741833":233.56,"1073741830":380.37,"16171":5227.85,"1073741831":379.75},"1073741827":{"1073741839":857.14,"1073741838":188.33,"1073741835":822.02,"1073741834":817.98,"1073741837":841.36,"1073741836":843.17,"1073741841":685.48,"1073741842":789.26,"1073741843":1019.31,"1073741844":951.44,"660331":743.16,"16169":5947.56,"1073741840":804.56,"1073741829":862.24,"1073741828":781.58,"1073741827":0.01,"1073741826":868.53,"660286":619.03,"1073741825":628.55,"1073741824":887.98,"1073741823":743.19,"16986":5947.56,"16987":5947.56,"34825":843.18,"6253":798.2,"6251":958.02,"15303":5947.56,"1073741832":851.21,"1073741833":789.26,"1073741830":957.64,"16171":5947.56,"1073741831":618.53},"1073741826":{"1073741839":576.23,"1073741838":988.78,"1073741835":787.53,"1073741834":729.54,"1073741837":129.71,"1073741836":543.3,"1073741841":613.41,"1073741842":479.7,"1073741843":152.6,"1073741844":347.44,"660331":768.02,"16169":5115.51,"1073741840":511.2,"1073741829":636.83,"1073741828":554.46,"1073741827":868.53,"1073741826":0.01,"660286":851.2,"1073741825":536.23,"1073741824":713.66,"1073741823":766.98,"16986":5115.51,"16987":5115.51,"34825":543.33,"6253":480.8,"6251":936.81,"15303":5115.51,"1073741832":281.26,"1073741833":321.91,"1073741830":933.86,"16171":5115.51,"1073741831":851.65},"660286":{"1073741839":428.09,"1073741838":803.72,"1073741835":250.75,"1073741834":281.92,"1073741837":743.33,"1073741836":439.25,"1073741841":265.61,"1073741842":1090.93,"1073741843":952.49,"1073741844":1125.37,"660331":180.299512997,"16169":5563.53,"1073741840":430.9,"1073741829":390.06,"1073741828":379.01,"1073741827":619.03,"1073741826":851.2,"1073741825":318.01,"1073741824":366.45,"1073741823":181.04,"16986":5563.53,"16987":5563.53,"34825":439.24,"6253":1098.3,"6251":347.66,"15303":5563.53,"1073741832":640.3,"1073741833":568.13,"1073741830":347.92,"16171":5563.53,"1073741831":0.83},"1073741825":{"1073741839":229.11,"1073741838":810.66,"1073741835":293.24,"1073741834":252.28,"1073741837":425.42,"1073741836":214.88,"1073741841":95.89,"1073741842":835.83,"1073741843":634.56,"1073741844":830.86,"660331":247.12,"16169":5364.21,"1073741840":178.71,"1073741829":243.69,"1073741828":153.51,"1073741827":628.55,"1073741826":536.23,"1073741825":0.01,"660286":318.01,"1073741824":291.12,"1073741823":246.24,"16986":5364.21,"16987":5364.21,"34825":214.88,"6253":842.02,"6251":458.44,"15303":5364.21,"1073741832":328.75,"1073741833":254.6,"1073741830":456.27,"16171":5364.21,"1073741831":318.54},"1073741824":{"1073741839":139.06,"1073741838":1075.28,"1073741835":129.39,"1073741834":84.57,"1073741837":584.8,"1073741836":171.06,"1073741841":207.75,"1073741842":1095.03,"1073741843":761.46,"1073741844":1048.04,"660331":186.21,"16169":5197.15,"1073741840":203.63,"1073741829":76.96,"1073741828":170.05,"1073741827":887.98,"1073741826":713.66,"660286":366.45,"1073741825":291.12,"1073741824":0.01,"1073741823":185.44,"16986":5197.15,"16987":5197.15,"34825":171.04,"6253":1100.26,"6251":228.29,"15303":5197.15,"1073741832":438.63,"1073741833":392.3,"1073741830":225.08,"16171":5197.15,"1073741831":367.28},"1073741823":{"1073741839":263.34,"1073741838":931.45,"1073741835":79.41,"1073741834":100.99,"1073741837":646.42,"1073741836":281.62,"1073741841":155.43,"1073741842":1080.19,"1073741843":845.93,"1073741844":1074.93,"660331":1.11,"16169":5382.5,"1073741840":286.08,"1073741829":216.11,"1073741828":232.82,"1073741827":743.19,"1073741826":766.98,"660286":181.04,"1073741825":246.24,"1073741824":185.44,"1073741823":0.01,"16986":5382.5,"16987":5382.5,"34825":281.6,"6253":1086.58,"6251":228.94,"15303":5382.5,"1073741832":520.59,"1073741833":455.74,"1073741830":227.58,"16171":5382.5,"1073741831":181.87},"16986":{"1073741839":5159.79,"1073741838":6095.14,"1073741835":5316.57,"1073741834":5281.72,"1073741837":5114.3,"1073741836":5161.07,"1073741841":5346.39,"1073741842":5443.8,"1073741843":4964.22,"1073741844":5203.56,"660331":5383.25,"16169":0.01,"1073741840":5188.73,"1073741829":5182.47,"1073741828":5227.85,"1073741827":5947.56,"1073741826":5115.51,"660286":5563.53,"1073741825":5364.21,"1073741824":5197.15,"1073741823":5382.5,"16986":0.01,"16987":0.01,"34825":5161.07,"6253":5438.09,"6251":5283.78,"15303":0.01,"1073741832":5097.2,"1073741833":5161.98,"1073741830":5281.59,"16171":0.01,"1073741831":5564.36},"16987":{"1073741839":5159.79,"1073741838":6095.14,"1073741835":5316.57,"1073741834":5281.72,"1073741837":5114.3,"1073741836":5161.07,"1073741841":5346.39,"1073741842":5443.8,"1073741843":4964.22,"1073741844":5203.56,"660331":5383.25,"16169":0.01,"1073741840":5188.73,"1073741829":5182.47,"1073741828":5227.85,"1073741827":5947.56,"1073741826":5115.51,"660286":5563.53,"1073741825":5364.21,"1073741824":5197.15,"1073741823":5382.5,"16986":0.01,"16987":0.01,"34825":5161.07,"6253":5438.09,"6251":5283.78,"15303":0.01,"1073741832":5097.2,"1073741833":5161.98,"1073741830":5281.59,"16171":0.01,"1073741831":5564.36},"34825":{"1073741839":33.22,"1073741838":1024.23,"1073741835":267.45,"1073741834":206.05,"1073741837":414.14,"1073741836":0.02,"1073741841":186.82,"1073741842":940.79,"1073741843":591.97,"1073741844":880.63,"660331":620.0,"16169":5161.07,"1073741840":45.45,"1073741829":94.11,"1073741828":66.78,"1073741827":843.18,"1073741826":543.33,"660286":439.24,"1073741825":214.88,"1073741824":171.04,"1073741823":281.6,"16986":5161.07,"16987":5161.07,"34825":0.01,"6253":620.0,"6251":398.0,"15303":5161.07,"1073741832":267.69,"1073741833":223.27,"1073741830":394.88,"16171":5161.07,"1073741831":440.01},"6253":{"1073741839":977.85,"1073741838":825.27,"1073741835":1134.03,"1073741834":1086.97,"1073741837":585.29,"1073741836":945.45,"1073741841":937.25,"1073741842":8.95,"1073741843":580.06,"1073741844":235.22,"660331":620.0,"16169":5438.09,"1073741840":903.49,"1073741829":1029.24,"1073741828":930.23,"1073741827":798.2,"1073741826":480.8,"660286":1098.3,"1073741825":842.02,"1073741824":1100.26,"1073741823":1086.58,"16986":5438.09,"16987":5438.09,"6253":0.01,"34825":620.0,"6251":1298.16,"15303":5438.09,"1073741832":725.04,"1073741833":732.86,"1073741830":1295.79,"16171":5438.09,"1073741831":1098.41},"6251":{"1073741839":366.86,"1073741838":1145.15,"1073741835":165.32,"1073741834":212.4,"1073741837":809.09,"1073741836":398.02,"1073741841":362.54,"1073741842":1292.25,"1073741843":989.56,"1073741844":1264.63,"660331":228.5,"16169":5283.78,"1073741840":425.91,"1073741829":304.23,"1073741828":383.23,"1073741827":958.02,"1073741826":936.81,"660286":347.66,"1073741825":458.44,"1073741824":228.29,"1073741823":228.94,"16986":5283.78,"16987":5283.78,"34825":398.0,"6253":1298.16,"6251":0.01,"15303":5283.78,"1073741832":665.49,"1073741833":614.96,"1073741830":3.36,"16171":5283.78,"1073741831":348.35},"15303":{"1073741839":5159.79,"1073741838":6095.14,"1073741835":5316.57,"1073741834":5281.72,"1073741837":5114.3,"1073741836":5161.07,"1073741841":5346.39,"1073741842":5443.8,"1073741843":4964.22,"1073741844":5203.56,"660331":5383.25,"16169":0.01,"1073741840":5188.73,"1073741829":5182.47,"1073741828":5227.85,"1073741827":5947.56,"1073741826":5115.51,"660286":5563.53,"1073741825":5364.21,"1073741824":5197.15,"1073741823":5382.5,"16986":0.01,"16987":0.01,"34825":5161.07,"6253":5438.09,"6251":5283.78,"15303":0.01,"1073741832":5097.2,"1073741833":5161.98,"1073741830":5281.59,"16171":0.01,"1073741831":5564.36},"1073741832":{"1073741839":299.68,"1073741838":1009.68,"1073741835":526.32,"1073741834":465.79,"1073741837":152.0,"1073741836":267.67,"1073741841":378.68,"1073741842":721.85,"1073741843":327.18,"1073741844":626.48,"660331":521.69,"16169":5097.2,"1073741840":242.19,"1073741829":361.78,"1073741828":291.75,"1073741827":851.21,"1073741826":281.26,"660286":640.3,"1073741825":328.75,"1073741824":438.63,"1073741823":520.59,"16986":5097.2,"16987":5097.2,"34825":267.69,"6253":725.04,"6251":665.49,"15303":5097.2,"1073741832":0.01,"1073741833":74.71,"1073741830":662.39,"16171":5097.2,"1073741831":640.92},"1073741833":{"1073741839":256.46,"1073741838":952.68,"1073741835":468.25,"1073741834":409.11,"1073741837":194.55,"1073741836":223.25,"1073741841":309.24,"1073741842":728.83,"1073741843":390.47,"1073741844":657.43,"660331":456.82,"16169":5161.98,"1073741840":189.31,"1073741829":315.74,"1073741828":233.56,"1073741827":789.26,"1073741826":321.91,"660286":568.13,"1073741825":254.6,"1073741824":392.3,"1073741823":455.74,"16986":5161.98,"16987":5161.98,"34825":223.27,"6253":732.86,"6251":614.96,"15303":5161.98,"1073741832":74.71,"1073741833":0.01,"1073741830":611.99,"16171":5161.98,"1073741831":568.73},"660295":{"35304":4924.37,"35305":5751.05,"15280":4389.27,"15207":4389.27},"1073741830":{"1073741839":363.7,"1073741838":1144.84,"1073741835":163.26,"1073741834":209.82,"1073741837":806.09,"1073741836":394.9,"1073741841":360.38,"1073741842":1289.89,"1073741843":986.4,"1073741844":1261.86,"660331":227.18,"16169":5281.59,"1073741840":422.91,"1073741829":301.08,"1073741828":380.37,"1073741827":957.64,"1073741826":933.86,"660286":347.92,"1073741825":456.27,"1073741824":225.08,"1073741823":227.58,"16986":5281.59,"16987":5281.59,"34825":394.88,"6253":1295.79,"6251":3.36,"15303":5281.59,"1073741832":662.39,"1073741833":611.99,"1073741830":0.01,"16171":5281.59,"1073741831":348.59},"16171":{"1073741839":5159.79,"1073741838":6095.14,"1073741835":5316.57,"1073741834":5281.72,"1073741837":5114.3,"1073741836":5161.07,"1073741841":5346.39,"1073741842":5443.8,"1073741843":4964.22,"1073741844":5203.56,"660331":5383.25,"16169":0.01,"1073741840":5188.73,"1073741829":5182.47,"1073741828":5227.85,"1073741827":5947.56,"1073741826":5115.51,"660286":5563.53,"1073741825":5364.21,"1073741824":5197.15,"1073741823":5382.5,"16986":0.01,"16987":0.01,"34825":5161.07,"6253":5438.09,"6251":5283.78,"15303":0.01,"1073741832":5097.2,"1073741833":5161.98,"1073741830":5281.59,"16171":0.01,"1073741831":5564.36},"1073741831":{"1073741839":428.88,"1073741838":803.19,"1073741835":251.56,"1073741834":282.75,"1073741837":743.85,"1073741836":440.01,"1073741841":266.3,"1073741842":1091.06,"1073741843":953.03,"1073741844":1125.66,"660331":181.12,"16169":5564.36,"1073741840":431.63,"1073741829":390.87,"1073741828":379.75,"1073741827":618.53,"1073741826":851.65,"660286":0.83,"1073741825":318.54,"1073741824":367.28,"1073741823":181.87,"16986":5564.36,"16987":5564.36,"34825":440.01,"6253":1098.41,"6251":348.35,"15303":5564.36,"1073741832":640.92,"1073741833":568.73,"1073741830":348.59,"1073741831":0.01,"16171":5564.36},"660320":{"35304":6413.17,"35305":6923.96,"15280":5259.29,"15207":5259.29},"15207":{"35304":6109.4,"35305":7394.38,"660318":6228.9,"660295":4389.27,"660320":5259.29,"660314":7815.83}}
+transitTimeMatrix = {"1073741839":{"1073741839":60,"1073741838":74820,"1073741835":17400,"1073741834":13020,"1073741837":32160,"1073741836":2340,"1073741841":13440,"1073741842":70020,"1073741843":44820,"1073741844":65760,"660331":19020,"16169":371460,"1073741840":5400,"1073741829":4500,"1073741828":5400,"1073741827":61680,"1073741826":41460,"660286":30780,"1073741825":16440,"1073741824":9960,"1073741823":18960,"16986":371460,"16987":371460,"34825":2340,"6253":70380,"6251":26400,"15303":371460,"1073741832":21540,"1073741833":18420,"1073741830":26160,"16171":371460,"1073741831":30840},"1073741838":{"1073741839":74820,"1073741838":60,"1073741835":72720,"1073741834":72420,"1073741837":70620,"1073741836":73740,"1073741841":62700,"1073741842":58740,"1073741843":82140,"1073741844":72840,"660331":67020,"16169":438840,"1073741840":70860,"1073741829":75420,"1073741828":69360,"1073741827":13500,"1073741826":71160,"660286":57840,"1073741825":58320,"1073741824":77400,"1073741823":67020,"16986":438840,"16987":438840,"34825":73740,"6253":59400,"6251":82440,"15303":438840,"1073741832":72660,"1073741833":68580,"1073741830":82380,"16171":438840,"1073741831":57780},"1073741835":{"1073741839":17400,"1073741838":72720,"1073741835":60,"1073741834":4380,"1073741837":47640,"1073741836":19200,"1073741841":14160,"1073741842":81180,"1073741843":61440,"1073741844":79740,"660331":5700,"16169":382740,"1073741840":20460,"1073741829":13200,"1073741828":16920,"1073741827":59160,"1073741826":56700,"660286":18000,"1073741825":21060,"1073741824":9300,"1073741823":5700,"16986":382740,"16987":382740,"34825":19200,"6253":81600,"6251":11880,"15303":382740,"1073741832":37860,"1073741833":33660,"1073741830":11700,"16171":382740,"1073741831":18060},"1073741834":{"1073741839":13020,"1073741838":72420,"1073741835":4380,"1073741834":60,"1073741837":43440,"1073741836":14820,"1073741841":11340,"1073741842":77820,"1073741843":57060,"1073741844":75780,"660331":7320,"16169":380280,"1073741840":16080,"1073741829":8940,"1073741828":12600,"1073741827":58860,"1073741826":52500,"660286":20280,"1073741825":18120,"1073741824":6060,"1073741823":7260,"16986":380280,"16987":380280,"34825":14820,"6253":78240,"6251":15240,"15303":380280,"1073741832":33480,"1073741833":29400,"1073741830":15060,"16171":380280,"1073741831":20340},"1073741837":{"1073741839":32160,"1073741838":70620,"1073741835":47640,"1073741834":43440,"1073741837":60,"1073741836":29760,"1073741841":35640,"1073741842":41940,"1073741843":15180,"1073741844":34140,"660331":46560,"16169":368220,"1073741840":27540,"1073741829":36540,"1073741828":30780,"1073741827":60540,"1073741826":9300,"660286":53460,"1073741825":30600,"1073741824":42060,"1073741823":46500,"16986":368220,"16987":368220,"34825":29760,"6253":42120,"6251":58200,"15303":368220,"1073741832":10920,"1073741833":13980,"1073741830":58020,"16171":368220,"1073741831":53520},"1073741836":{"1073741839":2340,"1073741838":73740,"1073741835":19200,"1073741834":14820,"1073741837":29760,"1073741836":60,"1073741841":13440,"1073741842":67680,"1073741843":42600,"1073741844":63360,"660331":20340,"16169":371580,"1073741840":3240,"1073741829":6720,"1073741828":4800,"1073741827":60660,"1073741826":39060,"660286":31620,"1073741825":15420,"1073741824":12300,"1073741823":20220,"16986":371580,"16987":371580,"34825":60,"6253":68040,"6251":28620,"15303":371580,"1073741832":19260,"1073741833":16020,"1073741830":28380,"16171":371580,"1073741831":31680},"34852":{"34852":60,"34854":3840},"34854":{"34852":3840,"34854":60},"34850":{"34850":60,"34832":11100},"34832":{"34832":60,"34850":11100},"35304":{"35304":60,"660318":522060,"35305":93900,"660257":125820,"660295":354540,"15280":439860,"660320":461700,"660314":496740,"15207":439860},"35306":{"35306":60,"35308":5040},"660318":{"35304":522060,"35305":534240,"15280":448440,"15207":448440},"35305":{"35304":93900,"660318":534240,"35305":60,"660257":32100,"660295":414060,"15280":532380,"660320":498480,"660314":472980,"15207":532380},"1073741841":{"1073741839":13440,"1073741838":62700,"1073741835":14160,"1073741834":11340,"1073741837":35640,"1073741836":13440,"1073741841":60,"1073741842":67020,"1073741843":50280,"1073741844":66180,"660331":11220,"16169":384900,"1073741840":12120,"1073741829":12780,"1073741828":8640,"1073741827":49320,"1073741826":44160,"660286":19080,"1073741825":6900,"1073741824":14940,"1073741823":11160,"16986":384900,"16987":384900,"34825":13440,"6253":67440,"6251":26100,"15303":384900,"1073741832":27240,"1073741833":22260,"1073741830":25920,"16171":384900,"1073741831":19140},"660257":{"35304":125820,"35305":32100},"1073741842":{"1073741839":70020,"1073741838":58740,"1073741835":81180,"1073741834":77820,"1073741837":41940,"1073741836":67680,"1073741841":67020,"1073741842":60,"1073741843":41820,"1073741844":17280,"660331":77820,"16169":391920,"1073741840":64680,"1073741829":73740,"1073741828":66600,"1073741827":56820,"1073741826":34500,"660286":78540,"1073741825":60120,"1073741824":78840,"1073741823":77760,"16986":391920,"16987":391920,"34825":67680,"6253":600,"6251":93000,"15303":391920,"1073741832":51960,"1073741833":52440,"1073741830":92820,"16171":391920,"1073741831":78540},"1073741843":{"1073741839":44820,"1073741838":82140,"1073741835":61440,"1073741834":57060,"1073741837":15180,"1073741836":42600,"1073741841":50280,"1073741842":41820,"1073741843":60,"1073741844":28440,"660331":60960,"16169":357420,"1073741840":40980,"1073741829":49320,"1073741828":44520,"1073741827":73380,"1073741826":10980,"660286":68520,"1073741825":45660,"1073741824":54780,"1073741823":60900,"16986":357420,"16987":357420,"34825":42600,"6253":41760,"6251":71220,"15303":357420,"1073741832":23520,"1073741833":28080,"1073741830":70980,"16171":357420,"1073741831":68580},"1073741844":{"1073741839":65760,"1073741838":72840,"1073741835":79740,"1073741834":75780,"1073741837":34140,"1073741836":63360,"1073741841":66180,"1073741842":17280,"1073741843":28440,"1073741844":60,"660331":77460,"16169":374640,"1073741840":60780,"1073741829":69960,"1073741828":63480,"1073741827":68460,"1073741826":24960,"660286":81000,"1073741825":59820,"1073741824":75420,"1073741823":77340,"16986":374640,"16987":374640,"34825":63360,"6253":16920,"6251":91020,"15303":374640,"1073741832":45060,"1073741833":47280,"1073741830":90840,"16171":374640,"1073741831":81000},"15280":{"35304":439860,"35305":532380,"660318":448440,"660295":316020,"660320":378660,"660314":562680},"35308":{"35306":5040,"35308":60},"660331":{"1073741839":19020,"1073741838":67020,"1073741835":5700,"1073741834":7320,"1073741837":46560,"1073741836":20340,"1073741841":11220,"1073741842":77820,"1073741843":60960,"1073741844":77460,"16169":387540,"1073741840":20640,"1073741829":15600,"1073741828":16800,"1073741827":53460,"1073741826":55260,"1073741825":17760,"660286":12960,"1073741824":13380,"1073741823":60,"16986":387540,"16987":387540,"6253":30000,"34825":30000,"6251":16440,"15303":387540,"1073741832":37560,"1073741833":32880,"1073741830":16320,"16171":387540,"1073741831":13020},"16169":{"1073741839":371460,"1073741838":438840,"1073741835":382740,"1073741834":380280,"1073741837":368220,"1073741836":371580,"1073741841":384900,"1073741842":391920,"1073741843":357420,"1073741844":374640,"660331":387540,"16169":60,"1073741840":373560,"1073741829":373080,"1073741828":376380,"1073741827":428220,"1073741826":368280,"660286":400560,"1073741825":386220,"1073741824":374160,"1073741823":387540,"16986":60,"16987":60,"34825":371580,"6253":391500,"6251":380400,"15303":60,"1073741832":366960,"1073741833":371640,"1073741830":380220,"16171":60,"1073741831":400620},"660314":{"35304":496740,"35305":472980,"15280":562680,"15207":562680},"1073741840":{"1073741839":5400,"1073741838":70860,"1073741835":20460,"1073741834":16080,"1073741837":27540,"1073741836":3240,"1073741841":12120,"1073741842":64680,"1073741843":40980,"1073741844":60780,"660331":20640,"16169":373560,"1073741840":60,"1073741829":9180,"1073741828":3840,"1073741827":57900,"1073741826":36780,"660286":31020,"1073741825":12840,"1073741824":14640,"1073741823":20580,"16986":373560,"16987":373560,"34825":3240,"6253":65040,"6251":30660,"15303":373560,"1073741832":17400,"1073741833":13620,"1073741830":30420,"16171":373560,"1073741831":31020},"1073741829":{"1073741839":4500,"1073741838":75420,"1073741835":13200,"1073741834":8940,"1073741837":36540,"1073741836":6720,"1073741841":12780,"1073741842":73740,"1073741843":49320,"1073741844":69960,"660331":15600,"16169":373080,"1073741840":9180,"1073741829":60,"1073741828":7320,"1073741827":62040,"1073741826":45840,"660286":28080,"1073741825":17520,"1073741824":5520,"1073741823":15540,"16986":373080,"16987":373080,"34825":6720,"6253":74100,"6251":21900,"15303":373080,"1073741832":26040,"1073741833":22680,"1073741830":21660,"16171":373080,"1073741831":28140},"1073741828":{"1073741839":5400,"1073741838":69360,"1073741835":16920,"1073741834":12600,"1073741837":30780,"1073741836":4800,"1073741841":8640,"1073741842":66600,"1073741843":44520,"1073741844":63480,"660331":16800,"16169":376380,"1073741840":3840,"1073741829":7320,"1073741828":60,"1073741827":56220,"1073741826":39900,"660286":27240,"1073741825":11040,"1073741824":12240,"1073741823":16740,"16986":376380,"16987":376380,"34825":4800,"6253":66960,"6251":27540,"15303":376380,"1073741832":21000,"1073741833":16800,"1073741830":27360,"16171":376380,"1073741831":27300},"1073741827":{"1073741839":61680,"1073741838":13500,"1073741835":59160,"1073741834":58860,"1073741837":60540,"1073741836":60660,"1073741841":49320,"1073741842":56820,"1073741843":73380,"1073741844":68460,"660331":53460,"16169":428220,"1073741840":57900,"1073741829":62040,"1073741828":56220,"1073741827":60,"1073741826":62520,"660286":44520,"1073741825":45240,"1073741824":63900,"1073741823":53460,"16986":428220,"16987":428220,"34825":60660,"6253":57420,"6251":68940,"15303":428220,"1073741832":61260,"1073741833":56820,"1073741830":68940,"16171":428220,"1073741831":44520},"1073741826":{"1073741839":41460,"1073741838":71160,"1073741835":56700,"1073741834":52500,"1073741837":9300,"1073741836":39060,"1073741841":44160,"1073741842":34500,"1073741843":10980,"1073741844":24960,"660331":55260,"16169":368280,"1073741840":36780,"1073741829":45840,"1073741828":39900,"1073741827":62520,"1073741826":60,"660286":61260,"1073741825":38580,"1073741824":51360,"1073741823":55200,"16986":368280,"16987":368280,"34825":39060,"6253":34560,"6251":67440,"15303":368280,"1073741832":20220,"1073741833":23160,"1073741830":67200,"16171":368280,"1073741831":61260},"660286":{"1073741839":30780,"1073741838":57840,"1073741835":18000,"1073741834":20280,"1073741837":53460,"1073741836":31620,"1073741841":19080,"1073741842":78540,"1073741843":68520,"1073741844":81000,"660331":12960,"16169":400560,"1073741840":31020,"1073741829":28080,"1073741828":27240,"1073741827":44520,"1073741826":61260,"1073741825":22860,"1073741824":26340,"1073741823":13020,"16986":400560,"16987":400560,"34825":31620,"6253":79020,"6251":25020,"15303":400560,"1073741832":46080,"1073741833":40860,"1073741830":25020,"16171":400560,"1073741831":60},"1073741825":{"1073741839":16440,"1073741838":58320,"1073741835":21060,"1073741834":18120,"1073741837":30600,"1073741836":15420,"1073741841":6900,"1073741842":60120,"1073741843":45660,"1073741844":59820,"660331":17760,"16169":386220,"1073741840":12840,"1073741829":17520,"1073741828":11040,"1073741827":45240,"1073741826":38580,"1073741825":60,"660286":22860,"1073741824":20940,"1073741823":17700,"16986":386220,"16987":386220,"34825":15420,"6253":60600,"6251":33000,"15303":386220,"1073741832":23640,"1073741833":18300,"1073741830":32820,"16171":386220,"1073741831":22920},"1073741824":{"1073741839":9960,"1073741838":77400,"1073741835":9300,"1073741834":6060,"1073741837":42060,"1073741836":12300,"1073741841":14940,"1073741842":78840,"1073741843":54780,"1073741844":75420,"660331":13380,"16169":374160,"1073741840":14640,"1073741829":5520,"1073741828":12240,"1073741827":63900,"1073741826":51360,"660286":26340,"1073741825":20940,"1073741824":60,"1073741823":13320,"16986":374160,"16987":374160,"34825":12300,"6253":79200,"6251":16380,"15303":374160,"1073741832":31560,"1073741833":28200,"1073741830":16200,"16171":374160,"1073741831":26400},"1073741823":{"1073741839":18960,"1073741838":67020,"1073741835":5700,"1073741834":7260,"1073741837":46500,"1073741836":20220,"1073741841":11160,"1073741842":77760,"1073741843":60900,"1073741844":77340,"660331":60,"16169":387540,"1073741840":20580,"1073741829":15540,"1073741828":16740,"1073741827":53460,"1073741826":55200,"660286":13020,"1073741825":17700,"1073741824":13320,"1073741823":60,"16986":387540,"16987":387540,"34825":20220,"6253":78180,"6251":16440,"15303":387540,"1073741832":37440,"1073741833":32760,"1073741830":16380,"16171":387540,"1073741831":13080},"16986":{"1073741839":371460,"1073741838":438840,"1073741835":382740,"1073741834":380280,"1073741837":368220,"1073741836":371580,"1073741841":384900,"1073741842":391920,"1073741843":357420,"1073741844":374640,"660331":387540,"16169":60,"1073741840":373560,"1073741829":373080,"1073741828":376380,"1073741827":428220,"1073741826":368280,"660286":400560,"1073741825":386220,"1073741824":374160,"1073741823":387540,"16986":60,"16987":60,"34825":371580,"6253":391500,"6251":380400,"15303":60,"1073741832":366960,"1073741833":371640,"1073741830":380220,"16171":60,"1073741831":400620},"16987":{"1073741839":371460,"1073741838":438840,"1073741835":382740,"1073741834":380280,"1073741837":368220,"1073741836":371580,"1073741841":384900,"1073741842":391920,"1073741843":357420,"1073741844":374640,"660331":387540,"16169":60,"1073741840":373560,"1073741829":373080,"1073741828":376380,"1073741827":428220,"1073741826":368280,"660286":400560,"1073741825":386220,"1073741824":374160,"1073741823":387540,"16986":60,"16987":60,"34825":371580,"6253":391500,"6251":380400,"15303":60,"1073741832":366960,"1073741833":371640,"1073741830":380220,"16171":60,"1073741831":400620},"34825":{"1073741839":2340,"1073741838":73740,"1073741835":19200,"1073741834":14820,"1073741837":29760,"1073741836":60,"1073741841":13440,"1073741842":67680,"1073741843":42600,"1073741844":63360,"660331":30000,"16169":371580,"1073741840":3240,"1073741829":6720,"1073741828":4800,"1073741827":60660,"1073741826":39060,"660286":31620,"1073741825":15420,"1073741824":12300,"1073741823":20220,"16986":371580,"16987":371580,"34825":60,"6253":30000,"6251":28620,"15303":371580,"1073741832":19260,"1073741833":16020,"1073741830":28380,"16171":371580,"1073741831":31680},"6253":{"1073741839":70380,"1073741838":59400,"1073741835":81600,"1073741834":78240,"1073741837":42120,"1073741836":68040,"1073741841":67440,"1073741842":600,"1073741843":41760,"1073741844":16920,"660331":30000,"16169":391500,"1073741840":65040,"1073741829":74100,"1073741828":66960,"1073741827":57420,"1073741826":34560,"660286":79020,"1073741825":60600,"1073741824":79200,"1073741823":78180,"16986":391500,"16987":391500,"6253":60,"34825":30000,"6251":93420,"15303":391500,"1073741832":52200,"1073741833":52740,"1073741830":93240,"16171":391500,"1073741831":79080},"6251":{"1073741839":26400,"1073741838":82440,"1073741835":11880,"1073741834":15240,"1073741837":58200,"1073741836":28620,"1073741841":26100,"1073741842":93000,"1073741843":71220,"1073741844":91020,"660331":16440,"16169":380400,"1073741840":30660,"1073741829":21900,"1073741828":27540,"1073741827":68940,"1073741826":67440,"660286":25020,"1073741825":33000,"1073741824":16380,"1073741823":16440,"16986":380400,"16987":380400,"34825":28620,"6253":93420,"6251":60,"15303":380400,"1073741832":47880,"1073741833":44220,"1073741830":240,"16171":380400,"1073741831":25080},"15303":{"1073741839":371460,"1073741838":438840,"1073741835":382740,"1073741834":380280,"1073741837":368220,"1073741836":371580,"1073741841":384900,"1073741842":391920,"1073741843":357420,"1073741844":374640,"660331":387540,"16169":60,"1073741840":373560,"1073741829":373080,"1073741828":376380,"1073741827":428220,"1073741826":368280,"660286":400560,"1073741825":386220,"1073741824":374160,"1073741823":387540,"16986":60,"16987":60,"34825":371580,"6253":391500,"6251":380400,"15303":60,"1073741832":366960,"1073741833":371640,"1073741830":380220,"16171":60,"1073741831":400620},"1073741832":{"1073741839":21540,"1073741838":72660,"1073741835":37860,"1073741834":33480,"1073741837":10920,"1073741836":19260,"1073741841":27240,"1073741842":51960,"1073741843":23520,"1073741844":45060,"660331":37560,"16169":366960,"1073741840":17400,"1073741829":26040,"1073741828":21000,"1073741827":61260,"1073741826":20220,"660286":46080,"1073741825":23640,"1073741824":31560,"1073741823":37440,"16986":366960,"16987":366960,"34825":19260,"6253":52200,"6251":47880,"15303":366960,"1073741832":60,"1073741833":5340,"1073741830":47640,"16171":366960,"1073741831":46140},"1073741833":{"1073741839":18420,"1073741838":68580,"1073741835":33660,"1073741834":29400,"1073741837":13980,"1073741836":16020,"1073741841":22260,"1073741842":52440,"1073741843":28080,"1073741844":47280,"660331":32880,"16169":371640,"1073741840":13620,"1073741829":22680,"1073741828":16800,"1073741827":56820,"1073741826":23160,"660286":40860,"1073741825":18300,"1073741824":28200,"1073741823":32760,"16986":371640,"16987":371640,"34825":16020,"6253":52740,"6251":44220,"15303":371640,"1073741832":5340,"1073741833":60,"1073741830":44040,"16171":371640,"1073741831":40920},"660295":{"35304":354540,"35305":414060,"15280":316020,"15207":316020},"1073741830":{"1073741839":26160,"1073741838":82380,"1073741835":11700,"1073741834":15060,"1073741837":58020,"1073741836":28380,"1073741841":25920,"1073741842":92820,"1073741843":70980,"1073741844":90840,"660331":16320,"16169":380220,"1073741840":30420,"1073741829":21660,"1073741828":27360,"1073741827":68940,"1073741826":67200,"660286":25020,"1073741825":32820,"1073741824":16200,"1073741823":16380,"16986":380220,"16987":380220,"34825":28380,"6253":93240,"6251":240,"15303":380220,"1073741832":47640,"1073741833":44040,"1073741830":60,"16171":380220,"1073741831":25080},"16171":{"1073741839":371460,"1073741838":438840,"1073741835":382740,"1073741834":380280,"1073741837":368220,"1073741836":371580,"1073741841":384900,"1073741842":391920,"1073741843":357420,"1073741844":374640,"660331":387540,"16169":60,"1073741840":373560,"1073741829":373080,"1073741828":376380,"1073741827":428220,"1073741826":368280,"660286":400560,"1073741825":386220,"1073741824":374160,"1073741823":387540,"16986":60,"16987":60,"34825":371580,"6253":391500,"6251":380400,"15303":60,"1073741832":366960,"1073741833":371640,"1073741830":380220,"16171":60,"1073741831":400620},"1073741831":{"1073741839":30840,"1073741838":57780,"1073741835":18060,"1073741834":20340,"1073741837":53520,"1073741836":31680,"1073741841":19140,"1073741842":78540,"1073741843":68580,"1073741844":81000,"660331":13020,"16169":400620,"1073741840":31020,"1073741829":28140,"1073741828":27300,"1073741827":44520,"1073741826":61260,"660286":60,"1073741825":22920,"1073741824":26400,"1073741823":13080,"16986":400620,"16987":400620,"34825":31680,"6253":79080,"6251":25080,"15303":400620,"1073741832":46140,"1073741833":40920,"1073741830":25080,"1073741831":60,"16171":400620},"660320":{"35304":461700,"35305":498480,"15280":378660,"15207":378660},"15207":{"35304":439860,"35305":532380,"660318":448440,"660295":316020,"660320":378660,"660314":562680}}
+var rate = function(rateInputObj) {&#13;
+&#13;
+	this.evaluateByObj = function(dimObj) {&#13;
+		result = this.evaluate(dimObj);&#13;
+		if (!result || result.total &lt;= 0 || !rateInputObj.baseRate.total&#13;
+				|| rateInputObj.baseRate.total &lt;= 0) {&#13;
+			// warn(rateInputObj.rateId+':FinalTotalAmt='+result.total);&#13;
+			// warn(rateInputObj.rateId+':Dimensions: '+JSON.stringify(dimObj));&#13;
+			return 9999999;&#13;
+		}&#13;
+		return parseFloat(result.total);&#13;
+	};&#13;
+&#13;
+	this.evaluate = function(dimObj) {&#13;
+		this.evaluateBaseRate(dimObj);&#13;
+		this.evaluateAccessorials(dimObj);&#13;
+		this.evaluateStopOff(dimObj.stopOffs);&#13;
+		totalAmt = 0;&#13;
+		baseRateBasis = rateInputObj.baseRate.basis;&#13;
+		supportedBasis = rateInputObj.baseRate.supportedBasis;&#13;
+		if (rateInputObj.baseRate.total) {&#13;
+			totalAmt = rateInputObj.baseRate.total;&#13;
+		}&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				if (rateInputObj.accessorials[i]&#13;
+						&amp;&amp; rateInputObj.accessorials[i].total&#13;
+						&amp;&amp; (baseRateBasis || rateInputObj.accessorials[i].supportedBasis)) {&#13;
+					totalAmt = totalAmt + rateInputObj.accessorials[i].total;&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+		if (rateInputObj.stopBands &amp;&amp; rateInputObj.stopOffTotal) {&#13;
+			totalAmt = totalAmt + rateInputObj.stopOffTotal;&#13;
+		}&#13;
+		rateInputObj.total = parseFloat(totalAmt);&#13;
+		return rateInputObj;&#13;
+	};&#13;
+&#13;
+	this.evaluateBaseRate = function(dimObj) {&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		calculateCW = rateInputObj.calculateCW;&#13;
+		supportedBasis = false;&#13;
+		totalAmt = 0;&#13;
+&#13;
+		if (inputObj.basis === '/container') {&#13;
+			supportedBasis = true;&#13;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {&#13;
+				totalAmt = inputObj.amount&#13;
+						* dimObj.dims[inputObj.equipmentType];&#13;
+			} else {&#13;
+				return;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (inputObj.basis === '/package' || inputObj.basis === '/pallet'&#13;
+				|| inputObj.basis === '/unit' || inputObj.basis === '/carton'&#13;
+				|| inputObj.basis === '/LNM' || inputObj.basis === '/SQM'&#13;
+				|| inputObj.basis === '/MBF' || inputObj.basis === '/MSF'&#13;
+				|| inputObj.basis === '/LDM') {&#13;
+			supportedBasis = true;&#13;
+&#13;
+			if (dimObj.dims.genericQty &amp;&amp; dimObj.dims.genericQtyUnit&#13;
+					&amp;&amp; (dimObj.dims.genericQtyUnit === inputObj.basis)) {&#13;
+				genericqty = dimObj.dims.genericQty;&#13;
+				if (inputObj.minimumqty) {&#13;
+					genericqty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty&#13;
+							: dimObj.dims.genericQty;&#13;
+				}&#13;
+				totalAmt = inputObj.amount * genericqty;&#13;
+			} else if (dimObj.dims[inputObj.basis]) {&#13;
+				genericqty = dimObj.dims[inputObj.basis];&#13;
+				if (inputObj.minimumqty) {&#13;
+					genericqty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty&#13;
+							: dimObj.dims.genericQty;&#13;
+				}&#13;
+				totalAmt = inputObj.amount * genericqty;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/FLAT') {&#13;
+			supportedBasis = true;&#13;
+			totalAmt = inputObj.amount;&#13;
+		}&#13;
+		if (dimObj.dims.wtInKG &amp;&amp; inputObj.wtConvRate) {&#13;
+			supportedBasis = true;&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+&#13;
+			// GTN-25018 : Chargeable Weight scenario.&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			dimFactor = rateInputObj.dimFactor;&#13;
+			dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+			volumetricWeight = 0.0;&#13;
+			if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+				if (dimFactorConv === 'cm/kg') {&#13;
+					volumetricWeight = (volume * 1000000) / dimFactor;&#13;
+				} else if (dimFactorConv === 'in/lb') {&#13;
+					volumetricWeight = (volume * 61024) / dimFactor;&#13;
+					volumetricWeight = volumetricWeight * 0.45359237;&#13;
+			    }&#13;
+			}&#13;
+			&#13;
+			weight = (weight * inputObj.wtConvRate) &gt; (volumetricWeight  * inputObj.wtConvRate) ? weight&#13;
+					: volumetricWeight;&#13;
+&#13;
+			if (inputObj.minWeight) {&#13;
+				weight = weight &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+						: weight;&#13;
+				inputObj.wtConvRate = 1;&#13;
+			}&#13;
+			totalAmt = this.evaluateRateBands(weight, inputObj.amount,&#13;
+					inputObj.wtConvRate);&#13;
+		}&#13;
+&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/WM') {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			wmUnit = 0;&#13;
+			supportedBasis = true;&#13;
+			if (weight) {&#13;
+				wmUnit = weight * inputObj.wtConvRate;&#13;
+			}&#13;
+			if (volume) {&#13;
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+			}&#13;
+			if (inputObj.minWeight) {&#13;
+				wmUnit = wmUnit &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+						: wmUnit;&#13;
+				inputObj.wtConvRate = 1;&#13;
+			}&#13;
+			totalAmt = inputObj.amount * wmUnit;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.volInCBM &amp;&amp; inputObj.volConvRate) {&#13;
+			supportedBasis = true;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+&#13;
+			if (inputObj.minimumqty) {&#13;
+				volume = volume &lt; inputObj.minimumqty ? inputObj.minimumqty&#13;
+						: volume;&#13;
+				inputObj.volConvRate = 1;&#13;
+			}&#13;
+			tempAmt = this.evaluateRateBands(volume, inputObj.amount,&#13;
+					inputObj.volConvRate);&#13;
+			totalAmt = totalAmt &gt; tempAmt ? totalAmt : tempAmt;&#13;
+		} else if ((dimObj.dims.dstInMile&#13;
+				|| (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) || rateInputObj.distance)&#13;
+				&amp;&amp; inputObj.dstConvRate) {&#13;
+			supportedBasis = true;&#13;
+			distance = 0.0;&#13;
+			if (dimObj.dims.dstInMile) {&#13;
+				distance = dimObj.dims.dstInMile;&#13;
+			} else if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {&#13;
+				distance = this.getEffectiveDistance(dimObj);&#13;
+			} else {&#13;
+				distance = rateInputObj.distance;&#13;
+			}&#13;
+			totalAmt = this.evaluateRateBands(distance, inputObj.amount,&#13;
+					inputObj.dstConvRate);&#13;
+		}&#13;
+&#13;
+		if (inputObj.basis === 'pricingbands') {&#13;
+			supportedBasis = true;&#13;
+			bandAmt = 0.0;&#13;
+			mUnit = 0.0;&#13;
+			convRate = 0.0;&#13;
+			amount = 0.0;&#13;
+			if (inputObj.isdeficitpricing) {&#13;
+				if (inputObj.wtConvRate) {&#13;
+					mUnit = dimObj.dims.wtInKG;&#13;
+					convRate = inputObj.wtConvRate;&#13;
+					&#13;
+					// GTN-27410 : Chargeable Weight scenario for TL and LTL.&#13;
+					volume = dimObj.dims.volInCBM;&#13;
+					dimFactor = rateInputObj.dimFactor;&#13;
+					dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+					volumetricWeight = 0.0;&#13;
+					if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+						if (dimFactorConv === 'cm/kg') {&#13;
+							volumetricWeight = (volume * 1000000) / dimFactor;&#13;
+						} else if (dimFactorConv === 'in/lb') {&#13;
+							volumetricWeight = (volume * 61024) / dimFactor;&#13;
+							volumetricWeight = volumetricWeight * 0.45359237;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					weight = (weight * inputObj.wtConvRate) &gt; (volumetricWeight * convRate) ? weight&#13;
+							: volumetricWeight;&#13;
+&#13;
+					if (inputObj.minWeight) {&#13;
+						weight = weight &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+								: weight;&#13;
+						inputObj.wtConvRate = 1;&#13;
+						convRate = 1;&#13;
+					}&#13;
+				} else if (inputObj.volConvRate) {&#13;
+					mUnit = dimObj.dims.volInCBM;&#13;
+					convRate = inputObj.volConvRate;&#13;
+				} else if (inputObj.dstConvRate) {&#13;
+					mUnit = dimObj.dims.dstInMile;&#13;
+					convRate = inputObj.dstConvRate;&#13;
+				} else {&#13;
+					if (inputObj.weightbreakbasis&#13;
+							&amp;&amp; (inputObj.weightbreakbasis === '/package'&#13;
+									|| inputObj.weightbreakbasis === '/pallet'&#13;
+									|| inputObj.weightbreakbasis === '/unit'&#13;
+									|| inputObj.weightbreakbasis === '/carton'&#13;
+									|| inputObj.weightbreakbasis === '/LNM'&#13;
+									|| inputObj.weightbreakbasis === '/SQM'&#13;
+									|| inputObj.weightbreakbasis === '/MBF'&#13;
+									|| inputObj.weightbreakbasis === '/MSF' || inputObj.weightbreakbasis === '/LDM')) {&#13;
+						if (dimObj.dims.genericQty&#13;
+								&amp;&amp; dimObj.dims.genericQtyUnit&#13;
+								&amp;&amp; (dimObj.dims.genericQtyUnit === inputObj.weightbreakbasis)) {&#13;
+							mUnit = dimObj.dims.genericQty;&#13;
+							convRate = 1;&#13;
+						} else if (dimObj.dims[inputObj.weightbreakbasis]) {&#13;
+							mUnit = dimObj.dims[inputObj.weightbreakbasis];&#13;
+							convRate = 1;&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+&#13;
+				if (inputObj.isdeficitpricing === 'yes') {&#13;
+					if (rateInputObj.rateBands&#13;
+							&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+							if ((mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+									|| (mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; mUnit &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+								if (rateInputObj.rateBands[i].upperbreak == 999999999) {&#13;
+									bandAmt = rateInputObj.rateBands[i].amount&#13;
+											* mUnit * convRate;&#13;
+									amount = rateInputObj.rateBands[i].amount;&#13;
+								} else {&#13;
+									bandAmt = rateInputObj.rateBands[i + 1].amount&#13;
+											* rateInputObj.rateBands[i + 1].lowerbreak&#13;
+											* convRate;&#13;
+									actualPrice = rateInputObj.rateBands[i].amount&#13;
+											* mUnit * convRate;&#13;
+&#13;
+									if (bandAmt &gt; actualPrice) {&#13;
+										bandAmt = actualPrice;&#13;
+										amount = rateInputObj.rateBands[i].amount;&#13;
+									} else {&#13;
+										amount = rateInputObj.rateBands[i + 1].amount;&#13;
+									}&#13;
+								}&#13;
+								break;&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				} else {&#13;
+					if (rateInputObj.rateBands&#13;
+							&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+							if ((mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+									|| (mUnit &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; mUnit &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+								bandAmt = rateInputObj.rateBands[i].amount&#13;
+										* mUnit * convRate;&#13;
+								amount = rateInputObj.rateBands[i].amount;&#13;
+								break;&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+			rateInputObj.amount = parseFloat(amount);&#13;
+			totalAmt = bandAmt;&#13;
+		}&#13;
+&#13;
+		if (!supportedBasis) {&#13;
+			switch (inputObj.basis) {&#13;
+			case '/container':&#13;
+			case '/CBM':&#13;
+			case '/WM':&#13;
+			case '/kg':&#13;
+			case '/lb':&#13;
+			case '/ton':&#13;
+			case '/MI':&#13;
+			case '/KM':&#13;
+				rateInputObj.baseRate.supportedBasis = true;&#13;
+				supportedBasis = true;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (!supportedBasis) {&#13;
+			totalAmt = inputObj.amount;&#13;
+		}&#13;
+&#13;
+		if (inputObj.minAmount) {&#13;
+			totalAmt = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount&#13;
+					: totalAmt;&#13;
+		}&#13;
+		if (inputObj.maxAmount) {&#13;
+			totalAmt = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount&#13;
+					: totalAmt;&#13;
+		}&#13;
+&#13;
+		rateInputObj.baseRate.supportedBasis = supportedBasis;&#13;
+		rateInputObj.baseRate.total = parseFloat(totalAmt);&#13;
+	};&#13;
+&#13;
+	this.getEffectiveDistance = function(dimObj) {&#13;
+		distance = 0.0;&#13;
+		for (i = 0; i &lt; dimObj.stopOffs.length - 1; i++) {&#13;
+			origStop = dimObj.stopOffs[i].stop;&#13;
+			if (origStop.indexOf('__') &gt; 0) {&#13;
+				origStop = origStop.slice(0, origStop.indexOf('__'));&#13;
+			}&#13;
+			destStop = dimObj.stopOffs[i + 1].stop;&#13;
+			if (destStop.indexOf('__') &gt; 0) {&#13;
+				destStop = destStop.slice(0, destStop.indexOf('__'));&#13;
+			}&#13;
+			if (origStop == destStop) {&#13;
+				distance = distance + 0.01;&#13;
+				continue;&#13;
+			}&#13;
+			if (!distanceMatrix[origStop]&#13;
+					|| !distanceMatrix[origStop][destStop]) {&#13;
+				if (rateInputObj.distance) {&#13;
+					return rateInputObj.distance;&#13;
+				} else {&#13;
+					return 9999999;&#13;
+				}&#13;
+			}&#13;
+			distance = distance + distanceMatrix[origStop][destStop];&#13;
+		}&#13;
+		return distance;&#13;
+	};&#13;
+&#13;
+	this.evaluateRateBands = function(totalDim, rateAmount, ConvRate) {&#13;
+		totalBandAmt = 0.0;&#13;
+		if (rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+			for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+				if ((totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+						|| (totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; totalDim &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+					totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateInputObj.rateBands[i].amount&#13;
+							: (rateInputObj.rateBands[i].amount * totalDim * ConvRate);&#13;
+					break;&#13;
+				}&#13;
+			}&#13;
+			if (totalBandAmt == 0 &amp;&amp; rateInputObj.baseRate) {&#13;
+				totalBandAmt = rateInputObj.baseRate.basis === '/kg' ? (rateInputObj.baseRate.amount&#13;
+						* totalDim * ConvRate)&#13;
+						: rateInputObj.baseRate.amount;&#13;
+			}&#13;
+		} else {&#13;
+			totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateAmount&#13;
+					: rateAmount * totalDim * ConvRate;&#13;
+		}&#13;
+		return parseFloat(totalBandAmt);&#13;
+	};&#13;
+&#13;
+	this.evaluateAccessorials = function(dimObj) {&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (var i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				if (rateInputObj.accessorials[i]) {&#13;
+					accObj = rateInputObj.accessorials[i];&#13;
+&#13;
+					totalAmt = 0;&#13;
+					if (accObj.basis === '/container') {&#13;
+						if (rateInputObj.baseRate.equipmentType&#13;
+								&amp;&amp; dimObj.dims[rateInputObj.baseRate.equipmentType]) {&#13;
+							totalAmt = accObj.amount&#13;
+									* dimObj.dims[rateInputObj.baseRate.equipmentType];&#13;
+						} else {&#13;
+							rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+							continue;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '%') {&#13;
+						netfreightcostelems = rateInputObj.netfreightcostelems;&#13;
+						if (netfreightcostelems&#13;
+								&amp;&amp; netfreightcostelems.length &gt; 0) {&#13;
+							totalSurchargeAmount = 0;&#13;
+							for (var j = 0; j &lt; netfreightcostelems.length; j++) {&#13;
+								netFreightSurcharge = netfreightcostelems[j];&#13;
+								surchargeAmount = this.getSurchargeAmount(&#13;
+										dimObj, netFreightSurcharge);&#13;
+								totalSurchargeAmount = totalSurchargeAmount&#13;
+										+ surchargeAmount;&#13;
+							}&#13;
+&#13;
+							baseRate = rateInputObj.baseRate.total;&#13;
+							totalAmt = ((baseRate + totalSurchargeAmount) * accObj.amount) / 100;&#13;
+						} else {&#13;
+							baseRate = rateInputObj.baseRate.total;&#13;
+							totalAmt = (baseRate * accObj.amount) / 100;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '/delivery'&#13;
+							|| accObj.basis === '/entry'&#13;
+							|| accObj.basis === '/shipment') {&#13;
+						totalAmt = accObj.amount;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '/package'&#13;
+							|| accObj.basis === '/pallet'&#13;
+							|| accObj.basis === '/unit'&#13;
+							|| accObj.basis === '/carton'&#13;
+							|| accObj.basis === '/LNM'&#13;
+							|| accObj.basis === '/SQM'&#13;
+							|| accObj.basis === '/MSF'&#13;
+							|| accObj.basis === '/MBF'&#13;
+							|| accObj.basis === '/LDM') {&#13;
+						if (dimObj.dims.genericQty&#13;
+								&amp;&amp; dimObj.dims.genericQtyUnit&#13;
+								&amp;&amp; (dimObj.dims.genericQtyUnit === accObj.basis)) {&#13;
+							totalAmt = accObj.amount * dimObj.dims.genericQty;&#13;
+						} else if (dimObj.dims[accObj.basis]) {&#13;
+							totalAmt = accObj.amount&#13;
+									* dimObj.dims[accObj.basis];&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (dimObj.dims.wtInKG &amp;&amp; accObj.wtConvRate) {&#13;
+						weight = dimObj.dims.wtInKG;&#13;
+&#13;
+						// GTN-25018 : Chargeable Weight scenario.&#13;
+						if (accObj.calculatedWeightBasis&#13;
+								&amp;&amp; accObj.calculatedWeightBasis === 'Chargeable Weight') {&#13;
+							dimFactor = rateInputObj.dimFactor;&#13;
+							dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+							volumetricWeight = 0.0;&#13;
+							if (dimFactor &gt; 0 &amp;&amp; dimFactorConv&#13;
+									&amp;&amp; dimObj.dims.volInCBM) {&#13;
+								if (dimFactorConv === 'cm/kg') {&#13;
+									volumetricWeight = (dimObj.dims.volInCBM * 1000000)&#13;
+											/ dimFactor;&#13;
+								} else if (dimFactorConv === 'in/lb') {&#13;
+									volumetricWeight = (dimObj.dims.volInCBM * 61024)&#13;
+											/ dimFactor;&#13;
+									volumetricWeight = volumetricWeight * 0.45359237;&#13;
+								}&#13;
+							}&#13;
+							weight = (weight * accObj.wtConvRate) &gt; (volumetricWeight * accObj.wtConvRate) ? weight&#13;
+									: volumetricWeight;&#13;
+						}&#13;
+&#13;
+						if (accObj.minWeight) {&#13;
+							weight = weight &lt; accObj.minWeight ? accObj.minWeight&#13;
+									: weight;&#13;
+						}&#13;
+						totalAmt = accObj.amount * weight * accObj.wtConvRate;&#13;
+					}&#13;
+					if (dimObj.dims.volInCBM &amp;&amp; accObj.volConvRate) {&#13;
+						volume = dimObj.dims.volInCBM;&#13;
+						if (accObj.minVolume) {&#13;
+							volume = volume &lt; accObj.minVolume ? accObj.minVolume&#13;
+									: volume;&#13;
+						}&#13;
+						totalAmt = accObj.amount * volume * accObj.volConvRate;&#13;
+					}&#13;
+&#13;
+					if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1))&#13;
+							&amp;&amp; accObj.dstConvRate) {&#13;
+						distance = 0.0;&#13;
+						if (dimObj.dims.dstInMile) {&#13;
+							distance = dimObj.dims.dstInMile;&#13;
+						} else {&#13;
+							distance = this.getEffectiveDistance(dimObj);&#13;
+						}&#13;
+						totalAmt = accObj.amount * distance&#13;
+								* accObj.dstConvRate;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis == '/FLAT') {&#13;
+						totalAmt = accObj.amount;&#13;
+					}&#13;
+					if (accObj.amount &amp;&amp; accObj.basis == '/WM') {&#13;
+						weight = dimObj.dims.wtInKG;&#13;
+						volume = dimObj.dims.volInCBM;&#13;
+						wmUnit = 0;&#13;
+						if (weight) {&#13;
+							wmUnit = weight * accObj.wtConvRate;&#13;
+						}&#13;
+						if (volume) {&#13;
+							wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+						}&#13;
+						totalAmt = accObj.amount * wmUnit;&#13;
+					}&#13;
+&#13;
+					if (rateInputObj.baseRate.basis == accObj.basis&#13;
+							&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+						totalAmt = accObj.amount;&#13;
+						accObj.supportedBasis = true;&#13;
+					} else if (rateInputObj.baseRate.basis != accObj.basis&#13;
+							&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+						totalAmt = 0;&#13;
+					}&#13;
+&#13;
+					if (accObj.minAmount) {&#13;
+						totalAmt = totalAmt &lt; accObj.minAmount ? accObj.minAmount&#13;
+								: totalAmt;&#13;
+					}&#13;
+					if (accObj.maxAmount) {&#13;
+						totalAmt = totalAmt &gt; accObj.maxAmount ? accObj.maxAmount&#13;
+								: totalAmt;&#13;
+					}&#13;
+&#13;
+					if (!dimObj.dims.isHazMat &amp;&amp; accObj.isHazMat) {&#13;
+						totalAmt = 0;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis == '/stop') {&#13;
+						rateInputObj.stopOffTotal = parseFloat(totalAmt);&#13;
+					} else {&#13;
+						rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+	};&#13;
+&#13;
+	this.getSurchargeAmount = function(dimObj, surcharge) {&#13;
+		surchargeAmount = 0;&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		if (surcharge.basis === '/container') {&#13;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {&#13;
+				surchargeAmount = surcharge.amount&#13;
+						* dimObj.dims[inputObj.equipmentType];&#13;
+			} else {&#13;
+				return surchargeAmount;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (surcharge.basis === '/delivery' || surcharge.basis === '/entry'&#13;
+				|| surcharge.basis === '/shipment') {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+		}&#13;
+&#13;
+		if (surcharge.basis === '/package' || surcharge.basis === '/pallet'&#13;
+				|| surcharge.basis === '/unit' || surcharge.basis === '/carton'&#13;
+				|| surcharge.basis === '/LNM' || surcharge.basis === '/SQM'&#13;
+				|| surcharge.basis === '/MSF' || surcharge.basis === '/MBF'&#13;
+				|| accObj.basis === '/LDM') {&#13;
+			if (dimObj.dims.genericQty &amp;&amp; dimObj.dims.genericQtyUnit&#13;
+					&amp;&amp; (dimObj.dims.genericQtyUnit === surcharge.basis)) {&#13;
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;&#13;
+			} else if (dimObj.dims[surcharge.basis]) {&#13;
+				surchargeAmount = surcharge.amount&#13;
+						* dimObj.dims[surcharge.basis];&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/FLAT') {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.wtInKG &amp;&amp; surcharge.wtConvRate) {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			// GTN-25018 : Chargeable Weight scenario.&#13;
+			if (surcharge.calculatedWeightBasis&#13;
+					&amp;&amp; surcharge.calculatedWeightBasis === 'Chargeable Weight') {&#13;
+				dimFactor = rateInputObj.dimFactor;&#13;
+				dimFactorConv = rateInputObj.dimFactorConv;&#13;
+				volumetricWeight = 0.0;&#13;
+				if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+					if (dimFactorConv === 'cm/kg') {&#13;
+						volumetricWeight = (dimObj.dims.volInCBM * 1000000)&#13;
+								/ dimFactor;&#13;
+					} else if (dimFactorConv === 'in/lb') {&#13;
+						volumetricWeight = (dimObj.dims.volInCBM * 61024)&#13;
+								/ dimFactor;&#13;
+						volumetricWeight = volumetricWeight * 0.45359237;&#13;
+					}&#13;
+				}&#13;
+				weight = (weight * surcharge.wtConvRate) &gt; (volumetricWeight * surcharge.wtConvRate) ? weight&#13;
+						: volumetricWeight;&#13;
+			}&#13;
+			if (surcharge.minWeight) {&#13;
+				weight = weight &lt; surcharge.minWeight ? surcharge.minWeight&#13;
+						: weight;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * weight * surcharge.wtConvRate;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.volInCBM &amp;&amp; surcharge.volConvRate) {&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			if (surcharge.minVolume) {&#13;
+				volume = volume &lt; surcharge.minVolume ? surcharge.minVolume&#13;
+						: volume;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * volume * surcharge.volConvRate;&#13;
+		}&#13;
+&#13;
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/WM') {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			wmUnit = 0;&#13;
+			if (weight) {&#13;
+				wmUnit = weight * surcharge.wtConvRate;&#13;
+			}&#13;
+			if (volume) {&#13;
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+			}&#13;
+			if (surcharge.minWeight) {&#13;
+				wmUnit = wmUnit &lt; surcharge.minWeight ? surcharge.minWeight&#13;
+						: wmUnit;&#13;
+				surcharge.wtConvRate = 1;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * wmUnit;&#13;
+		}&#13;
+&#13;
+		if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1))&#13;
+				&amp;&amp; surcharge.dstConvRate) {&#13;
+			if (surcharge.basis == '/stop') {&#13;
+				surchargeAmount = surcharge.amount * dimObj.stopOffs.length&#13;
+						* surcharge.dstConvRate;&#13;
+			} else {&#13;
+				distance = 0.0;&#13;
+				if (dimObj.dims.dstInMile) {&#13;
+					distance = dimObj.dims.dstInMile;&#13;
+				} else {&#13;
+					distance = this.getEffectiveDistance(dimObj);&#13;
+				}&#13;
+				surchargeAmount = surcharge.amount * distance&#13;
+						* surcharge.dstConvRate;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (rateInputObj.baseRate.basis == inputObj.basis&#13;
+				&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+			surcharge.supportedBasis = true;&#13;
+		} else if (rateInputObj.baseRate.basis != surcharge.basis&#13;
+				&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+			surchargeAmount = 0;&#13;
+		}&#13;
+&#13;
+		if (surcharge.minAmount) {&#13;
+			surchargeAmount = surchargeAmount &lt; surcharge.minAmount ? surcharge.minAmount&#13;
+					: surchargeAmount;&#13;
+		}&#13;
+		if (surcharge.maxAmount) {&#13;
+			surchargeAmount = surchargeAmount &gt; surcharge.maxAmount ? surcharge.maxAmount&#13;
+					: surchargeAmount;&#13;
+		}&#13;
+		return surchargeAmount;&#13;
+	}&#13;
+&#13;
+	this.evaluateStopOff = function(stopOffs) {&#13;
+		stopOffAmt = 0.0;&#13;
+		if (rateInputObj.stopBands &amp;&amp; stopOffs &amp;&amp; stopOffs.length &gt; 2) {&#13;
+			numOfStopOffs = stopOffs.length - 2;&#13;
+			remainingStopOffs = numOfStopOffs;&#13;
+			previousEnd = 0;&#13;
+&#13;
+			for (i = 0; i &lt; rateInputObj.stopBands.length; i++) {&#13;
+				start = rateInputObj.stopBands[i].start;&#13;
+				end = rateInputObj.stopBands[i].stop;&#13;
+				if (numOfStopOffs &gt; end) {&#13;
+					stopOffAmt = stopOffAmt&#13;
+							+ (rateInputObj.stopBands[i].costPerStop * (end - previousEnd));&#13;
+					remainingStopOffs -= (end - previousEnd);&#13;
+					previousEnd = end;&#13;
+&#13;
+				} else if (numOfStopOffs &gt;= start &amp;&amp; numOfStopOffs &lt;= end) {&#13;
+					stopOffAmt = stopOffAmt&#13;
+							+ (rateInputObj.stopBands[i].costPerStop * remainingStopOffs);&#13;
+					break;&#13;
+				}&#13;
+			}&#13;
+			rateInputObj.stopOffTotal = parseFloat(stopOffAmt);&#13;
+		}&#13;
+&#13;
+	};&#13;
+};var constraints = {/*##*/resources:{"2110":{"max_qty":0,"max_cube":0,"max_weight":0},"34":{"max_qty":2,"max_cube":63,"max_weight":29700},"2096":{"max_qty":0,"max_cube":0,"max_weight":0},"154":{"max_qty":2},"153":{"max_qty":1},"42":{"max_qty":2,"max_cube":0},"41":{"max_qty":1,"max_cube":0},"83":{"max_qty":2},"607":{"max_qty":0},"2101":{"max_qty":0,"max_cube":0,"max_weight":0},"2102":{"max_qty":0,"max_cube":0,"max_weight":0},"84":{"max_qty":2,"max_cube":85,"max_weight":18100},"85":{"max_qty":2,"max_cube":95,"max_weight":20000},"2066":{"max_qty":2},"66":{"max_qty":2,"max_cube":59,"max_weight":28600},"2065":{"max_qty":1},"25":{"max_qty":1,"max_cube":28,"max_weight":27490},"26":{"max_qty":2,"max_cube":59,"max_weight":28600},"129":{"max_qty":1},"27":{"max_qty":2},"161":{"max_qty":1},"0":{"max_qty":0},"2114":{"max_qty":0,"max_cube":0,"max_weight":0},"9":{"max_qty":1,"max_cube":28,"max_weight":28250},"74":{"max_qty":2,"max_cube":63,"max_weight":29700},"2058":{"max_qty":2},"2057":{"max_qty":1},"58":{"max_qty":2},"138":{"max_qty":2},"57":{"max_qty":1},"19":{"max_qty":2,"max_cube":75,"max_weight":27700},"137":{"max_qty":1},"17":{"max_qty":1},"18":{"max_qty":2,"max_cube":65,"max_weight":30200},"2074":{"max_qty":2},"2073":{"max_qty":1},"13":{"max_qty":2},"11":{"max_qty":2},"12":{"max_qty":2},"21":{"max_qty":2},"20":{"max_qty":2,"max_cube":90,"max_weight":30200},"65":{"max_qty":1,"max_cube":28,"max_weight":27490},"49":{"max_qty":1},"146":{"max_qty":2},"147":{"max_qty":2},"2082":{"max_qty":2},"351":{"max_qty":0},"10":{"max_qty":2,"max_cube":56,"max_weight":28800},"359":{"max_qty":0},"256":{"max_qty":0,"max_cube":1000,"max_weight":1500},"50":{"max_qty":2}}, 
+ /*##*/locations:{1073741839:{},1073741828:{},6253:{fixed_time:900,max_variable_time:900,LOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}},UNLOADING:{volume_time:{division_factor:1.0,time_factor:60},weight_time:{division_factor:1.0,time_factor:60}}},6251:{fixed_time:0,max_variable_time:0,LOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}},UNLOADING:{volume_time:{division_factor:1.0,time_factor:0},weight_time:{division_factor:1.0,time_factor:0}}}}}; evaluateConstraints = function evaluateConstraints(dimObj) {
+	var resourceData = this.id.split("_");
+	var resource = resourceData[1];
+	if ((resource in constraints.resources)) {
+		if ("max_weight" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.wtInKG &gt; constraints.resources[resource].max_weight)
+			return false;
+		if ("max_cube" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.volInCBM &gt; constraints.resources[resource].max_cube)
+			return false;
+	}
+	if (!(this.id in constraints.resources))
+		return true;
+
+	if ("maxstops" in constraints.resources[this.id]
+			&amp;&amp; dimObj.stopOffs.length &gt; constraints.resources[this.id].maxstops)
+		return false;
+	if ("max_distance" in constraints.resources[this.id]
+			&amp;&amp; isMaxDistanceCrossed(dimObj, this.id)) {
+		return false;
+	}
+	if ("maximum_single_hours" in constraints.resources[this.id]
+			&amp;&amp; isMaxDriveTimeCrossed(dimObj, this.id)) {
+		return false;
+	}
+	if ("maximum_out_of_route_miles" in constraints.resources[this.id]
+			&amp;&amp; isMaxOutOfRouteMile(dimObj, this.id)) {
+		return false;
+	}
+
+	return true;
+};
+
+isMaxOutOfRouteMile = function isMaxOutOfRouteMile(dimObj, resourceid) {
+	var totalDistance = 0;
+	var maxOutOfRouteMile = 0;
+	try {
+		totalDistance = distanceMatrix[sliceStopOffData(dimObj.stopOffs[0].stop)][sliceStopOffData(dimObj.stopOffs[dimObj.stopOffs.length - 1].stop)];
+	} catch (err) {
+		warn('error distanceMatrix  does not exist in  isMaxOutOfRouteMile');
+	}
+	;
+
+	try {
+		maxOutOfRouteMile = constraints.resources[resourceid].maximum_out_of_route_miles;
+
+	} catch (err) {
+		warn('maxOutOfRouteMile  does not exist in  for resourece' + resourceid);
+		maxOutOfRouteMile = 0;
+	}
+	;
+
+	if (constraints.resources[resourceid].maxoutofroutemilesunit == "%") {
+		maxOutOfRouteMile = ((maxOutOfRouteMile / 100) * totalDistance)
+				+ totalDistance;
+	} else {
+		maxOutOfRouteMile = maxOutOfRouteMile + totalDistance;
+
+		var totalDriveDistance = getTotalDriveDistance(dimObj);
+		if (!isNaN(maxOutOfRouteMile)) {
+			// warn('maxOutOfRouteMile==' + maxOutOfRouteMile);
+			// warn('totalDriveDistance=' + totalDriveDistance+' for
+			// resourceid'+ resourceid);
+
+		}
+	}
+	if (totalDriveDistance &gt; maxOutOfRouteMile) {
+		// warn('totalDriveDistance =='+totalDriveDistance
+		// +'-'+maxOutOfRouteMile);
+		return true;
+	}
+	// warn('in else totalDriveDistance =='+totalDriveDistance
+	// +'-'+maxOutOfRouteMile);
+	return false;
+};
+
+isMaxDistanceCrossed = function isMaxDistanceCrossed(dimObj, resourceid) {
+	var totalDriveDistance = getTotalDriveDistance(dimObj);
+	if (totalDriveDistance &gt; constraints.resources[resourceid].max_distance) {
+		return true;
+	}
+	return false;
+};
+
+isMaxDriveTimeCrossed = function isMaxDriveTimeCrossed(dimObj, resourceid) {
+	var totalDriveTime = getTotalDriveTime(dimObj);
+	if (totalDriveTime &gt; constraints.resources[resourceid].maximum_single_hours) {
+		return true;
+	}
+	return false;
+};
+
+getTotalDriveDistance = function getTotalDriveDistance(dimObj) {
+	var totalDriveDistance = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			var distance = distanceMatrix[stop1][stop2]
+			if (!isNaN(distance)) {
+				totalDriveDistance = totalDriveDistance + (distance);
+			} else {
+				warn('can give wrong data,since');
+				warn(' no dtm between ' + stop1 + '-' + stop2);
+			}
+		}
+	} catch (err) {
+		warn('distanceMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveDistance;
+};
+
+getTotalDriveTime = function getTotalDriveTime(dimObj) {
+	var totalDriveTime = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			totalDriveTime = totalDriveTime + (transitTimeMatrix[stop1][stop2]);
+		}
+	} catch (err) {
+		warn('transitTimeMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveTime;
+};
+
+sliceStopOffData = function sliceStopOffData(stopOffData) {
+	var stop = stopOffData;
+	try {
+
+		if (stopOffData.indexOf('__') &gt; 0) {
+			stop = stopOffData.slice(0, stopOffData.indexOf('__'));
+		}
+	} catch (err) {
+		warn('stopOffData incorrect for ' + stopOffData);
+	}
+	return JSON.parse(stop);
+};
+
+getProcessingTime = function getProcessingTime(dimObj) {
+
+	if (typeof dimObj.stopOffs[1] == 'undefined') {
+		return 1000000;
+	}
+	trasitTime = 0;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop
+					.indexOf('TRANSPORT') &gt; -1))) {
+		return 99999;
+	}
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	try {
+		trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]
+				+ finalunloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('errcause no transittime for ' + stop1 + '-- ' + stop2);
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+	return this.transitTime;
+	};
+
+getFinalThroughput = function getFinalThroughput(dimObj) {
+	var finalTroughputResult = '';
+
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length); stopIndex++) {
+		var stop = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+		if (dimObj.dims.wtInKG != 0) {
+			if ((stop in constraints.locations)
+					&amp;&amp; ("Throughput" in constraints.locations[stop])) {
+				finalTroughputResult = finalTroughputResult + stop + '--'
+						+ ((constraints.locations[stop].Throughput)) + '--';
+			}
+		}
+	}
+	return finalTroughputResult;
+};
+
+getDistanceBetweenStops = function getDistanceBetweenStops(dimObj) {
+	var distancebetweenstops = "";
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+		try {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+
+			distancebetweenstops = distancebetweenstops + "#" + stop1 + "_"
+					+ stop2;
+			distancebetweenstops = distancebetweenstops + "#"
+					+ distanceMatrix[stop1][stop2];
+		} catch (err) {
+			warn('err cause no distancebetweenstops ' + stop1 + ' -- ' + stop2);
+		}
+	}
+	return distancebetweenstops;
+};
+
+getFinalLoadThroughput = function getFinalLoadThroughput(dimObj) {
+	var varloadthroughput = 0;
+	stop1 = sliceStopOffData(dimObj.stopOffs[0].stop);
+	try {
+		if (stop1 in constraints.locations
+				&amp;&amp; ("LOADING" in constraints.locations[stop1])) {
+
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop1].LOADING["weight_time"].division_factor)
+						* constraints.locations[stop1].LOADING["weight_time"].time_factor;
+				varloadthroughput = varweightthrouput;
+			}
+
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop1].LOADING["volume_time"].division_factor)
+						* constraints.locations[stop1].LOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varloadthroughput) {
+					varloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop1].max_variable_time != 0) {
+			if (constraints.locations[stop1].max_variable_time &lt; varloadthroughput) {
+				varloadthroughput = constraints.locations[stop1].max_variable_time;
+			}
+		}
+		return constraints.locations[stop1].fixed_time + varloadthroughput;
+	} catch (err) {
+		warn('err calculating load throughput for stop ' + stop1 + '-- '
+				+ err.message);
+		return 0;
+	}
+};
+
+getFinalUnLoadThroughput = function getFinalUnLoadThroughput(dimObj) {
+	var varunloadthroughput = 0;
+	stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+	try {
+		if (stop2 in constraints.locations
+				&amp;&amp; "UNLOADING" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].UNLOADING["weight_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].UNLOADING["volume_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2].max_variable_time != 0) {
+			if (constraints.locations[stop2].max_variable_time &lt; varunloadthroughput) {
+				varunloadthroughput = constraints.locations[stop2].max_variable_time;
+			}
+		}
+		// warn('Unloading varunloadthroughput ' + varunloadthroughput + ' stop2
+		// ' + stop2+' fixed_time ' + constraints.locations[stop2].fixed_time);
+		return constraints.locations[stop2].fixed_time + varunloadthroughput;
+	} catch (err) {
+		warn('err calculating Unload throughput for stop ' + stop2 + '-- '
+				+ err.message);
+		return 0;
+	}
+};
+
+getOceanAirLoadingProcessingTime = function getOceanAirLoadingProcessingTime(dimObj) {
+
+	trasitTime = 0;
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	try {
+		trasitTime = finalloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('failed');
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+return this.transitTime;
+};
+
+getOceanAirUnloadingProcessingTime = function getOceanAirUnloadingProcessingTime(dimObj) {
+
+trasitTime = 0;
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput1(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	/*
+	 * warn('finalloadthroughput ' + finalloadthroughput + '
+	 * finalunloadthroughput ' + finalunloadthroughput + ' matrix ' +
+	 * transitTimeMatrix[stop1][stop2]);
+	 */
+	try {
+		trasitTime = finalunloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('unloading failed');
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getFinalUnLoadThroughput1 = function getFinalUnLoadThroughput1(dimObj) {
+	var varunloadthroughput = 0;
+	var stop2;
+	//warn(" calculating Unload throughput for stop ' + s");
+	try {
+	//warn(dimObj.stopOffs);
+	stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+	if(typeof stop2 == 'undefined')
+	  return 0;
+	  
+		if (stop2 in constraints.locations
+				&amp;&amp; "UNLOADING" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].UNLOADING["weight_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].UNLOADING["volume_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2].max_variable_time != 0) {
+			if (constraints.locations[stop2].max_variable_time &lt; varunloadthroughput) {
+				varunloadthroughput = constraints.locations[stop2].max_variable_time;
+			}
+		}
+		// warn('Unloading varunloadthroughput ' + varunloadthroughput + ' stop2
+		// ' + stop2+' fixed_time ' + constraints.locations[stop2].fixed_time);
+		return constraints.locations[stop2].fixed_time + varunloadthroughput;
+	} catch (err) {
+		//warn('err calculating Unload throughput for stop ' + stop2 + '-- '
+				//+ err.message);
+			//	warn("catch");
+		return 0;
+	}
+};</globalScript><applyConsolidationRules ttype="STRING">Yes</applyConsolidationRules><requirementConsolidationLevel ttype="I32">0</requirementConsolidationLevel></supplyChain><requirements ttype="MAP"><item><key ttype="STRING">121737157</key><value struct="LoadRequirement" ttype="STRUCT"><id ttype="STRING">121737157</id><name ttype="STRING">121737157</name><minDivision ttype="LIST"><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">wtInKG</unit><quantityPerDivision ttype="DOUBLE">100.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">volInCBM</unit><quantityPerDivision ttype="DOUBLE">28.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">/pallet</unit><quantityPerDivision ttype="DOUBLE">200.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">NumberOfTOS</unit><quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision></item></minDivision><referenceUnitName ttype="STRING">order</referenceUnitName><quantity ttype="I32">1</quantity><source ttype="STRING">1073741828__START_REQUIREMENT</source><destination ttype="STRING">1073741839__END_REQUIREMENT</destination><earliestDepartTime ttype="I64">1503082800</earliestDepartTime><earliestDeliveryTime ttype="I64">1503082860</earliestDeliveryTime><latestDepartTime ttype="I64">1503255600</latestDepartTime><latestDeliveryTime ttype="I64">1506754800</latestDeliveryTime></value></item></requirements><solutions ttype="LIST"><item struct="Solution" ttype="STRUCT"><id ttype="STRING">GTN_lEBIhJlFEeewNwYDK6wI5g</id><assignments ttype="MAP"><item><key ttype="STRING">GTN_q6K-WJlAEeeW6AYDK6wI5g</key><value struct="Assignment" ttype="STRUCT"><id ttype="STRING">GTN_q6K-WJlAEeeW6AYDK6wI5g</id><expectedTotalCost ttype="DOUBLE">6.6</expectedTotalCost><step ttype="STRING">96945__97207__121736630__SC______MULTI_STOP__1006</step><startTimeStamp ttype="I64">1503082800</startTimeStamp><endTimeStamp ttype="I64">1503088200</endTimeStamp><assignmentDetail ttype="STRING">{"units":{"volInCBM":28,"1003_9_SC":0,"1006_19_SC":0,"None":0,"1010_12_SC":0,"1003_20_SC":0,"/pallet":200,"1008_84_SC":0,"_20":0,"1008_10_SC":0,"NumberOfTOS":1,"1004_11_SC":0,"1006_83_SC":1,"1010_18_SC":0,"_84":0,"_85":0,"_83":0,"wtInKG":100,"1004_13_SC":0,"_9":0,"Dollar":0,"1006_85_SC":0,"_13":0,"_12":0,"_11":0,"_10":0,"_19":0,"_18":0},"stops":[{"stop":"1073741828__HOLD_REQUIREMENT"},{"stop":"1073741839__END_REQUIREMENT"}],"rate_details":[]}</assignmentDetail><isStatic ttype="BOOL">False</isStatic></value></item><item><key ttype="STRING">GTN_q6KuVJlAEeeW6AYDK6wI5g</key><value struct="Assignment" ttype="STRUCT"><id ttype="STRING">GTN_q6KuVJlAEeeW6AYDK6wI5g</id><expectedTotalCost ttype="DOUBLE">0.0</expectedTotalCost><step ttype="STRING">1073741828__START_REQUIREMENT</step><startTimeStamp ttype="I64">1503082800</startTimeStamp><endTimeStamp ttype="I64">1503082800</endTimeStamp><assignmentDetail ttype="STRING">{"units":{"volInCBM":28,"1003_9_SC":0,"1006_19_SC":0,"None":1,"1010_12_SC":0,"1003_20_SC":0,"/pallet":200,"1008_84_SC":0,"_20":0,"1008_10_SC":0,"NumberOfTOS":1,"1004_11_SC":0,"1006_83_SC":0,"1010_18_SC":0,"_84":0,"_85":0,"_83":0,"wtInKG":100,"1004_13_SC":0,"_9":0,"Dollar":0,"1006_85_SC":0,"_13":0,"_12":0,"_11":0,"_10":0,"_19":0,"_18":0},"stops":[{"stop":"1073741828__HOLD_REQUIREMENT"}],"rate_details":[]}</assignmentDetail><isStatic ttype="BOOL">False</isStatic></value></item><item><key ttype="STRING">GTN_q6J0SJlAEeeW6AYDK6wI5g</key><value struct="Assignment" ttype="STRUCT"><id ttype="STRING">GTN_q6J0SJlAEeeW6AYDK6wI5g</id><expectedTotalCost ttype="DOUBLE">0.0</expectedTotalCost><step ttype="STRING">1073741839__END_REQUIREMENT</step><startTimeStamp ttype="I64">1503088200</startTimeStamp><endTimeStamp ttype="I64">1503088200</endTimeStamp><assignmentDetail ttype="STRING">{"units":{"volInCBM":28,"1003_9_SC":0,"1006_19_SC":0,"None":1,"1010_12_SC":0,"1003_20_SC":0,"/pallet":200,"1008_84_SC":0,"_20":0,"1008_10_SC":0,"NumberOfTOS":1,"1004_11_SC":0,"1006_83_SC":0,"1010_18_SC":0,"_84":0,"_85":0,"_83":0,"wtInKG":100,"1004_13_SC":0,"_9":0,"Dollar":0,"1006_85_SC":0,"_13":0,"_12":0,"_11":0,"_10":0,"_19":0,"_18":0},"stops":[{"stop":"96945__97207__121736630__SC______MULTI_STOP__1006"}],"rate_details":[]}</assignmentDetail><isStatic ttype="BOOL">False</isStatic></value></item><item><key ttype="STRING">GTN_q6LQWplAEeeW6AYDK6wI5g</key><value struct="Assignment" ttype="STRUCT"><id ttype="STRING">GTN_q6LQWplAEeeW6AYDK6wI5g</id><expectedTotalCost ttype="DOUBLE">0.0</expectedTotalCost><step ttype="STRING">1073741828__HOLD_REQUIREMENT</step><startTimeStamp ttype="I64">1503082800</startTimeStamp><endTimeStamp ttype="I64">1503082800</endTimeStamp><assignmentDetail ttype="STRING">{"units":{"volInCBM":28,"1003_9_SC":0,"1006_19_SC":0,"None":1,"1010_12_SC":0,"1003_20_SC":0,"/pallet":200,"1008_84_SC":0,"_20":0,"1008_10_SC":0,"NumberOfTOS":1,"1004_11_SC":0,"1006_83_SC":0,"1010_18_SC":0,"_84":0,"_85":0,"_83":0,"wtInKG":100,"1004_13_SC":0,"_9":0,"Dollar":0,"1006_85_SC":0,"_13":0,"_12":0,"_11":0,"_10":0,"_19":0,"_18":0},"stops":[{"stop":"96945__97207__121736630__SC______MULTI_STOP__1006"},{"stop":"1073741828__START_REQUIREMENT"}],"rate_details":[]}</assignmentDetail><isStatic ttype="BOOL">False</isStatic></value></item></assignments><assigned_requirements ttype="MAP"><item><key ttype="STRING">121737157</key><value ttype="LIST"><item struct="AssignedRequirements" ttype="STRUCT"><requirementID ttype="STRING">121737157</requirementID><quantity ttype="I32">1</quantity><isStatic ttype="BOOL">False</isStatic><assignmentID ttype="STRING">GTN_q6KuVJlAEeeW6AYDK6wI5g</assignmentID><startTimeStamp ttype="I64">1503082800</startTimeStamp><endTimeStamp ttype="I64">1503082800</endTimeStamp><resourceInstance ttype="STRING">GTN_q520xplAEeeW6AYDK6wI5g</resourceInstance><pathID ttype="STRING">GTN_mnuosJlFEee1agYDK6wI5g</pathID></item><item struct="AssignedRequirements" ttype="STRUCT"><requirementID ttype="STRING">121737157</requirementID><quantity ttype="I32">1</quantity><isStatic ttype="BOOL">False</isStatic><assignmentID ttype="STRING">GTN_q6LQWplAEeeW6AYDK6wI5g</assignmentID><startTimeStamp ttype="I64">1503082800</startTimeStamp><endTimeStamp ttype="I64">1503082800</endTimeStamp><resourceInstance ttype="STRING">GTN_q520xplAEeeW6AYDK6wI5g</resourceInstance><pathID ttype="STRING">GTN_mnuosJlFEee1agYDK6wI5g</pathID></item><item struct="AssignedRequirements" ttype="STRUCT"><requirementID ttype="STRING">121737157</requirementID><quantity ttype="I32">1</quantity><resourceID ttype="STRING">1006_83_SC</resourceID><isStatic ttype="BOOL">False</isStatic><assignmentID ttype="STRING">GTN_q6K-WJlAEeeW6AYDK6wI5g</assignmentID><startTimeStamp ttype="I64">1503082800</startTimeStamp><endTimeStamp ttype="I64">1503088200</endTimeStamp><resourceInstance ttype="STRING">GTN_q6FZvplAEeeW6AYDK6wI5g</resourceInstance><pathID ttype="STRING">GTN_mnuosJlFEee1agYDK6wI5g</pathID></item><item struct="AssignedRequirements" ttype="STRUCT"><requirementID ttype="STRING">121737157</requirementID><quantity ttype="I32">1</quantity><isStatic ttype="BOOL">False</isStatic><assignmentID ttype="STRING">GTN_q6J0SJlAEeeW6AYDK6wI5g</assignmentID><startTimeStamp ttype="I64">1503088200</startTimeStamp><endTimeStamp ttype="I64">1503088200</endTimeStamp><resourceInstance ttype="STRING">GTN_q6HvZJlAEeeW6AYDK6wI5g</resourceInstance><pathID ttype="STRING">GTN_mnuosJlFEee1agYDK6wI5g</pathID></item></value></item></assigned_requirements></item></solutions><modelingLanguageVersion ttype="STRING">3.2</modelingLanguageVersion></OptimizationInstance>

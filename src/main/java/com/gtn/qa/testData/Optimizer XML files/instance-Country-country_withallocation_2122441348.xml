@@ -1,0 +1,1474 @@
+<OptimizationInstance struct="OptimizationInstance" ttype="STRUCT"><id ttype="STRING">Country-country_withallocation_2122441348</id><supplyChain struct="SupplyChain" ttype="STRUCT"><id ttype="STRING">Network</id><name ttype="STRING">supplyChainName12345</name><steps ttype="MAP"><item><key ttype="STRING">1073754426__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073754426__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 1073754426__42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,L5GH,29PF,22RN,P5GP,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">1073754426__HOLD_REQUIREMENT</item></nextSteps><operatingHours ttype="LIST"><item ttype="STRING">SHIPPING_1073754426_Operating_hour</item></operatingHours><resourcesAvailable ttype="SET"><item ttype="STRING">1012_12_S_2122440695</item><item ttype="STRING">1012_19_S_2122440695</item></resourcesAvailable><scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1073754427__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073754427__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 1073754427__42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,L5GH,29PF,22RN,P5GP,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">1002191__1002202__2122440688__S__P__D__TRANSPORT_REQUIREMENT__1012</item><item ttype="STRING">1002191__1002202__2122440689__S__P__D__TRANSPORT_REQUIREMENT__1012</item></nextSteps><operatingHours ttype="LIST"><item ttype="STRING">RECEIVING_1073754427_Operating_hour</item></operatingHours><resourcesAvailable ttype="SET"><item ttype="STRING">1012_12_S_2122440695</item><item ttype="STRING">1012_19_S_2122440695</item></resourcesAvailable><scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1073754425__HOLD_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073754425__HOLD_REQUIREMENT</id><narrativeDescription ttype="STRING">Hold at 1073754425 42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,L5GH,29PF,22RN,P5GP,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">1073754425__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1073754427__HOLD_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073754427__HOLD_REQUIREMENT</id><narrativeDescription ttype="STRING">Hold at 1073754427 42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,L5GH,29PF,22RN,P5GP,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">1073754427__CONSOLIDATE_REQUIREMENT_XDOC</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1073755425__START_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073755425__START_REQUIREMENT</id><narrativeDescription ttype="STRING">start at 1073755425</narrativeDescription><type ttype="I32">0</type><nextSteps ttype="SET"><item ttype="STRING">1073755425__HOLD_REQUIREMENT</item></nextSteps><operatingHours ttype="LIST"><item ttype="STRING">SHIPPING_1073755425_Operating_hour</item></operatingHours></value></item><item><key ttype="STRING">1073754426__HOLD_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073754426__HOLD_REQUIREMENT</id><narrativeDescription ttype="STRING">Hold at 1073754426 42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,L5GH,29PF,22RN,P5GP,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription><type ttype="I32">4</type><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1002191__1002202__2122440688__S__P__D__TRANSPORT_REQUIREMENT__1012</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1002191__1002202__2122440688__S__P__D__TRANSPORT_REQUIREMENT__1012</id><narrativeDescription ttype="STRING">Transport from 1002191__1002202__2122440688__S__P__D__TRANSPORT_REQUIREMENT__1012__L5GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">1073754426__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1012_19_S_2122440695</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":133.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_19"},"netfreightcostelems":[],"accessorials":[],"rateId":"2122440688"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":266400});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><rateValidityStart ttype="I64">1609488000</rateValidityStart><rateValidityEnd ttype="I64">1641024000</rateValidityEnd></value></item><item><key ttype="STRING">1073755423__1073755424__2122441212__SC______MULTI_STOP__1008__FLAT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073755423__1073755424__2122441212__SC______MULTI_STOP__1008__FLAT</id><narrativeDescription ttype="STRING">1073755423__1073755424__2122441212__SC______MULTI_STOP__1008__FLAT__42GP</narrativeDescription><type ttype="I32">6</type><resourcesAvailable ttype="SET"><item ttype="STRING">1008_10_SC_2122441214</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"dimFactor":0.0,"baseRate":{"amount":1600.0,"includeInNetFreight":null,"basis":"lps","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[],"dimFactorConv":"cm\/kg","rateId":"2122441212"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime><rateValidityStart ttype="I64">1641024000</rateValidityStart><rateValidityEnd ttype="I64">1665385200</rateValidityEnd><isHazardous ttype="STRING">Yes</isHazardous><scriptedCarrierConstraints ttype="STRING">resourceObj = new carrier({"id":"1008_10"}); resourceObj.evaluateCarrierConstraint.bind(resourceObj)</scriptedCarrierConstraints></value></item><item><key ttype="STRING">1073755426__1073755425__2122441345__SC______MULTI_STOP__1008__FLAT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073755426__1073755425__2122441345__SC______MULTI_STOP__1008__FLAT</id><narrativeDescription ttype="STRING">1073755426__1073755425__2122441345__SC______MULTI_STOP__1008__FLAT__22GP</narrativeDescription><type ttype="I32">6</type><resourcesAvailable ttype="SET"><item ttype="STRING">1008_9_SC_2122441347</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"dimFactor":0.0,"baseRate":{"amount":1200.0,"includeInNetFreight":null,"basis":"lps","isHazMat":null,"distArr":"","equipmentType":"_9"},"netfreightcostelems":[],"accessorials":[],"dimFactorConv":"cm\/kg","rateId":"2122441345"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime><rateValidityStart ttype="I64">1641024000</rateValidityStart><rateValidityEnd ttype="I64">1665385200</rateValidityEnd><isHazardous ttype="STRING">Yes</isHazardous><scriptedCarrierConstraints ttype="STRING">resourceObj = new carrier({"id":"1008_9"}); resourceObj.evaluateCarrierConstraint.bind(resourceObj)</scriptedCarrierConstraints></value></item><item><key ttype="STRING">1073754427__DECONSOLIDATE_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073754427__DECONSOLIDATE_REQUIREMENT</id><narrativeDescription ttype="STRING">XDOC  at 1073754427__42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,L5GH,29PF,22RN,P5GP,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription><type ttype="I32">3</type><nextSteps ttype="SET"><item ttype="STRING">1073754427__HOLD_REQUIREMENT</item></nextSteps><operatingHours ttype="LIST"><item ttype="STRING">SHIPPING_1073754427_Operating_hour</item></operatingHours><resourcesAvailable ttype="SET"><item ttype="STRING">1012_10_S_2122440694</item><item ttype="STRING">1012_9_S_2122440694</item></resourcesAvailable><scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirUnloadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1001502__1002191__2122440686__S__D__P__TRANSPORT_REQUIREMENT__1012</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1001502__1002191__2122440686__S__D__P__TRANSPORT_REQUIREMENT__1012</id><narrativeDescription ttype="STRING">Transport from 1001502__1002191__2122440686__S__D__P__TRANSPORT_REQUIREMENT__1012__42GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">1073754427__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1012_10_S_2122440694</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":125.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_10"},"netfreightcostelems":[],"accessorials":[],"rateId":"2122440686"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":439200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><rateValidityStart ttype="I64">1609488000</rateValidityStart><rateValidityEnd ttype="I64">1641024000</rateValidityEnd></value></item><item><key ttype="STRING">1073755426__END_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073755426__END_REQUIREMENT</id><narrativeDescription ttype="STRING">End at 1073755426 </narrativeDescription><type ttype="I32">5</type><operatingHours ttype="LIST"><item ttype="STRING">RECEIVING_1073755426_Operating_hour</item></operatingHours></value></item><item><key ttype="STRING">1073755425__1073755426__2122441345__SC______MULTI_STOP__1008__FLAT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073755425__1073755426__2122441345__SC______MULTI_STOP__1008__FLAT</id><narrativeDescription ttype="STRING">1073755425__1073755426__2122441345__SC______MULTI_STOP__1008__FLAT__22GP</narrativeDescription><type ttype="I32">6</type><nextSteps ttype="SET"><item ttype="STRING">1073755426__END_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1008_9_SC_2122441347</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"dimFactor":0.0,"baseRate":{"amount":1200.0,"includeInNetFreight":null,"basis":"lps","isHazMat":null,"distArr":"","equipmentType":"_9"},"netfreightcostelems":[],"accessorials":[],"dimFactorConv":"cm\/kg","rateId":"2122441345"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(function getProcessingTime(dimObj) {&#13;
+&#13;
+	if (typeof dimObj.stopOffs[1] == 'undefined') {&#13;
+		return 1000000;&#13;
+	}&#13;
+	trasitTime = 0;&#13;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);&#13;
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)&#13;
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop&#13;
+					.indexOf('TRANSPORT') &gt; -1))) {&#13;
+		return 99999;&#13;
+	}&#13;
+	var finalloadthroughput = 0;&#13;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);&#13;
+	if(isNaN(finalloadthroughput)){&#13;
+		finalloadthroughput=0;&#13;
+	}&#13;
+		&#13;
+	var finalunloadthroughput = 0;&#13;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);&#13;
+	if(isNaN(finalunloadthroughput)){&#13;
+		finalunloadthroughput=0;&#13;
+	}	&#13;
+&#13;
+	/*warn('finalloadthroughput ' + finalloadthroughput&#13;
+			+ ' finalunloadthroughput ' + finalunloadthroughput + ' matrix '&#13;
+			+ transitTimeMatrix[stop1][stop2]);*/&#13;
+	try {&#13;
+		&#13;
+		if(transitTimeMatrix[stop1] &amp;&amp; transitTimeMatrix[stop1][stop2]) {&#13;
+			trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]&#13;
+			+ finalunloadthroughput;&#13;
+		}&#13;
+		&#13;
+		if (isNaN(trasitTime)) {&#13;
+			warn('errcause no transittime for' + stop1 + '-- ' + stop2);&#13;
+			return 0;&#13;
+		}&#13;
+	} catch (err) {&#13;
+		warn('err cause-- ' + err.message);&#13;
+		return 0;&#13;
+		&#13;
+	}&#13;
+	//warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);&#13;
+	return (trasitTime);&#13;
+})</scriptedProcessingTime><origins ttype="SET"><item ttype="STRING">1073755425__HOLD_REQUIREMENT</item></origins><destinations ttype="SET"><item ttype="STRING">1073755426__END_REQUIREMENT</item></destinations><rateValidityStart ttype="I64">1641024000</rateValidityStart><rateValidityEnd ttype="I64">1665385200</rateValidityEnd><isHazardous ttype="STRING">Yes</isHazardous><scriptedCarrierConstraints ttype="STRING">resourceObj = new carrier({"id":"1008_9"}); resourceObj.evaluateCarrierConstraint.bind(resourceObj)</scriptedCarrierConstraints></value></item><item><key ttype="STRING">1073755425__HOLD_REQUIREMENT</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073755425__HOLD_REQUIREMENT</id><narrativeDescription ttype="STRING">Hold at 1073755425 </narrativeDescription><type ttype="I32">4</type><nextSteps ttype="SET"><item ttype="STRING">1073755425__1073755426__2122441345__SC______MULTI_STOP__1008__FLAT</item></nextSteps><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1001502__1002191__2122440687__S__D__P__TRANSPORT_REQUIREMENT__1012</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1001502__1002191__2122440687__S__D__P__TRANSPORT_REQUIREMENT__1012</id><narrativeDescription ttype="STRING">Transport from 1001502__1002191__2122440687__S__D__P__TRANSPORT_REQUIREMENT__1012__22GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">1073754427__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1012_9_S_2122440694</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":114.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_9"},"netfreightcostelems":[],"accessorials":[],"rateId":"2122440687"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":439200});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><rateValidityStart ttype="I64">1609488000</rateValidityStart><rateValidityEnd ttype="I64">1641024000</rateValidityEnd><isHazardous ttype="STRING">Yes</isHazardous></value></item><item><key ttype="STRING">1073754425__CONSOLIDATE_REQUIREMENT_XDOC</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1073754425__CONSOLIDATE_REQUIREMENT_XDOC</id><narrativeDescription ttype="STRING">XDOC  at 1073754425__42UT,42GH,ROOS,22UT,M5GP,22RT,42RT,TR45,00A0,45RT,NONE,42RN,49PF,45RN,TR48,22TD,L5GH,29PF,22RN,P5GP,P2GP,L5GP,45GP,22GH,42TD,00B0,LCOS,45GH,25GP,BBOS,TR53,22GP,42GP,TRSM</narrativeDescription><type ttype="I32">2</type><nextSteps ttype="SET"><item ttype="STRING">1001502__1002191__2122440686__S__D__P__TRANSPORT_REQUIREMENT__1012</item><item ttype="STRING">1001502__1002191__2122440687__S__D__P__TRANSPORT_REQUIREMENT__1012</item></nextSteps><operatingHours ttype="LIST"><item ttype="STRING">RECEIVING_1073754425_Operating_hour</item></operatingHours><resourcesAvailable ttype="SET"><item ttype="STRING">1012_10_S_2122440694</item><item ttype="STRING">1012_9_S_2122440694</item></resourcesAvailable><scriptedProcessingTime ttype="STRING">(processingTimeObj= {});getOceanAirLoadingProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><maxHours ttype="DOUBLE">0.0</maxHours></value></item><item><key ttype="STRING">1002191__1002202__2122440689__S__P__D__TRANSPORT_REQUIREMENT__1012</key><value struct="Step" ttype="STRUCT"><id ttype="STRING">1002191__1002202__2122440689__S__P__D__TRANSPORT_REQUIREMENT__1012</id><narrativeDescription ttype="STRING">Transport from 1002191__1002202__2122440689__S__P__D__TRANSPORT_REQUIREMENT__1012__M5GP</narrativeDescription><type ttype="I32">1</type><nextSteps ttype="SET"><item ttype="STRING">1073754426__DECONSOLIDATE_REQUIREMENT</item></nextSteps><resourcesAvailable ttype="SET"><item ttype="STRING">1012_12_S_2122440695</item></resourcesAvailable><scriptedRate ttype="STRING">rateObj = new rate({"baseRate":{"amount":150.0,"includeInNetFreight":null,"basis":"\/container","isHazMat":null,"distArr":"","equipmentType":"_12"},"netfreightcostelems":[],"accessorials":[],"rateId":"2122440689"});
+
+rateObj.evaluateByObj.bind(rateObj);</scriptedRate><scriptedProcessingTime ttype="STRING">(processingTimeObj= {"transitTime":266400});getOceanAirProcessingTime.bind(processingTimeObj);</scriptedProcessingTime><rateValidityStart ttype="I64">1609488000</rateValidityStart><rateValidityEnd ttype="I64">1641024000</rateValidityEnd><isHazardous ttype="STRING">Yes</isHazardous></value></item></steps><operatingTimes ttype="MAP"><item><key ttype="STRING">SHIPPING_1073754426_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">SHIPPING_1073754426_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">SHIPPING_1073755425_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">SHIPPING_1073755425_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">RECEIVING_1073754427_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">RECEIVING_1073754427_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">18:00:00</startTime><endTime ttype="STRING">21:00:00</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">RECEIVING_1073754425_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">RECEIVING_1073754425_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">SHIPPING_1073754427_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">SHIPPING_1073754427_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">16:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">15:59:59</endTime></weekDayHours></item></openTimeRange></value></item><item><key ttype="STRING">RECEIVING_1073755426_Operating_hour</key><value struct="OperatingHours" ttype="STRUCT"><id ttype="STRING">RECEIVING_1073755426_Operating_hour</id><openTimeRange ttype="LIST"><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">1</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">2</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">3</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">4</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">5</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">6</item></dayOfWeek><startTime ttype="STRING">06:00:00</startTime><endTime ttype="STRING">23:59:59</endTime></weekDayHours></item><item struct="TimeRange" ttype="STRUCT"><weekDayHours struct="WeekDayHours" ttype="STRUCT"><dayOfWeek ttype="LIST"><item ttype="I32">0</item></dayOfWeek><startTime ttype="STRING">00:00:00</startTime><endTime ttype="STRING">05:59:59</endTime></weekDayHours></item></openTimeRange></value></item></operatingTimes><unitDimensions ttype="MAP"><item><key ttype="STRING">LINEARMETER</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">LINEARMETER</id><dimension ttype="I32">10</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">/LNM</id><name ttype="STRING">544</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">WEIGHT</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">WEIGHT</id><dimension ttype="I32">5</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">wtInKG</id><name ttype="STRING">33</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">PACKAGE</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">PACKAGE</id><dimension ttype="I32">12</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">/package</id><name ttype="STRING">155</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">CUSTOM</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">CUSTOM</id><dimension ttype="I32">6</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">NumberOfTOS</id><name ttype="STRING">100001</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">VOLUME</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">VOLUME</id><dimension ttype="I32">4</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">volInCBM</id><name ttype="STRING">81</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">CURRENCY</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">CURRENCY</id><dimension ttype="I32">0</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">Dollar</id><name ttype="STRING">840</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">PALLET</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">PALLET</id><dimension ttype="I32">7</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">/pallet</id><name ttype="STRING">169</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">CARTON</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">CARTON</id><dimension ttype="I32">8</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">/carton</id><name ttype="STRING">159</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">SQUAREMETER</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">SQUAREMETER</id><dimension ttype="I32">11</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">/SQM</id><name ttype="STRING">181</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item><item><key ttype="STRING">UNIT</key><value struct="UnitDimension" ttype="STRUCT"><id ttype="STRING">UNIT</id><dimension ttype="I32">9</dimension><scaledUnits ttype="LIST"><item struct="UnitDefinition" ttype="STRUCT"><id ttype="STRING">/unit</id><name ttype="STRING">152</name><scale ttype="DOUBLE">1.0</scale></item></scaledUnits></value></item></unitDimensions><resources ttype="MAP"><item><key ttype="STRING">1012_12_S_2122440695</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1012_12_S_2122440695</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1012_12_S_2122440695"});evaluateConstraints.bind(resourceObj);</scriptedConstraint><carrierLaneWiseAllocationID ttype="STRING">1012_S_2122440695</carrierLaneWiseAllocationID><priority ttype="I32">3</priority></value></item><item><key ttype="STRING">1012_19_S_2122440695</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1012_19_S_2122440695</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1012_19_S_2122440695"});evaluateConstraints.bind(resourceObj);</scriptedConstraint><carrierLaneWiseAllocationID ttype="STRING">1012_S_2122440695</carrierLaneWiseAllocationID><priority ttype="I32">3</priority></value></item><item><key ttype="STRING">1012_9_S_2122440694</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1012_9_S_2122440694</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1012_9_S_2122440694"});evaluateConstraints.bind(resourceObj);</scriptedConstraint><carrierLaneWiseAllocationID ttype="STRING">1012_S_2122440694</carrierLaneWiseAllocationID><priority ttype="I32">3</priority></value></item><item><key ttype="STRING">1012_10_S_2122440694</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1012_10_S_2122440694</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1012_10_S_2122440694"});evaluateConstraints.bind(resourceObj);</scriptedConstraint><carrierLaneWiseAllocationID ttype="STRING">1012_S_2122440694</carrierLaneWiseAllocationID><priority ttype="I32">3</priority></value></item><item><key ttype="STRING">1008_10_SC_2122441214</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1008_10_SC_2122441214</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1008_10_SC_2122441214"});evaluateConstraints.bind(resourceObj);</scriptedConstraint><carrierLaneWiseAllocationID ttype="STRING">1008_SC_2122441214</carrierLaneWiseAllocationID><priority ttype="I32">4</priority></value></item><item><key ttype="STRING">1008_9_SC_2122441347</key><value struct="Resource" ttype="STRUCT"><id ttype="STRING">1008_9_SC_2122441347</id><capacities ttype="LIST"/><scriptedConstraint ttype="STRING">(resourceObj= {"id":"1008_9_SC_2122441347"});evaluateConstraints.bind(resourceObj);</scriptedConstraint><carrierLaneWiseAllocationID ttype="STRING">1008_SC_2122441347</carrierLaneWiseAllocationID><priority ttype="I32">2</priority></value></item></resources><carrierLaneWiseAllocations ttype="MAP"><item><key ttype="STRING">1008_SC_2122441214</key><value struct="CarrierLaneWiseAllocations" ttype="STRUCT"><id ttype="STRING">1008_SC_2122441214</id><timeAllocationBuckets ttype="LIST"><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1008_SC_2122441214_1641038400_1643630400</timeAllocationBucketID><startTimeStamp ttype="I64">1641038400</startTimeStamp><endTimeStamp ttype="I64">1643630400</endTimeStamp><allocationCount ttype="DOUBLE">1.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1008_SC_2122441214_1643716800_1646049600</timeAllocationBucketID><startTimeStamp ttype="I64">1643716800</startTimeStamp><endTimeStamp ttype="I64">1646049600</endTimeStamp><allocationCount ttype="DOUBLE">2.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1008_SC_2122441214_1646136000_1646308800</timeAllocationBucketID><startTimeStamp ttype="I64">1646136000</startTimeStamp><endTimeStamp ttype="I64">1646308800</endTimeStamp><allocationCount ttype="DOUBLE">2.0</allocationCount></item></timeAllocationBuckets></value></item><item><key ttype="STRING">1008_SC_2122441347</key><value struct="CarrierLaneWiseAllocations" ttype="STRUCT"><id ttype="STRING">1008_SC_2122441347</id><timeAllocationBuckets ttype="LIST"><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1008_SC_2122441347_1641038400_1643630400</timeAllocationBucketID><startTimeStamp ttype="I64">1641038400</startTimeStamp><endTimeStamp ttype="I64">1643630400</endTimeStamp><allocationCount ttype="DOUBLE">2.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1008_SC_2122441347_1643716800_1646049600</timeAllocationBucketID><startTimeStamp ttype="I64">1643716800</startTimeStamp><endTimeStamp ttype="I64">1646049600</endTimeStamp><allocationCount ttype="DOUBLE">2.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1008_SC_2122441347_1646136000_1646308800</timeAllocationBucketID><startTimeStamp ttype="I64">1646136000</startTimeStamp><endTimeStamp ttype="I64">1646308800</endTimeStamp><allocationCount ttype="DOUBLE">2.0</allocationCount></item></timeAllocationBuckets></value></item><item><key ttype="STRING">1012_S_2122440694</key><value struct="CarrierLaneWiseAllocations" ttype="STRUCT"><id ttype="STRING">1012_S_2122440694</id><timeAllocationBuckets ttype="LIST"><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440694_1609502400_1609848000</timeAllocationBucketID><startTimeStamp ttype="I64">1609502400</startTimeStamp><endTimeStamp ttype="I64">1609848000</endTimeStamp><allocationCount ttype="DOUBLE">4.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440694_1609934400_1610452800</timeAllocationBucketID><startTimeStamp ttype="I64">1609934400</startTimeStamp><endTimeStamp ttype="I64">1610452800</endTimeStamp><allocationCount ttype="DOUBLE">4.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440694_1610539200_1611057600</timeAllocationBucketID><startTimeStamp ttype="I64">1610539200</startTimeStamp><endTimeStamp ttype="I64">1611057600</endTimeStamp><allocationCount ttype="DOUBLE">3.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440694_1611144000_1611662400</timeAllocationBucketID><startTimeStamp ttype="I64">1611144000</startTimeStamp><endTimeStamp ttype="I64">1611662400</endTimeStamp><allocationCount ttype="DOUBLE">4.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440694_1611748800_1612267200</timeAllocationBucketID><startTimeStamp ttype="I64">1611748800</startTimeStamp><endTimeStamp ttype="I64">1612267200</endTimeStamp><allocationCount ttype="DOUBLE">4.0</allocationCount></item></timeAllocationBuckets></value></item><item><key ttype="STRING">1012_S_2122440695</key><value struct="CarrierLaneWiseAllocations" ttype="STRUCT"><id ttype="STRING">1012_S_2122440695</id><timeAllocationBuckets ttype="LIST"><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440695_1609502400_1609588800</timeAllocationBucketID><startTimeStamp ttype="I64">1609502400</startTimeStamp><endTimeStamp ttype="I64">1609588800</endTimeStamp><allocationCount ttype="DOUBLE">5.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440695_1609675200_1610193600</timeAllocationBucketID><startTimeStamp ttype="I64">1609675200</startTimeStamp><endTimeStamp ttype="I64">1610193600</endTimeStamp><allocationCount ttype="DOUBLE">5.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440695_1610280000_1610798400</timeAllocationBucketID><startTimeStamp ttype="I64">1610280000</startTimeStamp><endTimeStamp ttype="I64">1610798400</endTimeStamp><allocationCount ttype="DOUBLE">5.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440695_1610884800_1611403200</timeAllocationBucketID><startTimeStamp ttype="I64">1610884800</startTimeStamp><endTimeStamp ttype="I64">1611403200</endTimeStamp><allocationCount ttype="DOUBLE">2.468</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440695_1611489600_1612008000</timeAllocationBucketID><startTimeStamp ttype="I64">1611489600</startTimeStamp><endTimeStamp ttype="I64">1612008000</endTimeStamp><allocationCount ttype="DOUBLE">5.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440695_1612094400_1612612800</timeAllocationBucketID><startTimeStamp ttype="I64">1612094400</startTimeStamp><endTimeStamp ttype="I64">1612612800</endTimeStamp><allocationCount ttype="DOUBLE">5.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440695_1612699200_1613217600</timeAllocationBucketID><startTimeStamp ttype="I64">1612699200</startTimeStamp><endTimeStamp ttype="I64">1613217600</endTimeStamp><allocationCount ttype="DOUBLE">5.0</allocationCount></item><item struct="TimeAllocationBucket" ttype="STRUCT"><timeAllocationBucketID ttype="STRING">1012_S_2122440695_1613304000_1613390400</timeAllocationBucketID><startTimeStamp ttype="I64">1613304000</startTimeStamp><endTimeStamp ttype="I64">1613390400</endTimeStamp><allocationCount ttype="DOUBLE">5.0</allocationCount></item></timeAllocationBuckets></value></item></carrierLaneWiseAllocations><globalScript ttype="STRING">distanceMatrix = {"1073752377":{"1073752378":338.94,"1073752376":240.63,"1073752375":158.66,"1073752374":249.25,"1073752373":315.7},"1073752378":{"1073752377":338.94,"1073752376":98.48,"1073752375":496.61,"1073752374":588.1,"1073752373":654.54},"1073752375":{"1073752378":496.61,"1073752377":158.66,"1073752376":398.65,"1073752374":96.73,"1073752373":161.52},"1073752376":{"1073752378":98.48,"1073752377":240.63,"1073752375":398.65,"1073752374":489.69,"1073752373":556.13},"35133":{"35134":153.91,"35135":117.67,"35136":1905.69,"35137":2048.39,"35138":397.97,"35139":452.4,"35140":545.07,"35141":642.75,"35142":458.05},"1073752373":{"1073752378":654.54,"1073752377":315.7,"1073752376":556.13,"1073752375":161.52,"1073752374":66.44},"1073752374":{"1073752378":588.1,"1073752377":249.25,"1073752376":489.69,"1073752375":96.73,"1073752373":66.44},"1073745939":{"1073745938":300.0},"35139":{"35133":452.4,"35134":456.72,"35135":380.36,"35136":1615.04,"35137":1739.01,"35138":116.2,"35140":154.25,"35141":196.98,"35142":6.57},"1073745937":{"1073745939":500.0,"1073746927":620.0,"1073746928":620.0},"1073746927":{"1073745937":620.0,"1073746928":620.0},"35138":{"35133":397.97,"35134":440.88,"35135":354.13,"35136":1577.07,"35137":1708.3,"35139":116.2,"35140":270.18,"35141":297.65,"35142":122.21},"1073746928":{"1073745937":620.0,"1073746927":620.0},"35137":{"35133":2048.39,"35134":2138.58,"35135":2048.47,"35136":165.47,"35138":1708.3,"35139":1739.01,"35140":1802.57,"35141":1679.57,"35142":1738.18},"35136":{"35133":1905.69,"35134":2001.48,"35135":1911.24,"35137":165.47,"35138":1577.07,"35139":1615.04,"35140":1688.16,"35141":1569.43,"35142":1614.65},"35135":{"35133":117.67,"35134":90.24,"35136":1911.24,"35137":2048.47,"35138":354.13,"35139":380.36,"35140":449.35,"35141":558.8,"35142":385.13},"35134":{"35133":153.91,"35135":90.24,"35136":2001.48,"35137":2138.58,"35138":440.88,"35139":456.72,"35140":506.63,"35141":624.79,"35142":460.93},"1073750323":{"1073750324":2085.07},"1073752425":{"1073752426":102.11},"1073752426":{"1073752425":102.11},"1073752423":{"1073752424":1747.8},"1073750324":{"1073750323":2085.07},"1073752424":{"1073752423":1747.8},"1073747974":{"1073747973":6.79,"1073747975":6.42,"1073747976":6.42,"1073747977":8.49},"1073751376":{"1073751375":271.06},"1073747973":{"1073747974":6.79,"1073747975":9.86,"1073747976":9.86,"1073747977":4.11},"1073751375":{"1073751376":271.06},"1073747977":{"1073747973":4.11,"1073747974":8.49,"1073747975":8.51,"1073747976":8.51},"35142":{"35133":458.05,"35134":460.93,"35135":385.13,"35136":1614.65,"35137":1738.18,"35138":122.21,"35139":6.57,"35140":148.56,"35141":190.58},"1073747976":{"1073747973":9.86,"1073747974":6.42,"1073747975":0.01,"1073747977":8.51},"35141":{"35133":642.75,"35134":624.79,"35135":558.8,"35136":1569.43,"35137":1679.57,"35138":297.65,"35139":196.98,"35140":133.83,"35142":190.58},"1073747975":{"1073747973":9.86,"1073747974":6.42,"1073747976":0.01,"1073747977":8.51},"35140":{"35133":545.07,"35134":506.63,"35135":449.35,"35136":1688.16,"35137":1802.57,"35138":270.18,"35139":154.25,"35141":133.83,"35142":148.56},"660686":{"660686":0.01},"660688":{"660684":44.117341},"1073755423":{"1073755424":89.91},"1073755424":{"1073755423":89.91},"1073755425":{"1073755426":17.96},"1073755426":{"1073755425":17.96}}
+transitTimeMatrix = {"1073752377":{"1073752378":24360,"1073752376":17280,"1073752375":11400,"1073752374":17940,"1073752373":22680},"1073752378":{"1073752377":24360,"1073752376":7080,"1073752375":35700,"1073752374":42300,"1073752373":47100},"1073752375":{"1073752378":35700,"1073752377":11400,"1073752376":28680,"1073752374":6960,"1073752373":11580},"1073752376":{"1073752378":7080,"1073752377":17280,"1073752375":28680,"1073752374":35220,"1073752373":40020},"35133":{"35134":11040,"35135":8460,"35136":137160,"35137":147480,"35138":28620,"35139":32520,"35140":39240,"35141":46260,"35142":32940},"1073752373":{"1073752378":47100,"1073752377":22680,"1073752376":40020,"1073752375":11580,"1073752374":4740},"1073752374":{"1073752378":42300,"1073752377":17940,"1073752376":35220,"1073752375":6960,"1073752373":4740},"1073745939":{"1073745938":12000},"35139":{"35133":32520,"35134":32880,"35135":27360,"35136":116280,"35137":125160,"35138":8340,"35140":11100,"35141":14160,"35142":420},"1073745937":{"1073745939":36000,"1073746927":30000,"1073746928":30000},"1073746927":{"1073745937":30000,"1073746928":30000},"35138":{"35133":28620,"35134":31740,"35135":25440,"35136":113520,"35137":122940,"35139":8340,"35140":19440,"35141":21420,"35142":8760},"1073746928":{"1073745937":30000,"1073746927":30000},"35137":{"35133":147480,"35134":153960,"35135":147480,"35136":11880,"35138":122940,"35139":125160,"35140":129780,"35141":120900,"35142":125100},"35136":{"35133":137160,"35134":144060,"35135":137580,"35137":11880,"35138":113520,"35139":116280,"35140":121500,"35141":112980,"35142":116220},"35135":{"35133":8460,"35134":6480,"35136":137580,"35137":147480,"35138":25440,"35139":27360,"35140":32340,"35141":40200,"35142":27720},"35134":{"35133":11040,"35135":6480,"35136":144060,"35137":153960,"35138":31740,"35139":32880,"35140":36420,"35141":44940,"35142":33180},"1073750323":{"1073750324":150120},"1073752425":{"1073752426":7320},"1073752426":{"1073752425":7320},"1073752423":{"1073752424":125820},"1073750324":{"1073750323":150120},"1073752424":{"1073752423":125820},"1073747974":{"1073747973":480,"1073747975":420,"1073747976":420,"1073747977":600},"1073751376":{"1073751375":19500},"1073747973":{"1073747974":480,"1073747975":660,"1073747976":660,"1073747977":240},"1073751375":{"1073751376":19500},"1073747977":{"1073747973":240,"1073747974":600,"1073747975":600,"1073747976":600},"35142":{"35133":32940,"35134":33180,"35135":27720,"35136":116220,"35137":125100,"35138":8760,"35139":420,"35140":10680,"35141":13680},"1073747976":{"1073747973":660,"1073747974":420,"1073747975":60,"1073747977":600},"35141":{"35133":46260,"35134":44940,"35135":40200,"35136":112980,"35137":120900,"35138":21420,"35139":14160,"35140":9600,"35142":13680},"1073747975":{"1073747973":660,"1073747974":420,"1073747976":60,"1073747977":600},"35140":{"35133":39240,"35134":36420,"35135":32340,"35136":121500,"35137":129780,"35138":19440,"35139":11100,"35141":9600,"35142":10680},"660686":{"660686":60},"660688":{"660684":4860},"1073755423":{"1073755424":6420},"1073755424":{"1073755423":6420},"1073755425":{"1073755426":1260},"1073755426":{"1073755425":1260}}
+var rate = function(rateInputObj) {&#13;
+&#13;
+	this.evaluateByObj = function(dimObj) {&#13;
+		result = this.evaluate(dimObj);&#13;
+		if (!result || result.total &lt;= 0 || !rateInputObj.baseRate.total&#13;
+				|| rateInputObj.baseRate.total &lt;= 0) {&#13;
+			// warn(rateInputObj.rateId+':FinalTotalAmt='+result.total);&#13;
+			// warn(rateInputObj.rateId+':Dimensions: '+JSON.stringify(dimObj));&#13;
+			return 9999999;&#13;
+		}&#13;
+		return parseFloat(result.total);&#13;
+	};&#13;
+&#13;
+	this.evaluate = function(dimObj) {&#13;
+		this.evaluateBaseRate(dimObj);&#13;
+		this.evaluateAccessorials(dimObj);&#13;
+		this.evaluateStopOff(dimObj.stopOffs);&#13;
+		this.getDistanceSplit(dimObj);&#13;
+		this.evaluateTransitTime(dimObj);&#13;
+		totalAmt = 0;&#13;
+		baseRateBasis = rateInputObj.baseRate.basis;&#13;
+		supportedBasis = rateInputObj.baseRate.supportedBasis;&#13;
+		if (rateInputObj.baseRate.total) {&#13;
+			totalAmt = rateInputObj.baseRate.total;&#13;
+		}&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				if (rateInputObj.accessorials[i]&#13;
+						&amp;&amp; rateInputObj.accessorials[i].total&#13;
+						&amp;&amp; (baseRateBasis || rateInputObj.accessorials[i].supportedBasis)) {&#13;
+					totalAmt = totalAmt + rateInputObj.accessorials[i].total;&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+		if (rateInputObj.stopBands &amp;&amp; rateInputObj.stopOffTotal) {&#13;
+			totalAmt = totalAmt + rateInputObj.stopOffTotal;&#13;
+		}&#13;
+		rateInputObj.total = parseFloat(totalAmt);&#13;
+		return rateInputObj;&#13;
+	};&#13;
+	&#13;
+	this.evaluateSMCRate = function(dimObj) {&#13;
+		lbConvRate = rateInputObj.baseRate.lbConvRate;&#13;
+		smcWeight = dimObj.dims.wtInKG * lbConvRate;&#13;
+		smcRate = 0.0;&#13;
+		smcDiscount = 0.0;&#13;
+		smcFinalPrice = 0.0;&#13;
+		&#13;
+		if (inputObj.isdeficitpricing &amp;&amp; inputObj.isdeficitpricing === 'yes') {&#13;
+			if (rateInputObj.rateBands&#13;
+					&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+				for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+					if ((smcWeight &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+							|| (smcWeight &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; smcWeight &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+						if (rateInputObj.rateBands[i].upperbreak == 999999999) {&#13;
+							smcRate = rateInputObj.rateBands[i].amount;&#13;
+							smcDiscount = rateInputObj.rateBands[i].discountpercentage;&#13;
+						} else {&#13;
+							smcNextBandAmt = rateInputObj.rateBands[i + 1].amount;&#13;
+							smcNextBandRate = smcNextBandAmt * dimObj.dims.wtInKG * 0.01;&#13;
+							smcBandRate = rateInputObj.rateBands[i].amount * dimObj.dims.wtInKG * 0.01;&#13;
+									&#13;
+							if (smcNextBandRate &gt; smcBandRate) {&#13;
+								smcRate = rateInputObj.rateBands[i+1].amount;&#13;
+								smcDiscount = rateInputObj.rateBands[i+1].discountpercentage;&#13;
+							} else {&#13;
+								smcRate = rateInputObj.rateBands[i].amount;&#13;
+								smcDiscount = rateInputObj.rateBands[i].discountpercentage;&#13;
+							}&#13;
+						}&#13;
+						break;&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+		} else {&#13;
+			if (rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+				for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+					if ((smcWeight &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+						|| (smcWeight &gt; rateInputObj.rateBands[i].lowerbreak &amp;&amp; smcWeight &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+							smcRate = rateInputObj.rateBands[i].amount;&#13;
+							smcDiscount = rateInputObj.rateBands[i].discountpercentage;&#13;
+							break;&#13;
+					}&#13;
+				}&#13;
+			}		&#13;
+		}		&#13;
+		&#13;
+		if (smcRate &gt; 0.0) {&#13;
+			noOfCwts = dimObj.dims.wtInKG * 0.01;&#13;
+			grossCharge = noOfCwts * smcRate;&#13;
+			discountedCharge = 0.0;&#13;
+			&#13;
+			if (smcDiscount &gt; 0.0) {&#13;
+				discountCharge = (grossCharge * smcDiscount) / 100;&#13;
+				discountedCharge = grossCharge - discountCharge;				&#13;
+			} else {&#13;
+				discountedCharge = grossCharge;&#13;
+			}&#13;
+			&#13;
+			minimumcharge = rateInputObj.baseRate.minimumcharge;&#13;
+			minimumchargediscount = rateInputObj.baseRate.minimumchargediscount;&#13;
+			discountedMinimumCharge = 0.0;&#13;
+			&#13;
+			if (minimumchargediscount &gt; 0.0) {&#13;
+				minimumdiscountCharge = (minimumcharge * minimumchargediscount) / 100;&#13;
+				discountedMinimumCharge = minimumcharge - minimumdiscountCharge;				&#13;
+			} else {&#13;
+				discountedMinimumCharge = minimumcharge;&#13;
+			}&#13;
+			&#13;
+			smcTotalPrice = (discountedCharge &gt; discountedMinimumCharge) ? discountedCharge : discountedMinimumCharge;&#13;
+			&#13;
+			ltlsurchargepercentage = rateInputObj.baseRate.ltlsurchargepercentage;&#13;
+			ltlsurchargeamount = (smcTotalPrice * ltlsurchargepercentage) / 100;&#13;
+			&#13;
+			smcCalculatedPrice = smcTotalPrice + ltlsurchargeamount;&#13;
+			&#13;
+			minimumfloorcharge = rateInputObj.baseRate.minimumfloorcharge;&#13;
+			&#13;
+			smcFinalPrice = (minimumfloorcharge &gt; smcCalculatedPrice) ? minimumfloorcharge : smcCalculatedPrice;			&#13;
+		} &#13;
+		&#13;
+		rateInputObj.baseRate.supportedBasis = true;&#13;
+		rateInputObj.baseRate.total = parseFloat(smcFinalPrice);&#13;
+	};&#13;
+&#13;
+	this.evaluateBaseRate = function(dimObj) {&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		calculateCW = rateInputObj.calculateCW;&#13;
+		supportedBasis = false;&#13;
+		totalAmt = 0;&#13;
+		quantity = 0;&#13;
+		&#13;
+		if (inputObj.isSMC) {&#13;
+			this.evaluateSMCRate(dimObj);&#13;
+			return;				&#13;
+		}&#13;
+		&#13;
+		if (inputObj.basis === '/container') {&#13;
+			supportedBasis = true;&#13;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {&#13;
+				totalAmt = inputObj.amount&#13;
+						* dimObj.dims[inputObj.equipmentType];&#13;
+				quantity = dimObj.dims[inputObj.equipmentType];&#13;
+			} else {&#13;
+				return;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (inputObj.basis === '/package' || inputObj.basis === '/pallet'&#13;
+				|| inputObj.basis === '/unit' || inputObj.basis === '/carton'&#13;
+				|| inputObj.basis === '/LNM' || inputObj.basis === '/SQM'&#13;
+				|| inputObj.basis === '/MBF' || inputObj.basis === '/MSF'&#13;
+				|| inputObj.basis === '/LDM') {&#13;
+			supportedBasis = true;&#13;
+&#13;
+			if (dimObj.dims.genericQty &amp;&amp; dimObj.dims.genericQtyUnit&#13;
+					&amp;&amp; (dimObj.dims.genericQtyUnit === inputObj.basis)) {&#13;
+				genericqty = dimObj.dims.genericQty;&#13;
+				if (inputObj.minimumqty) {&#13;
+					rateInputObj.baseRate.appliedMinQty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty : 0;&#13;
+					genericqty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty&#13;
+							: dimObj.dims.genericQty;							&#13;
+				}&#13;
+				totalAmt = inputObj.amount * genericqty;&#13;
+				quantity = genericqty;&#13;
+			} else if (dimObj.dims[inputObj.basis]) {&#13;
+				genericqty = dimObj.dims[inputObj.basis];&#13;
+				if (inputObj.minimumqty) {&#13;
+					rateInputObj.baseRate.appliedMinQty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty : 0;&#13;
+					genericqty = inputObj.minimumqty &gt; dimObj.dims.genericQty ? inputObj.minimumqty&#13;
+							: dimObj.dims.genericQty;&#13;
+				}&#13;
+				totalAmt = inputObj.amount * genericqty;&#13;
+				quantity = genericqty;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/FLAT') {&#13;
+			supportedBasis = true;&#13;
+			totalAmt = inputObj.amount;&#13;
+			quantity = 1;&#13;
+		}&#13;
+		&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == 'lps') {&#13;
+			supportedBasis = true;&#13;
+			totalAmt = inputObj.amount;&#13;
+			quantity = 1;&#13;
+	    }&#13;
+	    &#13;
+		if (dimObj.dims.wtInKG &amp;&amp; inputObj.wtConvRate) {&#13;
+			supportedBasis = true;&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+&#13;
+			// GTN-25018 : Chargeable Weight scenario.&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			dimFactor = rateInputObj.dimFactor;&#13;
+			dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+			volumetricWeight = 0.0;&#13;
+			if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+				if (dimFactorConv === 'cm/kg') {&#13;
+					volumetricWeight = (volume * 1000000) / dimFactor;&#13;
+				} else if (dimFactorConv === 'in/lb') {&#13;
+					volumetricWeight = (volume * 61024) / dimFactor;&#13;
+					volumetricWeight = volumetricWeight * 0.45359237;&#13;
+			    }&#13;
+			}&#13;
+			&#13;
+			weight = (weight * inputObj.wtConvRate) &gt; (volumetricWeight  * inputObj.wtConvRate) ? weight&#13;
+					: volumetricWeight;&#13;
+&#13;
+			if (inputObj.minWeight) {&#13;
+				inputObj.appliedMinWeight = weight &lt; inputObj.minWeight ? inputObj.minWeight : 0;&#13;
+				weight = weight &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+						: weight;&#13;
+				inputObj.wtConvRate = 1;&#13;
+			}&#13;
+			quantity = weight * inputObj.wtConvRate;&#13;
+			totalAmt = this.evaluateRateBands(weight, inputObj.amount,&#13;
+					inputObj.wtConvRate);&#13;
+		}&#13;
+&#13;
+		if (inputObj.amount &amp;&amp; inputObj.basis == '/WM') {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			wmUnit = 0;&#13;
+			supportedBasis = true;&#13;
+			if (weight) {&#13;
+				wmUnit = weight * inputObj.wtConvRate;&#13;
+			}&#13;
+			if (volume) {&#13;
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+			}&#13;
+			if (inputObj.minWeight) {&#13;
+				rateInputObj.baseRate.appliedMinWeight = wmUnit &lt; inputObj.minWeight ? inputObj.minWeight : 0;&#13;
+				wmUnit = wmUnit &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+						: wmUnit;&#13;
+				inputObj.wtConvRate = 1;&#13;
+			}&#13;
+			totalAmt = inputObj.amount * wmUnit;&#13;
+			quantity = wmUnit;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.volInCBM &amp;&amp; inputObj.volConvRate) {&#13;
+			supportedBasis = true;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+&#13;
+			if (inputObj.minimumqty) {&#13;
+				rateInputObj.baseRate.appliedMinQty = volume &lt; inputObj.minimumqty ? inputObj.minimumqty : 0;				&#13;
+				volume = volume &lt; inputObj.minimumqty ? inputObj.minimumqty&#13;
+						: volume;&#13;
+				inputObj.volConvRate = 1;&#13;
+			}&#13;
+			tempAmt = this.evaluateRateBands(volume, inputObj.amount,&#13;
+					inputObj.volConvRate);&#13;
+			totalAmt = totalAmt &gt; tempAmt ? totalAmt : tempAmt;						&#13;
+			quantity = volume * inputObj.volConvRate;&#13;
+			&#13;
+		} else if ((dimObj.dims.dstInMile&#13;
+				|| (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) || rateInputObj.distance)&#13;
+				&amp;&amp; inputObj.dstConvRate) {&#13;
+			supportedBasis = true;&#13;
+			distance = 0.0;&#13;
+			if (dimObj.dims.dstInMile) {&#13;
+				distance = dimObj.dims.dstInMile;&#13;
+			} else if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {&#13;
+				distance = this.getEffectiveDistance(dimObj);&#13;
+			} else {&#13;
+				distance = rateInputObj.distance;&#13;
+			}&#13;
+			quantity = distance * inputObj.dstConvRate;&#13;
+			totalAmt = this.evaluateRateBands(distance, inputObj.amount,&#13;
+					inputObj.dstConvRate);&#13;
+		}&#13;
+&#13;
+		if (inputObj.basis === 'pricingbands') {&#13;
+			supportedBasis = true;&#13;
+			bandAmt = 0.0;&#13;
+			mUnit = 0.0;&#13;
+			convRate = 0.0;&#13;
+			amount = 0.0;&#13;
+			&#13;
+			if (inputObj.isdeficitpricing) {&#13;
+				if (inputObj.wtConvRate) {&#13;
+					mUnit = dimObj.dims.wtInKG;&#13;
+					convRate = inputObj.wtConvRate;&#13;
+					&#13;
+					// GTN-27410 : Chargeable Weight scenario for TL and LTL.&#13;
+					volume = dimObj.dims.volInCBM;&#13;
+					dimFactor = rateInputObj.dimFactor;&#13;
+					dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+					volumetricWeight = 0.0;&#13;
+					if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+						if (dimFactorConv === 'cm/kg') {&#13;
+							volumetricWeight = (volume * 1000000) / dimFactor;&#13;
+						} else if (dimFactorConv === 'in/lb') {&#13;
+							volumetricWeight = (volume * 61024) / dimFactor;&#13;
+							volumetricWeight = volumetricWeight * 0.45359237;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					mUnit = (mUnit * inputObj.wtConvRate) &gt; (volumetricWeight * convRate) ? mUnit&#13;
+							: volumetricWeight;&#13;
+&#13;
+					if (inputObj.minWeight) {&#13;
+						mUnit = mUnit &lt; inputObj.minWeight ? inputObj.minWeight&#13;
+								: mUnit;&#13;
+						inputObj.wtConvRate = 1;&#13;
+						convRate = 1;&#13;
+					}&#13;
+				} else if (inputObj.volConvRate) {&#13;
+					mUnit = dimObj.dims.volInCBM;&#13;
+					convRate = inputObj.volConvRate;&#13;
+				} else if (inputObj.dstConvRate) {&#13;
+					mUnit = dimObj.dims.dstInMile;&#13;
+					convRate = inputObj.dstConvRate;&#13;
+				} else {&#13;
+					if (inputObj.weightbreakbasis&#13;
+							&amp;&amp; (inputObj.weightbreakbasis === '/package'&#13;
+									|| inputObj.weightbreakbasis === '/pallet'&#13;
+									|| inputObj.weightbreakbasis === '/unit'&#13;
+									|| inputObj.weightbreakbasis === '/carton'&#13;
+									|| inputObj.weightbreakbasis === '/LNM'&#13;
+									|| inputObj.weightbreakbasis === '/SQM'&#13;
+									|| inputObj.weightbreakbasis === '/MBF'&#13;
+									|| inputObj.weightbreakbasis === '/MSF' &#13;
+									|| inputObj.weightbreakbasis === '/LDM')) {&#13;
+						if (dimObj.dims.genericQty&#13;
+								&amp;&amp; dimObj.dims.genericQtyUnit&#13;
+								&amp;&amp; (dimObj.dims.genericQtyUnit === inputObj.weightbreakbasis)) {&#13;
+							mUnit = dimObj.dims.genericQty;&#13;
+							convRate = 1;&#13;
+						} else if (dimObj.dims[inputObj.weightbreakbasis]) {&#13;
+							mUnit = dimObj.dims[inputObj.weightbreakbasis];&#13;
+							convRate = 1;&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+&#13;
+				if (inputObj.isdeficitpricing === 'yes') {&#13;
+					if (rateInputObj.rateBands&#13;
+							&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+							if (((mUnit * convRate) &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+									|| ((mUnit * convRate) &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; (mUnit * convRate) &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+								if (rateInputObj.rateBands[i].upperbreak == 999999999) {&#13;
+								    if (inputObj.weightbreakbasis == 'lps') {&#13;
+										bandAmt = rateInputObj.rateBands[i].amount;&#13;
+									} else {&#13;
+										bandAmt = rateInputObj.rateBands[i].amount&#13;
+											* mUnit * convRate;																&#13;
+									}&#13;
+									quantity = mUnit * convRate;										&#13;
+									amount = rateInputObj.rateBands[i].actualCost;&#13;
+								} else {&#13;
+									if (inputObj.weightbreakbasis == 'lps') {&#13;
+										bandAmt = rateInputObj.rateBands[i + 1].amount;&#13;
+									} else {&#13;
+										bandAmt = rateInputObj.rateBands[i + 1].amount&#13;
+												* rateInputObj.rateBands[i + 1].lowerbreak&#13;
+												* convRate;							&#13;
+									}&#13;
+									actualPrice = 0.0;&#13;
+									if (inputObj.weightbreakbasis == 'lps') {&#13;
+										actualPrice = rateInputObj.rateBands[i].amount;&#13;
+									} else {&#13;
+										actualPrice = rateInputObj.rateBands[i].amount&#13;
+												* mUnit * convRate;						&#13;
+									}&#13;
+									&#13;
+									if (bandAmt &gt; actualPrice) {&#13;
+										bandAmt = actualPrice;&#13;
+										amount = rateInputObj.rateBands[i].actualCost;&#13;
+									} else {&#13;
+										amount = rateInputObj.rateBands[i + 1].actualCost;&#13;
+									}&#13;
+									quantity = mUnit * convRate;		&#13;
+								}&#13;
+								break;&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				} else {&#13;
+					if (rateInputObj.rateBands&#13;
+							&amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+						for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+							if (((mUnit * convRate) &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+									|| ((mUnit * convRate) &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; (mUnit * convRate) &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+								if (inputObj.weightbreakbasis == 'lps') {&#13;
+									bandAmt = rateInputObj.rateBands[i].amount;&#13;
+								} else {&#13;
+									bandAmt = rateInputObj.rateBands[i].amount&#13;
+										* mUnit * convRate;								&#13;
+								}&#13;
+								quantity = mUnit * convRate;&#13;
+								amount = rateInputObj.rateBands[i].actualCost;&#13;
+								break;&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+			}		&#13;
+			&#13;
+			rateInputObj.baseRate.actualCost = parseFloat(amount);&#13;
+			totalAmt = bandAmt;&#13;
+		}&#13;
+&#13;
+		if (!supportedBasis) {&#13;
+			switch (inputObj.basis) {&#13;
+			case '/container':&#13;
+			case '/CBM':&#13;
+			case '/WM':&#13;
+			case '/kg':&#13;
+			case '/lb':&#13;
+			case '/ton':&#13;
+			case '/MI':&#13;
+			case '/KM':&#13;
+				rateInputObj.baseRate.supportedBasis = true;&#13;
+				supportedBasis = true;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (!supportedBasis) {&#13;
+			totalAmt = inputObj.amount;&#13;
+			rateInputObj.baseRate.quantity = 1;&#13;
+		}&#13;
+		&#13;
+		if (quantity) {&#13;
+			rateInputObj.baseRate.quantity = quantity;&#13;
+		}		&#13;
+&#13;
+		if (inputObj.minAmount) {&#13;
+			rateInputObj.baseRate.appliedMin = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount : 0;&#13;
+			totalAmt = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount&#13;
+					: totalAmt;&#13;
+		}&#13;
+		&#13;
+		if (inputObj.maxAmount) {&#13;
+			rateInputObj.baseRate.appliedMax = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount : 0;&#13;
+			totalAmt = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount&#13;
+					: totalAmt;&#13;
+		}&#13;
+	&#13;
+		rateInputObj.baseRate.supportedBasis = supportedBasis;&#13;
+		rateInputObj.baseRate.total = parseFloat(totalAmt);&#13;
+	};&#13;
+&#13;
+	this.getEffectiveDistance = function(dimObj) {&#13;
+		distance = 0.0;&#13;
+		var jsonBaseRate = rateInputObj.baseRate;&#13;
+		for (i = 0; i &lt; dimObj.stopOffs.length - 1; i++) {&#13;
+			origStop = dimObj.stopOffs[i].stop;&#13;
+			if (origStop.indexOf('__') &gt; 0) {&#13;
+				origStop = origStop.slice(0, origStop.indexOf('__'));&#13;
+			}&#13;
+			destStop = dimObj.stopOffs[i + 1].stop;&#13;
+			if (destStop.indexOf('__') &gt; 0) {&#13;
+				destStop = destStop.slice(0, destStop.indexOf('__'));&#13;
+			}&#13;
+			if (origStop == destStop) {&#13;
+				distance = distance + 0.01;&#13;
+				continue;&#13;
+			}&#13;
+			if (!distanceMatrix[origStop]&#13;
+					|| !distanceMatrix[origStop][destStop]) {&#13;
+				if (rateInputObj.distance) {&#13;
+					return rateInputObj.distance;&#13;
+				} else {&#13;
+					return 9999999;&#13;
+				}&#13;
+			}&#13;
+			distval = distanceMatrix[origStop][destStop];&#13;
+			distance = distance + distanceMatrix[origStop][destStop];&#13;
+		}&#13;
+		return distance;&#13;
+	};&#13;
+&#13;
+	this.evaluateRateBands = function(totalDim, rateAmount, ConvRate) {&#13;
+		totalBandAmt = 0.0;&#13;
+		if (rateInputObj.rateBands &amp;&amp; rateInputObj.rateBands.length &gt; 0) {&#13;
+			actualCost = 0.0;&#13;
+			for (i = 0; i &lt; rateInputObj.rateBands.length; i++) {&#13;
+				if ((totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; !rateInputObj.rateBands[i].upperbreak)&#13;
+						|| (totalDim &gt;= rateInputObj.rateBands[i].lowerbreak &amp;&amp; totalDim &lt;= rateInputObj.rateBands[i].upperbreak)) {&#13;
+					totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateInputObj.rateBands[i].amount&#13;
+							: (rateInputObj.rateBands[i].amount * totalDim * ConvRate);&#13;
+					actualCost = rateInputObj.rateBands[i].actualCost;&#13;
+					break;&#13;
+				}&#13;
+			}&#13;
+			if (totalBandAmt == 0 &amp;&amp; rateInputObj.baseRate) {&#13;
+				totalBandAmt = rateInputObj.baseRate.basis === '/kg' ? (rateInputObj.baseRate.amount&#13;
+						* totalDim * ConvRate)&#13;
+						: rateInputObj.baseRate.amount;&#13;
+				actualCost = rateInputObj.baseRate.amount;&#13;
+			}&#13;
+			rateInputObj.baseRate.actualCost = actualCost;&#13;
+		} else {&#13;
+			totalBandAmt = (rateInputObj.baseRate.basis === '/FLAT') ? rateAmount&#13;
+					: rateAmount * totalDim * ConvRate;&#13;
+		}&#13;
+		return parseFloat(totalBandAmt);&#13;
+	};&#13;
+&#13;
+	this.evaluateAccessorials = function(dimObj) {&#13;
+		if (rateInputObj.accessorials) {&#13;
+			for (var i = 0; i &lt; rateInputObj.accessorials.length; i++) {&#13;
+				if (rateInputObj.accessorials[i]) {&#13;
+					accObj = rateInputObj.accessorials[i];&#13;
+					quantity = 0;&#13;
+					totalAmt = 0;&#13;
+					if (accObj.basis === '/container') {&#13;
+						if (rateInputObj.baseRate.equipmentType&#13;
+								&amp;&amp; dimObj.dims[rateInputObj.baseRate.equipmentType]) {&#13;
+							totalAmt = accObj.amount&#13;
+									* dimObj.dims[rateInputObj.baseRate.equipmentType];&#13;
+							quantity =  dimObj.dims[rateInputObj.baseRate.equipmentType];&#13;
+						} else {&#13;
+							rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+							continue;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '%') {&#13;
+						netfreightcostelems = rateInputObj.netfreightcostelems;&#13;
+						if (netfreightcostelems&#13;
+								&amp;&amp; netfreightcostelems.length &gt; 0) {&#13;
+							totalSurchargeAmount = 0;&#13;
+							for (var j = 0; j &lt; netfreightcostelems.length; j++) {&#13;
+								netFreightSurcharge = netfreightcostelems[j];&#13;
+								surchargeAmount = this.getSurchargeAmount(&#13;
+										dimObj, netFreightSurcharge);&#13;
+								totalSurchargeAmount = totalSurchargeAmount&#13;
+										+ surchargeAmount;&#13;
+							}&#13;
+&#13;
+							baseRate = rateInputObj.baseRate.total;&#13;
+							totalAmt = ((baseRate + totalSurchargeAmount) * accObj.amount) / 100;&#13;
+						} else {&#13;
+							baseRate = rateInputObj.baseRate.total;&#13;
+							totalAmt = (baseRate * accObj.amount) / 100;&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '/delivery'&#13;
+							|| accObj.basis === '/entry'&#13;
+							|| accObj.basis === '/shipment') {&#13;
+						totalAmt = accObj.amount;&#13;
+						quantity = 1;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis === '/package'&#13;
+							|| accObj.basis === '/pallet'&#13;
+							|| accObj.basis === '/unit'&#13;
+							|| accObj.basis === '/carton'&#13;
+							|| accObj.basis === '/LNM'&#13;
+							|| accObj.basis === '/SQM'&#13;
+							|| accObj.basis === '/MSF'&#13;
+							|| accObj.basis === '/MBF'&#13;
+							|| accObj.basis === '/LDM') {&#13;
+						if (dimObj.dims.genericQty&#13;
+								&amp;&amp; dimObj.dims.genericQtyUnit&#13;
+								&amp;&amp; (dimObj.dims.genericQtyUnit === accObj.basis)) {&#13;
+							totalAmt = accObj.amount * dimObj.dims.genericQty;&#13;
+							quantity = dimObj.dims.genericQty;&#13;
+						} else if (dimObj.dims[accObj.basis]) {&#13;
+							totalAmt = accObj.amount&#13;
+									* dimObj.dims[accObj.basis];&#13;
+						}&#13;
+					}&#13;
+&#13;
+					if (dimObj.dims.wtInKG &amp;&amp; accObj.wtConvRate) {&#13;
+						weight = dimObj.dims.wtInKG;&#13;
+&#13;
+						// GTN-25018 : Chargeable Weight scenario.&#13;
+						if (accObj.calculatedWeightBasis&#13;
+								&amp;&amp; accObj.calculatedWeightBasis === 'Chargeable Weight') {&#13;
+							dimFactor = rateInputObj.dimFactor;&#13;
+							dimFactorConv = rateInputObj.dimFactorConv;&#13;
+&#13;
+							volumetricWeight = 0.0;&#13;
+							if (dimFactor &gt; 0 &amp;&amp; dimFactorConv&#13;
+									&amp;&amp; dimObj.dims.volInCBM) {&#13;
+								if (dimFactorConv === 'cm/kg') {&#13;
+									volumetricWeight = (dimObj.dims.volInCBM * 1000000)&#13;
+											/ dimFactor;&#13;
+								} else if (dimFactorConv === 'in/lb') {&#13;
+									volumetricWeight = (dimObj.dims.volInCBM * 61024)&#13;
+											/ dimFactor;&#13;
+									volumetricWeight = volumetricWeight * 0.45359237;&#13;
+								}&#13;
+							}&#13;
+							weight = (weight * accObj.wtConvRate) &gt; (volumetricWeight * accObj.wtConvRate) ? weight&#13;
+									: volumetricWeight;&#13;
+						}&#13;
+&#13;
+						if (accObj.minWeight) {&#13;
+							weight = weight &lt; accObj.minWeight ? accObj.minWeight&#13;
+									: weight;&#13;
+						}&#13;
+						totalAmt = accObj.amount * weight * accObj.wtConvRate;&#13;
+						quantity = weight * accObj.wtConvRate;&#13;
+					}&#13;
+					if (dimObj.dims.volInCBM &amp;&amp; accObj.volConvRate) {&#13;
+						volume = dimObj.dims.volInCBM;&#13;
+						if (accObj.minVolume) {&#13;
+							volume = volume &lt; accObj.minVolume ? accObj.minVolume&#13;
+									: volume;&#13;
+						}&#13;
+						totalAmt = accObj.amount * volume * accObj.volConvRate;&#13;
+						quantity = volume * accObj.volConvRate;&#13;
+					}&#13;
+&#13;
+					if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1))&#13;
+							&amp;&amp; accObj.dstConvRate) {&#13;
+						distance = 0.0;&#13;
+						if (dimObj.dims.dstInMile) {&#13;
+							distance = dimObj.dims.dstInMile;&#13;
+						} else {&#13;
+							distance = this.getEffectiveDistance(dimObj);&#13;
+						}&#13;
+						totalAmt = accObj.amount * distance&#13;
+								* accObj.dstConvRate;&#13;
+						quantity = distance * accObj.dstConvRate;&#13;
+					}&#13;
+&#13;
+					if (accObj.basis == '/FLAT') {&#13;
+						totalAmt = accObj.amount;&#13;
+						quantity = 1;&#13;
+					}&#13;
+					if (accObj.amount &amp;&amp; accObj.basis == '/WM') {&#13;
+						weight = dimObj.dims.wtInKG;&#13;
+						volume = dimObj.dims.volInCBM;&#13;
+						wmUnit = 0;&#13;
+						if (weight) {&#13;
+							wmUnit = weight * accObj.wtConvRate;&#13;
+						}&#13;
+						if (volume) {&#13;
+							wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+						}&#13;
+						totalAmt = accObj.amount * wmUnit;&#13;
+						quantity = wmUnit;&#13;
+					}&#13;
+&#13;
+					if (rateInputObj.baseRate.basis == accObj.basis&#13;
+							&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+						totalAmt = accObj.amount;&#13;
+						accObj.supportedBasis = true;&#13;
+					} else if (rateInputObj.baseRate.basis != accObj.basis&#13;
+							&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+						totalAmt = 0;&#13;
+					}&#13;
+&#13;
+					if (accObj.minAmount) {&#13;
+						rateInputObj.accessorials[i].appliedMin = totalAmt &lt; accObj.minAmount ? accObj.minAmount : 0;&#13;
+						totalAmt = totalAmt &lt; accObj.minAmount ? accObj.minAmount&#13;
+								: totalAmt;&#13;
+					}&#13;
+					if (accObj.maxAmount) {&#13;
+						rateInputObj.accessorials[i].appliedMax = totalAmt &gt; accObj.maxAmount ? accObj.maxAmount : 0;&#13;
+						totalAmt = totalAmt &gt; accObj.maxAmount ? accObj.maxAmount&#13;
+								: totalAmt;&#13;
+					}&#13;
+&#13;
+					if (!dimObj.dims.isHazMat &amp;&amp; accObj.isHazMat) {&#13;
+						totalAmt = 0;&#13;
+					}&#13;
+&#13;
+					rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+					if (accObj.basis == '/stop') {&#13;
+						rateInputObj.stopOffTotal = parseFloat(totalAmt);&#13;
+						if(totalAmt &amp;&amp; totalAmt &gt;0) {&#13;
+							rateInputObj.accessorials[i].quantity = 1;&#13;
+						}&#13;
+					} else{&#13;
+						rateInputObj.accessorials[i].total = parseFloat(totalAmt);&#13;
+						if(totalAmt &amp;&amp; totalAmt &gt;0) {&#13;
+							rateInputObj.accessorials[i].quantity = quantity;&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+	};&#13;
+&#13;
+	this.getSurchargeAmount = function(dimObj, surcharge) {&#13;
+		surchargeAmount = 0;&#13;
+		inputObj = rateInputObj.baseRate;&#13;
+		quantity = 0;&#13;
+		if (surcharge.basis === '/container') {&#13;
+			if (inputObj.equipmentType &amp;&amp; dimObj.dims[inputObj.equipmentType]) {&#13;
+				surchargeAmount = surcharge.amount&#13;
+						* dimObj.dims[inputObj.equipmentType];&#13;
+				quantity = dimObj.dims[inputObj.equipmentType];&#13;
+			} else {&#13;
+				quantity = 1;&#13;
+				return surchargeAmount;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (surcharge.basis === '/delivery' || surcharge.basis === '/entry'&#13;
+				|| surcharge.basis === '/shipment') {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+			quantity = 1;&#13;
+		}&#13;
+&#13;
+		if (surcharge.basis === '/package' || surcharge.basis === '/pallet'&#13;
+				|| surcharge.basis === '/unit' || surcharge.basis === '/carton'&#13;
+				|| surcharge.basis === '/LNM' || surcharge.basis === '/SQM'&#13;
+				|| surcharge.basis === '/MSF' || surcharge.basis === '/MBF'&#13;
+				|| accObj.basis === '/LDM') {&#13;
+			if (dimObj.dims.genericQty &amp;&amp; dimObj.dims.genericQtyUnit&#13;
+					&amp;&amp; (dimObj.dims.genericQtyUnit === surcharge.basis)) {&#13;
+				surchargeAmount = surcharge.amount * dimObj.dims.genericQty;&#13;
+				quantity = dimObj.dims.genericQty;&#13;
+			} else if (dimObj.dims[surcharge.basis]) {&#13;
+				surchargeAmount = surcharge.amount&#13;
+						* dimObj.dims[surcharge.basis];&#13;
+				quantity = dimObj.dims[surcharge.basis];&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/FLAT') {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+			quantity = 1;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.wtInKG &amp;&amp; surcharge.wtConvRate) {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			// GTN-25018 : Chargeable Weight scenario.&#13;
+			if (surcharge.calculatedWeightBasis&#13;
+					&amp;&amp; surcharge.calculatedWeightBasis === 'Chargeable Weight') {&#13;
+				dimFactor = rateInputObj.dimFactor;&#13;
+				dimFactorConv = rateInputObj.dimFactorConv;&#13;
+				volumetricWeight = 0.0;&#13;
+				if (dimFactor &gt; 0 &amp;&amp; dimFactorConv &amp;&amp; dimObj.dims.volInCBM) {&#13;
+					if (dimFactorConv === 'cm/kg') {&#13;
+						volumetricWeight = (dimObj.dims.volInCBM * 1000000)&#13;
+								/ dimFactor;&#13;
+					} else if (dimFactorConv === 'in/lb') {&#13;
+						volumetricWeight = (dimObj.dims.volInCBM * 61024)&#13;
+								/ dimFactor;&#13;
+						volumetricWeight = volumetricWeight * 0.45359237;&#13;
+					}&#13;
+				}&#13;
+				weight = (weight * surcharge.wtConvRate) &gt; (volumetricWeight * surcharge.wtConvRate) ? weight&#13;
+						: volumetricWeight;&#13;
+			}&#13;
+			if (surcharge.minWeight) {&#13;
+				surcharge.appliedWeight = weight &lt; surcharge.minWeight ? surcharge.minWeight : weight;&#13;
+				weight = weight &lt; surcharge.minWeight ? surcharge.minWeight&#13;
+						: weight;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * weight * surcharge.wtConvRate;&#13;
+			quantity = weight * surcharge.wtConvRate;&#13;
+		}&#13;
+&#13;
+		if (dimObj.dims.volInCBM &amp;&amp; surcharge.volConvRate) {&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			if (surcharge.minVolume) {&#13;
+				surcharge.appliedVolume = volume &lt; surcharge.minVolume ? surcharge.minVolume : volume;&#13;
+				volume = volume &lt; surcharge.minVolume ? surcharge.minVolume&#13;
+						: volume;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * volume * surcharge.volConvRate;&#13;
+			quantity = volume * surcharge.volConvRate;&#13;
+		}&#13;
+&#13;
+		if (surcharge.amount &amp;&amp; surcharge.basis == '/WM') {&#13;
+			weight = dimObj.dims.wtInKG;&#13;
+			volume = dimObj.dims.volInCBM;&#13;
+			wmUnit = 0;&#13;
+			if (weight) {&#13;
+				wmUnit = weight * surcharge.wtConvRate;&#13;
+			}&#13;
+			if (volume) {&#13;
+				wmUnit = wmUnit &gt; volume ? wmUnit : volume;&#13;
+			}&#13;
+			if (surcharge.minWeight) {&#13;
+				surcharge.appliedWeight = wmUnit &lt; surcharge.minWeight ? surcharge.minWeight : wmUnit;&#13;
+				wmUnit = wmUnit &lt; surcharge.minWeight ? surcharge.minWeight&#13;
+						: wmUnit;&#13;
+				surcharge.wtConvRate = 1;&#13;
+			}&#13;
+			surchargeAmount = surcharge.amount * wmUnit;&#13;
+			quantity = wmUnit;&#13;
+		}&#13;
+&#13;
+		if ((dimObj.dims.dstInMile || (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1))&#13;
+				&amp;&amp; surcharge.dstConvRate) {&#13;
+			if (surcharge.basis == '/stop') {&#13;
+				surchargeAmount = surcharge.amount * dimObj.stopOffs.length&#13;
+					* surcharge.dstConvRate;&#13;
+				quantity = dimObj.stopOffs.length * surcharge.dstConvRate;&#13;
+			} else {&#13;
+				distance = 0.0;&#13;
+				if (dimObj.dims.dstInMile) {&#13;
+					distance = dimObj.dims.dstInMile;&#13;
+				} else {&#13;
+					distance = this.getEffectiveDistance(dimObj);&#13;
+				}&#13;
+				surchargeAmount = surcharge.amount * distance&#13;
+						* surcharge.dstConvRate;&#13;
+				quantity = distance * surcharge.dstConvRate;&#13;
+			}&#13;
+		}&#13;
+&#13;
+		if (rateInputObj.baseRate.basis == inputObj.basis&#13;
+				&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+			surchargeAmount = surcharge.amount;&#13;
+			surcharge.supportedBasis = true;&#13;
+			rateInputObj.accessorials[i].quantity = quantity;&#13;
+		} else if (rateInputObj.baseRate.basis != surcharge.basis&#13;
+				&amp;&amp; !rateInputObj.baseRate.supportedBasis) {&#13;
+			surchargeAmount = 0;&#13;
+		}&#13;
+&#13;
+		if (surcharge.minAmount) {&#13;
+			surcharge.appliedMin = totalAmt &lt; inputObj.minAmount ? inputObj.minAmount : 0;			&#13;
+			surchargeAmount = surchargeAmount &lt; surcharge.minAmount ? surcharge.minAmount&#13;
+					: surchargeAmount;&#13;
+		}&#13;
+		if (surcharge.maxAmount) {&#13;
+			surcharge.appliedMax = totalAmt &gt; inputObj.maxAmount ? inputObj.maxAmount : 0;&#13;
+			surchargeAmount = surchargeAmount &gt; surcharge.maxAmount ? surcharge.maxAmount&#13;
+					: surchargeAmount;&#13;
+		}&#13;
+		return surchargeAmount;&#13;
+	}&#13;
+&#13;
+	this.evaluateStopOff = function(stopOffs) {&#13;
+		stopOffAmt = 0.0;&#13;
+		if (rateInputObj.stopBands &amp;&amp; stopOffs &amp;&amp; stopOffs.length &gt; 2) {&#13;
+			numOfStopOffs = stopOffs.length - 2;&#13;
+			remainingStopOffs = numOfStopOffs;&#13;
+			previousEnd = 0;&#13;
+&#13;
+			for (i = 0; i &lt; rateInputObj.stopBands.length; i++) {&#13;
+				start = rateInputObj.stopBands[i].start;&#13;
+				end = rateInputObj.stopBands[i].stop;&#13;
+				if (numOfStopOffs &gt; end) {&#13;
+					stopOffAmt = stopOffAmt&#13;
+							+ (rateInputObj.stopBands[i].costPerStop * (end - previousEnd));&#13;
+					remainingStopOffs -= (end - previousEnd);&#13;
+					previousEnd = end;&#13;
+&#13;
+				} else if (numOfStopOffs &gt;= start &amp;&amp; numOfStopOffs &lt;= end) {&#13;
+					stopOffAmt = stopOffAmt&#13;
+							+ (rateInputObj.stopBands[i].costPerStop * remainingStopOffs);&#13;
+					break;&#13;
+				}&#13;
+			}&#13;
+			rateInputObj.stopOffTotal = parseFloat(stopOffAmt);&#13;
+		}&#13;
+&#13;
+	};&#13;
+	&#13;
+	this.getDistanceSplit = function(dimObj) {&#13;
+		distance = 0.0;&#13;
+		var distObj = [];&#13;
+		var distArr = [];&#13;
+		var jsonBaseRate = rateInputObj.baseRate;&#13;
+		if(dimObj.stopOffs) {&#13;
+			for (i = 0; i &lt; dimObj.stopOffs.length - 1; i++) {&#13;
+				origStop = dimObj.stopOffs[i].stop;&#13;
+				if (origStop.indexOf('__') &gt; 0) {&#13;
+					origStop = origStop.slice(0, origStop.indexOf('__'));&#13;
+				}&#13;
+				destStop = dimObj.stopOffs[i + 1].stop;&#13;
+				if (destStop.indexOf('__') &gt; 0) {&#13;
+					destStop = destStop.slice(0, destStop.indexOf('__'));&#13;
+				}&#13;
+				if (origStop == destStop) {&#13;
+					distance = distance + 0.01;&#13;
+					distObj = {Distance:distance, OrigStop:origStop, DestStop:destStop};&#13;
+					distArr.push(distObj);&#13;
+					continue;&#13;
+				}&#13;
+				if (!distanceMatrix[origStop]&#13;
+						|| !distanceMatrix[origStop][destStop]) {&#13;
+					if (rateInputObj.distance) {&#13;
+						return rateInputObj.distance;&#13;
+					} else {&#13;
+						return 9999999;&#13;
+					}&#13;
+				}&#13;
+				distval = distanceMatrix[origStop][destStop];&#13;
+				distObj = {Distance:distval, OrigStop:origStop, DestStop:destStop};&#13;
+				distArr.push(distObj);&#13;
+				distance = distance + distanceMatrix[origStop][destStop];&#13;
+			}&#13;
+		}&#13;
+			jsonBaseRate["distArr"] = distArr;&#13;
+		return jsonBaseRate;&#13;
+	};&#13;
+	&#13;
+	this.evaluateTransitTime = function(dimObj) {&#13;
+		transittime = 0.0;&#13;
+		if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {		&#13;
+			if (dimObj.stopOffs &amp;&amp; dimObj.stopOffs.length &gt; 1) {&#13;
+				for (i = 0; i &lt; dimObj.stopOffs.length - 1; i++) {&#13;
+					origStop = dimObj.stopOffs[i].stop;&#13;
+					if (origStop.indexOf('__') &gt; 0) {&#13;
+						origStop = origStop.slice(0, origStop.indexOf('__'));&#13;
+					}&#13;
+					destStop = dimObj.stopOffs[i + 1].stop;&#13;
+					if (destStop.indexOf('__') &gt; 0) {&#13;
+						destStop = destStop.slice(0, destStop.indexOf('__'));&#13;
+					}&#13;
+					if (origStop == destStop) {&#13;
+						transittime = transittime + 0.01;&#13;
+						continue;&#13;
+					}&#13;
+					if (!transitTimeMatrix[origStop]&#13;
+							|| !transitTimeMatrix[origStop][destStop]) {&#13;
+							transittime = parseFloat(9999999);&#13;
+							break;&#13;
+					}&#13;
+					transittime = transittime + transitTimeMatrix[origStop][destStop];&#13;
+				}&#13;
+			} &#13;
+		}	&#13;
+		rateInputObj.baseRate.transittime = parseFloat(transittime);		&#13;
+	};&#13;
+};var constraints = {/*##*/resources:{"9":{"max_weight":28250.0,"max_cube":28.0,"max_qty":1.0},"10":{"max_weight":28800.0,"max_cube":56.0,"max_qty":2.0},"11":{"max_cube":75.0,"max_qty":2.532,"max_weight":27700.0},"12":{"max_cube":90.0,"max_weight":30200.0,"max_qty":2.886},"13":{"max_qty":2.0},"17":{"max_qty":1.0},"18":{"max_weight":30200.0,"max_qty":2.25,"max_cube":65.0},"19":{"max_cube":75.0,"max_qty":2.532,"max_weight":27700.0},"20":{"max_weight":30200.0,"max_cube":90.0,"max_qty":2.886},"21":{"max_qty":2.0},"25":{"max_cube":28.0,"max_weight":27490.0,"max_qty":1.0},"26":{"max_cube":59.0,"max_qty":2.0,"max_weight":28600.0},"27":{"max_weight":27700.0,"max_cube":75.0,"max_qty":2.532},"34":{"max_cube":63.0,"max_weight":29700.0,"max_qty":2.25},"41":{"max_qty":1.0},"42":{"max_qty":2.0},"49":{"max_qty":1.0},"50":{"max_qty":2.0},"57":{"max_qty":1.0},"58":{"max_qty":2.0},"65":{"max_weight":27490.0,"max_cube":28.0,"max_qty":1.0},"66":{"max_qty":2.0,"max_weight":28600.0,"max_cube":59.0},"74":{"max_weight":29700.0,"max_cube":63.0,"max_qty":2.25},"83":{"max_qty":2.532},"84":{"max_weight":18100.0,"max_qty":2.886,"max_cube":85.0},"85":{"max_qty":2.65,"max_weight":20000.0,"max_cube":95.0},"137":{"max_qty":1.0},"138":{"max_qty":2.0},"146":{"max_qty":2.25},"147":{"max_qty":2.532},"153":{"max_cube":33.0},"154":{"max_cube":33.0},"798":{"max_weight":24000.0,"max_qty":2.0},"799":{"max_cube":20.0,"max_qty":2.0,"max_weight":25000.0},"901":{"max_qty":2.0,"max_weight":24000.0},"2057":{"max_cube":28.0,"max_weight":28250.0,"max_qty":1.0},"2065":{"max_qty":1.0},"2066":{"max_cube":65.0,"max_qty":2.25,"max_weight":30200.0},"2073":{"max_qty":1.0,"max_weight":28250.0,"max_cube":28.0},"2074":{"max_cube":59.0,"max_weight":28600.0,"max_qty":2.0},"2082":{"max_cube":65.0,"max_qty":2.25,"max_weight":30200.0}},/*##*/locations:{1073755425:{},1073755426:{},1073754427:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1073754425:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}},1073754426:{fixed_time:0,max_variable_time:0,LOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}},UNLOADING:{weight_time:{time_factor:0,division_factor:1.0},volume_time:{time_factor:0,division_factor:1.0}}}}}; evaluateConstraints = function evaluateConstraints(dimObj) {
+	var resourceData = this.id.split("_");
+	var resource = resourceData[1];
+	if ((resource in constraints.resources)) {
+		if ("max_weight" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.wtInKG &gt; constraints.resources[resource].max_weight)
+			return false;
+		if ("max_cube" in constraints.resources[resource]
+				&amp;&amp; dimObj.dims.volInCBM &gt; constraints.resources[resource].max_cube)
+			return false;
+	}
+	return true;
+};
+
+
+var carrier = function(resourceInputObj){
+	this.evaluateCarrierConstraint = function (dimObj){
+	resource = resourceInputObj.id;
+    if (!(resource in constraints.resources))
+		return true;
+	
+	if ("maxstops" in constraints.resources[resource]
+			&amp;&amp; dimObj.stopOffs.length  &gt; constraints.resources[resource].maxstops ){
+		return false;
+		}
+	if ("max_distance" in constraints.resources[resource]
+			&amp;&amp; isMaxDistanceCrossed(dimObj, resource)) {
+		return false;
+	}
+	if ("maximum_single_hours" in constraints.resources[resource]
+			&amp;&amp; isMaxDriveTimeCrossed(dimObj, resource)) {
+		return false;
+	}
+	if ("maximum_out_of_route_miles" in constraints.resources[resource]
+			&amp;&amp; isMaxOutOfRouteMile(dimObj, resource)) {
+		return false;
+	}
+		return true;
+	}
+};
+
+
+
+isMaxOutOfRouteMile = function isMaxOutOfRouteMile(dimObj, resourceid) {
+	var totalDistance = 0;
+	var maxOutOfRouteMile = 0;
+	try {
+		totalDistance = distanceMatrix[sliceStopOffData(dimObj.stopOffs[0].stop)][sliceStopOffData(dimObj.stopOffs[dimObj.stopOffs.length - 1].stop)];
+	} catch (err) {
+		warn('error distanceMatrix  does not exist in  isMaxOutOfRouteMile');
+	}
+	;
+
+	try {
+		maxOutOfRouteMile = constraints.resources[resourceid].maximum_out_of_route_miles;
+
+	} catch (err) {
+		warn('maxOutOfRouteMile  does not exist in  for resource' + resourceid);
+		maxOutOfRouteMile = 0;
+	}
+	;
+
+	var totalDriveDistance = getTotalDriveDistance(dimObj);
+	
+	if (constraints.resources[resourceid].maxoutofroutemilesunit == "%") {
+		maxOutOfRouteMile = ((maxOutOfRouteMile / 100) * totalDistance)
+				+ totalDistance;
+	} else {
+		maxOutOfRouteMile = maxOutOfRouteMile + totalDistance;
+		
+		if (!isNaN(maxOutOfRouteMile)) {
+			// warn('maxOutOfRouteMile==' + maxOutOfRouteMile);
+			// warn('totalDriveDistance=' + totalDriveDistance+' for
+			// resourceid'+ resourceid);
+
+		}
+	}
+	if (totalDriveDistance &gt; maxOutOfRouteMile) {
+		// warn('totalDriveDistance =='+totalDriveDistance
+		// +'-'+maxOutOfRouteMile);
+		return true;
+	}
+	// warn('in else totalDriveDistance =='+totalDriveDistance
+	// +'-'+maxOutOfRouteMile);
+	return false;
+};
+
+isMaxDistanceCrossed = function isMaxDistanceCrossed(dimObj, resourceid) {
+	var totalDriveDistance = getTotalDriveDistance(dimObj);
+	if (totalDriveDistance &gt; constraints.resources[resourceid].max_distance) {
+		return true;
+	}
+	return false;
+};
+
+isMaxDriveTimeCrossed = function isMaxDriveTimeCrossed(dimObj, resourceid) {
+	var totalDriveTime = getTotalDriveTime(dimObj);
+	if (totalDriveTime &gt; constraints.resources[resourceid].maximum_single_hours) {
+		return true;
+	}
+	return false;
+};
+
+getTotalDriveDistance = function getTotalDriveDistance(dimObj) {
+	var totalDriveDistance = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			var distance = distanceMatrix[stop1][stop2]
+			if (!isNaN(distance)) {
+				totalDriveDistance = totalDriveDistance + (distance);
+			} else {
+				warn('can give wrong data,since');
+				warn(' no dtm between ' + stop1 + '-' + stop2);
+			}
+		}
+	} catch (err) {
+		warn('distanceMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveDistance;
+};
+
+getTotalDriveTime = function getTotalDriveTime(dimObj) {
+	var totalDriveTime = 0;
+	try {
+		for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+			totalDriveTime = totalDriveTime + (transitTimeMatrix[stop1][stop2]);
+		}
+	} catch (err) {
+		warn('transitTimeMatrix  does not exist for ' + stop1 + '-' + stop2);
+	}
+	;
+	return totalDriveTime;
+};
+
+sliceStopOffData = function sliceStopOffData(stopOffData) {
+	var stop = stopOffData;
+	try {
+
+		if (stopOffData.indexOf('__') &gt; 0) {
+			stop = stopOffData.slice(0, stopOffData.indexOf('__'));
+		}
+	} catch (err) {
+		warn('stopOffData incorrect for ' + stopOffData);
+	}
+	return JSON.parse(stop);
+};
+
+getProcessingTime = function getProcessingTime(dimObj) {
+
+	if (typeof dimObj.stopOffs[1] == 'undefined') {
+		return 1000000;
+	}
+	trasitTime = 0;
+	// warn(dimObj.stopOffs[0].stop+'__'+dimObj.stopOffs[1].stop);
+	if ((dimObj.stopOffs[0].stop.indexOf('TRANSPORT') &gt; -1)
+			|| ((dimObj.stopOffs[1] == 'undefined') || (dimObj.stopOffs[1].stop
+					.indexOf('TRANSPORT') &gt; -1))) {
+		return 99999;
+	}
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	try {
+		trasitTime = finalloadthroughput + transitTimeMatrix[stop1][stop2]
+				+ finalunloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('errcause no transittime for ' + stop1 + '-- ' + stop2);
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+	return this.transitTime;
+	};
+
+getFinalThroughput = function getFinalThroughput(dimObj) {
+	var finalTroughputResult = '';
+
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length); stopIndex++) {
+		var stop = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+		if (dimObj.dims.wtInKG != 0) {
+			if ((stop in constraints.locations)
+					&amp;&amp; ("Throughput" in constraints.locations[stop])) {
+				finalTroughputResult = finalTroughputResult + stop + '--'
+						+ ((constraints.locations[stop].Throughput)) + '--';
+			}
+		}
+	}
+	return finalTroughputResult;
+};
+
+getDistanceBetweenStops = function getDistanceBetweenStops(dimObj) {
+	var distancebetweenstops = "";
+	for (var stopIndex = 0; stopIndex &lt; (dimObj.stopOffs.length - 1); stopIndex++) {
+		try {
+			var stop1 = sliceStopOffData(dimObj.stopOffs[stopIndex].stop);
+			var stop2 = sliceStopOffData(dimObj.stopOffs[stopIndex + 1].stop);
+
+			distancebetweenstops = distancebetweenstops + "#" + stop1 + "_"
+					+ stop2;
+			distancebetweenstops = distancebetweenstops + "#"
+					+ distanceMatrix[stop1][stop2];
+		} catch (err) {
+			warn('err cause no distancebetweenstops ' + stop1 + ' -- ' + stop2);
+		}
+	}
+	return distancebetweenstops;
+};
+
+getFinalLoadThroughput = function getFinalLoadThroughput(dimObj) {
+	var varloadthroughput = 0;
+	stop1 = sliceStopOffData(dimObj.stopOffs[0].stop);
+	try {
+		if (stop1 in constraints.locations
+				&amp;&amp; ("LOADING" in constraints.locations[stop1])) {
+
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop1].LOADING["weight_time"].division_factor)
+						* constraints.locations[stop1].LOADING["weight_time"].time_factor;
+				varloadthroughput = varweightthrouput;
+			}
+
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop1].LOADING["volume_time"].division_factor)
+						* constraints.locations[stop1].LOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varloadthroughput) {
+					varloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop1].max_variable_time != 0) {
+			if (constraints.locations[stop1].max_variable_time &lt; varloadthroughput) {
+				varloadthroughput = constraints.locations[stop1].max_variable_time;
+			}
+		}
+		return constraints.locations[stop1].fixed_time + varloadthroughput;
+	} catch (err) {
+		warn('err calculating load throughput for stop ' + stop1 + '-- '
+				+ err.message);
+		return 0;
+	}
+};
+
+getFinalUnLoadThroughput = function getFinalUnLoadThroughput(dimObj) {
+	var varunloadthroughput = 0;
+	stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+	try {
+		if (stop2 in constraints.locations
+				&amp;&amp; "UNLOADING" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].UNLOADING["weight_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].UNLOADING["volume_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2].max_variable_time != 0) {
+			if (constraints.locations[stop2].max_variable_time &lt; varunloadthroughput) {
+				varunloadthroughput = constraints.locations[stop2].max_variable_time;
+			}
+		}
+		// warn('Unloading varunloadthroughput ' + varunloadthroughput + ' stop2
+		// ' + stop2+' fixed_time ' + constraints.locations[stop2].fixed_time);
+		return constraints.locations[stop2].fixed_time + varunloadthroughput;
+	} catch (err) {
+		warn('err calculating Unload throughput for stop ' + stop2 + '-- '
+				+ err.message);
+		return 0;
+	}
+};
+
+getOceanAirLoadingProcessingTime = function getOceanAirLoadingProcessingTime(dimObj) {
+
+	trasitTime = 0;
+	var finalloadthroughput = 0;
+	finalloadthroughput = getFinalLoadThroughput(dimObj);
+	if (isNaN(finalloadthroughput)) {
+		finalloadthroughput = 0;
+	}
+
+	try {
+		trasitTime = finalloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('failed');
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getOceanAirProcessingTime = function getOceanAirProcessingTime(dimObj) {
+return this.transitTime;
+};
+
+getOceanAirUnloadingProcessingTime = function getOceanAirUnloadingProcessingTime(dimObj) {
+
+trasitTime = 0;
+	var finalunloadthroughput = 0;
+	finalunloadthroughput = getFinalUnLoadThroughput1(dimObj);
+	if (isNaN(finalunloadthroughput)) {
+		finalunloadthroughput = 0;
+	}
+
+	/*
+	 * warn('finalloadthroughput ' + finalloadthroughput + '
+	 * finalunloadthroughput ' + finalunloadthroughput + ' matrix ' +
+	 * transitTimeMatrix[stop1][stop2]);
+	 */
+	try {
+		trasitTime = finalunloadthroughput;
+		if (isNaN(trasitTime)) {
+			warn('unloading failed');
+			return 0;
+		}
+	} catch (err) {
+		warn('err cause-- ' + err.message);
+		warn(JSON.stringify(dimObj))
+		return 0;
+	}
+	// warn('trasitTime ' + stop1 + ' -- ' + stop2 + ': ' + trasitTime);
+	return (trasitTime);
+};
+
+getFinalUnLoadThroughput1 = function getFinalUnLoadThroughput1(dimObj) {
+	var varunloadthroughput = 0;
+	var stop2;
+	//warn(" calculating Unload throughput for stop ' + s");
+	try {
+	//warn(dimObj.stopOffs);
+	stop2 = JSON.parse(sliceStopOffData(dimObj.stopOffs[1].stop));
+	if(typeof stop2 == 'undefined')
+	  return 0;
+	  
+		if (stop2 in constraints.locations
+				&amp;&amp; "UNLOADING" in constraints.locations[stop2]) {
+			if (dimObj.dims.wtInKG != 0) {
+				varweightthrouput = (dimObj.dims.wtInKG / constraints.locations[stop2].UNLOADING["weight_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["weight_time"].time_factor;
+
+				varunloadthroughput = varweightthrouput;
+			}
+			if (dimObj.dims.volInCBM &gt; 0) {
+				varvolumethrouput = (dimObj.dims.volInCBM / constraints.locations[stop2].UNLOADING["volume_time"].division_factor)
+						* constraints.locations[stop2].UNLOADING["volume_time"].time_factor;
+				if (varvolumethrouput &gt; varunloadthroughput) {
+					varunloadthroughput = varvolumethrouput;
+				}
+			}
+		}
+		if (constraints.locations[stop2].max_variable_time != 0) {
+			if (constraints.locations[stop2].max_variable_time &lt; varunloadthroughput) {
+				varunloadthroughput = constraints.locations[stop2].max_variable_time;
+			}
+		}
+		// warn('Unloading varunloadthroughput ' + varunloadthroughput + ' stop2
+		// ' + stop2+' fixed_time ' + constraints.locations[stop2].fixed_time);
+		return constraints.locations[stop2].fixed_time + varunloadthroughput;
+	} catch (err) {
+		//warn('err calculating Unload throughput for stop ' + stop2 + '-- '
+				//+ err.message);
+			//	warn("catch");
+		return 0;
+	}
+};</globalScript><applyConsolidationRules ttype="STRING">Yes</applyConsolidationRules><requirementConsolidationLevel ttype="I32">0</requirementConsolidationLevel><resourceToAllocationMaps ttype="MAP"><item><key ttype="STRING">1008_10_SC</key><value ttype="DOUBLE">1.0</value></item><item><key ttype="STRING">1012_10_S</key><value ttype="DOUBLE">2.0</value></item><item><key ttype="STRING">1008_9_SC</key><value ttype="DOUBLE">1.0</value></item><item><key ttype="STRING">1012_12_S</key><value ttype="DOUBLE">2.886</value></item><item><key ttype="STRING">1012_9_S</key><value ttype="DOUBLE">1.0</value></item><item><key ttype="STRING">1012_19_S</key><value ttype="DOUBLE">2.532</value></item></resourceToAllocationMaps></supplyChain><requirements ttype="MAP"><item><key ttype="STRING">2122313548</key><value struct="LoadRequirement" ttype="STRUCT"><id ttype="STRING">2122313548</id><name ttype="STRING">2122313548</name><minDivision ttype="LIST"><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">wtInKG</unit><quantityPerDivision ttype="DOUBLE">10.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">volInCBM</unit><quantityPerDivision ttype="DOUBLE">10.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">/pallet</unit><quantityPerDivision ttype="DOUBLE">16.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">/carton</unit><quantityPerDivision ttype="DOUBLE">16.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">/package</unit><quantityPerDivision ttype="DOUBLE">16.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">/SQM</unit><quantityPerDivision ttype="DOUBLE">16.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">/LNM</unit><quantityPerDivision ttype="DOUBLE">16.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">/unit</unit><quantityPerDivision ttype="DOUBLE">16.0</quantityPerDivision></item><item struct="MinDivision" ttype="STRUCT"><unit ttype="STRING">NumberOfTOS</unit><quantityPerDivision ttype="DOUBLE">1.0</quantityPerDivision></item></minDivision><referenceUnitName ttype="STRING">order</referenceUnitName><quantity ttype="I32">1</quantity><source ttype="STRING">1073755425__START_REQUIREMENT</source><destination ttype="STRING">1073755426__END_REQUIREMENT</destination><earliestDepartTime ttype="I64">1642136400</earliestDepartTime><earliestDeliveryTime ttype="I64">1642136460</earliestDeliveryTime><latestDepartTime ttype="I64">1645938000</latestDepartTime><latestDeliveryTime ttype="I64">1648616400</latestDeliveryTime><compatibilityClass ttype="STRING">20311</compatibilityClass><freightClass ttype="STRING">Class 50</freightClass></value></item></requirements><modelingLanguageVersion ttype="STRING">3.2</modelingLanguageVersion><resourceAllocationCheck ttype="I32">1</resourceAllocationCheck></OptimizationInstance>

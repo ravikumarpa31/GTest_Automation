@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<instance id="Rainer_xml" xmlns="http://www.clearabacus.com/schema/instance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.2" xsi:schemaLocation="http://www.clearabacus.com/schema/instance instance.xsd">
+<supplyChain id="Network">
+<step id="Node_1_Start">
+<customData>
+<Type_Description>Starting Point</Type_Description>
+</customData>
+<narrativeDescription>Starting point at Node_1</narrativeDescription>
+<type>
+<startRequirement>
+<nextStep>Node_1_Depart</nextStep>
+</startRequirement>
+</type>
+</step>
+<step id="Node_1_Depart">
+<customData>
+<Type_Description>Consolidation</Type_Description>
+</customData>
+<narrativeDescription>Outbound Dock at Node_1</narrativeDescription>
+<type>
+<consolidateRequirement>
+<nextStep>Leg_1</nextStep>
+<processingTimeInHours>0.5</processingTimeInHours>
+<operatingHours>Site_Working_Hours</operatingHours>
+<resourceAvailable>Container_20_Dry</resourceAvailable>
+<resourceAvailable>Container_40_Dry</resourceAvailable>
+<resourceAvailable>Container_40HC_Dry</resourceAvailable>
+<resourceAvailable>Container_45_Dry</resourceAvailable>
+<resourceAvailable>LCL</resourceAvailable>
+</consolidateRequirement>
+</type>
+</step>
+<step id="Node_2">
+<customData>
+<Type_Description>Ending Point</Type_Description>
+</customData>
+<narrativeDescription>Ending point at Node_2</narrativeDescription>
+<type>
+<endRequirement>EndingPoint</endRequirement>
+</type>
+</step>
+<step id="Leg_1">
+<customData>
+<Type_Description>Transport</Type_Description>
+</customData>
+<narrativeDescription>Transport from Node_1 to Node_2</narrativeDescription>
+<type>
+<transportRequirement>
+<nextStep>Node_2</nextStep>
+<processingTimeInHours>48</processingTimeInHours>
+<rate>Rate_2</rate>
+<rate>Rate_3</rate>
+<rate>Rate_4</rate>
+<rate>Rate_5</rate>
+<rate>Rate_1</rate>
+<resourceAvailable>Container_20_Dry</resourceAvailable>
+<resourceAvailable>Container_40_Dry</resourceAvailable>
+<resourceAvailable>Container_40HC_Dry</resourceAvailable>
+<resourceAvailable>Container_45_Dry</resourceAvailable>
+<resourceAvailable>LCL</resourceAvailable>
+</transportRequirement>
+</type>
+</step>
+<rate id="Rate_1">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>Container_20_Dry</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>Container_20_Dry</unitOrResource>
+</rateUOM>
+<rateCharge>2000</rateCharge>
+<currency>EUR</currency>
+</rate>
+<rate id="Rate_2">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>Container_40_Dry</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>Container_40_Dry</unitOrResource>
+</rateUOM>
+<rateCharge>3950</rateCharge>
+<currency>EUR</currency>
+</rate>
+<rate id="Rate_3">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>Container_40HC_Dry</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>Container_40HC_Dry</unitOrResource>
+</rateUOM>
+<rateCharge>4700</rateCharge>
+<currency>EUR</currency>
+</rate>
+<rate id="Rate_4">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>Container_45_Dry</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>Container_45_Dry</unitOrResource>
+</rateUOM>
+<rateCharge>5350</rateCharge>
+<currency>EUR</currency>
+</rate>
+<rate id="Rate_5">
+<breakUOM calculationMethod="SUM">
+<unitOrResource>LCL</unitOrResource>
+</breakUOM>
+<minBreakUOMValue>1</minBreakUOMValue>
+<rateUOM calculationMethod="SUM">
+<unitOrResource>LCL</unitOrResource>
+</rateUOM>
+<rateCharge>75</rateCharge>
+<minimumCharge>200</minimumCharge>
+<currency>EUR</currency>
+</rate>
+<operatingTime id="Site_Working_Hours">
+<closeTimeRange>
+<weekDayHours>
+<dayOfWeek>0</dayOfWeek>
+<dayOfWeek>6</dayOfWeek>
+<startUTC>00:00:00</startUTC>
+<endUTC>23:59:59</endUTC>
+</weekDayHours>
+</closeTimeRange>
+</operatingTime>
+<unitDimension>
+<base>
+<dimension>currency</dimension>
+<scaledUnit id="EUR">
+<scale>1</scale>
+</scaledUnit>
+</base>
+</unitDimension>
+<unitDimension>
+<base>
+<dimension>weight</dimension>
+<scaledUnit id="Kg">
+<scale>1</scale>
+</scaledUnit>
+</base>
+</unitDimension>
+<unitDimension>
+<base>
+<dimension>volume</dimension>
+<scaledUnit id="M3">
+<scale>1</scale>
+</scaledUnit>
+</base>
+</unitDimension>
+<unitDimension>
+<base>
+<dimension>load</dimension>
+<scaledUnit id="House_Bill">
+<scale>1</scale>
+</scaledUnit>
+</base>
+</unitDimension>
+<resource id="Container_20_Dry">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>M3</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>27</maximumValue>
+</capacities>
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>Kg</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>17900</maximumValue>
+</capacities>
+</resource>
+<resource id="Container_40_Dry">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>M3</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>54</maximumValue>
+</capacities>
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>Kg</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>20180</maximumValue>
+</capacities>
+</resource>
+<resource id="Container_40HC_Dry">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>M3</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>65</maximumValue>
+</capacities>
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>Kg</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>20180</maximumValue>
+</capacities>
+</resource>
+<resource id="Container_45_Dry">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>M3</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>75</maximumValue>
+</capacities>
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>Kg</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>19000</maximumValue>
+</capacities>
+</resource>
+<resource id="LCL">
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>M3</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>1</maximumValue>
+</capacities>
+<capacities>
+<UOM calculationMethod="SUM">
+<unitOrResource>Kg</unitOrResource>
+</UOM>
+<minimumValue>0</minimumValue>
+<maximumValue>350</maximumValue>
+</capacities>
+</resource>
+</supplyChain>
+<requirements><requirement id="Requirement_1">
+<minDivision>
+<unit>M3</unit>
+<quantityPerDivision>3</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Case</referenceUnitName>
+<quantity>9</quantity>
+<source>Node_1_Start</source>
+<destination>Node_2</destination>
+<earliestDepartTime>2013-01-01T00:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-01-01T00:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-01-02T00:00:00</latestDepartTime>
+<latestDeliveryTime>2013-02-11T00:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="Requirement_2">
+<minDivision>
+<unit>M3</unit>
+<quantityPerDivision>4</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Case</referenceUnitName>
+<quantity>9</quantity>
+<source>Node_1_Start</source>
+<destination>Node_2</destination>
+<earliestDepartTime>2013-01-01T00:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-01-01T00:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-01-02T00:00:00</latestDepartTime>
+<latestDeliveryTime>2013-02-11T00:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="Requirement_3">
+<minDivision>
+<unit>M3</unit>
+<quantityPerDivision>5</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Case</referenceUnitName>
+<quantity>9</quantity>
+<source>Node_1_Start</source>
+<destination>Node_2</destination>
+<earliestDepartTime>2013-01-01T00:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-01-01T00:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-01-02T00:00:00</latestDepartTime>
+<latestDeliveryTime>2013-02-11T00:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="Requirement_4">
+<minDivision>
+<unit>M3</unit>
+<quantityPerDivision>6</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Case</referenceUnitName>
+<quantity>9</quantity>
+<source>Node_1_Start</source>
+<destination>Node_2</destination>
+<earliestDepartTime>2013-01-01T00:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-01-01T00:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-01-02T00:00:00</latestDepartTime>
+<latestDeliveryTime>2013-02-11T00:00:00</latestDeliveryTime>
+</requirement>
+<requirement id="Requirement_5">
+<minDivision>
+<unit>M3</unit>
+<quantityPerDivision>7</quantityPerDivision>
+</minDivision>
+<referenceUnitName>Case</referenceUnitName>
+<quantity>9</quantity>
+<source>Node_1_Start</source>
+<destination>Node_2</destination>
+<earliestDepartTime>2013-01-01T00:00:00</earliestDepartTime>
+<earliestDeliveryTime>2013-01-01T00:00:00</earliestDeliveryTime>
+<latestDepartTime>2013-01-02T00:00:00</latestDepartTime>
+<latestDeliveryTime>2013-02-11T00:00:00</latestDeliveryTime>
+</requirement>
+</requirements>
+</instance>
